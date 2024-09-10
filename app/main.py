@@ -1,8 +1,6 @@
 from PySide6 import QtWidgets
-from Story import StoryDlg
+from app.story import StoryDlg
 import sys
-
-G_SHOWTIPS = 1
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -18,5 +16,4 @@ class MainWindow(QtWidgets.QMainWindow):
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()
-    a = [window]
     sys.exit(app.exec())

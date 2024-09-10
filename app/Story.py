@@ -1,5 +1,5 @@
 from PySide6 import QtWidgets, QtCore
-from story_ui import Ui_Story
+from ui.story import Ui_Story
 
 
 class StoryDlg(QtWidgets.QWidget):
@@ -7,13 +7,16 @@ class StoryDlg(QtWidgets.QWidget):
         super().__init__(parent)
         self.ui = Ui_Story()
         self.ui.setupUi(self)
+        self.setWindowFlag(
+            self.windowFlags() | QtCore.Qt.WindowType.FramelessWindowHint
+        )
 
         self.messages = [
             "初始化黑客信息....",
             "初始化二环路信息.....",
             "初始化黑市物品......",
             "初始化随机事件......",
-            "加载北京实时新闻...."
+            "加载北京实时新闻....",
         ]
         self._count = 0
 
