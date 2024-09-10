@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>北京浮生记</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QListWidget" name="listWidget">
@@ -463,8 +463,110 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>系统</string>
+    </property>
+    <addaction name="new_game"/>
+    <addaction name="top_players"/>
+    <addaction name="settings"/>
+    <addaction name="exit_game"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>重要场所</string>
+    </property>
+    <addaction name="bank"/>
+    <addaction name="post_office"/>
+    <addaction name="hospital"/>
+    <addaction name="airport"/>
+    <addaction name="rental_agency"/>
+    <addaction name="cypercafe"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="beijing_intro"/>
+    <addaction name="story"/>
+    <addaction name="game_help"/>
+    <addaction name="about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="new_game">
+   <property name="text">
+    <string>新游戏</string>
+   </property>
+  </action>
+  <action name="top_players">
+   <property name="text">
+    <string>高手排行</string>
+   </property>
+  </action>
+  <action name="settings">
+   <property name="text">
+    <string>游戏设置</string>
+   </property>
+  </action>
+  <action name="exit_game">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="bank">
+   <property name="text">
+    <string>银行</string>
+   </property>
+  </action>
+  <action name="post_office">
+   <property name="text">
+    <string>邮局</string>
+   </property>
+  </action>
+  <action name="hospital">
+   <property name="text">
+    <string>医院</string>
+   </property>
+  </action>
+  <action name="airport">
+   <property name="text">
+    <string>机场</string>
+   </property>
+  </action>
+  <action name="rental_agency">
+   <property name="text">
+    <string>租房中介</string>
+   </property>
+  </action>
+  <action name="cypercafe">
+   <property name="text">
+    <string>网吧</string>
+   </property>
+  </action>
+  <action name="beijing_intro">
+   <property name="text">
+    <string>北京简介</string>
+   </property>
+  </action>
+  <action name="story">
+   <property name="text">
+    <string>游戏故事</string>
+   </property>
+  </action>
+  <action name="game_help">
+   <property name="text">
+    <string>游戏文档</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>关于本游戏</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
