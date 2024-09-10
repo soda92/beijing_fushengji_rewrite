@@ -8,9 +8,12 @@
             "name": "Main",
             "type": "debugpy",
             "request": "launch",
-            "program": "C:/Users/azureuser/beijing_fushengji_rewrite/main.py",
+            "program": "${workspaceFolder}/app/main.py",
             "console": "integratedTerminal",
-            "cwd": "C:/Users/azureuser/beijing_fushengji_rewrite"
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "preLaunchTask": "mybuild"
         }
     ]
 }
