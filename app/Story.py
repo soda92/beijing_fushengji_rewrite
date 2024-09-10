@@ -53,6 +53,10 @@ class StoryDlg(QtWidgets.QWidget):
 
         CURRENT = Path(__file__).resolve().parent
         help_file_encrypted = CURRENT.parent.joinpath("helpinfo")
+
+        from app.tools import test_dirs
+
+        test_dirs()
         content = help_file_encrypted.read_bytes()
         real_content = bytearray([i ^ 0x52 for i in content]).decode("GB2312")
         help_file_encrypted.parent.joinpath("help.html").write_text(real_content)
