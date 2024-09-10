@@ -31,3 +31,18 @@ class StoryDlg(QtWidgets.QWidget):
             self._count += 1
         else:
             self.timer.stop()
+            self.processHelpFile()
+            QtCore.QTimer.singleShot(
+                330,
+                lambda: self.ui.statusText.setText("游戏初始化完毕,准备进入北京..."),
+            )
+
+    def processHelpFile(self):
+        self.ui.statusText.setText("初始化帮助信息....")
+        from pathlib import Path
+
+        CURRENT = Path(__file__).resolve().parent
+        help_file_encrypted = CURRENT.parent.joinpath("helpinfo")
+        content = help_file_encrypted.read_bytes()
+        real_content = bytearray([i ^ 0x52 for i in content]).decode("GB2312")
+        help_file_encrypted.parent.joinpath("help.html").write_text(real_content)

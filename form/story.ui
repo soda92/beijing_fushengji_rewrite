@@ -104,7 +104,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">QWidget {
-background-image: url(:/ICON/DualListDemo.ico);
+background-image: url(:/ICON/icon.ico);
 background-repeat: none none;
 }
 </string>

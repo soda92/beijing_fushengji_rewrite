@@ -1,5 +1,5 @@
 <RCC>
   <qresource prefix="ICON">
-    <file>DualListDemo.ico</file>
+    <file alias="icon.ico">res/DualListDemo.ico</file>
   </qresource>
 </RCC>
