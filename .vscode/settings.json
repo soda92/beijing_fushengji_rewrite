@@ -9,5 +9,8 @@
         "editor.formatOnType": true,
         "editor.wordBasedSuggestions": "off",
         "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "files.associations": {
+        "*.py.spec": "python"
     }
 }
