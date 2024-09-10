@@ -1,15 +1,27 @@
 from pathlib import Path
-import glob
+import subprocess
 
 CURRENT = Path(__file__).resolve().parent
+form_dir = CURRENT.parent.joinpath("form")
+ui_dir = CURRENT.parent.joinpath("ui")
 
 
 def get_ui_files() -> list[Path]:
-    files = glob.glob("**/*.ui", recursive=True, root_dir=str(CURRENT))
-    files_fullpath = [
-        CURRENT.joinpath(i) for i in files
-    ]
-    return files_fullpath
+    files = form_dir.glob("*.ui")
+    return files
+
+
+def get_dest_path(file: Path) -> Path:
+    name = file.stem
+    ui_name = f"ui_{name}.py"
+    return ui_dir.joinpath(ui_name)
+
+
+def compile(file: Path):
+    dest_path = get_dest_path(file)
+    subprocess.run(f"pyside6-uic {str(file)} -o {str(dest_path)}".split(), check=True)
+
 
 if __name__ == "__main__":
-    pass
+    for i in get_ui_files():
+        compile(i)
