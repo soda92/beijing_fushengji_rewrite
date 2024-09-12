@@ -1,4 +1,4 @@
-from PySide6 import QtWidgets
+from PySide6 import QtWidgets, QtGui
 from app.story import StoryDlg
 import sys
 from ui.main import Ui_MainWindow
@@ -9,6 +9,16 @@ class MainWindow(QtWidgets.QMainWindow):
         super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/font.ttf")
+        family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
+        self.setStyleSheet(
+            """
+            QLabel, QPushButton {
+                font: 12pt {family};
+            }
+            """.replace("{family}", family)
+        )
+        self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
         self.hide()
         self.show_intro()
 

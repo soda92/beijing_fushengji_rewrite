@@ -1,4 +1,4 @@
-from PySide6 import QtWidgets, QtCore
+from PySide6 import QtWidgets, QtCore, QtGui
 from ui.story import Ui_Story
 
 
@@ -9,6 +9,16 @@ class StoryDlg(QtWidgets.QWidget):
         super().__init__(parent)
         self.ui = Ui_Story()
         self.ui.setupUi(self)
+        font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/test-font.ttf")
+        family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
+        self.setStyleSheet(
+            """
+            QLabel, QPushButton {
+                font: 12pt {family};
+            }
+            """.replace("{family}", 'MiSans')
+        )
+        self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
 
         self.ui.startGame.clicked.connect(self.start_game)
         self.ui.startGame.setEnabled(False)
@@ -59,7 +69,9 @@ class StoryDlg(QtWidgets.QWidget):
         test_dirs()
         content = help_file_encrypted.read_bytes()
         real_content = bytearray([i ^ 0x52 for i in content]).decode("GB2312")
-        help_file_encrypted.parent.joinpath("help.html").write_text(real_content)
+        help_file_encrypted.parent.joinpath("help.html").write_text(
+            real_content, encoding="utf8"
+        )
 
     def start_game(self):
         self.start_sig.emit(True)
