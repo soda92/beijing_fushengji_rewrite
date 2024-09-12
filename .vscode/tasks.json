@@ -6,7 +6,8 @@
             "command": "python",
             "args": [
                 "tools/compile_all.py"
-            ]
+            ],
+            "problemMatcher": []
         },
         {
             "label": "package",

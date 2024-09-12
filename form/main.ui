@@ -13,6 +13,13 @@
   <property name="windowTitle">
    <string>北京浮生记</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">/* CAUTION: do not modify, this is for preview, main stylesheet set in code */
+
+QLabel, QPushButton {
+                font: 12pt MiSans;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
@@ -372,7 +379,7 @@
      <string>买进</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
@@ -388,7 +395,7 @@
      <string>卖出</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_18">
@@ -460,7 +467,7 @@
      <x>0</x>
      <y>0</y>
      <width>808</width>
-     <height>21</height>
+     <height>33</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
