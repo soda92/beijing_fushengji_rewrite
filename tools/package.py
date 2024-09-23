@@ -5,6 +5,9 @@ CURRENT = Path(__file__).resolve().parent
 
 import contextlib
 
+import platform
+
+PYINSTALLER = "pyinstaller" if platform.system() != "Linux" else "venv/bin/pyinstaller"
 
 @contextlib.contextmanager
 def cd(dir: str):
@@ -20,7 +23,7 @@ def cd(dir: str):
 
 def run_pyinstaller():
     with cd(str(CURRENT.parent)):
-        subprocess.run("venv/bin/pyinstaller entry.py.spec".split(), check=True)
+        subprocess.run(f"{PYINSTALLER} entry.py.spec".split(), check=True)
 
 
 if __name__ == "__main__":

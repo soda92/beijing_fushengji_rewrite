@@ -3,18 +3,24 @@
     "tasks": [
         {
             "label": "mybuild",
-            "command": "venv/bin/python",
+            "command": "python",
             "args": [
                 "tools/compile_all.py"
             ],
+            "linux":{
+                "command": "venv/bin/python"
+            },
             "problemMatcher": []
         },
         {
             "label": "package",
-            "command": "venv/bin/python",
+            "command": "python",
             "args": [
                 "tools/package.py"
             ],
+            "linux":{
+                "command": "venv/bin/python"
+            },
             "problemMatcher": []
         }
     ]
