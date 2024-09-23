@@ -34,7 +34,8 @@ class StoryDlg(QtWidgets.QWidget):
             "初始化随机事件......",
             "加载北京实时新闻....",
         ]
-        self._count = 0
+        self._count = 1
+        self.ui.statusText.setText(self.messages[0])
 
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.update_message)
