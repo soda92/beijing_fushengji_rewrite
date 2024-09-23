@@ -3,14 +3,15 @@
     "tasks": [
         {
             "label": "mybuild",
-            "command": "python",
+            "command": "venv/bin/python",
             "args": [
                 "tools/compile_all.py"
-            ]
+            ],
+            "problemMatcher": []
         },
         {
             "label": "package",
-            "command": "python",
+            "command": "venv/bin/python",
             "args": [
                 "tools/package.py"
             ],

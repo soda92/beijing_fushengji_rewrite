@@ -1,0 +1,3 @@
+pyinstaller
+PySide6
+# -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple

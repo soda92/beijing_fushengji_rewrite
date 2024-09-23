@@ -2,4 +2,8 @@
   <qresource prefix="ICON">
     <file alias="icon.ico">res/DualListDemo.ico</file>
   </qresource>
+  <qresource prefix="FONTS">
+    <file alias="font.ttf">res/MiSans-Regular.ttf</file>
+    <file alias="test-font.ttf">res/斗鱼追光体2.0.ttf</file>
+  </qresource>
 </RCC>
