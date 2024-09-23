@@ -11,7 +11,9 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "files.associations": {
-        "*.py.spec": "python"
+        "*.py.spec": "python",
+        "*zh_CN.ts": "xml",
+        "*.qrc": "xml"
     },
     "gitlens.blame.avatars": false
 }

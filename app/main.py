@@ -1,4 +1,4 @@
-from PySide6 import QtWidgets, QtGui
+from PySide6 import QtWidgets, QtGui, QtCore
 from app.story import StoryDlg
 import sys
 from ui.main import Ui_MainWindow
@@ -21,6 +21,13 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
         self.hide()
         self.show_intro()
+        self.move(QtWidgets.QApplication.screens()[0].geometry().center() - self.rect().center())
+        self.ui.cybercafe.triggered.connect(self.enter_cafe)
+
+    def enter_cafe(self):
+        from app.cybercafe import CyberCafe
+        self.cafe = CyberCafe()
+        self.cafe.show()
 
     def show_intro(self):
         self.dlg = StoryDlg()
@@ -33,6 +40,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
+    print(QtCore.QLocale.system().name())
+    translator = QtCore.QTranslator()
+    translator.load(":/translations/cn.qm")
+    app.installTranslator(translator)
     window = MainWindow()
     sys.exit(app.exec())
 
