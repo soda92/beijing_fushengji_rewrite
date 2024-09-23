@@ -19,7 +19,7 @@ def get_dest_path(file: Path) -> Path:
 
 def compile(file: Path):
     dest_path = get_dest_path(file)
-    subprocess.run(f"pyside6-uic {str(file)} -o {str(dest_path)}".split(), check=True)
+    subprocess.run(f"venv/bin/pyside6-uic {str(file)} -o {str(dest_path)}".split(), check=True)
 
 
 if __name__ == "__main__":
@@ -27,6 +27,6 @@ if __name__ == "__main__":
     for i in get_ui_files():
         compile(i)
     subprocess.run(
-        f"pyside6-rcc {str(CURRENT.parent.joinpath('main.qrc'))} -o {str(CURRENT.parent.joinpath('main_rc.py'))}".split(),
+        f"venv/bin/pyside6-rcc {str(CURRENT.parent.joinpath('main.qrc'))} -o {str(CURRENT.parent.joinpath('main_rc.py'))}".split(),
         check=True,
     )

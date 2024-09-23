@@ -20,7 +20,7 @@ def cd(dir: str):
 
 def run_pyinstaller():
     with cd(str(CURRENT.parent)):
-        subprocess.run("pyinstaller entry.py.spec", check=True)
+        subprocess.run("venv/bin/pyinstaller entry.py.spec".split(), check=True)
 
 
 if __name__ == "__main__":
