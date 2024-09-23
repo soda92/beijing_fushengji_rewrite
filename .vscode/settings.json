@@ -12,5 +12,6 @@
     },
     "files.associations": {
         "*.py.spec": "python"
-    }
+    },
+    "gitlens.blame.avatars": false
 }
