@@ -537,7 +537,7 @@ QLabel, QPushButton {
     <addaction name="hospital"/>
     <addaction name="airport"/>
     <addaction name="rental_agency"/>
-    <addaction name="cypercafe"/>
+    <addaction name="cybercafe"/>
    </widget>
    <widget class="QMenu" name="menu_3">
     <property name="title">
@@ -598,7 +598,7 @@ QLabel, QPushButton {
     <string>租房中介</string>
    </property>
   </action>
-  <action name="cypercafe">
+  <action name="cybercafe">
    <property name="text">
     <string>网吧</string>
    </property>
