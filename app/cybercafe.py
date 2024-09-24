@@ -10,7 +10,6 @@ class CyberCafe(QtWidgets.QWidget):
         self.show()
 
 
-
 if __name__ == "__main__":
     app = QtWidgets.QApplication()
     cafe = CyberCafe()

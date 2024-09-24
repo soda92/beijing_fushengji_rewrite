@@ -16,21 +16,28 @@ class MainWindow(QtWidgets.QMainWindow):
             QLabel, QPushButton {
                 font: 12pt {family};
             }
-            """.replace("{family}", family)
+            """.replace(
+                "{family}", family
+            )
         )
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
         import os
+
         hide_intro = os.environ.get("HIDE_INTRO", False)
         if hide_intro == False:
             self.hide()
             self.show_intro()
         else:
             self.show()
-        self.move(QtWidgets.QApplication.screens()[0].geometry().center() - self.rect().center())
+        self.move(
+            QtWidgets.QApplication.screens()[0].geometry().center()
+            - self.rect().center()
+        )
         self.ui.cybercafe.triggered.connect(self.enter_cafe)
 
     def enter_cafe(self):
         from app.cybercafe import CyberCafe
+
         self.cafe = CyberCafe()
         self.cafe.show()
 

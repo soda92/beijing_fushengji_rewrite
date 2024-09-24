@@ -16,7 +16,9 @@ class StoryDlg(QtWidgets.QWidget):
             QLabel, QPushButton {
                 font: 12pt {family};
             }
-            """.replace("{family}", 'MiSans')
+            """.replace(
+                "{family}", "MiSans"
+            )
         )
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
 
