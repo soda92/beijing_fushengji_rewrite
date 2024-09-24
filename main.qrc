@@ -1,12 +1,25 @@
 <RCC>
   <qresource prefix="ICON">
-    <file alias="icon.ico">res/DualListDemo.ico</file>
+    <file alias="icon.ico">res/main.ico</file>
   </qresource>
   <qresource prefix="FONTS">
     <file alias="font.ttf">res/MiSans-Regular.ttf</file>
-    <file alias="test-font.ttf">res/斗鱼追光体2.0.ttf</file>
+    <file alias="test-font.ttf">res/Douyu_font2.0.ttf</file>
   </qresource>
   <qresource prefix="translations">
     <file alias="cn.qm">translation_zh_CN.qm</file>
+  </qresource>
+  <qresource prefix="bg">
+    <file>res/subway.bmp</file>
+    <file>res/hospital.ico</file>
+    <file>res/hospital_hover.ico</file>
+    <file>res/netcafe.ico</file>
+    <file>res/netcafe_hover.ico</file>
+    <file>res/postoffice.ico</file>
+    <file>res/postoffice_hover.ico</file>
+    <file>res/bank.ico</file>
+    <file>res/bank_hover.ico</file>
+    <file>res/rent.ico</file>
+    <file>res/rent_hover.ico</file>
   </qresource>
 </RCC>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>780</width>
-    <height>678</height>
+    <width>810</width>
+    <height>686</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -143,6 +143,9 @@ QLabel, QPushButton {
            <height>191</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
          <property name="title">
           <string>您的状态</string>
          </property>
@@ -180,9 +183,6 @@ QLabel, QPushButton {
              <item>
               <widget class="QWidget" name="widget_4" native="true">
                <layout class="QHBoxLayout" name="horizontalLayout_2">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
                 <property name="leftMargin">
                  <number>0</number>
                 </property>
@@ -263,7 +263,7 @@ QLabel, QPushButton {
               <widget class="QWidget" name="widget_6" native="true">
                <layout class="QHBoxLayout" name="horizontalLayout_5">
                 <property name="spacing">
-                 <number>0</number>
+                 <number>6</number>
                 </property>
                 <property name="leftMargin">
                  <number>0</number>
@@ -291,6 +291,15 @@ QLabel, QPushButton {
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="smallDecimalPoint">
+                   <bool>false</bool>
+                  </property>
+                  <property name="digitCount">
+                   <number>5</number>
+                  </property>
+                  <property name="segmentStyle">
+                   <enum>QLCDNumber::SegmentStyle::Filled</enum>
                   </property>
                  </widget>
                 </item>
@@ -381,6 +390,9 @@ QLabel, QPushButton {
               <height>0</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;</string>
+            </property>
             <property name="text">
              <string>我要逛京城</string>
             </property>
@@ -413,7 +425,10 @@ QLabel, QPushButton {
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="switch_mode">
+            <property name="styleSheet">
+             <string notr="true">border: none;</string>
+            </property>
             <property name="text">
              <string>老板来了</string>
             </property>
@@ -502,7 +517,7 @@ QLabel, QPushButton {
           <item row="1" column="1">
            <widget class="QLabel" name="label_16">
             <property name="styleSheet">
-             <string notr="true">image: url(:/bg/subway.bmp);</string>
+             <string notr="true">image: url(:/bg/res/subway.bmp);</string>
             </property>
             <property name="text">
              <string/>
@@ -516,38 +531,98 @@ QLabel, QPushButton {
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="widget_2" native="true">
+     <widget class="QWidget" name="places" native="true">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+height: 40px;
+border: none;
+
+	background-color: rgb(192, 191, 188);
+}
+
+QPushButton::hover {
+background-color: black;
+}</string>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="p_bank">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+icon: url(:/bg/res/bank.ico);
+}
+
+QPushButton::hover {
+icon: url(:/bg/res/bank_hover.ico);
+}</string>
+         </property>
          <property name="text">
           <string>银行</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="p_hospital">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+icon: url(:/bg/res/hospital.ico);
+}
+
+QPushButton::hover {
+icon: url(:/bg/res/hospital_hover.ico);
+}</string>
+         </property>
          <property name="text">
           <string>医院</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="p_postoffice">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+icon: url(:/bg/res/postoffice.ico);
+}
+
+QPushButton::hover {
+icon: url(:/bg/res/postoffice_hover.ico);
+}</string>
+         </property>
          <property name="text">
           <string>邮局</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="p_rent">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+icon: url(:/bg/res/rent.ico);
+}
+
+QPushButton::hover {
+icon: url(:/bg/res/rent_hover.ico);
+}</string>
+         </property>
          <property name="text">
           <string>租房中介</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="p_netcafe">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+icon: url(:/bg/res/netcafe.ico);
+}
+
+QPushButton::hover {
+icon: url(:/bg/res/netcafe_hover.ico);
+}</string>
+         </property>
          <property name="text">
           <string>网吧</string>
          </property>
@@ -611,7 +686,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>780</width>
+     <width>810</width>
      <height>24</height>
     </rect>
    </property>
