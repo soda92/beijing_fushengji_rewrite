@@ -34,6 +34,23 @@ class MainWindow(QtWidgets.QMainWindow):
             - self.rect().center()
         )
         self.ui.cybercafe.triggered.connect(self.enter_cafe)
+        self.ui.p_netcafe.clicked.connect(self.enter_cafe)
+
+        self.ui.exit_game.triggered.connect(self.close)
+
+        self.timer = QtCore.QTimer()
+        self.timer.setInterval(20)
+        self.timer.timeout.connect(self.scroll)
+        self.t_pos = 0
+        self.timer.start()
+        self.ui.ticker.enterEvent = lambda _: self.timer.stop()
+        self.ui.ticker.leaveEvent = lambda _: self.timer.start()
+
+
+    def scroll(self):
+        self.t_pos += 1.1
+        bar = self.ui.ticker.horizontalScrollBar()
+        bar.setValue(int(self.t_pos))
 
     def enter_cafe(self):
         from app.cybercafe import CyberCafe

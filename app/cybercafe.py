@@ -9,6 +9,8 @@ class CyberCafe(QtWidgets.QWidget):
         self.ui.setupUi(self)
         self.show()
 
+        self.ui.leave_cybercafe.clicked.connect(lambda _: self.close())
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication()
