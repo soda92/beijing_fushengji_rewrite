@@ -44,6 +44,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
 def main():
+    import os, platform
+    if platform.system() == "Linux":
+        # this will enable automaic load of fcitx plugin
+        os.environ["QT_PLUGIN_PATH"] = "/usr/lib/qt6/plugins/"
     app = QtWidgets.QApplication(sys.argv)
     print(QtCore.QLocale.system().name())
     translator = QtCore.QTranslator()
