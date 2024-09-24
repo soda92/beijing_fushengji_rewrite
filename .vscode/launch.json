@@ -16,7 +16,8 @@
             "linux": {
                 "env": {
                     "PYTHONPATH": "${workspaceFolder}",
-                    "QT_SCALE_FACTOR": "2"
+                    "QT_SCALE_FACTOR": "2",
+                    "HIDE_INTRO": "true"
                 }
             },
             "preLaunchTask": "mybuild"

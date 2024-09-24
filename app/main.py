@@ -19,8 +19,13 @@ class MainWindow(QtWidgets.QMainWindow):
             """.replace("{family}", family)
         )
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
-        self.hide()
-        self.show_intro()
+        import os
+        hide_intro = os.environ.get("HIDE_INTRO", False)
+        if hide_intro == False:
+            self.hide()
+            self.show_intro()
+        else:
+            self.show()
         self.move(QtWidgets.QApplication.screens()[0].geometry().center() - self.rect().center())
         self.ui.cybercafe.triggered.connect(self.enter_cafe)
 
