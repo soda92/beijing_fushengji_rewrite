@@ -22,4 +22,9 @@
     <file>res/rent.ico</file>
     <file>res/rent_hover.ico</file>
   </qresource>
+  <qresource prefix="SND">
+    <file>sound/vomit.wav</file>
+    <file>sound/buy.wav</file>
+    <file>sound/money.wav</file>
+  </qresource>
 </RCC>

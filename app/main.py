@@ -1,4 +1,4 @@
-from PySide6 import QtWidgets, QtGui, QtCore
+from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
 from app.story import StoryDlg
 import sys
 from ui.main import Ui_MainWindow
@@ -37,6 +37,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.p_netcafe.clicked.connect(self.enter_cafe)
 
         self.ui.exit_game.triggered.connect(self.close)
+        self.ui.buy.clicked.connect(self.buy)
+        self.ui.sell.clicked.connect(self.sell)
 
         self.timer = QtCore.QTimer()
         self.timer.setInterval(20)
@@ -46,6 +48,19 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.ticker.enterEvent = lambda _: self.timer.stop()
         self.ui.ticker.leaveEvent = lambda _: self.timer.start()
 
+    def buy(self):
+        self.effect = QtMultimedia.QSoundEffect()
+        self.effect.setSource(QtCore.QUrl.fromLocalFile(":/SND/sound/buy.wav"))
+        self.effect.setLoopCount(1)
+        self.effect.setVolume(0.8)
+        self.effect.play()
+
+    def sell(self):
+        self.effect = QtMultimedia.QSoundEffect()
+        self.effect.setSource(QtCore.QUrl.fromLocalFile(":/SND/sound/money.wav"))
+        self.effect.setLoopCount(1)
+        self.effect.setVolume(0.8)
+        self.effect.play()
 
     def scroll(self):
         self.t_pos += 1.1
@@ -57,7 +72,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.timer_restart.timeout.connect(self.restart_scroll)
             self.timer_restart.setSingleShot(True)
             self.timer_restart.start(60 * 1000)
-    
+
     def restart_scroll(self):
         self.t_pos = 0
         self.timer.start()
@@ -79,6 +94,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 def main():
     import os, platform
+
     if platform.system() == "Linux":
         # this will enable automaic load of fcitx plugin
         os.environ["QT_PLUGIN_PATH"] = "/usr/lib/qt6/plugins/"
