@@ -51,6 +51,16 @@ class MainWindow(QtWidgets.QMainWindow):
         self.t_pos += 1.1
         bar = self.ui.ticker.horizontalScrollBar()
         bar.setValue(int(self.t_pos))
+        if self.t_pos > bar.maximum():
+            self.timer.stop()
+            self.timer_restart = QtCore.QTimer()
+            self.timer_restart.timeout.connect(self.restart_scroll)
+            self.timer_restart.setSingleShot(True)
+            self.timer_restart.start(60 * 1000)
+    
+    def restart_scroll(self):
+        self.t_pos = 0
+        self.timer.start()
 
     def enter_cafe(self):
         from app.cybercafe import CyberCafe

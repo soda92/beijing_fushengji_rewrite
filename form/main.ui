@@ -209,12 +209,15 @@ QLabel, QPushButton {
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLCDNumber" name="lcdNumber">
+                 <widget class="QLCDNumber" name="cash">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(87, 227, 137);</string>
                   </property>
                  </widget>
                 </item>
@@ -247,12 +250,15 @@ QLabel, QPushButton {
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLCDNumber" name="lcdNumber_2">
+                 <widget class="QLCDNumber" name="saving">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(87, 227, 137);</string>
                   </property>
                  </widget>
                 </item>
@@ -285,12 +291,15 @@ QLabel, QPushButton {
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLCDNumber" name="lcdNumber_3">
+                 <widget class="QLCDNumber" name="debt">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(240, 0, 0);</string>
                   </property>
                   <property name="smallDecimalPoint">
                    <bool>false</bool>
@@ -332,12 +341,15 @@ QLabel, QPushButton {
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLCDNumber" name="lcdNumber_4">
+                 <widget class="QLCDNumber" name="health">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(87, 227, 137);</string>
                   </property>
                  </widget>
                 </item>
@@ -349,12 +361,15 @@ QLabel, QPushButton {
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLCDNumber" name="lcdNumber_5">
+                 <widget class="QLCDNumber" name="fame">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(87, 227, 137);</string>
                   </property>
                  </widget>
                 </item>
