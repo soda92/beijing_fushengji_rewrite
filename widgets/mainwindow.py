@@ -2,6 +2,7 @@ from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
 from widgets.story import StoryDlg
 from ui.main import Ui_MainWindow
 from widgets.cybercafe import CyberCafe
+from app.tools import load_data
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -49,19 +50,30 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.ticker.enterEvent = lambda _: self.timer.stop()
         self.ui.ticker.leaveEvent = lambda _: self.timer.start()
 
+        self.init_data()
+
+    def init_data(self):
+        status, market_items, my_items = load_data()
+        self.ui.cash.display(status.cash)
+        self.ui.debt.display(status.debt)
+        self.ui.health.display(status.health)
+        self.ui.fame.display(status.fame)
+        self.ui.saving.display(status.saving)
+
+    def play_sound(self, name: str):
+        effect = QtMultimedia.QSoundEffect()
+        effect.setSource(QtCore.QUrl.fromLocalFile(f":/SND/sound/{name}"))
+        effect.setLoopCount(1)
+        effect.setVolume(0.8)
+        effect.play()
+
     def buy(self):
-        self.effect = QtMultimedia.QSoundEffect()
-        self.effect.setSource(QtCore.QUrl.fromLocalFile(":/SND/sound/buy.wav"))
-        self.effect.setLoopCount(1)
-        self.effect.setVolume(0.8)
-        self.effect.play()
+        pass
+        self.play_sound("buy.wav")
 
     def sell(self):
-        self.effect = QtMultimedia.QSoundEffect()
-        self.effect.setSource(QtCore.QUrl.fromLocalFile(":/SND/sound/money.wav"))
-        self.effect.setLoopCount(1)
-        self.effect.setVolume(0.8)
-        self.effect.play()
+        pass
+        self.play_sound("money.wav")
 
     def scroll(self):
         self.t_pos += 1.1

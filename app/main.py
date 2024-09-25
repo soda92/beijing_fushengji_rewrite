@@ -15,8 +15,7 @@ def main_gui():
     translator = QtCore.QTranslator()
     translator.load(":/translations/cn.qm")
     app.installTranslator(translator)
-    window = MainWindow()
-    window.hide()
+    _window = MainWindow()
     sys.exit(app.exec())
 
 
