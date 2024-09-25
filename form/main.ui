@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>780</width>
-    <height>656</height>
+    <width>1005</width>
+    <height>677</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -137,9 +137,15 @@ QLabel, QPushButton {
       <layout class="QHBoxLayout" name="horizontalLayout_8">
        <item>
         <widget class="QGroupBox" name="groupBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
-           <width>311</width>
+           <width>250</width>
            <height>191</height>
           </size>
          </property>
@@ -384,6 +390,12 @@ QLabel, QPushButton {
        </item>
        <item>
         <widget class="QWidget" name="widget_10" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>160</width>
@@ -392,7 +404,7 @@ QLabel, QPushButton {
          </property>
          <property name="maximumSize">
           <size>
-           <width>160</width>
+           <width>300</width>
            <height>190</height>
           </size>
          </property>
@@ -409,7 +421,8 @@ QLabel, QPushButton {
              <string notr="true">border: none;</string>
             </property>
             <property name="text">
-             <string>我要逛京城</string>
+             <string>I want to visit 
+the capital</string>
             </property>
            </widget>
           </item>
@@ -422,17 +435,32 @@ QLabel, QPushButton {
              </size>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <property name="spacing">
+              <number>6</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>2</number>
+             </property>
              <item>
               <widget class="QPushButton" name="pushButton_11">
                <property name="text">
-                <string>苹果园</string>
+                <string>Pingguoyuan</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_12">
                <property name="text">
-                <string>公主坟</string>
+                <string>Gongzhufen</string>
                </property>
               </widget>
              </item>
@@ -445,7 +473,7 @@ QLabel, QPushButton {
              <string notr="true">border: none;</string>
             </property>
             <property name="text">
-             <string>老板来了</string>
+             <string>Switch mode</string>
             </property>
            </widget>
           </item>
@@ -455,7 +483,7 @@ QLabel, QPushButton {
        <item>
         <widget class="QWidget" name="widget_9" native="true">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -470,7 +498,7 @@ QLabel, QPushButton {
           <item row="2" column="0">
            <widget class="QPushButton" name="pushButton_17">
             <property name="text">
-             <string>长椿街</string>
+             <string>Changchun Street</string>
             </property>
            </widget>
           </item>
@@ -483,49 +511,50 @@ QLabel, QPushButton {
              </sizepolicy>
             </property>
             <property name="text">
-             <string>东直门</string>
+             <string>Dongzhimen</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="pushButton_10">
             <property name="text">
-             <string>复兴门</string>
+             <string>Fuxingmen</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="pushButton_15">
             <property name="text">
-             <string>积水潭</string>
+             <string>Jishuitan</string>
             </property>
            </widget>
           </item>
           <item row="1" column="2">
            <widget class="QPushButton" name="pushButton_9">
             <property name="text">
-             <string>建国门</string>
+             <string>Jianguomen</string>
             </property>
            </widget>
           </item>
           <item row="0" column="0">
            <widget class="QPushButton" name="pushButton_14">
             <property name="text">
-             <string>西直门</string>
+             <string>Xizhimen</string>
             </property>
            </widget>
           </item>
           <item row="2" column="2">
            <widget class="QPushButton" name="pushButton_8">
             <property name="text">
-             <string>北京站</string>
+             <string>Beijing Railway 
+Station</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
            <widget class="QPushButton" name="pushButton_7">
             <property name="text">
-             <string>崇文门</string>
+             <string>Chongwenmen</string>
             </property>
            </widget>
           </item>
@@ -713,8 +742,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>780</width>
-     <height>24</height>
+     <width>1005</width>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -728,7 +757,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
-     <string>重要场所</string>
+     <string>Places</string>
     </property>
     <addaction name="bank"/>
     <addaction name="post_office"/>
@@ -739,7 +768,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </widget>
    <widget class="QMenu" name="menu_3">
     <property name="title">
-     <string>帮助</string>
+     <string>Help</string>
     </property>
     <addaction name="beijing_intro"/>
     <addaction name="story"/>
@@ -753,72 +782,72 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QStatusBar" name="statusbar"/>
   <action name="new_game">
    <property name="text">
-    <string>新游戏</string>
+    <string>new game</string>
    </property>
   </action>
   <action name="top_players">
    <property name="text">
-    <string>高手排行</string>
+    <string>Ranking</string>
    </property>
   </action>
   <action name="settings">
    <property name="text">
-    <string>游戏设置</string>
+    <string>Settings</string>
    </property>
   </action>
   <action name="exit_game">
    <property name="text">
-    <string>退出</string>
+    <string>exit</string>
    </property>
   </action>
   <action name="bank">
    <property name="text">
-    <string>银行</string>
+    <string>Bank</string>
    </property>
   </action>
   <action name="post_office">
    <property name="text">
-    <string>邮局</string>
+    <string>Post Office</string>
    </property>
   </action>
   <action name="hospital">
    <property name="text">
-    <string>医院</string>
+    <string>Hospital</string>
    </property>
   </action>
   <action name="airport">
    <property name="text">
-    <string>机场</string>
+    <string>Airport</string>
    </property>
   </action>
   <action name="rental_agency">
    <property name="text">
-    <string>租房中介</string>
+    <string>Rental Agency</string>
    </property>
   </action>
   <action name="cybercafe">
    <property name="text">
-    <string>网吧</string>
+    <string>Cyber Cafe</string>
    </property>
   </action>
   <action name="beijing_intro">
    <property name="text">
-    <string>北京简介</string>
+    <string>Beijing Intro</string>
    </property>
   </action>
   <action name="story">
    <property name="text">
-    <string>游戏故事</string>
+    <string>Game Story</string>
    </property>
   </action>
   <action name="game_help">
    <property name="text">
-    <string>游戏文档</string>
+    <string>Game Guide</string>
    </property>
   </action>
   <action name="about">
    <property name="text">
-    <string>关于本游戏</string>
+    <string>About this game</string>
    </property>
   </action>
  </widget>

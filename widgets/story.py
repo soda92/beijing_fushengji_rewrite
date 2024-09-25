@@ -30,11 +30,11 @@ class StoryDlg(QtWidgets.QWidget):
         )
 
         self.messages = [
-            self.tr("初始化黑客信息...."),
-            self.tr("初始化二环路信息....."),
-            self.tr("初始化黑市物品......"),
-            self.tr("初始化随机事件......"),
-            self.tr("加载北京实时新闻...."),
+            self.tr("Initialize hacker information...."),
+            self.tr("Initialize the second loop information....."),
+            self.tr("Initialize black market items..."),
+            self.tr("Initialize random events..."),
+            self.tr("Loading Beijing real-time news...."),
         ]
         self._count = 1
         self.ui.statusText.setText(self.messages[0])
@@ -57,11 +57,12 @@ class StoryDlg(QtWidgets.QWidget):
             )
 
     def finish_init(self):
-        self.ui.statusText.setText(self.tr("游戏初始化完毕,准备进入北京..."))
+        self.ui.statusText.setText(self.tr("The game has been initialized, ready to enter Beijing..."))
         self.ui.startGame.setEnabled(True)
+        self.ui.startGame.setFocus()
 
     def processHelpFile(self):
-        self.ui.statusText.setText(self.tr("初始化帮助信息...."))
+        self.ui.statusText.setText(self.tr("Initialization help information...."))
         from pathlib import Path
 
         CURRENT = Path(__file__).resolve().parent

@@ -255,92 +255,84 @@
         <translation type="vanished">名声:</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="412"/>
         <source>我要逛京城</source>
-        <translation>我要逛京城</translation>
+        <translation type="vanished">我要逛京城</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="428"/>
         <source>苹果园</source>
-        <translation>苹果园</translation>
+        <translation type="vanished">苹果园</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="435"/>
         <source>公主坟</source>
-        <translation>公主坟</translation>
+        <translation type="vanished">公主坟</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="448"/>
         <source>老板来了</source>
-        <translation>老板来了</translation>
+        <translation type="vanished">老板来了</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="473"/>
         <source>长椿街</source>
-        <translation>长椿街</translation>
+        <translation type="vanished">长椿街</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="486"/>
         <source>东直门</source>
-        <translation>东直门</translation>
+        <translation type="vanished">东直门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="493"/>
         <source>复兴门</source>
-        <translation>复兴门</translation>
+        <translation type="vanished">复兴门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="500"/>
         <source>积水潭</source>
-        <translation>积水潭</translation>
+        <translation type="vanished">积水潭</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="507"/>
         <source>建国门</source>
-        <translation>建国门</translation>
+        <translation type="vanished">建国门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="514"/>
         <source>西直门</source>
-        <translation>西直门</translation>
+        <translation type="vanished">西直门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="521"/>
         <source>北京站</source>
-        <translation>北京站</translation>
+        <translation type="vanished">北京站</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="528"/>
         <source>崇文门</source>
-        <translation>崇文门</translation>
+        <translation type="vanished">崇文门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="575"/>
+        <location filename="form/main.ui" line="604"/>
+        <location filename="form/main.ui" line="805"/>
         <source>Bank</source>
         <translation>银行</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="591"/>
+        <location filename="form/main.ui" line="620"/>
+        <location filename="form/main.ui" line="815"/>
         <source>Hospital</source>
         <translation>医院</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="610"/>
+        <location filename="form/main.ui" line="639"/>
+        <location filename="form/main.ui" line="810"/>
         <source>Post Office</source>
         <translation>邮局</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="626"/>
+        <location filename="form/main.ui" line="655"/>
         <source>Rental agency</source>
         <translation>租房中介</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="642"/>
+        <location filename="form/main.ui" line="671"/>
+        <location filename="form/main.ui" line="830"/>
         <source>Cyber Cafe</source>
-        <translation>街头网吧</translation>
+        <translation>网吧</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="695"/>
+        <location filename="form/main.ui" line="724"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -359,24 +351,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;R北京新闻: 市民反映有人在地铁口卖假酒 | 12:09 | Guoly Computing公司成立 | 12:20 | 北京市出台网上古玩市场管理规定 | 21:8.10  | Guoly Computing公司推出“北京浮生记”生存策略游戏 | 13:10 | Guoly Computing 寻求风险投资 (guoxh@hotmail.com) | 2:25.00  | 成都走私飞机北京人竞拍成功 | 2:45.50  | 京城大代理行：明年北京楼市大预言  | 3:55.00 | 车业再发狠招 北京汽车调千元 | 13:6.25  |  朝鲜支持北京申办奥运 | 2:35 | 著名画家安前类：北京与我的一个约定 | 8:28.30  | 机票打折变招术 50元就可以从北京东飞往昌平 | 16:2.30  | 北京把禁止燃放烟花爆竹同热爱动物结合起来 | 13:35.00 | 北京电脑体育彩票揭晓 12亿巨奖被一男子领取 | 7:06.00  | 西城“扫黄”正规军   出手“快准狠” | 4:62.00  | 北京警方严打买卖伪劣化妆品的人 | 10:60.00 | 京城目击：地铁口小贩猖獗，群众说有关部门应该管一管了 | 2:19.50  | 进口玩具电子商务网站(ePlayMe.com)在北京开通 | 20:1.80  | 首都20万师生联合签名支持申奥 | 23:1.00  | 《北京真理报》招聘记者周六进行复试 | 5:04.15  | 千年古酒亮相北京 假酒飘香堪称极品 | 9:16.00  | 农村发展高科技：卖VCD大军会京师 | 4:00.00  | 京城水货手机七大趋势令科学家关注 | 7:12:5 | 北京环保厕所进军美国  | 23:50 (美国西部时间) | 同乡反目三只耳朵被砍 | 5:40 | 警方凌晨出击 查获《看上去真的很假》五千册  | 4:08 | 北京新时尚：过节送彩票  | 19:45 | 留京工作大学生自豪地说：我们的住房100年后就可买到手 | 10:46 | 北京环境保护取得伟大成就，首钢比公园还美10多倍 | 7:13.00 | 市民张大爷反映有人在地铁口卖《上海小宝贝》 | 6:00  | 中关村某公司CEO误喝山西假白酒昏迷，进军Nsdq日期后推 | 20:0.50 | 《宇宙气功日报》：气沉丹田速成班开始报名 | 15:50 | 北京治安又上新台阶，被评为世界最安全城市 | 19:00.00  | 官员笑谈北京乱收费现象为什么不见了 | 20:00  | 工商局查处一处盗版VCD窝点 | 4:0:00  | 美国专家：北京的空气含有多种矿物质，营养丰富 | 8:15:00 (美国东部时间) | 一名贵汽车原来是厦门走私汽车 | 8:59:00  | 大学生毕业招聘会信息：邮电大学学生供不应求，多家IT企业抢人 | 4:16:00  | 世界小学生会聚北京，见识白色污染和沙尘暴 | 6:20:00 (巴黎时间) | 来自天鹅湖的感谢信：北京人救了野天鹅 | 6:18:00  | 香港会议上，北京被评为最廉洁的城市 | 6:48:00  | 坚持“亲戚第二、人才第一”的好区长 | 2:32:85 | 专家称：狐狸爱鸡.com网站不会倒闭，2年后就可赢利 | 3:30 | 领导说：北京的道路状况良好 | 4:07 | 市民抱怨北京报纸假医疗广告太多 | 5:53 | 陈狗猫小姐的《我爱北京的胡同》荣获征文第一名 | 4:40 | 小区居民正告小偷：不要再偷自行车了 | 10:85 | 擅迁他人户口 北京一派出所被告倒 | 4:00  | 北京一大学坚持“博士生导师”终身制，受到美国教授赞扬 | 19:09 | 北京体育彩票第150期 摇出一注特等奖 一等奖达2万 | 5:63 | 北京“牦牛胡同”考古挖掘，电视直播成闹剧 | 10:09 | 北京教师节期间餐厅等服务行业将延长营业时间 | 23：00 | 北京三百楼宇实现宽带接入 | 3:40 | 北京公安整治节日客运秩序 | 8:23 | 中关村有百万大学生在“打工”  | 2:00 | 我市污染企业比上一年减少12% | 11:34 | 证券市场实现新跨越 年度筹资首次破万亿大关  | 20:40 | 本日新闻结束，一分钟后重播 | 14:24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="722"/>
+        <location filename="form/main.ui" line="751"/>
         <source>System</source>
         <translation>系统</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="776"/>
         <source>银行</source>
-        <translation>银行</translation>
+        <translation type="vanished">银行</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="786"/>
         <source>医院</source>
-        <translation>医院</translation>
+        <translation type="vanished">医院</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="781"/>
         <source>邮局</source>
-        <translation>邮局</translation>
+        <translation type="vanished">邮局</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="14"/>
@@ -404,44 +393,164 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>您的出租屋</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="150"/>
+        <location filename="form/main.ui" line="156"/>
         <source>Your Status</source>
         <translation>您的状态</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="207"/>
+        <location filename="form/main.ui" line="213"/>
         <source>Cash</source>
         <translation>现金</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="248"/>
+        <location filename="form/main.ui" line="254"/>
         <source>Savings</source>
         <translation>存款</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="289"/>
+        <location filename="form/main.ui" line="295"/>
         <source>Debt</source>
         <translation>欠债</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="339"/>
+        <location filename="form/main.ui" line="345"/>
         <source>Health</source>
         <translation>健康</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="359"/>
+        <location filename="form/main.ui" line="365"/>
         <source>Fame</source>
         <translation>名声</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="796"/>
-        <source>租房中介</source>
+        <location filename="form/main.ui" line="424"/>
+        <source>I want to visit 
+the capital</source>
+        <translation>我要逛京城</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="456"/>
+        <source>Pingguoyuan</source>
+        <translation>苹果园</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="463"/>
+        <source>Gongzhufen</source>
+        <translation>公主坟</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="476"/>
+        <source>Switch mode</source>
+        <translation>老板来了</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="501"/>
+        <source>Changchun Street</source>
+        <translation>长椿街</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="514"/>
+        <source>Dongzhimen</source>
+        <translation>东直门</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="521"/>
+        <source>Fuxingmen</source>
+        <translation>复兴门</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="528"/>
+        <source>Jishuitan</source>
+        <translation>积水潭</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="535"/>
+        <source>Jianguomen</source>
+        <translation>建国门</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="542"/>
+        <source>Xizhimen</source>
+        <translation>西直门</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="549"/>
+        <source>Beijing Railway 
+Station</source>
+        <translation>北京站</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="557"/>
+        <source>Chongwenmen</source>
+        <translation>崇文门</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="760"/>
+        <source>Places</source>
+        <translation>重要场所</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="771"/>
+        <source>Help</source>
+        <translation>帮助</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="785"/>
+        <source>new game</source>
+        <translation>新游戏</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="790"/>
+        <source>Ranking</source>
+        <translation>高手排行</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="795"/>
+        <source>Settings</source>
+        <translation>设置</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="800"/>
+        <source>exit</source>
+        <translation>退出</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="820"/>
+        <source>Airport</source>
+        <translation>机场</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="825"/>
+        <source>Rental Agency</source>
         <translation>租房中介</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="801"/>
+        <location filename="form/main.ui" line="835"/>
+        <source>Beijing Intro</source>
+        <translation>北京简介</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="840"/>
+        <source>Game Story</source>
+        <translation>游戏故事</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="845"/>
+        <source>Game Guide</source>
+        <translation>游戏文档</translation>
+    </message>
+    <message>
+        <location filename="form/main.ui" line="850"/>
+        <source>About this game</source>
+        <translation>关于本游戏</translation>
+    </message>
+    <message>
+        <source>租房中介</source>
+        <translation type="vanished">租房中介</translation>
+    </message>
+    <message>
         <source>网吧</source>
-        <translation>网吧</translation>
+        <translation type="vanished">网吧</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -466,59 +575,48 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">系统</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="731"/>
         <source>重要场所</source>
-        <translation>重要场所</translation>
+        <translation type="vanished">重要场所</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="742"/>
         <source>帮助</source>
-        <translation>帮助</translation>
+        <translation type="vanished">帮助</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="756"/>
         <source>新游戏</source>
-        <translation>新游戏</translation>
+        <translation type="vanished">新游戏</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="761"/>
         <source>高手排行</source>
-        <translation>高手排行</translation>
+        <translation type="vanished">高手排行</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="766"/>
         <source>游戏设置</source>
-        <translation>游戏设置</translation>
+        <translation type="vanished">游戏设置</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="771"/>
         <source>退出</source>
-        <translation>退出</translation>
+        <translation type="vanished">退出</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="791"/>
         <source>机场</source>
-        <translation>机场</translation>
+        <translation type="vanished">机场</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="806"/>
         <source>北京简介</source>
-        <translation>北京简介</translation>
+        <translation type="vanished">北京简介</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="811"/>
         <source>游戏故事</source>
-        <translation>游戏故事</translation>
+        <translation type="vanished">游戏故事</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="816"/>
         <source>游戏文档</source>
-        <translation>游戏文档</translation>
+        <translation type="vanished">游戏文档</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="821"/>
         <source>关于本游戏</source>
-        <translation>关于本游戏</translation>
+        <translation type="vanished">关于本游戏</translation>
     </message>
 </context>
 <context>
@@ -586,38 +684,66 @@ li.checked::marker { content: &quot;\2612&quot;; }
 <context>
     <name>StoryDlg</name>
     <message>
-        <location filename="widgets/story.py" line="33"/>
         <source>初始化黑客信息....</source>
+        <translation type="vanished">初始化黑客信息....</translation>
+    </message>
+    <message>
+        <source>初始化二环路信息.....</source>
+        <translation type="vanished">初始化二环路信息.....</translation>
+    </message>
+    <message>
+        <source>初始化黑市物品......</source>
+        <translation type="vanished">初始化黑市物品......</translation>
+    </message>
+    <message>
+        <source>初始化随机事件......</source>
+        <translation type="vanished">初始化随机事件......</translation>
+    </message>
+    <message>
+        <source>加载北京实时新闻....</source>
+        <translation type="vanished">加载北京实时新闻....</translation>
+    </message>
+    <message>
+        <source>游戏初始化完毕,准备进入北京...</source>
+        <translation type="vanished">游戏初始化完毕,准备进入北京...</translation>
+    </message>
+    <message>
+        <source>初始化帮助信息....</source>
+        <translation type="vanished">初始化帮助信息....</translation>
+    </message>
+    <message>
+        <location filename="widgets/story.py" line="33"/>
+        <source>Initialize hacker information....</source>
         <translation>初始化黑客信息....</translation>
     </message>
     <message>
         <location filename="widgets/story.py" line="34"/>
-        <source>初始化二环路信息.....</source>
+        <source>Initialize the second loop information.....</source>
         <translation>初始化二环路信息.....</translation>
     </message>
     <message>
         <location filename="widgets/story.py" line="35"/>
-        <source>初始化黑市物品......</source>
+        <source>Initialize black market items...</source>
         <translation>初始化黑市物品......</translation>
     </message>
     <message>
         <location filename="widgets/story.py" line="36"/>
-        <source>初始化随机事件......</source>
+        <source>Initialize random events...</source>
         <translation>初始化随机事件......</translation>
     </message>
     <message>
         <location filename="widgets/story.py" line="37"/>
-        <source>加载北京实时新闻....</source>
+        <source>Loading Beijing real-time news....</source>
         <translation>加载北京实时新闻....</translation>
     </message>
     <message>
         <location filename="widgets/story.py" line="60"/>
-        <source>游戏初始化完毕,准备进入北京...</source>
+        <source>The game has been initialized, ready to enter Beijing...</source>
         <translation>游戏初始化完毕,准备进入北京...</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="64"/>
-        <source>初始化帮助信息....</source>
+        <location filename="widgets/story.py" line="65"/>
+        <source>Initialization help information....</source>
         <translation>初始化帮助信息....</translation>
     </message>
 </context>
