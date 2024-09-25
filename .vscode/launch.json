@@ -20,6 +20,24 @@
                 }
             },
             "preLaunchTask": "mybuild"
+        },
+        {
+            "name": "Main - Console",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/app/main.py",
+            "args": ["--console"],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "linux": {
+                "env": {
+                    "PYTHONPATH": "${workspaceFolder}",
+                    "HIDE_INTRO": "true",
+                }
+            },
+            "preLaunchTask": "mybuild"
         }
     ]
 }
