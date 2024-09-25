@@ -22,6 +22,17 @@
                 "command": "venv/bin/python"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "translate",
+            "command": "python",
+            "args": [
+                "tools/translate.py"
+            ],
+            "linux":{
+                "command": "venv/bin/python"
+            },
+            "problemMatcher": []
         }
     ]
 }

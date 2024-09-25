@@ -1,6 +1,6 @@
 from PySide6 import QtCore, QtMultimedia
 import sys
-import main_rc
+import main_rc  # noqa: F401
 
 class X(QtCore.QObject):
     def __init__(self, parent=None):
