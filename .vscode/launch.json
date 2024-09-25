@@ -16,6 +16,22 @@
             "linux": {
                 "env": {
                     "PYTHONPATH": "${workspaceFolder}",
+                }
+            },
+            "preLaunchTask": "mybuild"
+        },
+        {
+            "name": "Main - Skip Intro",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/app/main.py",
+            "console": "internalConsole",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "linux": {
+                "env": {
+                    "PYTHONPATH": "${workspaceFolder}",
                     "HIDE_INTRO": "true",
                 }
             },
