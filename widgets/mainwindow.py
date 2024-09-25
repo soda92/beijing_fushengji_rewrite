@@ -1,7 +1,7 @@
 from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
-from app.story import StoryDlg
-import sys
+from widgets.story import StoryDlg
 from ui.main import Ui_MainWindow
+from widgets.cybercafe import CyberCafe
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -23,9 +23,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
         import os
 
+        self.hide()
+
         hide_intro = os.environ.get("HIDE_INTRO", False)
-        if hide_intro == False:
-            self.hide()
+        if not hide_intro:
             self.show_intro()
         else:
             self.show()
@@ -78,8 +79,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.timer.start()
 
     def enter_cafe(self):
-        from app.cybercafe import CyberCafe
-
         self.cafe = CyberCafe()
         self.cafe.show()
 
@@ -90,22 +89,3 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def check_start(self):
         self.show()
-
-
-def main():
-    import os, platform
-
-    if platform.system() == "Linux":
-        # this will enable automaic load of fcitx plugin
-        os.environ["QT_PLUGIN_PATH"] = "/usr/lib/qt6/plugins/"
-    app = QtWidgets.QApplication(sys.argv)
-    print(QtCore.QLocale.system().name())
-    translator = QtCore.QTranslator()
-    translator.load(":/translations/cn.qm")
-    app.installTranslator(translator)
-    window = MainWindow()
-    sys.exit(app.exec())
-
-
-if __name__ == "__main__":
-    main()
