@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>北京浮生记</string>
+   <string>Beijing Life</string>
   </property>
   <property name="styleSheet">
    <string notr="true">/* CAUTION: do not modify, this is for preview, main stylesheet set in code */
@@ -31,7 +31,7 @@ QLabel, QPushButton {
           <item>
            <widget class="QLabel" name="label">
             <property name="text">
-             <string>黑市</string>
+             <string>Black Market</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -69,7 +69,7 @@ QLabel, QPushButton {
           <item>
            <widget class="QLabel" name="label_8">
             <property name="text">
-             <string>买进</string>
+             <string>Buy</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -86,7 +86,7 @@ QLabel, QPushButton {
           <item>
            <widget class="QLabel" name="label_9">
             <property name="text">
-             <string>卖出</string>
+             <string>Sell</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -109,7 +109,7 @@ QLabel, QPushButton {
           <item>
            <widget class="QLabel" name="label_7">
             <property name="text">
-             <string>您的出租屋</string>
+             <string>Your rented house</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -147,7 +147,7 @@ QLabel, QPushButton {
           <string notr="true"/>
          </property>
          <property name="title">
-          <string>您的状态</string>
+          <string>Your Status</string>
          </property>
          <layout class="QGridLayout" name="gridLayout">
           <property name="leftMargin">
@@ -204,7 +204,7 @@ QLabel, QPushButton {
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>现金</string>
+                   <string>Cash</string>
                   </property>
                  </widget>
                 </item>
@@ -245,7 +245,7 @@ QLabel, QPushButton {
                 <item>
                  <widget class="QLabel" name="label_3">
                   <property name="text">
-                   <string>存款:</string>
+                   <string>Savings</string>
                   </property>
                  </widget>
                 </item>
@@ -286,7 +286,7 @@ QLabel, QPushButton {
                 <item>
                  <widget class="QLabel" name="label_4">
                   <property name="text">
-                   <string>欠债</string>
+                   <string>Debt</string>
                   </property>
                  </widget>
                 </item>
@@ -336,7 +336,7 @@ QLabel, QPushButton {
                 <item>
                  <widget class="QLabel" name="label_5">
                   <property name="text">
-                   <string>健康:</string>
+                   <string>Health</string>
                   </property>
                  </widget>
                 </item>
@@ -356,7 +356,7 @@ QLabel, QPushButton {
                 <item>
                  <widget class="QLabel" name="label_6">
                   <property name="text">
-                   <string>名声:</string>
+                   <string>Fame</string>
                   </property>
                  </widget>
                 </item>
@@ -572,7 +572,7 @@ icon: url(:/bg/res/bank_hover.ico);
 }</string>
          </property>
          <property name="text">
-          <string>银行</string>
+          <string>Bank</string>
          </property>
         </widget>
        </item>
@@ -588,7 +588,7 @@ icon: url(:/bg/res/hospital_hover.ico);
 }</string>
          </property>
          <property name="text">
-          <string>医院</string>
+          <string>Hospital</string>
          </property>
          <property name="flat">
           <bool>false</bool>
@@ -607,7 +607,7 @@ icon: url(:/bg/res/postoffice_hover.ico);
 }</string>
          </property>
          <property name="text">
-          <string>邮局</string>
+          <string>Post Office</string>
          </property>
         </widget>
        </item>
@@ -623,7 +623,7 @@ icon: url(:/bg/res/rent_hover.ico);
 }</string>
          </property>
          <property name="text">
-          <string>租房中介</string>
+          <string>Rental agency</string>
          </property>
         </widget>
        </item>
@@ -639,7 +639,7 @@ icon: url(:/bg/res/netcafe_hover.ico);
 }</string>
          </property>
          <property name="text">
-          <string>网吧</string>
+          <string>Cyber Cafe</string>
          </property>
         </widget>
        </item>
@@ -699,7 +699,7 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;R北京新闻: 市民反映有人在地铁口卖假酒 | 12:09 | Guoly Computing公司成立 | 12:20 | 北京市出台网上古玩市场管理规定 | 21:8.10  | Guoly Computing公司推出“北京浮生记”生存策略游戏 | 13:10 | Guoly Computing 寻求风险投资 (guoxh@hotmail.com) | 2:25.00  | 成都走私飞机北京人竞拍成功 | 2:45.50  | 京城大代理行：明年北京楼市大预言  | 3:55.00 | 车业再发狠招 北京汽车调千元 | 13:6.25  |  朝鲜支持北京申办奥运 | 2:35 | 著名画家安前类：北京与我的一个约定 | 8:28.30  | 机票打折变招术 50元就可以从北京东飞往昌平 | 16:2.30  | 北京把禁止燃放烟花爆竹同热爱动物结合起来 | 13:35.00 | 北京电脑体育彩票揭晓 12亿巨奖被一男子领取 | 7:06.00  | 西城“扫黄”正规军   出手“快准狠” | 4:62.00  | 北京警方严打买卖伪劣化妆品的人 | 10:60.00 | 京城目击：地铁口小贩猖獗，群众说有关部门应该管一管了 | 2:19.50  | 进口玩具电子商务网站(ePlayMe.com)在北京开通 | 20:1.80  | 首都20万师生联合签名支持申奥 | 23:1.00  | 《北京真理报》招聘记者周六进行复试 | 5:04.15  | 千年古酒亮相北京 假酒飘香堪称极品 | 9:16.00  | 农村发展高科技：卖VCD大军会京师 | 4:00.00  | 京城水货手机七大趋势令科学家关注 | 7:12:5 | 北京环保厕所进军美国  | 23:50 (美国西部时间) | 同乡反目三只耳朵被砍 | 5:40 | 警方凌晨出击 查获《看上去真的很假》五千册  | 4:08 | 北京新时尚：过节送彩票  | 19:45 | 留京工作大学生自豪地说：我们的住房100年后就可买到手 | 10:46 | 北京环境保护取得伟大成就，首钢比公园还美10多倍 | 7:13.00 | 市民张大爷反映有人在地铁口卖《上海小宝贝》 | 6:00  | 中关村某公司CEO误喝山西假白酒昏迷，进军Nsdq日期后推 | 20:0.50 | 《宇宙气功日报》：气沉丹田速成班开始报名 | 15:50 | 北京治安又上新台阶，被评为世界最安全城市 | 19:00.00  | 官员笑谈北京乱收费现象为什么不见了 | 20:00  | 工商局查处一处盗版VCD窝点 | 4:0:00  | 美国专家：北京的空气含有多种矿物质，营养丰富 | 8:15:00 (美国东部时间) | 一名贵汽车原来是厦门走私汽车 | 8:59:00  | 大学生毕业招聘会信息：邮电大学学生供不应求，多家IT企业抢人 | 4:16:00  | 世界小学生会聚北京，见识白色污染和沙尘暴 | 6:20:00 (巴黎时间) | 来自天鹅湖的感谢信：北京人救了野天鹅 | 6:18:00  | 香港会议上，北京被评为最廉洁的城市 | 6:48:00  | 坚持“亲戚第二、人才第一”的好区长 | 2:32:85 | 专家称：狐狸爱鸡.com网站不会倒闭，2年后就可赢利 | 3:30 | 领导说：北京的道路状况良好 | 4:07 | 市民抱怨北京报纸假医疗广告太多 | 5:53 | 陈狗猫小姐的《我爱北京的胡同》荣获征文第一名 | 4:40 | 小区居民正告小偷：不要再偷自行车了 | 10:85 | 擅迁他人户口 北京一派出所被告倒 | 4:00  | 北京一大学坚持“博士生导师”终身制，受到美国教授赞扬 | 19:09 | 北京体育彩票第150期 摇出一注特等奖 一等奖达2万 | 5:63 | 北京“牦牛胡同”考古挖掘，电视直播成闹剧 | 10:09 | 北京教师节期间餐厅等服务行业将延长营业时间 | 23：00 | 北京三百楼宇实现宽带接入 | 3:40 | 北京公安整治节日客运秩序 | 8:23 | 中关村有百万大学生在“打工”  | 2:00 | 我市污染企业比上一年减少12% | 11:34 | 证券市场实现新跨越 年度筹资首次破万亿大关  | 20:40 | 本日新闻结束，一分钟后重播 | 14:24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Beijing News: Citizens reported that someone was selling counterfeit wine at the subway entrance | 12:09 | Guoly Computing company was established | 12:20 | Beijing issued management regulations for the online antiques market | 21:8.10 | Guoly Computing company launched &amp;quot;Beijing Fushengji&amp;quot; survival strategy Games | 13:10 | Guoly Computing seeks venture capital (guoxh@hotmail.com) | 2:25.00 | Chengdu smuggled plane successfully bids for Beijingers | 2:45.50 | Capital agency: big predictions for Beijing property market next year | 3:55.00 | The auto industry is once again aggressively recruiting Beijing Automobile to pay a thousand-yuan adjustment | 13:6.25 | North Korea supports Beijing's bid to host the Olympics | 2:35 | Famous painter An Qianlei: A promise between Beijing and me | 8:28.30 | Discounted air tickets for 50 yuan You can fly from Beijing East to Changping | 16:2.30 | Beijing combines the ban on setting off fireworks and firecrackers with the love for animals | 13:35.00 | Beijing Computer Sports Lottery announced that the 1.2 billion grand prize was claimed by a man | 7:06.00 | Xicheng's &amp;quot;anti-pornography&amp;quot; The regular army takes action &amp;quot;quickly, accurately and ruthlessly&amp;quot; | 4:62.00 | Beijing police crack down on those who buy and sell fake cosmetics | 10:60.00 | Witnesses in Beijing: Vendors are rampant at subway entrances, and people say the relevant departments should take control | 2:19.50 | Imported toys and electronics Business website (ePlayMe.com) launched in Beijing | 20:1.80 | 200,000 teachers and students in the capital signed in support of the Olympic bid | 23:1.00 | &amp;quot;Beijing Pravda&amp;quot; recruitment reporters will undergo re-examination on Saturday | 5:04.15 | Thousand-year-old wine appears in Beijing The fragrance of counterfeit wine is the best | 9:16.00 | High-tech development in rural areas: VCD sellers gather in the capital | 4:00.00 | Seven major trends in parallel-imported mobile phones in Beijing attract scientists' attention | 7:12:5 | Beijing's environmentally friendly toilets enter the United States | 23 :50 (US Western Time) | Three ears were cut off after a fellow villager turned against him | 5:40 | Police raided in the early morning and seized 5,000 copies of &amp;quot;It Looks Really Fake&amp;quot; | 4:08 | Beijing's new fashion: Give away lottery tickets during the holidays | 19: 45 | College students working in Beijing proudly say: Our housing will be available for purchase in 100 years | 10:46 | Beijing has made great achievements in environmental protection, Shougang is more than 10 times more beautiful than the park | 7:13.00 | Citizen Uncle Zhang reflects that some people Selling &amp;quot;Shanghai Baby&amp;quot; at the subway entrance | 6:00 | The CEO of a company in Zhongguancun accidentally drank Shanxi fake liquor and passed out, and the date of entering NSDQ was postponed | 20:0.50 | &amp;quot;Universal Qigong Daily&amp;quot;: Registration for the crash course on sinking qi in Dantian has begun | 15 :50 | Public security in Beijing has reached a new level and it has been rated as the safest city in the world | 19:00.00 | Officials joked about why the phenomenon of arbitrary fees in Beijing disappeared | 20:00 | The Industry and Commerce Bureau investigated a pirated VCD den | 4:0:00 | American experts: Beijing’s air contains a variety of minerals and is rich in nutrients | 8:15:00 (US Eastern Time) | An expensive car turned out to be a smuggled car in Xiamen | 8:59:00 | College graduate job fair information: University of Posts and Telecommunications The supply of students exceeds the demand, and many IT companies are snatching people | 4:16:00 | Primary school students from all over the world gather in Beijing to see white pollution and sandstorms | 6:20:00 (Paris time) | Letter of thanks from Swan Lake: Beijingers saved wild swans | 6:18:00 | At the Hong Kong conference, Beijing was rated as the cleanest city | 6:48:00 | A good district chief who insists on &amp;quot;putting relatives second and talents first&amp;quot; | 2:32:85 | Experts say: FoxLoveChicken.com website will not go bankrupt and will be profitable in 2 years | 3:30 | Leaders say: Beijing’s roads are in good condition | 4:07 | Citizens complain about too many fake medical advertisements in Beijing newspapers | 5:53 | Chen Gou Miss Cat's &amp;quot;I Love Beijing's Hutongs&amp;quot; won the first place in the essay competition | 4:40 | Community residents warned thieves: Stop stealing bicycles | 10:85 | A police station in Beijing was accused of moving someone else's household registration without permission | 4:00 | Beijing A university adheres to the lifelong system of &amp;quot;doctoral supervisors&amp;quot; and is praised by American professors | 19:09 | The 150th issue of the Beijing Sports Lottery draws a special prize of 20,000 first prize | 5:63 | Archaeological excavation of &amp;quot;Yak Hutong&amp;quot; in Beijing , the live TV broadcast turned into a farce | 10:09 | Restaurants and other service industries will extend their business hours during Teachers’ Day in Beijing | 23:00 | Three hundred buildings in Beijing have achieved broadband access | 3:40 | Beijing public security improves the order of passenger transportation during the festival | 8:23 | There are millions of college students &amp;quot;working&amp;quot; in Zhongguancun | 2:00 | Our city's polluting enterprises have decreased by 12% compared with the previous year | 11:34 | The securities market has achieved a new breakthrough and annual financing has exceeded the trillion mark for the first time | 20:40 | Today End of news, replay in one minute | 14:24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -719,7 +719,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
-     <string>系统</string>
+     <string>System</string>
     </property>
     <addaction name="new_game"/>
     <addaction name="top_players"/>

@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>461</width>
-    <height>502</height>
+    <width>586</width>
+    <height>531</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>北京浮生记</string>
+   <string>Beijing Life</string>
   </property>
   <property name="styleSheet">
    <string notr="true">/* CAUTION: do not modify, this is for preview, main stylesheet set in code */
@@ -53,7 +53,7 @@ background-repeat: none none;
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>“北京浮生记”的故事</string>
+         <string>The story of &quot;Beijing Life&quot;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -66,7 +66,7 @@ background-repeat: none none;
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>     您扮演一位从外地到北京谋生的青年。一开始，您只有2000元钱，并且还欠村长（一个流氓头子）5500元 债务。这些债务每天的利息高达10%.如果不及时还清，村长会叫在北京的老乡们来扁您，您可能牺牲在北京街头。 您决定在北京各地铁口黑市倒卖各种物品来发财致富，不仅还掉债务，而且要荣登北京富人排行榜。 </string>
+      <string>You play the role of a young man who comes to Beijing from other places to make a living. At the beginning, you only have 2,000 yuan, and you still owe a debt of 5,500 yuan to the village chief (a gangster leader). The daily interest on these debts is as high as 10%. If you do not pay it off in time, the village chief will call fellow villagers in Beijing to beat you up, and you may die on the streets of Beijing. You decide to get rich by reselling various items on the black market at subway entrances across Beijing. Not only do you want to pay off your debts, but you also want to be ranked among the richest people in Beijing.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -76,7 +76,7 @@ background-repeat: none none;
    <item>
     <widget class="QLabel" name="label_3">
      <property name="text">
-      <string>    您只能在北京呆40天，每次奔走一个黑市算一天。一开始，您租的房子只能放100个东西。 您会在北京遭遇到各种事件，您需要与流氓、小偷、凶手、贪官、骗子等斗智斗勇，还需要在北京恶劣的自然环境下设法生存下来。</string>
+      <string>You can only stay in Beijing for 40 days, and each visit to a black market counts as one day. In the beginning, you can only place 100 items in the house you rent. You will encounter various events in Beijing. You need to fight wits and courage with gangsters, thieves, murderers, corrupt officials, swindlers, etc. You also need to try to survive in Beijing's harsh natural environment.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -86,7 +86,7 @@ background-repeat: none none;
    <item>
     <widget class="QLabel" name="label_4">
      <property name="text">
-      <string>    您将体验在北京卖盗版VCD和走私汽车的刺激以及我们这个时代才有的搞笑事件。 </string>
+      <string>You will experience the excitement of selling pirated VCDs and smuggled cars in Beijing, as well as the funny events that are unique to our time.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -106,7 +106,7 @@ background-repeat: none none;
    <item>
     <widget class="QPushButton" name="startGame">
      <property name="text">
-      <string>开始游戏 &gt;&gt;</string>
+      <string>Start Game &gt;&gt;</string>
      </property>
     </widget>
    </item>

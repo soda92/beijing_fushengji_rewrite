@@ -9,7 +9,7 @@ class StoryDlg(QtWidgets.QWidget):
         super().__init__(parent)
         self.ui = Ui_Story()
         self.ui.setupUi(self)
-        font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/test-font.ttf")
+        font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/font.ttf")
         family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
         self.setStyleSheet(
             """
@@ -17,7 +17,7 @@ class StoryDlg(QtWidgets.QWidget):
                 font: 12pt {family};
             }
             """.replace(
-                "{family}", "MiSans"
+                "{family}", family
             )
         )
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
@@ -30,11 +30,11 @@ class StoryDlg(QtWidgets.QWidget):
         )
 
         self.messages = [
-            "初始化黑客信息....",
-            "初始化二环路信息.....",
-            "初始化黑市物品......",
-            "初始化随机事件......",
-            "加载北京实时新闻....",
+            self.tr("初始化黑客信息...."),
+            self.tr("初始化二环路信息....."),
+            self.tr("初始化黑市物品......"),
+            self.tr("初始化随机事件......"),
+            self.tr("加载北京实时新闻...."),
         ]
         self._count = 1
         self.ui.statusText.setText(self.messages[0])
@@ -57,11 +57,11 @@ class StoryDlg(QtWidgets.QWidget):
             )
 
     def finish_init(self):
-        self.ui.statusText.setText("游戏初始化完毕,准备进入北京...")
+        self.ui.statusText.setText(self.tr("游戏初始化完毕,准备进入北京..."))
         self.ui.startGame.setEnabled(True)
 
     def processHelpFile(self):
-        self.ui.statusText.setText("初始化帮助信息....")
+        self.ui.statusText.setText(self.tr("初始化帮助信息...."))
         from pathlib import Path
 
         CURRENT = Path(__file__).resolve().parent
