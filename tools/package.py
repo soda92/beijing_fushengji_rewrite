@@ -3,9 +3,9 @@ from pathlib import Path
 
 CURRENT = Path(__file__).resolve().parent
 
-import contextlib
+import contextlib  # noqa: E402
 
-import platform
+import platform  # noqa: E402
 
 PYINSTALLER = "pyinstaller" if platform.system() != "Linux" else "venv/bin/pyinstaller"
 
