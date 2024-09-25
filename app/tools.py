@@ -1,5 +1,7 @@
-import sys, os
+import sys
+import os
 from PySide6 import QtWidgets
+from app.models import Status, Item
 
 
 def debugger_is_active() -> bool:
@@ -33,3 +35,11 @@ def test_dirs():
 
     if debugger_is_active() or Debug:
         print_dirs()
+
+
+def load_data() -> (Status, list[Item], list[Item]):
+    status = Status()
+    market_items = []
+    my_items = []
+
+    return status, market_items, my_items
