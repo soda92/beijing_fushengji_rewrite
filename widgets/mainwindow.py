@@ -61,11 +61,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.saving.display(status.saving)
 
     def play_sound(self, name: str):
-        effect = QtMultimedia.QSoundEffect()
-        effect.setSource(QtCore.QUrl.fromLocalFile(f":/SND/sound/{name}"))
-        effect.setLoopCount(1)
-        effect.setVolume(0.8)
-        effect.play()
+        # the "self" is important because sound will run in the background
+        self.effect = QtMultimedia.QSoundEffect()
+        self.effect.setSource(QtCore.QUrl.fromLocalFile(f":/SND/sound/{name}"))
+        self.effect.setLoopCount(1)
+        self.effect.setVolume(0.8)
+        self.effect.play()
 
     def buy(self):
         pass

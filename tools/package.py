@@ -9,6 +9,8 @@ import platform  # noqa: E402
 
 PYINSTALLER = "pyinstaller" if platform.system() != "Linux" else "venv/bin/pyinstaller"
 
+PREFIX = "" if platform.system() != "Linux" else "venv/bin/"
+
 @contextlib.contextmanager
 def cd(dir: str):
     import os
@@ -23,6 +25,7 @@ def cd(dir: str):
 
 def run_pyinstaller():
     with cd(str(CURRENT.parent)):
+        subprocess.run(f"{PREFIX}python {CURRENT.name}/compile_all.py".split(), check=True)
         subprocess.run(f"{PYINSTALLER} entry.py.spec".split(), check=True)
 
 
