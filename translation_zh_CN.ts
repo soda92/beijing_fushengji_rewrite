@@ -623,20 +623,20 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
     <message>
         <location filename="form/main.ui" line="443"/>
-        <location filename="widgets/mainwindow.py" line="100"/>
+        <location filename="widgets/mainwindow.py" line="107"/>
         <source>I want to visit 
 the capital</source>
         <translation>我要逛京城</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="475"/>
-        <location filename="widgets/mainwindow.py" line="75"/>
+        <location filename="widgets/mainwindow.py" line="82"/>
         <source>Pingguoyuan</source>
         <translation>苹果园</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="482"/>
-        <location filename="widgets/mainwindow.py" line="76"/>
+        <location filename="widgets/mainwindow.py" line="83"/>
         <source>Gongzhufen</source>
         <translation>公主坟</translation>
     </message>
@@ -647,50 +647,50 @@ the capital</source>
     </message>
     <message>
         <location filename="form/main.ui" line="528"/>
-        <location filename="widgets/mainwindow.py" line="82"/>
+        <location filename="widgets/mainwindow.py" line="89"/>
         <source>Changchun Street</source>
         <translation>长椿街</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="541"/>
-        <location filename="widgets/mainwindow.py" line="79"/>
+        <location filename="widgets/mainwindow.py" line="86"/>
         <source>Dongzhimen</source>
         <translation>东直门</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="548"/>
-        <location filename="widgets/mainwindow.py" line="80"/>
+        <location filename="widgets/mainwindow.py" line="87"/>
         <source>Fuxingmen</source>
         <translation>复兴门</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="555"/>
-        <location filename="widgets/mainwindow.py" line="78"/>
+        <location filename="widgets/mainwindow.py" line="85"/>
         <source>Jishuitan</source>
         <translation>积水潭</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="562"/>
-        <location filename="widgets/mainwindow.py" line="81"/>
+        <location filename="widgets/mainwindow.py" line="88"/>
         <source>Jianguomen</source>
         <translation>建国门</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="569"/>
-        <location filename="widgets/mainwindow.py" line="77"/>
+        <location filename="widgets/mainwindow.py" line="84"/>
         <source>Xizhimen</source>
         <translation>西直门</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="576"/>
-        <location filename="widgets/mainwindow.py" line="74"/>
+        <location filename="widgets/mainwindow.py" line="81"/>
         <source>Beijing Railway 
 Station</source>
         <translation>北京站</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="584"/>
-        <location filename="widgets/mainwindow.py" line="83"/>
+        <location filename="widgets/mainwindow.py" line="90"/>
         <source>Chongwenmen</source>
         <translation>崇文门</translation>
     </message>
@@ -829,57 +829,57 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">关于本游戏</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="86"/>
+        <location filename="widgets/mainwindow.py" line="93"/>
         <source>Fangzhuang</source>
         <translation>方庄</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="87"/>
+        <location filename="widgets/mainwindow.py" line="94"/>
         <source>Bajiao West Road</source>
         <translation>八角西路</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="88"/>
+        <location filename="widgets/mainwindow.py" line="95"/>
         <source>Cuiwei Road</source>
         <translation>翠微路</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="89"/>
+        <location filename="widgets/mainwindow.py" line="96"/>
         <source>Haidian Street</source>
         <translation>海淀大街</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="90"/>
+        <location filename="widgets/mainwindow.py" line="97"/>
         <source>Asian Games Village</source>
         <translation>亚运村</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="91"/>
+        <location filename="widgets/mainwindow.py" line="98"/>
         <source>Sanyuan West Bridge</source>
         <translation>三元西桥</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="92"/>
+        <location filename="widgets/mainwindow.py" line="99"/>
         <source>Fuyou Street</source>
         <translation>府右街</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="93"/>
+        <location filename="widgets/mainwindow.py" line="100"/>
         <source>Yong&apos;anli</source>
         <translation>永安里</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="94"/>
+        <location filename="widgets/mainwindow.py" line="101"/>
         <source>Yuquanying</source>
         <translation>玉泉营</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="95"/>
+        <location filename="widgets/mainwindow.py" line="102"/>
         <source>Yongdingmen</source>
         <translation>永定门</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="104"/>
+        <location filename="widgets/mainwindow.py" line="111"/>
         <source>I want to go
  to the subway</source>
         <translation>我要进地铁</translation>
@@ -1123,6 +1123,81 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <location filename="widgets/story.py" line="65"/>
         <source>Initialization help information....</source>
         <translation>初始化帮助信息....</translation>
+    </message>
+</context>
+<context>
+    <name>TextEditor</name>
+    <message>
+        <location filename="form/text_editor.ui" line="14"/>
+        <source>Writing</source>
+        <translation>写作</translation>
+    </message>
+    <message>
+        <location filename="form/text_editor.ui" line="20"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Some specific ideas about doing a good job this month&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. Adhere to doing your job well and further grasp the coordination tasks in business and technology. Work should be focused.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Listen to colleagues&apos; opinions humbly. This is very important.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. My current work situation is very good, but I must strive for better and improve my ability endlessly.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. Be proactive, positive, make plans, complete plans on time, and ask yourself every day: How am I doing at work?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5. The boss and manager are very capable, and they care about me very much. I must work hard.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;6. After get off work every day, clean up your desk, because cleanliness helps to create a high-efficiency working atmosphere and gives people a feeling of fresh air.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;7. At midnight every Saturday, you should think about what to do next week, and it is best to put the easier things on Thursday afternoon, so that you will be full of energy for half a week.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;8. Don&apos;t speak and do things on your own. The manager and boss should give instructions on important matters. They are absolutely right.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;关于做好本月工作的一些具体想法&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;一、坚持做好本职工作，把业务和技术方面的协调任务进一步抓起来。工作要专注。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;二、虚心听取同事的意见。这一点很重要。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;三、我目前工作情况很好，但是要争取更好，无止境地提高自己的能力。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;四、主动、积极、制定计划、按时完成计划，每一天都要问自己：我工作得怎么样了？&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;五、老板、经理非常有能力，而且对我很关心很照顾，我一定要认真工作。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;六、每天下班后，把自己的办公桌收拾干净，因为整洁有助于营造高效益的工作气氛，也能给人空气清香的感觉。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;七、每周六半夜，应把下一周该做的事情考虑好，并且最好把较容易的事放在周四下午，半个星期都干劲十足。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;八、说话和做事不要自做主张，重要的事都要经理和老板指点，他们是绝对是正确的。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="form/text_editor.ui" line="55"/>
+        <source>Save</source>
+        <translation>存盘</translation>
+    </message>
+    <message>
+        <location filename="form/text_editor.ui" line="62"/>
+        <source>Check Grammar</source>
+        <translation>拼写检查</translation>
+    </message>
+    <message>
+        <location filename="form/text_editor.ui" line="69"/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+    <message>
+        <location filename="widgets/text_editor.py" line="19"/>
+        <source>Grammar</source>
+        <translation>拼写</translation>
+    </message>
+    <message>
+        <location filename="widgets/text_editor.py" line="20"/>
+        <source>Spell check suggestion: &quot;Fragrant air&quot; changed to &quot;Fresh air&quot;; &quot;Boss&quot; changed to &quot;Boss lady&quot;.</source>
+        <translation>拼写检查建议：“空气清香”改为“空气清新”；“老板”改为“老板娘”。</translation>
+    </message>
+    <message>
+        <source>Spell check suggestion: &quot;Fragrant air&quot; changed to &quot;Fresh air&quot;
+&quot;Boss&quot; changed to &quot;Boss lady&quot;.</source>
+        <translation type="vanished">拼写检查建议：“空气清香”改为“空气清新”\n“老板”改为“老板娘”。</translation>
     </message>
 </context>
 </TS>

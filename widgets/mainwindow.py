@@ -5,6 +5,7 @@ from widgets.cybercafe import CyberCafe
 from widgets.about import AboutGame
 from widgets.settings import Settings
 from widgets.airport import Airport
+from widgets.text_editor import TextEditor
 from app.tools import load_data
 
 
@@ -66,7 +67,13 @@ class MainWindow(QtWidgets.QMainWindow):
         self.in_subway = True
         self.ui.switch_place.clicked.connect(self.switch_place)
 
+        self.ui.switch_mode.clicked.connect(self.switch_mode)
+
         self.init_data()
+
+    def switch_mode(self):
+        self.text_editor = TextEditor()
+        self.text_editor.show()
 
     def switch_place(self):
         self.in_subway = not self.in_subway
