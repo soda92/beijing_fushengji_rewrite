@@ -57,7 +57,61 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.airport.triggered.connect(self.go_airport)
         self.ui.settings.triggered.connect(self.show_settings)
 
+        self.places: list[QtWidgets.QPushButton] = [
+            getattr(self.ui, f"x{i}") for i in range(10)
+        ]
+        for i in range(len(self.places)):
+            self.places[i].clicked.connect(self.getaction(i))
+
+        self.in_subway = True
+        self.ui.switch_place.clicked.connect(self.switch_place)
+
         self.init_data()
+
+    def switch_place(self):
+        self.in_subway = not self.in_subway
+        self.texts_subway = [
+            self.tr("Beijing Railway \nStation"),
+            self.tr("Pingguoyuan"),
+            self.tr("Gongzhufen"),
+            self.tr("Xizhimen"),
+            self.tr("Jishuitan"),
+            self.tr("Dongzhimen"),
+            self.tr("Fuxingmen"),
+            self.tr("Jianguomen"),
+            self.tr("Changchun Street"),
+            self.tr("Chongwenmen"),
+        ]
+        self.texts_city = [
+            self.tr("Fangzhuang"),
+            self.tr("Bajiao West Road"),
+            self.tr("Cuiwei Road"),
+            self.tr("Haidian Street"),
+            self.tr("Asian Games Village"),
+            self.tr("Sanyuan West Bridge"),
+            self.tr("Fuyou Street"),
+            self.tr("Yong'anli"),
+            self.tr("Yuquanying"),
+            self.tr("Yongdingmen"),
+        ]
+        for i in self.places:
+            i.setDisabled(False)
+        if self.in_subway:
+            self.ui.switch_place.setText(self.tr("I want to visit \nthe capital"))
+            for i in range(len(self.places)):
+                self.places[i].setText(self.texts_subway[i])
+        else:
+            self.ui.switch_place.setText(self.tr("I want to go\n to the subway"))
+            for i in range(len(self.places)):
+                self.places[i].setText(self.texts_city[i])
+
+    def getaction(self, btn_number: int):
+        def action():
+            for i in self.places:
+                i.setDisabled(False)
+            self.places[btn_number].setDisabled(True)
+
+        return action
 
     def show_settings(self):
         self.d_settings = Settings()
