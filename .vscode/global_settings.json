@@ -1,0 +1,42 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "files.autoSave": "afterDelay",
+    "rust-analyzer.server.extraEnv": {
+        "PATH": "C:/msys64/ucrt64/bin"
+    },
+    "window.zoomLevel": 1.25,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "msys ucrt64": {
+            "path": "C:/msys64/msys2_shell.cmd",
+            "args": [
+                "-defterm",
+                "-here",
+                "-no-start",
+                "-ucrt64",
+                "-c",
+                "fish"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "msys ucrt64",
+    "extensions":[
+        "ruff",
+        "rust-analyzer",
+        "ms-python"
+    ]
+}
