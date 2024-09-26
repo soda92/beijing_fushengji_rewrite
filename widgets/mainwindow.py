@@ -2,6 +2,7 @@ from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
 from widgets.story import StoryDlg
 from ui.main import Ui_MainWindow
 from widgets.cybercafe import CyberCafe
+from widgets.about import AboutGame
 from app.tools import load_data
 
 
@@ -46,11 +47,17 @@ class MainWindow(QtWidgets.QMainWindow):
         self.timer.setInterval(20)
         self.timer.timeout.connect(self.scroll)
         self.t_pos = 0
-        self.timer.start()
+        QtCore.QTimer.singleShot(7000, lambda: self.timer.start())
         self.ui.ticker.enterEvent = lambda _: self.timer.stop()
         self.ui.ticker.leaveEvent = lambda _: self.timer.start()
 
+        self.ui.about.triggered.connect(self.show_about)
+
         self.init_data()
+
+    def show_about(self):
+        self.about_game = AboutGame()
+        self.about_game.show()
 
     def init_data(self):
         status, market_items, my_items = load_data()
@@ -89,7 +96,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def restart_scroll(self):
         self.t_pos = 0
-        self.timer.start()
+        QtCore.QTimer.singleShot(7000, lambda: self.timer.start())
+
 
     def enter_cafe(self):
         self.cafe = CyberCafe()
