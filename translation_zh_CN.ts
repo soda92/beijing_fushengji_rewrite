@@ -168,6 +168,33 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
 </context>
 <context>
+    <name>Airport</name>
+    <message>
+        <location filename="form/airport.ui" line="14"/>
+        <source>Capital Airport</source>
+        <translation>首都机场</translation>
+    </message>
+    <message>
+        <location filename="form/airport.ui" line="20"/>
+        <source>Do you want to fly to the United States and build a global trade network?</source>
+        <translation>您想飞到美国，在全球建立贸易网？</translation>
+    </message>
+    <message>
+        <location filename="form/airport.ui" line="33"/>
+        <source>In the upcoming version 2.0, you can engage in international trade between major cities in the world (New York, Tokyo, London, Paris, Shanghai, Mumbai, Singapore, and Pyongyang in North Korea).
+ Selling food to North Korea? Sell ​​cosmetics from Paris? Selling Indian specialties in New York? Or import Southeast Asian fruits to Singapore?
+ The most exciting thing is probably in Tokyo! Reselling Japanese specialties - &quot;Despicable Medicine&quot; and &quot;Despicable Meatballs&quot;!</source>
+        <translation>即将到来的2.0版本中，您可以在世界各大城市（纽约、东京、伦敦、巴黎、上海、孟买、新加坡和朝鲜的平壤）间从事国际贸易。
+给朝鲜卖粮食？从巴黎倒卖化妆品？在纽约卖印度特产？还是到新加坡进口东南亚水果？
+最刺激的恐怕是在东京!  倒卖日本特产----“死不认帐药”和“卑鄙丸子”！</translation>
+    </message>
+    <message>
+        <location filename="form/airport.ui" line="64"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+</context>
+<context>
     <name>CyberCafe</name>
     <message>
         <location filename="form/net_cafe.ui" line="17"/>
@@ -821,6 +848,43 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <location filename="form/send_money.ui" line="53"/>
         <source>OK</source>
         <translation>OK</translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="form/settings.ui" line="14"/>
+        <source>Settings</source>
+        <translation>游戏设置</translation>
+    </message>
+    <message>
+        <source>TextLabel</source>
+        <translation type="obsolete">《》</translation>
+    </message>
+    <message>
+        <location filename="form/settings.ui" line="29"/>
+        <source>Allow hackers to attack banking networks</source>
+        <translation>允许黑客攻击银行网络</translation>
+    </message>
+    <message>
+        <location filename="form/settings.ui" line="36"/>
+        <source>Your deposit may decrease or increase wildly, so be careful.</source>
+        <translation>您的存款可能疯狂减少或者增加，小心为妙。</translation>
+    </message>
+    <message>
+        <location filename="form/settings.ui" line="46"/>
+        <source>turn off sound</source>
+        <translation>关闭声音</translation>
+    </message>
+    <message>
+        <location filename="form/settings.ui" line="78"/>
+        <source>Confirm</source>
+        <translation>确定</translation>
+    </message>
+    <message>
+        <location filename="form/settings.ui" line="98"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
     </message>
 </context>
 <context>

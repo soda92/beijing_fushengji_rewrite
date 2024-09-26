@@ -3,6 +3,8 @@ from widgets.story import StoryDlg
 from ui.main import Ui_MainWindow
 from widgets.cybercafe import CyberCafe
 from widgets.about import AboutGame
+from widgets.settings import Settings
+from widgets.airport import Airport
 from app.tools import load_data
 
 
@@ -52,8 +54,18 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.ticker.leaveEvent = lambda _: self.timer.start()
 
         self.ui.about.triggered.connect(self.show_about)
+        self.ui.airport.triggered.connect(self.go_airport)
+        self.ui.settings.triggered.connect(self.show_settings)
 
         self.init_data()
+
+    def show_settings(self):
+        self.d_settings = Settings()
+        self.d_settings.show()
+
+    def go_airport(self):
+        self.d_airport = Airport()
+        self.d_airport.show()
 
     def show_about(self):
         self.about_game = AboutGame()
@@ -97,7 +109,6 @@ class MainWindow(QtWidgets.QMainWindow):
     def restart_scroll(self):
         self.t_pos = 0
         QtCore.QTimer.singleShot(7000, lambda: self.timer.start())
-
 
     def enter_cafe(self):
         self.cafe = CyberCafe()
