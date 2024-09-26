@@ -1,8 +1,28 @@
 from pathlib import Path
 import subprocess
 import platform
+import contextlib
+
+
+@contextlib.contextmanager
+def cd(dir: str):
+    import os
+
+    cwd = os.getcwd()
+    try:
+        os.chdir(dir)
+        yield
+    finally:
+        os.chdir(cwd)
+
 
 PREFIX = "" if platform.system() != "Linux" else "venv/bin/"
+
+LINUX = platform.system() == "Linux"
+UCRT = False
+if platform.system() == "Windows":
+    if Path("C:/msys64/ucrt64").exists():
+        UCRT = True
 
 CURRENT = Path(__file__).resolve().parent
 form_dir = CURRENT.parent.joinpath("form")
@@ -22,17 +42,30 @@ def get_dest_path(file: Path) -> Path:
 
 def compile(file: Path):
     dest_path = get_dest_path(file)
-    subprocess.run(f"{PREFIX}pyside6-uic {str(file)} -o {str(dest_path)}".split(), check=True)
+
+    command = "venv/Scripts/pyside6-uic.exe"
+    if LINUX:
+        command = "venv/bin/pyside6-uic"
+    subprocess.run(f"{command} {str(file)} -o {str(dest_path)}".split(), check=True)
+
+
+def compile_rc():
+    command = "venv/Scripts/pyside6-rcc.exe"
+    if LINUX:
+        command = "venv/bin/pyside6-rcc"
+    subprocess.run(
+        f"{command} {str(CURRENT.parent.joinpath('main.qrc'))} -o {str(CURRENT.parent.joinpath('main_rc.py'))}".split(),
+        check=True,
+    )
 
 
 def main():
     ui_dir.mkdir(parents=True, exist_ok=True)
     for i in get_ui_files():
         compile(i)
-    subprocess.run(
-        f"{PREFIX}pyside6-rcc {str(CURRENT.parent.joinpath('main.qrc'))} -o {str(CURRENT.parent.joinpath('main_rc.py'))}".split(),
-        check=True,
-    )
+
+    compile_rc()
+
 
 if __name__ == "__main__":
     main()

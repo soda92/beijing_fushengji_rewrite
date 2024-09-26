@@ -1,0 +1,42 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "files.autoSave": "afterDelay",
+    "rust-analyzer.server.extraEnv": {
+        "PATH": "C:/msys64/ucrt64/bin"
+    },
+    "window.zoomLevel": 1.25,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "MSYS2": {
+            "path": "C:\\msys64\\usr\\bin\\fish.exe",
+            "args": [
+                "--login",
+                "-i"
+            ],
+            "env": {
+                "MSYSTEM": "UCRT64",
+                "CHERE_INVOKING": "1"
+            }
+        }
+    },
+    "extensions": [
+        "ruff",
+        "rust-analyzer",
+        "ms-python",
+        "tamasfe.even-better-toml"
+    ]
+}

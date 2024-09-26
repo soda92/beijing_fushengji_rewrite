@@ -2,6 +2,7 @@ import subprocess
 import pathlib
 import contextlib
 from pathlib import Path
+import platform
 
 CURRENT = Path(__file__).resolve().parent
 
@@ -47,8 +48,17 @@ def generate():
 
 
 def translate():
-    with cd(str(CURRENT.parent)):
-        run("pyside6-linguist translation_zh_CN.ts")
+    UCRT = False
+    if platform.system() == "Windows":
+        if Path("C:/msys64/ucrt64").exists():
+            UCRT = True
+    if UCRT:
+        subprocess.run(
+            "C:/msys64/ucrt64/bin/linguist.exe translation_zh_CN.ts".split(), check=True
+        )
+    else:
+        with cd(str(CURRENT.parent)):
+            run("pyside6-linguist translation_zh_CN.ts")
 
 
 def compile():
