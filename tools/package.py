@@ -1,7 +1,7 @@
 import subprocess
 from pathlib import Path
 import sys
-import shutil
+import shutil  # noqa: F401
 import contextlib
 
 CURRENT = Path(__file__).resolve().parent
@@ -40,6 +40,6 @@ sys.path.insert(0, str(CURRENT.parent))
 
 if __name__ == "__main__":
     run_pyinstaller()
-    with cd(str(CURRENT.parent)):
-        shutil.copy("res/MiSans-Regular.ttf", "dist")
-    subprocess.run(f"explorer {str(CURRENT.parent.joinpath('dist'))}".split(), check=False)
+    # with cd(str(CURRENT.parent)):
+    #     shutil.copy("res/MiSans-Regular.ttf", "dist")
+    # subprocess.run(f"explorer {str(CURRENT.parent.joinpath('dist'))}".split(), check=False)
