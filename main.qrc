@@ -22,6 +22,7 @@
     <file>res/rent.ico</file>
     <file>res/rent_hover.ico</file>
     <file>res/logo.bmp</file>
+    <file>res/diary.bmp</file>
   </qresource>
   <qresource prefix="SND">
     <file>sound/vomit.wav</file>

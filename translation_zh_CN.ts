@@ -242,6 +242,24 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
 </context>
 <context>
+    <name>Diary</name>
+    <message>
+        <location filename="form/diary.ui" line="14"/>
+        <source>My days in Beijing</source>
+        <translation>我在北京的岁月</translation>
+    </message>
+    <message>
+        <location filename="form/diary.ui" line="54"/>
+        <source>TextLabel</source>
+        <translation>《》</translation>
+    </message>
+    <message>
+        <location filename="form/diary.ui" line="80"/>
+        <source>Close Diary</source>
+        <translation>关上日记本</translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <location filename="console/mainwindow.py" line="12"/>
@@ -807,6 +825,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
 </context>
 <context>
     <name>Statements</name>
+    <message>
+        <location filename="form/statements.ui" line="14"/>
+        <source>---</source>
+        <translation>---</translation>
+    </message>
     <message>
         <location filename="form/statements.ui" line="23"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
