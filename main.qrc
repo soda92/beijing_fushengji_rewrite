@@ -21,6 +21,7 @@
     <file>res/bank_hover.ico</file>
     <file>res/rent.ico</file>
     <file>res/rent_hover.ico</file>
+    <file>res/logo.bmp</file>
   </qresource>
   <qresource prefix="SND">
     <file>sound/vomit.wav</file>
