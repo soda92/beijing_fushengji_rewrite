@@ -3,7 +3,7 @@ import pathlib
 import contextlib
 from pathlib import Path
 import sys
-from compile_all import main as compile_main
+from compile_all import compile_forms
 
 CURRENT = Path(__file__).resolve().parent
 sys.path.insert(0, str(CURRENT.parent))
@@ -49,4 +49,4 @@ def design():
 
 if __name__ == "__main__":
     design()
-    compile_main()
+    compile_forms()

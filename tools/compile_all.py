@@ -59,11 +59,13 @@ def compile_rc():
     )
 
 
-def main():
+def compile_forms():
     ui_dir.mkdir(parents=True, exist_ok=True)
     for i in get_ui_files():
         compile(i)
 
+def main():
+    compile_forms()
     compile_rc()
 
 
