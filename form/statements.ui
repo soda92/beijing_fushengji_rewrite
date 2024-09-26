@@ -13,12 +13,22 @@
   <property name="windowTitle">
    <string>---</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit {
+                font: 12pt MiSans;
+            }</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QWidget" name="widget" native="true">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QTextBrowser" name="textBrowser">
+        <property name="styleSheet">
+         <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit {
+                font: 12pt MiSans;
+            }</string>
+        </property>
         <property name="html">
          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -26,13 +36,13 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Special statement about this game&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. The plots, scenes and ways of doing things described in this game are purely fictitious and have no allusion to reality. Not all rental agencies in Beijing are fraudulent, just as not all officials are corrupt.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Some of the attributes of items in this game (smuggled goods, counterfeit goods, banned books) and certain player behaviors set by the game (reselling items prohibited by law) are illegal and unacceptable in real society and morality. Therefore, this game is prohibited from being played by people under the age of 20 who have not yet established a sense of right and wrong. People of other ages must understand the virtual nature of the game, the illegality of smuggling and counterfeiting, and abide by all national laws and regulations when playing this game.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. This game is free software, and individual players can freely copy, download and reproduce it, and can recommend it to adults over 20 years old.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. Welcome website to provide free download service of this game. However, before providing download services, the author's written consent must be obtained, unless the author actively contacts the website. Machine pre-installation, integration, CD sales, gifts, or any other commercial profit-making activities based on this game must obtain the author's written consent. The free download services or other commercial profit-making activities based on this game involved in this article must ensure the integrity and consistency of the game information. This game (including the game's name, version, author information, binary program code and other arbitrary files, etc.) is not allowed to be modified in any form.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5. When released as free software, we are not responsible for providing any form of technical support for this game, and believe that this software has no warranty (no warranty)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MiSans'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;Special statement about this game&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;1. The plots, scenes and ways of doing things described in this game are purely fictitious and have no allusion to reality. Not all rental agencies in Beijing are fraudulent, just as not all officials are corrupt.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;2. Some of the attributes of items in this game (smuggled goods, counterfeit goods, banned books) and certain player behaviors set by the game (reselling items prohibited by law) are illegal and unacceptable in real society and morality. Therefore, this game is prohibited from being played by people under the age of 20 who have not yet established a sense of right and wrong. People of other ages must understand the virtual nature of the game, the illegality of smuggling and counterfeiting, and abide by all national laws and regulations when playing this game.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;3. This game is free software, and individual players can freely copy, download and reproduce it, and can recommend it to adults over 20 years old.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;4. Welcome website to provide free download service of this game. However, before providing download services, the author's written consent must be obtained, unless the author actively contacts the website. Machine pre-installation, integration, CD sales, gifts, or any other commercial profit-making activities based on this game must obtain the author's written consent. The free download services or other commercial profit-making activities based on this game involved in this article must ensure the integrity and consistency of the game information. This game (including the game's name, version, author information, binary program code and other arbitrary files, etc.) is not allowed to be modified in any form.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;5. When released as free software, we are not responsible for providing any form of technical support for this game, and believe that this software has no warranty (no warranty)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
