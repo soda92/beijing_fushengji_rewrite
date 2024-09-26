@@ -33,6 +33,17 @@
                 "command": "venv/bin/python"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Design Forms",
+            "command": "python",
+            "args": [
+                "tools/design.py"
+            ],
+            "linux":{
+                "command": "venv/bin/python"
+            },
+            "problemMatcher": []
         }
     ]
 }
