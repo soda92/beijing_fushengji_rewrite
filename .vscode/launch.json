@@ -13,7 +13,7 @@
             "env": {
                 "PYTHONPATH": "${workspaceFolder}",
             },
-            "preLaunchTask": "mybuild"
+            "preLaunchTask": "Build UI and Resource"
         },
         {
             "name": "Main - Skip Intro",
@@ -25,7 +25,7 @@
                 "PYTHONPATH": "${workspaceFolder}",
                 "HIDE_INTRO": "true",
             },
-            "preLaunchTask": "mybuild"
+            "preLaunchTask": "Build UI and Resource"
         },
         {
             "name": "Main - Console",
@@ -37,7 +37,7 @@
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"
             },
-            "preLaunchTask": "mybuild"
+            "preLaunchTask": "Build UI and Resource"
         }
     ]
 }
