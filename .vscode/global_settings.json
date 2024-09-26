@@ -21,22 +21,22 @@
         "Git Bash": {
             "source": "Git Bash"
         },
-        "msys ucrt64": {
-            "path": "C:/msys64/msys2_shell.cmd",
+        "MSYS2": {
+            "path": "C:\\msys64\\usr\\bin\\fish.exe",
             "args": [
-                "-defterm",
-                "-here",
-                "-no-start",
-                "-ucrt64",
-                "-c",
-                "fish"
-            ]
+                "--login",
+                "-i"
+            ],
+            "env": {
+                "MSYSTEM": "UCRT64",
+                "CHERE_INVOKING": "1"
+            }
         }
     },
-    "terminal.integrated.defaultProfile.windows": "msys ucrt64",
-    "extensions":[
+    "extensions": [
         "ruff",
         "rust-analyzer",
-        "ms-python"
+        "ms-python",
+        "tamasfe.even-better-toml"
     ]
 }
