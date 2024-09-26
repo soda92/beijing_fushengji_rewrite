@@ -11,12 +11,7 @@
             "program": "${workspaceFolder}/app/main.py",
             "console": "internalConsole",
             "env": {
-                "PYTHONPATH": "${workspaceFolder}"
-            },
-            "linux": {
-                "env": {
-                    "PYTHONPATH": "${workspaceFolder}",
-                }
+                "PYTHONPATH": "${workspaceFolder}",
             },
             "preLaunchTask": "mybuild"
         },
@@ -27,13 +22,8 @@
             "program": "${workspaceFolder}/app/main.py",
             "console": "internalConsole",
             "env": {
-                "PYTHONPATH": "${workspaceFolder}"
-            },
-            "linux": {
-                "env": {
-                    "PYTHONPATH": "${workspaceFolder}",
-                    "HIDE_INTRO": "true",
-                }
+                "PYTHONPATH": "${workspaceFolder}",
+                "HIDE_INTRO": "true",
             },
             "preLaunchTask": "mybuild"
         },
@@ -46,12 +36,6 @@
             "console": "integratedTerminal",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"
-            },
-            "linux": {
-                "env": {
-                    "PYTHONPATH": "${workspaceFolder}",
-                    "HIDE_INTRO": "true",
-                }
             },
             "preLaunchTask": "mybuild"
         }

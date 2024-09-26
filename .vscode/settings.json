@@ -15,6 +15,5 @@
         "*zh_CN.ts": "xml",
         "*.qrc": "xml"
     },
-    "python.languageServer": "None",
     "gitlens.blame.avatars": false
 }

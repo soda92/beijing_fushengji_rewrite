@@ -25,7 +25,7 @@ def compile(file: Path):
     subprocess.run(f"{PREFIX}pyside6-uic {str(file)} -o {str(dest_path)}".split(), check=True)
 
 
-if __name__ == "__main__":
+def main():
     ui_dir.mkdir(parents=True, exist_ok=True)
     for i in get_ui_files():
         compile(i)
@@ -33,3 +33,6 @@ if __name__ == "__main__":
         f"{PREFIX}pyside6-rcc {str(CURRENT.parent.joinpath('main.qrc'))} -o {str(CURRENT.parent.joinpath('main_rc.py'))}".split(),
         check=True,
     )
+
+if __name__ == "__main__":
+    main()
