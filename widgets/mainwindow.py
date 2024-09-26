@@ -18,13 +18,17 @@ class MainWindow(QtWidgets.QMainWindow):
         family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
         self.setStyleSheet(
             """
-            QLabel, QPushButton {
+            QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {
                 font: 12pt {family};
             }
             """.replace(
                 "{family}", family
             )
         )
+        self.ui.menubar.setFont(QtGui.QFont(family, 14))
+        self.ui.menu.setFont(QtGui.QFont(family, 14))
+        self.ui.menu_2.setFont(QtGui.QFont(family, 14))
+        self.ui.menu_3.setFont(QtGui.QFont(family, 14))
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
         import os
 

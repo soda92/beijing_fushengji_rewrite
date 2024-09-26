@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>Writing</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit {
+                font: 12pt MiSans;
+            }</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTextEdit" name="textEdit">
@@ -23,17 +28,17 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Some specific ideas about doing a good job this month&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. Adhere to doing your job well and further grasp the coordination tasks in business and technology. Work should be focused.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Listen to colleagues' opinions humbly. This is very important.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. My current work situation is very good, but I must strive for better and improve my ability endlessly.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. Be proactive, positive, make plans, complete plans on time, and ask yourself every day: How am I doing at work?&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5. The boss and manager are very capable, and they care about me very much. I must work hard.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;6. After get off work every day, clean up your desk, because cleanliness helps to create a high-efficiency working atmosphere and gives people a feeling of fresh air.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;7. At midnight every Saturday, you should think about what to do next week, and it is best to put the easier things on Thursday afternoon, so that you will be full of energy for half a week.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;8. Don't speak and do things on your own. The manager and boss should give instructions on important matters. They are absolutely right.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MiSans'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;Some specific ideas about doing a good job this month&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;1. Adhere to doing your job well and further grasp the coordination tasks in business and technology. Work should be focused.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;2. Listen to colleagues' opinions humbly. This is very important.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;3. My current work situation is very good, but I must strive for better and improve my ability endlessly.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;4. Be proactive, positive, make plans, complete plans on time, and ask yourself every day: How am I doing at work?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;5. The boss and manager are very capable, and they care about me very much. I must work hard.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;6. After get off work every day, clean up your desk, because cleanliness helps to create a high-efficiency working atmosphere and gives people a feeling of fresh air.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;7. At midnight every Saturday, you should think about what to do next week, and it is best to put the easier things on Thursday afternoon, so that you will be full of energy for half a week.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;8. Don't speak and do things on your own. The manager and boss should give instructions on important matters. They are absolutely right.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans'; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </item>

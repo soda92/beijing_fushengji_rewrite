@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>Settings</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton, QCheckBox {
+                font: 12pt MiSans;
+            }</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QWidget" name="widget" native="true">
@@ -24,7 +29,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QRadioButton" name="radioButton">
+       <widget class="QCheckBox" name="checkBox_2">
         <property name="text">
          <string>Allow hackers to attack banking networks</string>
         </property>
@@ -41,7 +46,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QRadioButton" name="radioButton_2">
+       <widget class="QCheckBox" name="checkBox">
         <property name="text">
          <string>turn off sound</string>
         </property>
