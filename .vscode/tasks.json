@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "mybuild",
+            "label": "Build UI and Resource",
             "command": "python",
             "args": [
                 "tools/compile_all.py"
@@ -13,7 +13,7 @@
             "problemMatcher": []
         },
         {
-            "label": "package",
+            "label": "Build Release",
             "command": "python",
             "args": [
                 "tools/package.py"
@@ -24,7 +24,7 @@
             "problemMatcher": []
         },
         {
-            "label": "translate",
+            "label": "Do Translation",
             "command": "python",
             "args": [
                 "tools/translate.py"
