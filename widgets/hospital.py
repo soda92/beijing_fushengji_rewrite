@@ -18,10 +18,8 @@ class Hospital(QtWidgets.QWidget):
 
         self.ui.label_2.setText(
             self.tr(
-                'The doctor clapped his hands happily: "Your health points are %1, and the points you need to be treated are %2.'
-            )
-            .replace("%1", str(health))
-            .replace("%2", str(self.cure_points))
+                'The doctor clapped his hands happily: "Your health points are {}, and the points you need to be treated are {}.'
+            ).format(self.health, self.cure_points)
         )
         self.ui.spinBox.setMinimum(0)
         self.ui.spinBox.setMaximum(self.cure_points)

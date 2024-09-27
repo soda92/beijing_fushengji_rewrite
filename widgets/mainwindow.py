@@ -30,10 +30,10 @@ class MainWindow(QtWidgets.QMainWindow):
         family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
         self.setStyleSheet(
             """
-            QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {
+            QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {{
                 font: 12pt {family};
-            }
-            """.replace("{family}", family)
+            }}
+            """.format(family=family)
         )
         self.ui.menubar.setFont(QtGui.QFont(family, 14))
         self.ui.menu.setFont(QtGui.QFont(family, 14))
@@ -307,8 +307,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.d_diary = Diary()
         self.d_diary.ui.label.setText(
             self.tr(
-                "Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned %d yuan in US Internet advertising fees, hehe!"
-            ).replace("%d", str(money))
+                "Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned {} yuan in US Internet advertising fees, hehe!"
+            ).format(money)
         )
         self.d_diary.show()
 

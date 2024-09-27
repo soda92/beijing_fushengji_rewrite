@@ -288,17 +288,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>离开</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="28"/>
         <source>Hello customer! Your cash is %1, your deposit is %2, what do you want to do...</source>
-        <translation>客户您好！您的现金是%1，您的存款是%2，请问您要...</translation>
+        <translation type="vanished">客户您好！您的现金是%1，您的存款是%2，请问您要...</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="37"/>
+        <location filename="widgets/bank.py" line="27"/>
+        <source>Hello customer! Your cash is {}, your deposit is {}, what do you want to do...</source>
+        <translation>客户您好！您的现金是{}，您的存款是{}，请问您要...</translation>
+    </message>
+    <message>
+        <location filename="widgets/bank.py" line="35"/>
         <source>How much money do you deposit?</source>
         <translation>您存多少钱？</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="53"/>
+        <location filename="widgets/bank.py" line="51"/>
         <source>How much money do you withdraw?</source>
         <translation>您提走多少钱？</translation>
     </message>
@@ -428,12 +432,16 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>你太黑了!俺告你去!</translation>
     </message>
     <message>
-        <location filename="widgets/hospital.py" line="23"/>
         <source>The doctor clapped his hands happily: &quot;Your health points are %1, and the points you need to be treated are %2.</source>
-        <translation>大夫高兴地拍着手：“您的健康点数是%1，需要治疗的点数是%2。</translation>
+        <translation type="vanished">大夫高兴地拍着手：“您的健康点数是%1，需要治疗的点数是%2。</translation>
     </message>
     <message>
-        <location filename="widgets/hospital.py" line="40"/>
+        <location filename="widgets/hospital.py" line="22"/>
+        <source>The doctor clapped his hands happily: &quot;Your health points are {}, and the points you need to be treated are {}.</source>
+        <translation>大夫高兴地拍着手：“您的健康点数是{}，需要治疗的点数是{}。</translation>
+    </message>
+    <message>
+        <location filename="widgets/hospital.py" line="38"/>
         <source>The doctor said, &quot;There&apos;s not enough money! I refuse to treat you.&quot;</source>
         <translation>医生说，“钱不够哎! 拒绝治疗。”</translation>
     </message>
@@ -1096,8 +1104,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
     <message>
         <location filename="widgets/mainwindow.py" line="311"/>
-        <source>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned %d yuan in US Internet advertising fees, hehe!</source>
-        <translation>感谢电信改革，可以免费上网! 还挣了美国网络广告费%d元，嘿嘿!</translation>
+        <source>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned {} yuan in US Internet advertising fees, hehe!</source>
+        <oldsource>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned %d yuan in US Internet advertising fees, hehe!</oldsource>
+        <translation>感谢电信改革，可以免费上网! 还挣了美国网络广告费{}元，嘿嘿!</translation>
     </message>
 </context>
 <context>
@@ -1343,32 +1352,32 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>北京浮生记</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="56"/>
+        <location filename="form/story.ui" line="54"/>
         <source>The story of &quot;Beijing Life&quot;</source>
         <translation>“北京浮生记”的故事</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="69"/>
+        <location filename="form/story.ui" line="67"/>
         <source>You play the role of a young man who comes to Beijing from other places to make a living. At the beginning, you only have 2,000 yuan, and you still owe a debt of 5,500 yuan to the village chief (a gangster leader). The daily interest on these debts is as high as 10%. If you do not pay it off in time, the village chief will call fellow villagers in Beijing to beat you up, and you may die on the streets of Beijing. You decide to get rich by reselling various items on the black market at subway entrances across Beijing. Not only do you want to pay off your debts, but you also want to be ranked among the richest people in Beijing.</source>
         <translation>您扮演一位从外地到北京谋生的青年。一开始，您只有2000元钱，并且还欠村长（一个流氓头子）5500元 债务。这些债务每天的利息高达10%.如果不及时还清，村长会叫在北京的老乡们来扁您，您可能牺牲在北京街头。 您决定在北京各地铁口黑市倒卖各种物品来发财致富，不仅还掉债务，而且要荣登北京富人排行榜。</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="79"/>
+        <location filename="form/story.ui" line="77"/>
         <source>You can only stay in Beijing for 40 days, and each visit to a black market counts as one day. In the beginning, you can only place 100 items in the house you rent. You will encounter various events in Beijing. You need to fight wits and courage with gangsters, thieves, murderers, corrupt officials, swindlers, etc. You also need to try to survive in Beijing&apos;s harsh natural environment.</source>
         <translation>您只能在北京呆40天，每次奔走一个黑市算一天。一开始，您租的房子只能放100个东西。 您会在北京遭遇到各种事件，您需要与流氓、小偷、凶手、贪官、骗子等斗智斗勇，还需要在北京恶劣的自然环境下设法生存下来。</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="89"/>
+        <location filename="form/story.ui" line="87"/>
         <source>You will experience the excitement of selling pirated VCDs and smuggled cars in Beijing, as well as the funny events that are unique to our time.</source>
         <translation>您将体验在北京卖盗版VCD和走私汽车的刺激以及我们这个时代才有的搞笑事件。</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="99"/>
+        <location filename="form/story.ui" line="97"/>
         <source>&lt;status&gt;</source>
         <translation>状态</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="109"/>
+        <location filename="form/story.ui" line="107"/>
         <source>Start Game &gt;&gt;</source>
         <translation>开始游戏 &gt;&gt;</translation>
     </message>
@@ -1408,37 +1417,37 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">初始化帮助信息....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="33"/>
+        <location filename="widgets/story.py" line="22"/>
         <source>Initialize hacker information....</source>
         <translation>初始化黑客信息....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="34"/>
+        <location filename="widgets/story.py" line="23"/>
         <source>Initialize the second loop information.....</source>
         <translation>初始化二环路信息.....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="35"/>
+        <location filename="widgets/story.py" line="24"/>
         <source>Initialize black market items...</source>
         <translation>初始化黑市物品......</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="36"/>
+        <location filename="widgets/story.py" line="25"/>
         <source>Initialize random events...</source>
         <translation>初始化随机事件......</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="37"/>
+        <location filename="widgets/story.py" line="26"/>
         <source>Loading Beijing real-time news....</source>
         <translation>加载北京实时新闻....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="60"/>
+        <location filename="widgets/story.py" line="49"/>
         <source>The game has been initialized, ready to enter Beijing...</source>
         <translation>游戏初始化完毕,准备进入北京...</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="65"/>
+        <location filename="widgets/story.py" line="54"/>
         <source>Initialization help information....</source>
         <translation>初始化帮助信息....</translation>
     </message>
