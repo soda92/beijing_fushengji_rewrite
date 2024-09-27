@@ -76,6 +76,18 @@
           </item>
           <item>
            <widget class="QPushButton" name="buy">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>38</height>
+             </size>
+            </property>
             <property name="text">
              <string>==&gt;</string>
             </property>
@@ -93,6 +105,18 @@
           </item>
           <item>
            <widget class="QPushButton" name="sell">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>38</height>
+             </size>
+            </property>
             <property name="text">
              <string>&lt;==</string>
             </property>
@@ -469,6 +493,12 @@ the capital</string>
              </property>
              <item>
               <widget class="QPushButton" name="x1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="text">
                 <string>Pingguoyuan</string>
                </property>
@@ -476,6 +506,12 @@ the capital</string>
              </item>
              <item>
               <widget class="QPushButton" name="x2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="text">
                 <string>Gongzhufen</string>
                </property>
@@ -522,6 +558,12 @@ border: none;
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="2" column="0">
            <widget class="QPushButton" name="x8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Changchun Street</string>
             </property>
@@ -530,7 +572,7 @@ border: none;
           <item row="0" column="2">
            <widget class="QPushButton" name="x5">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -542,6 +584,12 @@ border: none;
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="x6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Fuxingmen</string>
             </property>
@@ -549,6 +597,12 @@ border: none;
           </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="x4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Jishuitan</string>
             </property>
@@ -556,6 +610,12 @@ border: none;
           </item>
           <item row="1" column="2">
            <widget class="QPushButton" name="x7">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Jianguomen</string>
             </property>
@@ -563,6 +623,12 @@ border: none;
           </item>
           <item row="0" column="0">
            <widget class="QPushButton" name="x3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Xizhimen</string>
             </property>
@@ -570,6 +636,12 @@ border: none;
           </item>
           <item row="2" column="2">
            <widget class="QPushButton" name="x0">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Beijing Railway 
 Station</string>
@@ -578,6 +650,12 @@ Station</string>
           </item>
           <item row="2" column="1">
            <widget class="QPushButton" name="x9">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Chongwenmen</string>
             </property>
@@ -616,6 +694,12 @@ background-color: black;
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QPushButton" name="p_bank">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
 icon: url(:/bg/res/bank.ico);
@@ -632,6 +716,12 @@ icon: url(:/bg/res/bank_hover.ico);
        </item>
        <item>
         <widget class="QPushButton" name="p_hospital">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
 icon: url(:/bg/res/hospital.ico);
@@ -651,6 +741,12 @@ icon: url(:/bg/res/hospital_hover.ico);
        </item>
        <item>
         <widget class="QPushButton" name="p_postoffice">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
 icon: url(:/bg/res/postoffice.ico);
@@ -667,6 +763,12 @@ icon: url(:/bg/res/postoffice_hover.ico);
        </item>
        <item>
         <widget class="QPushButton" name="p_rent">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
 icon: url(:/bg/res/rent.ico);
@@ -683,6 +785,12 @@ icon: url(:/bg/res/rent_hover.ico);
        </item>
        <item>
         <widget class="QPushButton" name="p_netcafe">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
 icon: url(:/bg/res/netcafe.ico);

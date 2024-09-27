@@ -81,6 +81,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>38</height>
+         </size>
+        </property>
         <property name="text">
          <string>Close Diary</string>
         </property>
