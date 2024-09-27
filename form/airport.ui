@@ -6,12 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>427</width>
+    <height>352</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Capital Airport</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit {
+                font: 12pt MiSans;
+            }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -60,6 +65,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>38</height>
+         </size>
+        </property>
         <property name="text">
          <string>OK</string>
         </property>
