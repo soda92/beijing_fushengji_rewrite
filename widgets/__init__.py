@@ -9,6 +9,7 @@ from .statements import Statement
 from .story import StoryDlg
 from .text_editor import TextEditor
 from .hospital import Hospital
+from .pay_debt import PayDebt
 
 __all__ = [
     "AboutGame",
@@ -22,4 +23,5 @@ __all__ = [
     "StoryDlg",
     "TextEditor",
     "Hospital",
+    "PayDebt",
 ]

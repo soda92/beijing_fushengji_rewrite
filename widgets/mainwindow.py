@@ -13,6 +13,7 @@ from widgets import (
     StoryDlg,
     TextEditor,
     Hospital,
+    PayDebt,
 )
 
 
@@ -87,7 +88,63 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.hospital.triggered.connect(self.enter_hospital)
         self.ui.p_hospital.triggered.connect(self.enter_hospital)
 
+        self.ui.post_office.triggered.connect(self.pay_debt)
+        self.ui.p_postoffice.clicked.connect(self.pay_debt)
+
         self.init_data()
+
+    def pay_debt(self):
+        if self.debt > 0:
+            self.d_paydebt = PayDebt()
+            self.d_paydebt.sig_pay.connect(self.after_pay_debt)
+            self.d_paydebt.show()
+        else:
+            amount = self.status.cash + self.status.saving
+            if amount < 1000:
+                self.d_diary = Diary()
+                self.d_diary.ui.label.setText(
+                    self.tr(
+                        'The village chief laughed and said: "You have no money, you are crazy!"'
+                    )
+                )
+                self.d_diary.show()
+            elif 1000 < amount < 100000:
+                self.d_diary = Diary()
+                self.d_diary.ui.label.setText(
+                    self.tr(
+                        'The village chief nodded to me: "Brother, do you want to support your hometown with 1,000 yuan?"'
+                    )
+                )
+                self.d_diary.show()
+            elif 100000 < amount < 10000000:
+                self.d_diary = Diary()
+                self.d_diary.ui.label.setText(
+                    self.tr(
+                        'The village chief bowed to me on the phone: "Rich man! I want to marry my daughter to you."...'
+                    )
+                )
+                self.d_diary.show()
+            elif amount > 10000000:
+                self.d_diary = Diary()
+                self.d_diary.ui.label.setText(
+                    self.tr(
+                        'The village chief knelt down to me on the phone and said: "You are my real father!"'
+                    )
+                )
+                self.d_diary.show()
+            else:
+                self.d_diary = Diary()
+                self.d_diary.ui.label.setText(
+                    self.tr(
+                        'The village chief said: "You are a role model for rural young people!"'
+                    )
+                )
+                self.d_diary.show()
+
+    def after_pay_debt(self, cash, debt):
+        self.status.cash = cash
+        self.status.debt = debt
+        self.refresh_display()
 
     def enter_hospital(self):
         self.d_hospital = Hospital(None, self.status.cash, self.status.health)
