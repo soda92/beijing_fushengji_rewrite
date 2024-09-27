@@ -15,6 +15,8 @@ from widgets import (
     TextEditor,
     Hospital,
     PayDebt,
+    Buy,
+    Sell,
 )
 
 
@@ -94,6 +96,20 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.init_data()
         self.refresh_display()
+        self.indexes = []
+        self.sell_indexes = []
+
+    def black_market_items(self, selected, deselected):
+        if len(selected.indexes()) == 0:
+            self.indexes = []
+        else:
+            self.indexes = [index.row() for index in selected.indexes()]
+
+    def my_home_items(self, selected, deselected):
+        if len(selected.indexes()) == 0:
+            self.sell_indexes = []
+        else:
+            self.sell_indexes = [index.row() for index in selected.indexes()]
 
     def pay_debt(self):
         if self.status.debt > 0:
@@ -239,6 +255,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.about_game.show()
 
     def init_data(self):
+        self.quantity = 0
         status, market_items, my_items = load_data()
         self.status: Status = status
 
@@ -254,6 +271,13 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.my_room.setModel(self.model_myitem)
         self.ui.my_room.setFont(font)
 
+        self.ui.black_market.selectionModel().selectionChanged.connect(
+            self.black_market_items
+        )
+        self.ui.my_room.selectionModel().selectionChanged.connect(self.my_home_items)
+
+        self.quantity = sum([x.quantity for x in self.my_items])
+
     def play_sound(self, name: str):
         # the "self" is important because sound will run in the background
         self.effect = QtMultimedia.QSoundEffect()
@@ -263,12 +287,84 @@ class MainWindow(QtWidgets.QMainWindow):
         self.effect.play()
 
     def buy(self):
-        pass
+        if len(self.indexes) == 0:
+            self.dialog = Diary()
+            self.dialog.ui.label.setText(self.tr("I haven't decided what to buy yet."))
+            self.dialog.show()
+        else:
+            item = self.market_items[self.indexes[0]]
+            if self.status.cash < item.price:
+                if self.status.saving > 0:
+                    self.dialog = Diary()
+                    self.dialog.ui.label.setText(
+                        self.tr(
+                            "I don't have enough cash with me, so I'll go to the bank to withdraw some money."
+                        )
+                    )
+                    self.dialog.show()
+                else:
+                    self.dialog = Diary()
+                    self.dialog.ui.label.setText(
+                        self.tr(
+                            "I don't have enough cash and I don't have any deposits in the bank, what should I do?"
+                        )
+                    )
+                    self.dialog.show()
+            else:
+                self.d_buy = Buy(
+                    self.status.cash,
+                    self.market_items[self.indexes[0]],
+                    self.quantity == 100,
+                )
+                self.d_buy.ui.pushButton.clicked.connect(self.finish_buy)
+                self.d_buy.show()
+
+    def finish_buy(self):
         self.play_sound("buy.wav")
+        buy_amount = self.d_buy.ui.spinBox.value()
+        self.status.cash -= self.d_buy.item.price * buy_amount
+        item = self.d_buy.item
+        item.quantity = buy_amount
+        self.my_items.append(item)
+        self.refresh_display()
 
     def sell(self):
-        pass
+        if len(self.sell_indexes) == 0:
+            pass
+        else:
+            self.d_sell = Sell(self.my_items[self.sell_indexes[0]])
+            self.d_sell.ui.pushButton.clicked.connect(self.finish_sell)
+            self.d_sell.show()
+
+    def get_price(self, item: Item):
+        names = [x.name for x in self.market_items]
+        if item.name in names:
+            index = names.index(item.name)
+            market_item = self.market_items[index]
+            return market_item.price
+        else:
+            return -1
+
+    def finish_sell(self):
         self.play_sound("money.wav")
+        quantity = self.d_sell.ui.spinBox.value()
+        price = self.get_price(self.d_sell.item)
+        if price == -1:
+            self.d_diary = Diary()
+            self.d_diary.ui.label.setText(
+                self.tr("Oh? It seems that no one is doing {} business here.").format(
+                    get_item_name(self.d_sell.item)
+                )
+            )
+            self.d_diary.show()
+        else:
+            self.status.cash += quantity * self.get_price(self.d_sell.item)
+            names = [x.name for x in self.my_items]
+            index = names.index(self.d_sell.item.name)
+            self.my_items[index].quantity -= quantity
+            if self.my_items[index].quantity == 0:
+                del self.my_items[index]
+            self.refresh_display()
 
     def scroll(self):
         self.t_pos += 1.1
@@ -347,8 +443,12 @@ class MainWindow(QtWidgets.QMainWindow):
         header.setSectionResizeMode(
             1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
         )
-        self.ui.black_market.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.SingleSelection)
-        self.ui.black_market.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows)
+        self.ui.black_market.setSelectionMode(
+            QtWidgets.QAbstractItemView.SelectionMode.SingleSelection
+        )
+        self.ui.black_market.setSelectionBehavior(
+            QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows
+        )
 
         self.model_myitem.clear()
         for item in self.my_items:
@@ -373,9 +473,12 @@ class MainWindow(QtWidgets.QMainWindow):
         header.setSectionResizeMode(
             2, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
         )
-        self.ui.my_room.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.SingleSelection)
-        self.ui.my_room.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows)
-
+        self.ui.my_room.setSelectionMode(
+            QtWidgets.QAbstractItemView.SelectionMode.SingleSelection
+        )
+        self.ui.my_room.setSelectionBehavior(
+            QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows
+        )
 
     def show_intro(self):
         self.dlg = StoryDlg()

@@ -10,6 +10,8 @@ from .story import StoryDlg
 from .text_editor import TextEditor
 from .hospital import Hospital
 from .pay_debt import PayDebt
+from .buy import Buy
+from .sell import Sell
 
 __all__ = [
     "AboutGame",
@@ -24,4 +26,6 @@ __all__ = [
     "TextEditor",
     "Hospital",
     "PayDebt",
+    "Buy",
+    "Sell",
 ]
