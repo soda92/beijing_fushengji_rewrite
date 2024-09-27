@@ -9,17 +9,6 @@ class StoryDlg(QtWidgets.QWidget):
         super().__init__(parent)
         self.ui = Ui_Story()
         self.ui.setupUi(self)
-        font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/font.ttf")
-        family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
-        self.setStyleSheet(
-            """
-            QLabel, QPushButton {
-                font: 12pt {family};
-            }
-            """.replace(
-                "{family}", family
-            )
-        )
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
 
         self.ui.startGame.clicked.connect(self.start_game)

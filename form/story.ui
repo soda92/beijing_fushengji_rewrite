@@ -14,9 +14,7 @@
    <string>Beijing Life</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">/* CAUTION: do not modify, this is for preview, main stylesheet set in code */
-
-QLabel, QPushButton {
+   <string notr="true">QLabel, QPushButton {
 	font: 12pt MiSans;
 }</string>
   </property>
