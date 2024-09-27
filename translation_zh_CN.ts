@@ -287,6 +287,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <source>Leave</source>
         <translation>离开</translation>
     </message>
+    <message>
+        <location filename="widgets/bank.py" line="28"/>
+        <source>Hello customer! Your cash is %1, your deposit is %2, what do you want to do...</source>
+        <translation>客户您好！您的现金是%1，您的存款是%2，请问您要...</translation>
+    </message>
+    <message>
+        <location filename="widgets/bank.py" line="37"/>
+        <source>How much money do you deposit?</source>
+        <translation>您存多少钱？</translation>
+    </message>
+    <message>
+        <location filename="widgets/bank.py" line="53"/>
+        <source>How much money do you withdraw?</source>
+        <translation>您提走多少钱？</translation>
+    </message>
 </context>
 <context>
     <name>CyberCafe</name>
@@ -716,20 +731,20 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
     <message>
         <location filename="form/main.ui" line="441"/>
-        <location filename="widgets/mainwindow.py" line="128"/>
+        <location filename="widgets/mainwindow.py" line="132"/>
         <source>I want to visit 
 the capital</source>
         <translation>我要逛京城</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="473"/>
-        <location filename="widgets/mainwindow.py" line="103"/>
+        <location filename="widgets/mainwindow.py" line="107"/>
         <source>Pingguoyuan</source>
         <translation>苹果园</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="480"/>
-        <location filename="widgets/mainwindow.py" line="104"/>
+        <location filename="widgets/mainwindow.py" line="108"/>
         <source>Gongzhufen</source>
         <translation>公主坟</translation>
     </message>
@@ -740,50 +755,50 @@ the capital</source>
     </message>
     <message>
         <location filename="form/main.ui" line="526"/>
-        <location filename="widgets/mainwindow.py" line="110"/>
+        <location filename="widgets/mainwindow.py" line="114"/>
         <source>Changchun Street</source>
         <translation>长椿街</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="539"/>
-        <location filename="widgets/mainwindow.py" line="107"/>
+        <location filename="widgets/mainwindow.py" line="111"/>
         <source>Dongzhimen</source>
         <translation>东直门</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="546"/>
-        <location filename="widgets/mainwindow.py" line="108"/>
+        <location filename="widgets/mainwindow.py" line="112"/>
         <source>Fuxingmen</source>
         <translation>复兴门</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="553"/>
-        <location filename="widgets/mainwindow.py" line="106"/>
+        <location filename="widgets/mainwindow.py" line="110"/>
         <source>Jishuitan</source>
         <translation>积水潭</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="560"/>
-        <location filename="widgets/mainwindow.py" line="109"/>
+        <location filename="widgets/mainwindow.py" line="113"/>
         <source>Jianguomen</source>
         <translation>建国门</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="567"/>
-        <location filename="widgets/mainwindow.py" line="105"/>
+        <location filename="widgets/mainwindow.py" line="109"/>
         <source>Xizhimen</source>
         <translation>西直门</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="574"/>
-        <location filename="widgets/mainwindow.py" line="102"/>
+        <location filename="widgets/mainwindow.py" line="106"/>
         <source>Beijing Railway 
 Station</source>
         <translation>北京站</translation>
     </message>
     <message>
         <location filename="form/main.ui" line="582"/>
-        <location filename="widgets/mainwindow.py" line="111"/>
+        <location filename="widgets/mainwindow.py" line="115"/>
         <source>Chongwenmen</source>
         <translation>崇文门</translation>
     </message>
@@ -941,75 +956,98 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">关于本游戏</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="114"/>
+        <location filename="widgets/mainwindow.py" line="118"/>
         <source>Fangzhuang</source>
         <translation>方庄</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="115"/>
+        <location filename="widgets/mainwindow.py" line="119"/>
         <source>Bajiao West Road</source>
         <translation>八角西路</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="116"/>
+        <location filename="widgets/mainwindow.py" line="120"/>
         <source>Cuiwei Road</source>
         <translation>翠微路</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="117"/>
+        <location filename="widgets/mainwindow.py" line="121"/>
         <source>Haidian Street</source>
         <translation>海淀大街</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="118"/>
+        <location filename="widgets/mainwindow.py" line="122"/>
         <source>Asian Games Village</source>
         <translation>亚运村</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="119"/>
+        <location filename="widgets/mainwindow.py" line="123"/>
         <source>Sanyuan West Bridge</source>
         <translation>三元西桥</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="120"/>
+        <location filename="widgets/mainwindow.py" line="124"/>
         <source>Fuyou Street</source>
         <translation>府右街</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="121"/>
+        <location filename="widgets/mainwindow.py" line="125"/>
         <source>Yong&apos;anli</source>
         <translation>永安里</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="122"/>
+        <location filename="widgets/mainwindow.py" line="126"/>
         <source>Yuquanying</source>
         <translation>玉泉营</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="123"/>
+        <location filename="widgets/mainwindow.py" line="127"/>
         <source>Yongdingmen</source>
         <translation>永定门</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="132"/>
+        <location filename="widgets/mainwindow.py" line="136"/>
         <source>I want to go
  to the subway</source>
         <translation>我要进地铁</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="201"/>
+        <location filename="widgets/mainwindow.py" line="207"/>
         <source>You need to bring at least 15 yuan with you when entering an Internet cafe, haha, come back after withdrawing money.</source>
         <translation>进网吧至少身上要带15元，呵呵，取钱再来。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="207"/>
+        <location filename="widgets/mainwindow.py" line="215"/>
         <source>The village chief said: Don&apos;t hang out in the Internet cafe all the time, go and do a decent business!</source>
         <translation>村长放出话来：你别总是在网吧里鬼混，快去做正经买卖!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="223"/>
+        <location filename="widgets/mainwindow.py" line="232"/>
         <source>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned %d yuan in US Internet advertising fees, hehe!</source>
         <translation>感谢电信改革，可以免费上网! 还挣了美国网络广告费%d元，嘿嘿!</translation>
+    </message>
+</context>
+<context>
+    <name>MoneyExchange</name>
+    <message>
+        <location filename="form/money_exchange.ui" line="14"/>
+        <source>Cash Transactions</source>
+        <translation>现金交易</translation>
+    </message>
+    <message>
+        <location filename="form/money_exchange.ui" line="28"/>
+        <source>&lt;placeholder&gt;</source>
+        <translation>&lt;placeholder&gt;</translation>
+    </message>
+    <message>
+        <location filename="form/money_exchange.ui" line="44"/>
+        <source>Conform Transaction</source>
+        <translation>确认交易</translation>
+    </message>
+    <message>
+        <location filename="form/money_exchange.ui" line="64"/>
+        <source>Cancel Transaction</source>
+        <translation>取消交易</translation>
     </message>
 </context>
 <context>

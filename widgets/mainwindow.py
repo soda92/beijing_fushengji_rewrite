@@ -87,8 +87,14 @@ class MainWindow(QtWidgets.QMainWindow):
         self.init_data()
 
     def enter_bank(self):
-        self.d_bank = Bank()
+        self.d_bank = Bank(None, self.status.cash, self.status.saving)
+        self.d_bank.sig_account.connect(self.leave_bank)
         self.d_bank.show()
+
+    def leave_bank(self, cash, saving):
+        self.status.cash = cash
+        self.status.saving = saving
+        self.refresh_display()
 
     def switch_mode(self):
         self.text_editor = TextEditor()
