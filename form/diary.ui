@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>My days in Beijing</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit {
+                font: 12pt MiSans;
+            }</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QWidget" name="widget_3" native="true">
@@ -102,5 +107,22 @@
  <resources>
   <include location="../main.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Diary</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>202</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

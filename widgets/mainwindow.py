@@ -1,11 +1,21 @@
 from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
-from widgets.story import StoryDlg
+import random
+
 from ui.main import Ui_MainWindow
-from widgets.cybercafe import CyberCafe
-from widgets.about import AboutGame
-from widgets.settings import Settings
-from widgets.airport import Airport
-from widgets.text_editor import TextEditor
+
+from widgets import (
+    AboutGame,
+    Bank,
+    Airport,
+    CyberCafe,
+    Diary,
+    Settings,
+    StoryDlg,
+    TextEditor,
+)
+
+
+from app.models import Status
 from app.tools import load_data
 
 
@@ -21,9 +31,7 @@ class MainWindow(QtWidgets.QMainWindow):
             QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {
                 font: 12pt {family};
             }
-            """.replace(
-                "{family}", family
-            )
+            """.replace("{family}", family)
         )
         self.ui.menubar.setFont(QtGui.QFont(family, 14))
         self.ui.menu.setFont(QtGui.QFont(family, 14))
@@ -43,6 +51,7 @@ class MainWindow(QtWidgets.QMainWindow):
             QtWidgets.QApplication.screens()[0].geometry().center()
             - self.rect().center()
         )
+        self.n_cafe = 0
         self.ui.cybercafe.triggered.connect(self.enter_cafe)
         self.ui.p_netcafe.clicked.connect(self.enter_cafe)
 
@@ -70,10 +79,16 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.in_subway = True
         self.ui.switch_place.clicked.connect(self.switch_place)
-
         self.ui.switch_mode.clicked.connect(self.switch_mode)
 
+        self.ui.bank.triggered.connect(self.enter_bank)
+        self.ui.p_bank.clicked.connect(self.enter_bank)
+
         self.init_data()
+
+    def enter_bank(self):
+        self.d_bank = Bank()
+        self.d_bank.show()
 
     def switch_mode(self):
         self.text_editor = TextEditor()
@@ -143,6 +158,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.health.display(status.health)
         self.ui.fame.display(status.fame)
         self.ui.saving.display(status.saving)
+        self.status: Status = status
 
     def play_sound(self, name: str):
         # the "self" is important because sound will run in the background
@@ -176,8 +192,47 @@ class MainWindow(QtWidgets.QMainWindow):
         QtCore.QTimer.singleShot(7000, lambda: self.timer.start())
 
     def enter_cafe(self):
-        self.cafe = CyberCafe()
-        self.cafe.show()
+        if self.status.cash < 15:
+            self.d_diary = Diary()
+            self.d_diary.ui.label.setText(
+                self.tr(
+                    "You need to bring at least 15 yuan with you when entering an Internet cafe, haha, come back after withdrawing money."
+                )
+            )
+            self.d_diary.show()
+        elif self.n_cafe > 2:
+            self.d_diary = Diary()
+            self.d_diary.ui.label.setText(
+                self.tr(
+                    "The village chief said: Don't hang out in the Internet cafe all the time, go and do a decent business!"
+                )
+            )
+            self.d_diary.show()
+        else:
+            self.n_cafe += 1
+            self.cafe = CyberCafe()
+            self.cafe.ui.leave_cybercafe.clicked.connect(self.finish_cyber_cafe)
+            self.cafe.show()
+
+    def finish_cyber_cafe(self):
+        money = random.randint(1, 10)
+        self.status.cash += money
+        self.refresh_display()
+
+        self.d_diary = Diary()
+        self.d_diary.ui.label.setText(
+            self.tr(
+                "Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned %d yuan in US Internet advertising fees, hehe!"
+            ).replace("%d", str(money))
+        )
+        self.d_diary.show()
+
+    def refresh_display(self):
+        self.ui.cash.display(self.status.cash)
+        self.ui.saving.display(self.status.saving)
+        self.ui.fame.display(self.status.fame)
+        self.ui.debt.display(self.status.debt)
+        self.ui.health.display(self.status.health)
 
     def show_intro(self):
         self.dlg = StoryDlg()
