@@ -86,7 +86,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.bank.triggered.connect(self.enter_bank)
         self.ui.p_bank.clicked.connect(self.enter_bank)
         self.ui.hospital.triggered.connect(self.enter_hospital)
-        self.ui.p_hospital.triggered.connect(self.enter_hospital)
+        self.ui.p_hospital.clicked.connect(self.enter_hospital)
 
         self.ui.post_office.triggered.connect(self.pay_debt)
         self.ui.p_postoffice.clicked.connect(self.pay_debt)
@@ -94,8 +94,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.init_data()
 
     def pay_debt(self):
-        if self.debt > 0:
-            self.d_paydebt = PayDebt()
+        if self.status.debt > 0:
+            self.d_paydebt = PayDebt(self.status.cash, self.status.debt)
             self.d_paydebt.sig_pay.connect(self.after_pay_debt)
             self.d_paydebt.show()
         else:
@@ -147,8 +147,18 @@ class MainWindow(QtWidgets.QMainWindow):
         self.refresh_display()
 
     def enter_hospital(self):
-        self.d_hospital = Hospital(None, self.status.cash, self.status.health)
-        self.d_hospital.sig_health.connect(self.leave_hospital)
+        if self.status.health == 100:
+            self.d_diary = Diary()
+            self.d_diary.ui.label.setText(
+                self.tr(
+                    'The young nurse looked at me with a smile and said, "Brother! Please register at the neurology department."'
+                )
+            )
+            self.d_diary.show()
+        else:
+            self.d_hospital = Hospital(None, self.status.cash, self.status.health)
+            self.d_hospital.sig_health.connect(self.leave_hospital)
+            self.d_hospital.show()
 
     def leave_hospital(self, cash: int, health: int):
         self.status.cash = cash
