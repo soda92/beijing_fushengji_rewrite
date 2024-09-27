@@ -119,60 +119,53 @@ class MainWindow(QtWidgets.QMainWindow):
         else:
             amount = self.status.cash + self.status.saving
             if amount < 1000:
-                self.d_diary = Diary()
-                self.d_diary.ui.label.setText(
+                self.show_diary(
                     self.tr(
                         'The village chief laughed and said: "You have no money, you are crazy!"'
                     )
                 )
-                self.d_diary.show()
             elif 1000 < amount < 100000:
-                self.d_diary = Diary()
-                self.d_diary.ui.label.setText(
+                self.show_diary(
                     self.tr(
                         'The village chief nodded to me: "Brother, do you want to support your hometown with 1,000 yuan?"'
                     )
                 )
-                self.d_diary.show()
             elif 100000 < amount < 10000000:
-                self.d_diary = Diary()
-                self.d_diary.ui.label.setText(
+                self.show_diary(
                     self.tr(
                         'The village chief bowed to me on the phone: "Rich man! I want to marry my daughter to you."...'
                     )
                 )
-                self.d_diary.show()
             elif amount > 10000000:
-                self.d_diary = Diary()
-                self.d_diary.ui.label.setText(
+                self.show_diary(
                     self.tr(
                         'The village chief knelt down to me on the phone and said: "You are my real father!"'
                     )
                 )
-                self.d_diary.show()
             else:
-                self.d_diary = Diary()
-                self.d_diary.ui.label.setText(
+                self.show_diary(
                     self.tr(
                         'The village chief said: "You are a role model for rural young people!"'
                     )
                 )
-                self.d_diary.show()
 
     def after_pay_debt(self, cash, debt):
         self.status.cash = cash
         self.status.debt = debt
         self.refresh_display()
 
+    def show_diary(self, text: str):
+        self.d_diary = Diary()
+        self.d_diary.ui.label.setText(text)
+        self.d_diary.show()
+
     def enter_hospital(self):
         if self.status.health == 100:
-            self.d_diary = Diary()
-            self.d_diary.ui.label.setText(
+            self.show_diary(
                 self.tr(
                     'The young nurse looked at me with a smile and said, "Brother! Please register at the neurology department."'
                 )
             )
-            self.d_diary.show()
         else:
             self.d_hospital = Hospital(None, self.status.cash, self.status.health)
             self.d_hospital.sig_health.connect(self.leave_hospital)
@@ -350,13 +343,11 @@ class MainWindow(QtWidgets.QMainWindow):
         quantity = self.d_sell.ui.spinBox.value()
         price = self.get_price(self.d_sell.item)
         if price == -1:
-            self.d_diary = Diary()
-            self.d_diary.ui.label.setText(
+            self.show_diary(
                 self.tr("Oh? It seems that no one is doing {} business here.").format(
                     get_item_name(self.d_sell.item)
                 )
             )
-            self.d_diary.show()
         else:
             self.status.cash += quantity * self.get_price(self.d_sell.item)
             names = [x.name for x in self.my_items]
@@ -383,21 +374,17 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def enter_cafe(self):
         if self.status.cash < 15:
-            self.d_diary = Diary()
-            self.d_diary.ui.label.setText(
+            self.show_diary(
                 self.tr(
                     "You need to bring at least 15 yuan with you when entering an Internet cafe, haha, come back after withdrawing money."
                 )
             )
-            self.d_diary.show()
         elif self.n_cafe > 2:
-            self.d_diary = Diary()
-            self.d_diary.ui.label.setText(
+            self.show_diary(
                 self.tr(
                     "The village chief said: Don't hang out in the Internet cafe all the time, go and do a decent business!"
                 )
             )
-            self.d_diary.show()
         else:
             self.n_cafe += 1
             self.cafe = CyberCafe()
@@ -409,13 +396,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.status.cash += money
         self.refresh_display()
 
-        self.d_diary = Diary()
-        self.d_diary.ui.label.setText(
+        self.show_diary(
             self.tr(
                 "Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned {} yuan in US Internet advertising fees, hehe!"
             ).format(money)
         )
-        self.d_diary.show()
 
     def refresh_display(self):
         self.ui.cash.display(self.status.cash)
