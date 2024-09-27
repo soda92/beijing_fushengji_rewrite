@@ -20,10 +20,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.layout().addWidget(self.browser)
         self.setStyleSheet(
             """
-            QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {
+            QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {{
                 font: 12pt {family};
-            }
-            """.replace("{family}", family)
+            }}
+            """.format(family=family)
         )
 
 

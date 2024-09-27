@@ -14,7 +14,7 @@
    <string>Beijing Life</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel, QPushButton, QTextBrowser {
+   <string notr="true">QLabel, QPushButton, QTextBrowser, QAction, QMenu, QHeaderView, QStandardItem {
                 font: 12pt MiSans;
 }</string>
   </property>
@@ -37,12 +37,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QListWidget" name="blackMarket">
-            <property name="minimumSize">
-             <size>
-              <width>280</width>
-              <height>200</height>
-             </size>
+           <widget class="QTableView" name="black_market">
+            <property name="styleSheet">
+             <string notr="true">QHeaderView, QStandardItem {
+                font: 12pt MiSans;
+}</string>
             </property>
            </widget>
           </item>
@@ -139,12 +138,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QListWidget" name="yourRoom">
-            <property name="minimumSize">
-             <size>
-              <width>280</width>
-              <height>200</height>
-             </size>
+           <widget class="QTableView" name="my_room">
+            <property name="styleSheet">
+             <string notr="true">QHeaderView, QStandardItem {
+                font: 12pt MiSans;
+}</string>
             </property>
            </widget>
           </item>

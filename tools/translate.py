@@ -42,6 +42,7 @@ def generate():
     all_files.extend(get_files("form", "ui"))
     all_files.extend(get_files("widgets", "py"))
     all_files.extend(get_files("console", "py"))
+    all_files.extend(get_files("app", "py"))
 
     with cd(str(CURRENT.parent)):
         run(f"pyside6-lupdate {' '.join(all_files)} -ts translation_zh_CN.ts")

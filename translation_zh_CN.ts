@@ -288,17 +288,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>离开</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="28"/>
         <source>Hello customer! Your cash is %1, your deposit is %2, what do you want to do...</source>
-        <translation>客户您好！您的现金是%1，您的存款是%2，请问您要...</translation>
+        <translation type="vanished">客户您好！您的现金是%1，您的存款是%2，请问您要...</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="37"/>
+        <location filename="widgets/bank.py" line="27"/>
+        <source>Hello customer! Your cash is {}, your deposit is {}, what do you want to do...</source>
+        <translation>客户您好！您的现金是{}，您的存款是{}，请问您要...</translation>
+    </message>
+    <message>
+        <location filename="widgets/bank.py" line="35"/>
         <source>How much money do you deposit?</source>
         <translation>您存多少钱？</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="53"/>
+        <location filename="widgets/bank.py" line="51"/>
         <source>How much money do you withdraw?</source>
         <translation>您提走多少钱？</translation>
     </message>
@@ -403,39 +407,86 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>在医院里</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="33"/>
+        <location filename="form/hospital.ui" line="38"/>
         <source>TextLabel</source>
         <translation>《》</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="40"/>
+        <location filename="form/hospital.ui" line="45"/>
         <source>Resolutely resist corruption! I will only charge you 3,500 yuan red envelope for each health point.&quot;</source>
         <translation>坚决抵制腐败！每个健康点数俺只收您3500元红包。”</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="53"/>
+        <location filename="form/hospital.ui" line="58"/>
         <source>Treatment Points</source>
         <translation>治疗点数</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="88"/>
+        <location filename="form/hospital.ui" line="93"/>
         <source>Confirm</source>
         <translation>确认</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="114"/>
+        <location filename="form/hospital.ui" line="119"/>
         <source>You are too dark! I will sue you!</source>
         <translation>你太黑了!俺告你去!</translation>
     </message>
     <message>
-        <location filename="widgets/hospital.py" line="23"/>
         <source>The doctor clapped his hands happily: &quot;Your health points are %1, and the points you need to be treated are %2.</source>
-        <translation>大夫高兴地拍着手：“您的健康点数是%1，需要治疗的点数是%2。</translation>
+        <translation type="vanished">大夫高兴地拍着手：“您的健康点数是%1，需要治疗的点数是%2。</translation>
     </message>
     <message>
-        <location filename="widgets/hospital.py" line="40"/>
+        <location filename="widgets/hospital.py" line="22"/>
+        <source>The doctor clapped his hands happily: &quot;Your health points are {}, and the points you need to be treated are {}.</source>
+        <translation>大夫高兴地拍着手：“您的健康点数是{}，需要治疗的点数是{}。</translation>
+    </message>
+    <message>
+        <location filename="widgets/hospital.py" line="38"/>
         <source>The doctor said, &quot;There&apos;s not enough money! I refuse to treat you.&quot;</source>
         <translation>医生说，“钱不够哎! 拒绝治疗。”</translation>
+    </message>
+</context>
+<context>
+    <name>Item</name>
+    <message>
+        <location filename="app/models.py" line="37"/>
+        <source>smuggled cars</source>
+        <translation>走私汽车</translation>
+    </message>
+    <message>
+        <location filename="app/models.py" line="39"/>
+        <source>imported cigarettes</source>
+        <translation>进口香烟</translation>
+    </message>
+    <message>
+        <location filename="app/models.py" line="41"/>
+        <source>Pirated VCDs and games</source>
+        <translation>盗版VCD、游戏</translation>
+    </message>
+    <message>
+        <location filename="app/models.py" line="43"/>
+        <source>Shanghai baby (r18)</source>
+        <translation>《上海小宝贝》（禁书）</translation>
+    </message>
+    <message>
+        <location filename="app/models.py" line="45"/>
+        <source>imported toys</source>
+        <translation>进口玩具</translation>
+    </message>
+    <message>
+        <location filename="app/models.py" line="47"/>
+        <source>Fake cosmetics</source>
+        <translation>伪劣化妆品</translation>
+    </message>
+    <message>
+        <location filename="app/models.py" line="49"/>
+        <source>Fake liquor (highly toxic)</source>
+        <translation>假白酒（剧毒！）</translation>
+    </message>
+    <message>
+        <location filename="app/models.py" line="53"/>
+        <source>Counterfeit mobile phones</source>
+        <translation>水货手机</translation>
     </message>
 </context>
 <context>
@@ -564,7 +615,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">买进</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="92"/>
+        <location filename="form/main.ui" line="85"/>
         <source>==&gt;</source>
         <translation>==&gt;</translation>
     </message>
@@ -573,7 +624,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">卖出</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="121"/>
+        <location filename="form/main.ui" line="114"/>
         <source>&lt;==</source>
         <translation>&lt;==</translation>
     </message>
@@ -654,31 +705,31 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">崇文门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="713"/>
-        <location filename="form/main.ui" line="938"/>
+        <location filename="form/main.ui" line="699"/>
+        <location filename="form/main.ui" line="924"/>
         <source>Bank</source>
         <translation>银行</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="735"/>
-        <location filename="form/main.ui" line="948"/>
+        <location filename="form/main.ui" line="721"/>
+        <location filename="form/main.ui" line="934"/>
         <source>Hospital</source>
         <translation>医院</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="760"/>
-        <location filename="form/main.ui" line="943"/>
+        <location filename="form/main.ui" line="746"/>
+        <location filename="form/main.ui" line="929"/>
         <source>Post Office</source>
         <translation>邮局</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="782"/>
+        <location filename="form/main.ui" line="768"/>
         <source>Rental agency</source>
         <translation>租房中介</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="804"/>
-        <location filename="form/main.ui" line="963"/>
+        <location filename="form/main.ui" line="790"/>
+        <location filename="form/main.ui" line="949"/>
         <source>Cyber Cafe</source>
         <translation>网吧</translation>
     </message>
@@ -701,7 +752,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;R北京新闻: 市民反映有人在地铁口卖假酒 | 12:09 | Guoly Computing公司成立 | 12:20 | 北京市出台网上古玩市场管理规定 | 21:8.10  | Guoly Computing公司推出“北京浮生记”生存策略游戏 | 13:10 | Guoly Computing 寻求风险投资 (guoxh@hotmail.com) | 2:25.00  | 成都走私飞机北京人竞拍成功 | 2:45.50  | 京城大代理行：明年北京楼市大预言  | 3:55.00 | 车业再发狠招 北京汽车调千元 | 13:6.25  |  朝鲜支持北京申办奥运 | 2:35 | 著名画家安前类：北京与我的一个约定 | 8:28.30  | 机票打折变招术 50元就可以从北京东飞往昌平 | 16:2.30  | 北京把禁止燃放烟花爆竹同热爱动物结合起来 | 13:35.00 | 北京电脑体育彩票揭晓 12亿巨奖被一男子领取 | 7:06.00  | 西城“扫黄”正规军   出手“快准狠” | 4:62.00  | 北京警方严打买卖伪劣化妆品的人 | 10:60.00 | 京城目击：地铁口小贩猖獗，群众说有关部门应该管一管了 | 2:19.50  | 进口玩具电子商务网站(ePlayMe.com)在北京开通 | 20:1.80  | 首都20万师生联合签名支持申奥 | 23:1.00  | 《北京真理报》招聘记者周六进行复试 | 5:04.15  | 千年古酒亮相北京 假酒飘香堪称极品 | 9:16.00  | 农村发展高科技：卖VCD大军会京师 | 4:00.00  | 京城水货手机七大趋势令科学家关注 | 7:12:5 | 北京环保厕所进军美国  | 23:50 (美国西部时间) | 同乡反目三只耳朵被砍 | 5:40 | 警方凌晨出击 查获《看上去真的很假》五千册  | 4:08 | 北京新时尚：过节送彩票  | 19:45 | 留京工作大学生自豪地说：我们的住房100年后就可买到手 | 10:46 | 北京环境保护取得伟大成就，首钢比公园还美10多倍 | 7:13.00 | 市民张大爷反映有人在地铁口卖《上海小宝贝》 | 6:00  | 中关村某公司CEO误喝山西假白酒昏迷，进军Nsdq日期后推 | 20:0.50 | 《宇宙气功日报》：气沉丹田速成班开始报名 | 15:50 | 北京治安又上新台阶，被评为世界最安全城市 | 19:00.00  | 官员笑谈北京乱收费现象为什么不见了 | 20:00  | 工商局查处一处盗版VCD窝点 | 4:0:00  | 美国专家：北京的空气含有多种矿物质，营养丰富 | 8:15:00 (美国东部时间) | 一名贵汽车原来是厦门走私汽车 | 8:59:00  | 大学生毕业招聘会信息：邮电大学学生供不应求，多家IT企业抢人 | 4:16:00  | 世界小学生会聚北京，见识白色污染和沙尘暴 | 6:20:00 (巴黎时间) | 来自天鹅湖的感谢信：北京人救了野天鹅 | 6:18:00  | 香港会议上，北京被评为最廉洁的城市 | 6:48:00  | 坚持“亲戚第二、人才第一”的好区长 | 2:32:85 | 专家称：狐狸爱鸡.com网站不会倒闭，2年后就可赢利 | 3:30 | 领导说：北京的道路状况良好 | 4:07 | 市民抱怨北京报纸假医疗广告太多 | 5:53 | 陈狗猫小姐的《我爱北京的胡同》荣获征文第一名 | 4:40 | 小区居民正告小偷：不要再偷自行车了 | 10:85 | 擅迁他人户口 北京一派出所被告倒 | 4:00  | 北京一大学坚持“博士生导师”终身制，受到美国教授赞扬 | 19:09 | 北京体育彩票第150期 摇出一注特等奖 一等奖达2万 | 5:63 | 北京“牦牛胡同”考古挖掘，电视直播成闹剧 | 10:09 | 北京教师节期间餐厅等服务行业将延长营业时间 | 23：00 | 北京三百楼宇实现宽带接入 | 3:40 | 北京公安整治节日客运秩序 | 8:23 | 中关村有百万大学生在“打工”  | 2:00 | 我市污染企业比上一年减少12% | 11:34 | 证券市场实现新跨越 年度筹资首次破万亿大关  | 20:40 | 本日新闻结束，一分钟后重播 | 14:24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="884"/>
+        <location filename="form/main.ui" line="870"/>
         <source>System</source>
         <translation>系统</translation>
     </message>
@@ -728,125 +779,125 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>黑市</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="70"/>
+        <location filename="form/main.ui" line="63"/>
         <source>Buy</source>
         <translation>买进</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="99"/>
+        <location filename="form/main.ui" line="92"/>
         <source>Sell</source>
         <translation>卖出</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="134"/>
+        <location filename="form/main.ui" line="127"/>
         <source>Your rented house</source>
         <translation>您的出租屋</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="183"/>
+        <location filename="form/main.ui" line="169"/>
         <source>Your Status</source>
         <translation>您的状态</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="240"/>
+        <location filename="form/main.ui" line="226"/>
         <source>Cash</source>
         <translation>现金</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="281"/>
+        <location filename="form/main.ui" line="267"/>
         <source>Savings</source>
         <translation>存款</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="322"/>
+        <location filename="form/main.ui" line="308"/>
         <source>Debt</source>
         <translation>欠债</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="372"/>
+        <location filename="form/main.ui" line="358"/>
         <source>Health</source>
         <translation>健康</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="392"/>
+        <location filename="form/main.ui" line="378"/>
         <source>Fame</source>
         <translation>名声</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="465"/>
-        <location filename="widgets/mainwindow.py" line="201"/>
+        <location filename="form/main.ui" line="451"/>
+        <location filename="widgets/mainwindow.py" line="213"/>
         <source>I want to visit 
 the capital</source>
         <translation>我要逛京城</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="503"/>
-        <location filename="widgets/mainwindow.py" line="176"/>
+        <location filename="form/main.ui" line="489"/>
+        <location filename="widgets/mainwindow.py" line="188"/>
         <source>Pingguoyuan</source>
         <translation>苹果园</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="516"/>
-        <location filename="widgets/mainwindow.py" line="177"/>
+        <location filename="form/main.ui" line="502"/>
+        <location filename="widgets/mainwindow.py" line="189"/>
         <source>Gongzhufen</source>
         <translation>公主坟</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="537"/>
+        <location filename="form/main.ui" line="523"/>
         <source>Switch mode</source>
         <translation>老板来了</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="568"/>
-        <location filename="widgets/mainwindow.py" line="183"/>
+        <location filename="form/main.ui" line="554"/>
+        <location filename="widgets/mainwindow.py" line="195"/>
         <source>Changchun Street</source>
         <translation>长椿街</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="581"/>
-        <location filename="widgets/mainwindow.py" line="180"/>
+        <location filename="form/main.ui" line="567"/>
+        <location filename="widgets/mainwindow.py" line="192"/>
         <source>Dongzhimen</source>
         <translation>东直门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="594"/>
-        <location filename="widgets/mainwindow.py" line="181"/>
+        <location filename="form/main.ui" line="580"/>
+        <location filename="widgets/mainwindow.py" line="193"/>
         <source>Fuxingmen</source>
         <translation>复兴门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="607"/>
-        <location filename="widgets/mainwindow.py" line="179"/>
+        <location filename="form/main.ui" line="593"/>
+        <location filename="widgets/mainwindow.py" line="191"/>
         <source>Jishuitan</source>
         <translation>积水潭</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="620"/>
-        <location filename="widgets/mainwindow.py" line="182"/>
+        <location filename="form/main.ui" line="606"/>
+        <location filename="widgets/mainwindow.py" line="194"/>
         <source>Jianguomen</source>
         <translation>建国门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="633"/>
-        <location filename="widgets/mainwindow.py" line="178"/>
+        <location filename="form/main.ui" line="619"/>
+        <location filename="widgets/mainwindow.py" line="190"/>
         <source>Xizhimen</source>
         <translation>西直门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="646"/>
-        <location filename="widgets/mainwindow.py" line="175"/>
+        <location filename="form/main.ui" line="632"/>
+        <location filename="widgets/mainwindow.py" line="187"/>
         <source>Beijing Railway 
 Station</source>
         <translation>北京站</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="660"/>
-        <location filename="widgets/mainwindow.py" line="184"/>
+        <location filename="form/main.ui" line="646"/>
+        <location filename="widgets/mainwindow.py" line="196"/>
         <source>Chongwenmen</source>
         <translation>崇文门</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="857"/>
+        <location filename="form/main.ui" line="843"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -865,62 +916,62 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;R北京新闻: 市民反映有人在地铁口卖假酒 | 12:09 | Guoly Computing公司成立 | 12:20 | 北京市出台网上古玩市场管理规定 | 21:8.10  | Guoly Computing公司推出“北京浮生记”生存策略游戏 | 13:10 | Guoly Computing 寻求风险投资 (guoxh@hotmail.com) | 2:25.00  | 成都走私飞机北京人竞拍成功 | 2:45.50  | 京城大代理行：明年北京楼市大预言  | 3:55.00 | 车业再发狠招 北京汽车调千元 | 13:6.25  |  朝鲜支持北京申办奥运 | 2:35 | 著名画家安前类：北京与我的一个约定 | 8:28.30  | 机票打折变招术 50元就可以从北京东飞往昌平 | 16:2.30  | 北京把禁止燃放烟花爆竹同热爱动物结合起来 | 13:35.00 | 北京电脑体育彩票揭晓 12亿巨奖被一男子领取 | 7:06.00  | 西城“扫黄”正规军   出手“快准狠” | 4:62.00  | 北京警方严打买卖伪劣化妆品的人 | 10:60.00 | 京城目击：地铁口小贩猖獗，群众说有关部门应该管一管了 | 2:19.50  | 进口玩具电子商务网站(ePlayMe.com)在北京开通 | 20:1.80  | 首都20万师生联合签名支持申奥 | 23:1.00  | 《北京真理报》招聘记者周六进行复试 | 5:04.15  | 千年古酒亮相北京 假酒飘香堪称极品 | 9:16.00  | 农村发展高科技：卖VCD大军会京师 | 4:00.00  | 京城水货手机七大趋势令科学家关注 | 7:12:5 | 北京环保厕所进军美国  | 23:50 (美国西部时间) | 同乡反目三只耳朵被砍 | 5:40 | 警方凌晨出击 查获《看上去真的很假》五千册  | 4:08 | 北京新时尚：过节送彩票  | 19:45 | 留京工作大学生自豪地说：我们的住房100年后就可买到手 | 10:46 | 北京环境保护取得伟大成就，首钢比公园还美10多倍 | 7:13.00 | 市民张大爷反映有人在地铁口卖《上海小宝贝》 | 6:00  | 中关村某公司CEO误喝山西假白酒昏迷，进军Nsdq日期后推 | 20:0.50 | 《宇宙气功日报》：气沉丹田速成班开始报名 | 15:50 | 北京治安又上新台阶，被评为世界最安全城市 | 19:00.00  | 官员笑谈北京乱收费现象为什么不见了 | 20:00  | 工商局查处一处盗版VCD窝点 | 4:0:00  | 美国专家：北京的空气含有多种矿物质，营养丰富 | 8:15:00 (美国东部时间) | 一名贵汽车原来是厦门走私汽车 | 8:59:00  | 大学生毕业招聘会信息：邮电大学学生供不应求，多家IT企业抢人 | 4:16:00  | 世界小学生会聚北京，见识白色污染和沙尘暴 | 6:20:00 (巴黎时间) | 来自天鹅湖的感谢信：北京人救了野天鹅 | 6:18:00  | 香港会议上，北京被评为最廉洁的城市 | 6:48:00  | 坚持“亲戚第二、人才第一”的好区长 | 2:32:85 | 专家称：狐狸爱鸡.com网站不会倒闭，2年后就可赢利 | 3:30 | 领导说：北京的道路状况良好 | 4:07 | 市民抱怨北京报纸假医疗广告太多 | 5:53 | 陈狗猫小姐的《我爱北京的胡同》荣获征文第一名 | 4:40 | 小区居民正告小偷：不要再偷自行车了 | 10:85 | 擅迁他人户口 北京一派出所被告倒 | 4:00  | 北京一大学坚持“博士生导师”终身制，受到美国教授赞扬 | 19:09 | 北京体育彩票第150期 摇出一注特等奖 一等奖达2万 | 5:63 | 北京“牦牛胡同”考古挖掘，电视直播成闹剧 | 10:09 | 北京教师节期间餐厅等服务行业将延长营业时间 | 23：00 | 北京三百楼宇实现宽带接入 | 3:40 | 北京公安整治节日客运秩序 | 8:23 | 中关村有百万大学生在“打工”  | 2:00 | 我市污染企业比上一年减少12% | 11:34 | 证券市场实现新跨越 年度筹资首次破万亿大关  | 20:40 | 本日新闻结束，一分钟后重播 | 14:24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="893"/>
+        <location filename="form/main.ui" line="879"/>
         <source>Places</source>
         <translation>重要场所</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="904"/>
+        <location filename="form/main.ui" line="890"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="918"/>
+        <location filename="form/main.ui" line="904"/>
         <source>new game</source>
         <translation>新游戏</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="923"/>
+        <location filename="form/main.ui" line="909"/>
         <source>Ranking</source>
         <translation>高手排行</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="928"/>
+        <location filename="form/main.ui" line="914"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="933"/>
+        <location filename="form/main.ui" line="919"/>
         <source>exit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="953"/>
+        <location filename="form/main.ui" line="939"/>
         <source>Airport</source>
         <translation>机场</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="958"/>
+        <location filename="form/main.ui" line="944"/>
         <source>Rental Agency</source>
         <translation>租房中介</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="968"/>
+        <location filename="form/main.ui" line="954"/>
         <source>Beijing Intro</source>
         <translation>北京简介</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="973"/>
+        <location filename="form/main.ui" line="959"/>
         <source>Game Story</source>
         <translation>游戏故事</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="978"/>
+        <location filename="form/main.ui" line="964"/>
         <source>Game Guide</source>
         <translation>游戏文档</translation>
     </message>
     <message>
-        <location filename="form/main.ui" line="983"/>
+        <location filename="form/main.ui" line="969"/>
         <source>About this game</source>
         <translation>关于本游戏</translation>
     </message>
@@ -999,100 +1050,127 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">关于本游戏</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="109"/>
+        <location filename="widgets/mainwindow.py" line="111"/>
         <source>The village chief laughed and said: &quot;You have no money, you are crazy!&quot;</source>
         <translation>村长嘿嘿笑道：“你没钱,有神经病!”</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="117"/>
+        <location filename="widgets/mainwindow.py" line="119"/>
         <source>The village chief nodded to me: &quot;Brother, do you want to support your hometown with 1,000 yuan?&quot;</source>
         <translation>村长朝俺点头：&quot;兄弟,您想支援家乡1000元吗？&quot;</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="125"/>
+        <location filename="widgets/mainwindow.py" line="127"/>
         <source>The village chief bowed to me on the phone: &quot;Rich man! I want to marry my daughter to you.&quot;...</source>
         <translation>村长在电话中朝俺鞠躬: &quot;富豪!我想把我女儿嫁给您.&quot;...</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="133"/>
+        <location filename="widgets/mainwindow.py" line="135"/>
         <source>The village chief knelt down to me on the phone and said: &quot;You are my real father!&quot;</source>
         <translation>村长在电话中朝俺下跪，说：&quot;您简直是我亲爹！&quot;</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="141"/>
+        <location filename="widgets/mainwindow.py" line="143"/>
         <source>The village chief said: &quot;You are a role model for rural young people!&quot;</source>
         <translation>村长说：&quot;您是农村年轻人的典范！&quot;</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="187"/>
+        <location filename="widgets/mainwindow.py" line="158"/>
+        <source>The young nurse looked at me with a smile and said, &quot;Brother! Please register at the neurology department.&quot;</source>
+        <translation>小护士笑咪咪地望着俺：&quot;大哥！神经科这边挂号.&quot;</translation>
+    </message>
+    <message>
+        <location filename="widgets/mainwindow.py" line="199"/>
         <source>Fangzhuang</source>
         <translation>方庄</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="188"/>
+        <location filename="widgets/mainwindow.py" line="200"/>
         <source>Bajiao West Road</source>
         <translation>八角西路</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="189"/>
+        <location filename="widgets/mainwindow.py" line="201"/>
         <source>Cuiwei Road</source>
         <translation>翠微路</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="190"/>
+        <location filename="widgets/mainwindow.py" line="202"/>
         <source>Haidian Street</source>
         <translation>海淀大街</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="191"/>
+        <location filename="widgets/mainwindow.py" line="203"/>
         <source>Asian Games Village</source>
         <translation>亚运村</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="192"/>
+        <location filename="widgets/mainwindow.py" line="204"/>
         <source>Sanyuan West Bridge</source>
         <translation>三元西桥</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="193"/>
+        <location filename="widgets/mainwindow.py" line="205"/>
         <source>Fuyou Street</source>
         <translation>府右街</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="194"/>
+        <location filename="widgets/mainwindow.py" line="206"/>
         <source>Yong&apos;anli</source>
         <translation>永安里</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="195"/>
+        <location filename="widgets/mainwindow.py" line="207"/>
         <source>Yuquanying</source>
         <translation>玉泉营</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="196"/>
+        <location filename="widgets/mainwindow.py" line="208"/>
         <source>Yongdingmen</source>
         <translation>永定门</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="205"/>
+        <location filename="widgets/mainwindow.py" line="217"/>
         <source>I want to go
  to the subway</source>
         <translation>我要进地铁</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="276"/>
+        <location filename="widgets/mainwindow.py" line="251"/>
+        <location filename="widgets/mainwindow.py" line="257"/>
+        <source>Goods</source>
+        <translation>商品</translation>
+    </message>
+    <message>
+        <location filename="widgets/mainwindow.py" line="252"/>
+        <source>Black Market prices</source>
+        <translation>黑市价格</translation>
+    </message>
+    <message>
+        <location filename="widgets/mainwindow.py" line="257"/>
+        <source>Bought price</source>
+        <translation>买进价格</translation>
+    </message>
+    <message>
+        <location filename="widgets/mainwindow.py" line="258"/>
+        <source>Quantity</source>
+        <translation>数量</translation>
+    </message>
+    <message>
+        <location filename="widgets/mainwindow.py" line="298"/>
         <source>You need to bring at least 15 yuan with you when entering an Internet cafe, haha, come back after withdrawing money.</source>
         <translation>进网吧至少身上要带15元，呵呵，取钱再来。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="284"/>
+        <location filename="widgets/mainwindow.py" line="306"/>
         <source>The village chief said: Don&apos;t hang out in the Internet cafe all the time, go and do a decent business!</source>
         <translation>村长放出话来：你别总是在网吧里鬼混，快去做正经买卖!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="301"/>
-        <source>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned %d yuan in US Internet advertising fees, hehe!</source>
-        <translation>感谢电信改革，可以免费上网! 还挣了美国网络广告费%d元，嘿嘿!</translation>
+        <location filename="widgets/mainwindow.py" line="323"/>
+        <source>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned {} yuan in US Internet advertising fees, hehe!</source>
+        <oldsource>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned %d yuan in US Internet advertising fees, hehe!</oldsource>
+        <translation>感谢电信改革，可以免费上网! 还挣了美国网络广告费{}元，嘿嘿!</translation>
     </message>
 </context>
 <context>
@@ -1126,24 +1204,29 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>给村长还钱</translation>
     </message>
     <message>
-        <location filename="form/pay_debt.ui" line="20"/>
+        <location filename="form/pay_debt.ui" line="25"/>
         <source>The village chief said on the phone: &quot;Tie Niu, you owe me %d yuan, pay me back!&quot;</source>
         <translation>村长在电话中说：&quot;铁牛，你欠俺%d元，快还!&quot;</translation>
     </message>
     <message>
-        <location filename="form/pay_debt.ui" line="33"/>
+        <location filename="form/pay_debt.ui" line="38"/>
         <source>How much do you owe?</source>
         <translation>您还多少？</translation>
     </message>
     <message>
-        <location filename="form/pay_debt.ui" line="81"/>
+        <location filename="form/pay_debt.ui" line="86"/>
         <source>Conform</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="form/pay_debt.ui" line="107"/>
+        <location filename="form/pay_debt.ui" line="112"/>
         <source>Wait a few days.</source>
         <translation>缓几天吧</translation>
+    </message>
+    <message>
+        <location filename="widgets/pay_debt.py" line="25"/>
+        <source>The village chief said on the phone: &quot;Tie Niu, you owe me {} yuan, pay me back!&quot;</source>
+        <translation>村长在电话中说：&quot;铁牛，你欠俺{}元，快还!&quot;</translation>
     </message>
 </context>
 <context>
@@ -1333,32 +1416,32 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>北京浮生记</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="56"/>
+        <location filename="form/story.ui" line="54"/>
         <source>The story of &quot;Beijing Life&quot;</source>
         <translation>“北京浮生记”的故事</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="69"/>
+        <location filename="form/story.ui" line="67"/>
         <source>You play the role of a young man who comes to Beijing from other places to make a living. At the beginning, you only have 2,000 yuan, and you still owe a debt of 5,500 yuan to the village chief (a gangster leader). The daily interest on these debts is as high as 10%. If you do not pay it off in time, the village chief will call fellow villagers in Beijing to beat you up, and you may die on the streets of Beijing. You decide to get rich by reselling various items on the black market at subway entrances across Beijing. Not only do you want to pay off your debts, but you also want to be ranked among the richest people in Beijing.</source>
         <translation>您扮演一位从外地到北京谋生的青年。一开始，您只有2000元钱，并且还欠村长（一个流氓头子）5500元 债务。这些债务每天的利息高达10%.如果不及时还清，村长会叫在北京的老乡们来扁您，您可能牺牲在北京街头。 您决定在北京各地铁口黑市倒卖各种物品来发财致富，不仅还掉债务，而且要荣登北京富人排行榜。</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="79"/>
+        <location filename="form/story.ui" line="77"/>
         <source>You can only stay in Beijing for 40 days, and each visit to a black market counts as one day. In the beginning, you can only place 100 items in the house you rent. You will encounter various events in Beijing. You need to fight wits and courage with gangsters, thieves, murderers, corrupt officials, swindlers, etc. You also need to try to survive in Beijing&apos;s harsh natural environment.</source>
         <translation>您只能在北京呆40天，每次奔走一个黑市算一天。一开始，您租的房子只能放100个东西。 您会在北京遭遇到各种事件，您需要与流氓、小偷、凶手、贪官、骗子等斗智斗勇，还需要在北京恶劣的自然环境下设法生存下来。</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="89"/>
+        <location filename="form/story.ui" line="87"/>
         <source>You will experience the excitement of selling pirated VCDs and smuggled cars in Beijing, as well as the funny events that are unique to our time.</source>
         <translation>您将体验在北京卖盗版VCD和走私汽车的刺激以及我们这个时代才有的搞笑事件。</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="99"/>
+        <location filename="form/story.ui" line="97"/>
         <source>&lt;status&gt;</source>
         <translation>状态</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="109"/>
+        <location filename="form/story.ui" line="107"/>
         <source>Start Game &gt;&gt;</source>
         <translation>开始游戏 &gt;&gt;</translation>
     </message>
@@ -1398,37 +1481,37 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">初始化帮助信息....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="33"/>
+        <location filename="widgets/story.py" line="22"/>
         <source>Initialize hacker information....</source>
         <translation>初始化黑客信息....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="34"/>
+        <location filename="widgets/story.py" line="23"/>
         <source>Initialize the second loop information.....</source>
         <translation>初始化二环路信息.....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="35"/>
+        <location filename="widgets/story.py" line="24"/>
         <source>Initialize black market items...</source>
         <translation>初始化黑市物品......</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="36"/>
+        <location filename="widgets/story.py" line="25"/>
         <source>Initialize random events...</source>
         <translation>初始化随机事件......</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="37"/>
+        <location filename="widgets/story.py" line="26"/>
         <source>Loading Beijing real-time news....</source>
         <translation>加载北京实时新闻....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="60"/>
+        <location filename="widgets/story.py" line="49"/>
         <source>The game has been initialized, ready to enter Beijing...</source>
         <translation>游戏初始化完毕,准备进入北京...</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="65"/>
+        <location filename="widgets/story.py" line="54"/>
         <source>Initialization help information....</source>
         <translation>初始化帮助信息....</translation>
     </message>

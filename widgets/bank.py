@@ -23,10 +23,8 @@ class Bank(QtWidgets.QWidget):
 
         self.ui.label.setText(
             self.tr(
-                "Hello customer! Your cash is %1, your deposit is %2, what do you want to do..."
-            )
-            .replace("%1", str(self.cash))
-            .replace("%2", str(self.saving))
+                "Hello customer! Your cash is {}, your deposit is {}, what do you want to do..."
+            ).format(self.cash, self.saving)
         )
 
         self.ui.deposit.clicked.connect(self.deposit)

@@ -1,6 +1,7 @@
 from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
 import random
-
+from app.models import makeDrugPrices, get_item_name, Item
+from widgets.my_table_model import MyTableModel
 from ui.main import Ui_MainWindow
 
 from widgets import (
@@ -30,10 +31,10 @@ class MainWindow(QtWidgets.QMainWindow):
         family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
         self.setStyleSheet(
             """
-            QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {
+            QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {{
                 font: 12pt {family};
-            }
-            """.replace("{family}", family)
+            }}
+            """.format(family=family)
         )
         self.ui.menubar.setFont(QtGui.QFont(family, 14))
         self.ui.menu.setFont(QtGui.QFont(family, 14))
@@ -86,16 +87,17 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.bank.triggered.connect(self.enter_bank)
         self.ui.p_bank.clicked.connect(self.enter_bank)
         self.ui.hospital.triggered.connect(self.enter_hospital)
-        self.ui.p_hospital.triggered.connect(self.enter_hospital)
+        self.ui.p_hospital.clicked.connect(self.enter_hospital)
 
         self.ui.post_office.triggered.connect(self.pay_debt)
         self.ui.p_postoffice.clicked.connect(self.pay_debt)
 
         self.init_data()
+        self.refresh_display()
 
     def pay_debt(self):
-        if self.debt > 0:
-            self.d_paydebt = PayDebt()
+        if self.status.debt > 0:
+            self.d_paydebt = PayDebt(self.status.cash, self.status.debt)
             self.d_paydebt.sig_pay.connect(self.after_pay_debt)
             self.d_paydebt.show()
         else:
@@ -147,8 +149,18 @@ class MainWindow(QtWidgets.QMainWindow):
         self.refresh_display()
 
     def enter_hospital(self):
-        self.d_hospital = Hospital(None, self.status.cash, self.status.health)
-        self.d_hospital.sig_health.connect(self.leave_hospital)
+        if self.status.health == 100:
+            self.d_diary = Diary()
+            self.d_diary.ui.label.setText(
+                self.tr(
+                    'The young nurse looked at me with a smile and said, "Brother! Please register at the neurology department."'
+                )
+            )
+            self.d_diary.show()
+        else:
+            self.d_hospital = Hospital(None, self.status.cash, self.status.health)
+            self.d_hospital.sig_health.connect(self.leave_hospital)
+            self.d_hospital.show()
 
     def leave_hospital(self, cash: int, health: int):
         self.status.cash = cash
@@ -228,12 +240,19 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def init_data(self):
         status, market_items, my_items = load_data()
-        self.ui.cash.display(status.cash)
-        self.ui.debt.display(status.debt)
-        self.ui.health.display(status.health)
-        self.ui.fame.display(status.fame)
-        self.ui.saving.display(status.saving)
         self.status: Status = status
+
+        self.market_items: list[Item] = makeDrugPrices(3)
+        self.my_items: list[Item] = my_items
+
+        font = QtGui.QFont("MiSans", 12)
+        self.model_market = MyTableModel()
+        self.ui.black_market.setModel(self.model_market)
+        self.ui.black_market.setFont(font)
+
+        self.model_myitem = MyTableModel()
+        self.ui.my_room.setModel(self.model_myitem)
+        self.ui.my_room.setFont(font)
 
     def play_sound(self, name: str):
         # the "self" is important because sound will run in the background
@@ -297,8 +316,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.d_diary = Diary()
         self.d_diary.ui.label.setText(
             self.tr(
-                "Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned %d yuan in US Internet advertising fees, hehe!"
-            ).replace("%d", str(money))
+                "Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned {} yuan in US Internet advertising fees, hehe!"
+            ).format(money)
         )
         self.d_diary.show()
 
@@ -308,6 +327,55 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.fame.display(self.status.fame)
         self.ui.debt.display(self.status.debt)
         self.ui.health.display(self.status.health)
+
+        self.model_market.clear()
+        for item in self.market_items:
+            name = QtGui.QStandardItem(get_item_name(item))
+            icon = QtGui.QIcon(":/res/item.ico")
+            name.setIcon(icon)
+            price = QtGui.QStandardItem(str(item.price))
+            self.model_market.appendRow([name, price])
+
+        self.model_market.setHorizontalHeaderLabels(
+            [self.tr("Goods"), self.tr("Black Market prices")]
+        )
+
+        header = self.ui.black_market.horizontalHeader()
+        header.setSectionResizeMode(
+            0, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        header.setSectionResizeMode(
+            1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        self.ui.black_market.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.SingleSelection)
+        self.ui.black_market.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows)
+
+        self.model_myitem.clear()
+        for item in self.my_items:
+            name = QtGui.QStandardItem(get_item_name(item))
+            icon = QtGui.QIcon(":/res/item.ico")
+            name.setIcon(icon)
+            price = QtGui.QStandardItem(str(item.price))
+            quantity = QtGui.QStandardItem(str(item.quantity))
+            self.model_myitem.appendRow([name, price, quantity])
+
+        self.model_myitem.setHorizontalHeaderLabels(
+            [self.tr("Goods"), self.tr("Bought price"), self.tr("Quantity")]
+        )
+
+        header = self.ui.my_room.horizontalHeader()
+        header.setSectionResizeMode(
+            0, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        header.setSectionResizeMode(
+            1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        header.setSectionResizeMode(
+            2, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        self.ui.my_room.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.SingleSelection)
+        self.ui.my_room.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows)
+
 
     def show_intro(self):
         self.dlg = StoryDlg()
