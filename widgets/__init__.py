@@ -8,6 +8,7 @@ from .settings import Settings
 from .statements import Statement
 from .story import StoryDlg
 from .text_editor import TextEditor
+from .hospital import Hospital
 
 __all__ = [
     "AboutGame",
@@ -20,4 +21,5 @@ __all__ = [
     "Statement",
     "StoryDlg",
     "TextEditor",
+    "Hospital",
 ]

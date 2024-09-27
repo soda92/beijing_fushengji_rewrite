@@ -12,6 +12,7 @@ from widgets import (
     Settings,
     StoryDlg,
     TextEditor,
+    Hospital,
 )
 
 
@@ -83,8 +84,19 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.ui.bank.triggered.connect(self.enter_bank)
         self.ui.p_bank.clicked.connect(self.enter_bank)
+        self.ui.hospital.triggered.connect(self.enter_hospital)
+        self.ui.p_hospital.triggered.connect(self.enter_hospital)
 
         self.init_data()
+
+    def enter_hospital(self):
+        self.d_hospital = Hospital(None, self.status.cash, self.status.health)
+        self.d_hospital.sig_health.connect(self.leave_hospital)
+
+    def leave_hospital(self, cash: int, health: int):
+        self.status.cash = cash
+        self.status.health = health
+        self.refresh_display()
 
     def enter_bank(self):
         self.d_bank = Bank(None, self.status.cash, self.status.saving)
