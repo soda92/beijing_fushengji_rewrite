@@ -1,6 +1,7 @@
 from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
 import random
-
+from app.models import makeDrugPrices, get_item_name, Item
+from widgets.my_table_model import MyTableModel
 from ui.main import Ui_MainWindow
 
 from widgets import (
@@ -92,6 +93,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.p_postoffice.clicked.connect(self.pay_debt)
 
         self.init_data()
+        self.refresh_display()
 
     def pay_debt(self):
         if self.status.debt > 0:
@@ -238,12 +240,19 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def init_data(self):
         status, market_items, my_items = load_data()
-        self.ui.cash.display(status.cash)
-        self.ui.debt.display(status.debt)
-        self.ui.health.display(status.health)
-        self.ui.fame.display(status.fame)
-        self.ui.saving.display(status.saving)
         self.status: Status = status
+
+        self.market_items: list[Item] = makeDrugPrices(3)
+        self.my_items: list[Item] = my_items
+
+        font = QtGui.QFont("MiSans", 12)
+        self.model_market = MyTableModel()
+        self.ui.black_market.setModel(self.model_market)
+        self.ui.black_market.setFont(font)
+
+        self.model_myitem = MyTableModel()
+        self.ui.my_room.setModel(self.model_myitem)
+        self.ui.my_room.setFont(font)
 
     def play_sound(self, name: str):
         # the "self" is important because sound will run in the background
@@ -318,6 +327,55 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.fame.display(self.status.fame)
         self.ui.debt.display(self.status.debt)
         self.ui.health.display(self.status.health)
+
+        self.model_market.clear()
+        for item in self.market_items:
+            name = QtGui.QStandardItem(get_item_name(item))
+            icon = QtGui.QIcon(":/res/item.ico")
+            name.setIcon(icon)
+            price = QtGui.QStandardItem(str(item.price))
+            self.model_market.appendRow([name, price])
+
+        self.model_market.setHorizontalHeaderLabels(
+            [self.tr("Goods"), self.tr("Black Market prices")]
+        )
+
+        header = self.ui.black_market.horizontalHeader()
+        header.setSectionResizeMode(
+            0, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        header.setSectionResizeMode(
+            1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        self.ui.black_market.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.SingleSelection)
+        self.ui.black_market.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows)
+
+        self.model_myitem.clear()
+        for item in self.my_items:
+            name = QtGui.QStandardItem(get_item_name(item))
+            icon = QtGui.QIcon(":/res/item.ico")
+            name.setIcon(icon)
+            price = QtGui.QStandardItem(str(item.price))
+            quantity = QtGui.QStandardItem(str(item.quantity))
+            self.model_myitem.appendRow([name, price, quantity])
+
+        self.model_myitem.setHorizontalHeaderLabels(
+            [self.tr("Goods"), self.tr("Bought price"), self.tr("Quantity")]
+        )
+
+        header = self.ui.my_room.horizontalHeader()
+        header.setSectionResizeMode(
+            0, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        header.setSectionResizeMode(
+            1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        header.setSectionResizeMode(
+            2, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        self.ui.my_room.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.SingleSelection)
+        self.ui.my_room.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows)
+
 
     def show_intro(self):
         self.dlg = StoryDlg()

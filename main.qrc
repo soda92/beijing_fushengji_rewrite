@@ -25,6 +25,9 @@
     <file>res/diary.bmp</file>
     <file>res/icon1.ico</file>
   </qresource>
+  <qresource>
+    <file>res/item.ico</file>
+  </qresource>
   <qresource prefix="SND">
     <file>sound/vomit.wav</file>
     <file>sound/buy.wav</file>
