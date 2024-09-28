@@ -302,7 +302,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>您存多少钱？</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="51"/>
+        <location filename="widgets/bank.py" line="52"/>
         <source>How much money do you withdraw?</source>
         <translation>您提走多少钱？</translation>
     </message>
@@ -335,12 +335,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="widgets/buy.py" line="26"/>
+        <location filename="widgets/buy.py" line="30"/>
         <source>Your cash is RMB {}, which can be used to buy up to {} {}.</source>
         <translation>您的现金是{}元人民币，最多可以买{}个{}。</translation>
     </message>
     <message>
-        <location filename="widgets/buy.py" line="35"/>
+        <location filename="widgets/buy.py" line="39"/>
         <source>Your cash is RMB {}, the house you rented is full of stuff, so you can&apos;t get any more stock. 
 To expand your business, it is recommended that you rent a bigger house.</source>
         <translation>您的现金是{}元人民币，您租的房子放满了东西，所以不能再进货了。
@@ -514,7 +514,7 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation type="vanished">媒体报道：又有日本出口到中国的产品出事了! 出事后日本人死不认帐,拒绝赔偿。村长得知此消息，托人把他用的水货手机（无任何厂商标识）硬卖给您，收您2500元。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="553"/>
+        <location filename="widgets/mainwindow.py" line="563"/>
         <source>What a pity! The house I rented is too small and can only hold {} items.</source>
         <translation>可惜!俺租的房子太小，只能放{}个物品。</translation>
     </message>
@@ -1256,173 +1256,178 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>我要进地铁</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="294"/>
+        <location filename="widgets/mainwindow.py" line="303"/>
         <source>Beijing Life ({}/{} day)</source>
         <translation>北京浮生（{}/{}天）</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="302"/>
+        <location filename="widgets/mainwindow.py" line="311"/>
         <source>I&apos;m going back to my hometown tomorrow and selling all the goods quickly.</source>
         <translation>俺明天回家乡，快把全部货物卖掉。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="308"/>
+        <location filename="widgets/mainwindow.py" line="317"/>
         <source>I have been in Beijing for 40 days, it’s time to go back and get married.</source>
         <translation>俺已经在北京40天了，该回去结婚去了。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="311"/>
+        <location filename="widgets/mainwindow.py" line="320"/>
         <source>The system sold the remaining goods for me: {}</source>
         <translation>系统帮我卖了剩余货物：{}</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="342"/>
+        <location filename="widgets/mainwindow.py" line="351"/>
         <source>Experts propose to improve college students&apos; &quot;hands-on quality&quot;, imported toys are popular!</source>
         <translation>专家提议提高大学生“动手素质”，进口玩具颇受欢迎!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="352"/>
+        <location filename="widgets/mainwindow.py" line="361"/>
         <source>Some people proudly say: When you are sick, you don&apos;t need to take injections or medicine, just drink fake liquor (very toxic)!</source>
         <translation>有人自豪地说：生病不用打针吃药，喝假白酒（剧毒）就可以!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="362"/>
+        <location filename="widgets/mainwindow.py" line="371"/>
         <source>Hospital&apos;s secret report: &quot;Shanghai Baby&quot; is more effective than Viagra&quot;!</source>
         <translation>医院的秘密报告：“《上海小宝贝》功效甚过伟哥”!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="372"/>
+        <location filename="widgets/mainwindow.py" line="381"/>
         <source>The illiterate said: &quot;2000 Nobel Prize in Literature? Bah! Not as good as pirated VCD Hong Kong and Taiwan movies.&quot; ”</source>
         <translation>文盲说：“2000年诺贝尔文学奖？呸！不如盗版VCD港台片。”</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="382"/>
+        <location filename="widgets/mainwindow.py" line="391"/>
         <source>Editorial of &quot;Beijing Economic Newspaper&quot;: &quot;Smuggling cars vigorously promotes car consumption!&quot;</source>
         <translation>《北京经济小报》社论：“走私汽车大力推进汽车消费!”</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="392"/>
+        <location filename="widgets/mainwindow.py" line="401"/>
         <source>Editorial of &quot;Beijing Truth&quot;: &quot;Promote beauty and put it into practice&quot;, counterfeit cosmetics are very popular!</source>
         <translation>《北京真理报》社论：“提倡爱美，落到实处”，伪劣化妆品大受欢迎!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="402"/>
+        <location filename="widgets/mainwindow.py" line="411"/>
         <source>8858.com e-bookstore dare not sell &quot;Shanghai Baby&quot;, a copy can be sold at a sky-high price on the black market!</source>
         <translation>8858.com电子书店也不敢卖《上海小宝贝》，黑市一册可卖天价!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="412"/>
+        <location filename="widgets/mainwindow.py" line="421"/>
         <source>Xie Bufeng said at the party: &quot;I am cool! I use counterfeit cosmetics!&quot;, counterfeit cosmetics are in short supply!</source>
         <translation>谢不疯在晚会上说：“我酷!我使用伪劣化妆品!”，伪劣化妆品供不应求!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="422"/>
+        <location filename="widgets/mainwindow.py" line="431"/>
         <source>Some people in Beijing drink fake Shanxi wine crazily, and can sell it at a sky-high price!</source>
         <translation>北京有人狂饮山西假酒，可以卖出天价!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="432"/>
+        <location filename="widgets/mainwindow.py" line="441"/>
         <source>College students in Beijing start looking for jobs, parallel-imported mobile phones are very popular!!</source>
         <translation>北京的大学生们开始找工作，水货手机大受欢迎！!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="442"/>
+        <location filename="widgets/mainwindow.py" line="451"/>
         <source>Rich people in Beijing are crazy about buying smuggled cars! Prices are soaring!</source>
         <translation>北京的富人疯狂地购买走私汽车！价格狂升!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="452"/>
+        <location filename="widgets/mainwindow.py" line="461"/>
         <source>The market is flooded with smuggled cigarettes from Fujian!</source>
         <translation>市场上充斥着来自福建的走私香烟!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="462"/>
+        <location filename="widgets/mainwindow.py" line="471"/>
         <source>Children in Beijing are busy studying online, no one wants to buy imported toys.</source>
         <translation>北京的孩子们都忙于上网学习，进口玩具没人愿意买。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="472"/>
+        <location filename="widgets/mainwindow.py" line="481"/>
         <source>The piracy industry is booming, and Zhongguancun, the &quot;Silicon Valley of China&quot;, is full of village girls selling pirated VCDs!</source>
         <translation>盗版业十分兴旺，“中国硅谷”——中关村全是卖盗版VCD的村姑!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="482"/>
+        <location filename="widgets/mainwindow.py" line="491"/>
         <source>My old classmate in Xiamen sponsored me two smuggled cars! I&apos;m rich!</source>
         <translation>厦门的老同学资助俺两部走私汽车！发了！！</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="492"/>
+        <location filename="widgets/mainwindow.py" line="501"/>
         <source>After the Industrial and Commercial Bureau raided the place, I found the imported cigarettes lost by my fellow villager in a dark corner.</source>
         <translation>工商局扫荡后，俺在黑暗角落里发现了老乡丢失的进口香烟。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="502"/>
+        <location filename="widgets/mainwindow.py" line="511"/>
         <source>My fellow villager gave me some fake Shanxi liquor (highly toxic) before he went home!</source>
         <translation>俺老乡回家前把一些山西假白酒（剧毒）给俺!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="512"/>
+        <location filename="widgets/mainwindow.py" line="521"/>
         <source>Media reports: Another Japanese product exported to China has gone wrong! After the incident, the Japanese refused to admit it and refused to compensate. The village chief learned of this news and asked someone to sell you his parallel-imported mobile phone (without any manufacturer logo) for 2,500 yuan.</source>
         <translation>媒体报道：又有日本出口到中国的产品出事了! 出事后日本人死不认帐,拒绝赔偿。村长得知此消息，托人把他用的水货手机（无任何厂商标识）硬卖给您，收您2500元。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="588"/>
+        <location filename="widgets/mainwindow.py" line="598"/>
         <source>I haven&apos;t decided what to buy yet.</source>
         <translation>我还没有选定买什么物品呢。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="599"/>
+        <location filename="widgets/mainwindow.py" line="607"/>
         <source>I don&apos;t have enough cash with me, so I&apos;ll go to the bank to withdraw some money.</source>
         <translation>俺带的现金不够，去银行提点钱吧。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="607"/>
+        <location filename="widgets/mainwindow.py" line="613"/>
         <source>I don&apos;t have enough cash and I don&apos;t have any deposits in the bank, what should I do?</source>
         <translation>俺的现金不够，银行又没有存款，咋办哩?</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="650"/>
+        <location filename="widgets/mainwindow.py" line="643"/>
         <source>Oh? It seems that no one is doing {} business here.</source>
         <translation>哦？仿佛没有人这里做{}生意。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="725"/>
-        <location filename="widgets/mainwindow.py" line="752"/>
+        <location filename="widgets/mainwindow.py" line="735"/>
+        <location filename="widgets/mainwindow.py" line="765"/>
         <source>Goods</source>
         <translation>商品</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="725"/>
+        <location filename="widgets/mainwindow.py" line="735"/>
         <source>Black Market prices</source>
         <translation>黑市价格</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="726"/>
+        <location filename="widgets/mainwindow.py" line="736"/>
         <source>average price</source>
         <translation>平均价格</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="752"/>
+        <location filename="widgets/mainwindow.py" line="765"/>
         <source>Bought price</source>
         <translation>买进价格</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="753"/>
+        <location filename="widgets/mainwindow.py" line="766"/>
         <source>Quantity</source>
         <translation>数量</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="684"/>
+        <location filename="widgets/mainwindow.py" line="787"/>
+        <source>your rented house ({}/{})</source>
+        <translation>您的出租屋（{}/{}）</translation>
+    </message>
+    <message>
+        <location filename="widgets/mainwindow.py" line="691"/>
         <source>You need to bring at least 15 yuan with you when entering an Internet cafe, haha, come back after withdrawing money.</source>
         <translation>进网吧至少身上要带15元，呵呵，取钱再来。</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="690"/>
+        <location filename="widgets/mainwindow.py" line="697"/>
         <source>The village chief said: Don&apos;t hang out in the Internet cafe all the time, go and do a decent business!</source>
         <translation>村长放出话来：你别总是在网吧里鬼混，快去做正经买卖!</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="705"/>
+        <location filename="widgets/mainwindow.py" line="712"/>
         <source>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned {} yuan in US Internet advertising fees, hehe!</source>
         <oldsource>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned %d yuan in US Internet advertising fees, hehe!</oldsource>
         <translation>感谢电信改革，可以免费上网! 还挣了美国网络广告费{}元，嘿嘿!</translation>
@@ -1479,7 +1484,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>缓几天吧</translation>
     </message>
     <message>
-        <location filename="widgets/pay_debt.py" line="25"/>
+        <location filename="widgets/pay_debt.py" line="28"/>
         <source>The village chief said on the phone: &quot;Tie Niu, you owe me {} yuan, pay me back!&quot;</source>
         <translation>村长在电话中说：&quot;铁牛，你欠俺{}元，快还!&quot;</translation>
     </message>

@@ -237,8 +237,9 @@ class MainWindow(QtWidgets.QMainWindow):
         return action
 
     def show_settings(self):
-        self.d_settings = Settings()
+        self.d_settings = Settings(None, self.allow_hacker, self.turn_off_sound)
         self.d_settings.show()
+        self.d_settings.sig_settings.connect(self.settings)
 
     def go_airport(self):
         self.d_airport = Airport()
@@ -248,7 +249,13 @@ class MainWindow(QtWidgets.QMainWindow):
         self.about_game = AboutGame()
         self.about_game.show()
 
+    def settings(self, allow_hacker: bool, turn_off_sound: bool):
+        self.turn_off_sound = turn_off_sound
+        self.allow_hacker = allow_hacker
+
     def init_data(self):
+        self.turn_off_sound = False
+        self.allow_hacker = False
         self.quantity = 0
         self.max_quantity = 100
         status, market_items, my_items = load_data()
@@ -579,12 +586,13 @@ class MainWindow(QtWidgets.QMainWindow):
         pass
 
     def play_sound(self, name: str):
-        # the "self" is important because sound will run in the background
-        self.effect = QtMultimedia.QSoundEffect()
-        self.effect.setSource(QtCore.QUrl.fromLocalFile(f":/SND/sound/{name}"))
-        self.effect.setLoopCount(1)
-        self.effect.setVolume(0.8)
-        self.effect.play()
+        if not self.turn_off_sound:
+            # the "self" is important because sound will run in the background
+            self.effect = QtMultimedia.QSoundEffect()
+            self.effect.setSource(QtCore.QUrl.fromLocalFile(f":/SND/sound/{name}"))
+            self.effect.setLoopCount(1)
+            self.effect.setVolume(0.8)
+            self.effect.play()
 
     def buy(self):
         if len(self.indexes) == 0:
@@ -776,6 +784,11 @@ class MainWindow(QtWidgets.QMainWindow):
         )
 
         self.quantity = sum([x.quantity for x in self.my_items])
+        self.ui.label_7.setText(
+            self.tr("your rented house ({}/{})").format(
+                self.quantity, self.max_quantity
+            )
+        )
 
     def show_intro(self):
         self.dlg = StoryDlg()

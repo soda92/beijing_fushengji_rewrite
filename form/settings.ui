@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>398</width>
+    <width>457</width>
     <height>199</height>
    </rect>
   </property>
@@ -29,7 +29,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QCheckBox" name="checkBox_2">
+       <widget class="QCheckBox" name="allow_hacker">
         <property name="text">
          <string>Allow hackers to attack banking networks</string>
         </property>
@@ -46,7 +46,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox">
+       <widget class="QCheckBox" name="turn_off_sound">
         <property name="text">
          <string>turn off sound</string>
         </property>
