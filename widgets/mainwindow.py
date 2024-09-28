@@ -714,10 +714,14 @@ class MainWindow(QtWidgets.QMainWindow):
             icon = QtGui.QIcon(":/res/item.ico")
             name.setIcon(icon)
             price = QtGui.QStandardItem(str(item.price))
-            self.model_market.appendRow([name, price])
+            percent = int(
+                (item.price - item.average_price) / item.average_price * 100
+            )
+            average_price = QtGui.QStandardItem(f"{int(item.average_price)}({'+' if percent>0 else ''}{percent}%)")
+            self.model_market.appendRow([name, price, average_price])
 
         self.model_market.setHorizontalHeaderLabels(
-            [self.tr("Goods"), self.tr("Black Market prices")]
+            [self.tr("Goods"), self.tr("Black Market prices"), self.tr("average price")]
         )
 
         header = self.ui.black_market.horizontalHeader()
@@ -726,6 +730,9 @@ class MainWindow(QtWidgets.QMainWindow):
         )
         header.setSectionResizeMode(
             1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+        )
+        header.setSectionResizeMode(
+            2, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
         )
         self.ui.black_market.setSelectionMode(
             QtWidgets.QAbstractItemView.SelectionMode.SingleSelection

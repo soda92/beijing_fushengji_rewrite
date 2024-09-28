@@ -35,6 +35,7 @@ class Bank(QtWidgets.QWidget):
         self.dialog.ui.label.setText(self.tr("How much money do you deposit?"))
         self.dialog.ui.spinBox.setMinimum(0)
         self.dialog.ui.spinBox.setMaximum(self.cash)
+        self.dialog.ui.spinBox.setValue(self.cash)
         self.dialog.show()
         self.dialog.ui.pushButton.clicked.connect(self.finish_deposit)
 

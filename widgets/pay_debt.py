@@ -14,8 +14,11 @@ class PayDebt(QtWidgets.QWidget):
         self.debt = debt
 
         self.ui.spinBox.setMinimum(0)
-        self.ui.spinBox.setMaximum(self.cash)
-        self.ui.spinBox.setValue(self.cash)
+        self.ui.spinBox.setMaximum(self.debt)
+        if self.cash > self.debt:
+            self.ui.spinBox.setValue(self.debt)
+        else:
+            self.ui.spinBox.setValue(self.cash)
 
         self.ui.pushButton.clicked.connect(self.pay)
 
