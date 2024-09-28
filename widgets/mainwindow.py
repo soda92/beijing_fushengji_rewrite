@@ -277,6 +277,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.status.debt *= 1.1
         self.status.saving *= 1.01
 
+        self.status.debt = int(self.status.debt)
+        self.status.saving = int(self.status.saving)
+
     def handle_normal_events(self):
         if self.time_left <= 2:
             self.market_items = makeDrugPrices(0)
@@ -536,6 +539,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 # price divided
                 if message.minus > 0:
                     self.market_items[index].price /= message.minus
+                    self.market_items[index].price = int(self.market_items[index].price)
 
                 if message.add > 0:
                     max_add_count = self.max_quantity - self.quantity
@@ -606,7 +610,8 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.d_buy = Buy(
                     self.status.cash,
                     self.market_items[self.indexes[0]],
-                    self.quantity == 100,
+                    self.quantity,
+                    self.max_quantity
                 )
                 self.d_buy.ui.pushButton.clicked.connect(self.finish_buy)
                 self.d_buy.show()
@@ -624,9 +629,18 @@ class MainWindow(QtWidgets.QMainWindow):
         if len(self.sell_indexes) == 0:
             pass
         else:
-            self.d_sell = Sell(self.my_items[self.sell_indexes[0]])
-            self.d_sell.ui.pushButton.clicked.connect(self.finish_sell)
-            self.d_sell.show()
+            item = self.my_items[self.sell_indexes[0]]
+            price = self.get_price(item)
+            if price == -1:
+                self.show_diary(
+                    self.tr("Oh? It seems that no one is doing {} business here.").format(
+                        get_item_name(item)
+                    )
+                )
+            else:
+                self.d_sell = Sell(item)
+                self.d_sell.ui.pushButton.clicked.connect(self.finish_sell)
+                self.d_sell.show()
 
     def get_price(self, item: Item):
         names = [x.name for x in self.market_items]
@@ -640,21 +654,13 @@ class MainWindow(QtWidgets.QMainWindow):
     def finish_sell(self):
         self.play_sound("money.wav")
         quantity = self.d_sell.ui.spinBox.value()
-        price = self.get_price(self.d_sell.item)
-        if price == -1:
-            self.show_diary(
-                self.tr("Oh? It seems that no one is doing {} business here.").format(
-                    get_item_name(self.d_sell.item)
-                )
-            )
-        else:
-            self.status.cash += quantity * self.get_price(self.d_sell.item)
-            names = [x.name for x in self.my_items]
-            index = names.index(self.d_sell.item.name)
-            self.my_items[index].quantity -= quantity
-            if self.my_items[index].quantity == 0:
-                del self.my_items[index]
-            self.refresh_display()
+        self.status.cash += quantity * self.get_price(self.d_sell.item)
+        names = [x.name for x in self.my_items]
+        index = names.index(self.d_sell.item.name)
+        self.my_items[index].quantity -= quantity
+        if self.my_items[index].quantity == 0:
+            del self.my_items[index]
+        self.refresh_display()
 
     def scroll(self):
         self.t_pos += 1.1

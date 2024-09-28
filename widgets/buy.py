@@ -4,7 +4,7 @@ from app.models import Item, get_item_name
 
 
 class Buy(QtWidgets.QWidget):
-    def __init__(self, cash: int, item: Item, is_full: bool):
+    def __init__(self, cash: int, item: Item, current_store: int, max_store: int):
         super().__init__()
         self.cash = cash
         self.item = item
@@ -13,9 +13,13 @@ class Buy(QtWidgets.QWidget):
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.close)
 
+        is_full = current_store == max_store
         if not is_full:
             max_count = self.cash // self.item.price
+            avail_store = max_store - current_store
 
+            if max_count > avail_store:
+                max_count = avail_store
             self.ui.spinBox.setMinimum(1)
             self.ui.spinBox.setMaximum(max_count)
             self.ui.spinBox.setValue(max_count)
