@@ -232,6 +232,7 @@ class MainWindow(QtWidgets.QMainWindow):
             for i in self.places:
                 i.setDisabled(False)
             self.places[btn_number].setDisabled(True)
+            self.handle_normal_events()
 
         return action
 
@@ -249,6 +250,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def init_data(self):
         self.quantity = 0
+        self.max_quantity = 100
         status, market_items, my_items = load_data()
         self.status: Status = status
 
@@ -776,6 +778,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.my_room.setSelectionBehavior(
             QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows
         )
+
+        self.quantity = sum([x.quantity for x in self.my_items])
 
     def show_intro(self):
         self.dlg = StoryDlg()
