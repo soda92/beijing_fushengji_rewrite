@@ -26,6 +26,16 @@
             "preLaunchTask": "Build UI and Resource"
         },
         {
+            "name": "Main - Skip Intro - no compile",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/app/main.py",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "HIDE_INTRO": "true",
+            },
+        },
+        {
             "name": "Main - Console",
             "type": "debugpy",
             "request": "launch",
