@@ -1,6 +1,6 @@
 from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
 import random
-from app.models import makeDrugPrices, get_item_name, Item
+from app.models import makeDrugPrices, get_item_name, Item, ItemName
 from widgets.my_table_model import MyTableModel
 from ui.main import Ui_MainWindow
 
@@ -450,7 +450,9 @@ class MainWindow(QtWidgets.QMainWindow):
             ],
             [
                 17,
-                MainWindow.tr("The market is flooded with smuggled cigarettes from Fujian!"),
+                MainWindow.tr(
+                    "The market is flooded with smuggled cigarettes from Fujian!"
+                ),
                 ItemName.cigar,
                 0,
                 8,
@@ -561,7 +563,7 @@ class MainWindow(QtWidgets.QMainWindow):
                         item.quantity = add_count
                         if k == len(messages) - 1:
                             item.price = 2500
-                        
+
                         if item.name not in [x.name for x in self.my_items]:
                             self.my_items.append(item)
                         else:
@@ -586,34 +588,28 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def buy(self):
         if len(self.indexes) == 0:
-            self.dialog = Diary()
-            self.dialog.ui.label.setText(self.tr("I haven't decided what to buy yet."))
-            self.dialog.show()
+            self.show_diary(self.tr("I haven't decided what to buy yet."))
         else:
             item = self.market_items[self.indexes[0]]
             if self.status.cash < item.price:
                 if self.status.saving > 0:
-                    self.dialog = Diary()
-                    self.dialog.ui.label.setText(
+                    self.show_diary(
                         self.tr(
                             "I don't have enough cash with me, so I'll go to the bank to withdraw some money."
                         )
                     )
-                    self.dialog.show()
                 else:
-                    self.dialog = Diary()
-                    self.dialog.ui.label.setText(
+                    self.show_diary(
                         self.tr(
                             "I don't have enough cash and I don't have any deposits in the bank, what should I do?"
                         )
                     )
-                    self.dialog.show()
             else:
                 self.d_buy = Buy(
                     self.status.cash,
                     self.market_items[self.indexes[0]],
                     self.quantity,
-                    self.max_quantity
+                    self.max_quantity,
                 )
                 self.d_buy.ui.pushButton.clicked.connect(self.finish_buy)
                 self.d_buy.show()
@@ -635,9 +631,9 @@ class MainWindow(QtWidgets.QMainWindow):
             price = self.get_price(item)
             if price == -1:
                 self.show_diary(
-                    self.tr("Oh? It seems that no one is doing {} business here.").format(
-                        get_item_name(item)
-                    )
+                    self.tr(
+                        "Oh? It seems that no one is doing {} business here."
+                    ).format(get_item_name(item))
                 )
             else:
                 self.d_sell = Sell(item)
@@ -722,10 +718,10 @@ class MainWindow(QtWidgets.QMainWindow):
             icon = QtGui.QIcon(":/res/item.ico")
             name.setIcon(icon)
             price = QtGui.QStandardItem(str(item.price))
-            percent = int(
-                (item.price - item.average_price) / item.average_price * 100
+            percent = int((item.price - item.average_price) / item.average_price * 100)
+            average_price = QtGui.QStandardItem(
+                f"{int(item.average_price)}({'+' if percent>0 else ''}{percent}%)"
             )
-            average_price = QtGui.QStandardItem(f"{int(item.average_price)}({'+' if percent>0 else ''}{percent}%)")
             self.model_market.appendRow([name, price, average_price])
 
         self.model_market.setHorizontalHeaderLabels(
