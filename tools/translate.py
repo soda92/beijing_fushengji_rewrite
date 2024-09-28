@@ -3,6 +3,7 @@ import pathlib
 import contextlib
 from pathlib import Path
 import platform
+import sys
 
 CURRENT = Path(__file__).resolve().parent
 
@@ -71,3 +72,7 @@ if __name__ == "__main__":
     generate()
     translate()
     compile()
+
+    sys.path.insert(0, str(CURRENT))
+    from compile_all import compile_rc
+    compile_rc()

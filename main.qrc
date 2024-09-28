@@ -27,6 +27,7 @@
   </qresource>
   <qresource>
     <file>res/item.ico</file>
+    <file>res/news.bmp</file>
   </qresource>
   <qresource prefix="SND">
     <file>sound/vomit.wav</file>

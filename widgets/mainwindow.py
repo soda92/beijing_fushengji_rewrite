@@ -1,8 +1,8 @@
 from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
 import random
 from app.models import makeDrugPrices, get_item_name, Item, ItemName
-from widgets.my_table_model import MyTableModel
 from ui.main import Ui_MainWindow
+from widgets.tables import BlackMarketTable, MyItemsTable
 
 from widgets import (
     AboutGame,
@@ -17,6 +17,7 @@ from widgets import (
     PayDebt,
     Buy,
     Sell,
+    News,
 )
 
 
@@ -159,6 +160,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.d_diary.ui.label.setText(text)
         self.d_diary.exec()
 
+    def show_news(self, text: str):
+        self.d_diary = News()
+        self.d_diary.ui.label.setText(text)
+        self.d_diary.exec()
+
     def enter_hospital(self):
         if self.status.health == 100:
             self.show_diary(
@@ -265,14 +271,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.market_items: list[Item] = makeDrugPrices(3)
         self.my_items: list[Item] = my_items
 
-        font = QtGui.QFont("MiSans", 12)
-        self.model_market = MyTableModel()
-        self.ui.black_market.setModel(self.model_market)
-        self.ui.black_market.setFont(font)
-
-        self.model_myitem = MyTableModel()
-        self.ui.my_room.setModel(self.model_myitem)
-        self.ui.my_room.setFont(font)
+        self.t_1 = BlackMarketTable(self.ui.black_market)
+        self.t_2 = MyItemsTable(self.ui.my_room)
 
         self.ui.black_market.selectionModel().selectionChanged.connect(
             self.black_market_items
@@ -541,7 +541,7 @@ class MainWindow(QtWidgets.QMainWindow):
                     continue
                 index = [x.name for x in self.market_items].index(message.drug)
 
-                self.show_diary(message.msg)
+                self.show_news(message.msg)
                 if k == len(messages) - 1:
                     self.status.debt += 2500
 
@@ -624,13 +624,14 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.d_buy.show()
 
     def finish_buy(self):
-        self.play_sound("buy.wav")
         buy_amount = self.d_buy.ui.spinBox.value()
-        self.status.cash -= self.d_buy.item.price * buy_amount
-        item = self.d_buy.item
-        item.quantity = buy_amount
-        self.my_items.append(item)
-        self.refresh_display()
+        if buy_amount != 0:
+            self.play_sound("buy.wav")
+            self.status.cash -= self.d_buy.item.price * buy_amount
+            item = self.d_buy.item
+            item.quantity = buy_amount
+            self.my_items.append(item)
+            self.refresh_display()
 
     def sell(self):
         if len(self.sell_indexes) == 0:
@@ -721,82 +722,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.debt.display(self.status.debt)
         self.ui.health.display(self.status.health)
 
-        self.model_market.clear()
-        for item in self.market_items:
-            name = QtGui.QStandardItem(get_item_name(item))
-            icon = QtGui.QIcon(":/res/item.ico")
-            name.setIcon(icon)
-            price = QtGui.QStandardItem(str(item.price))
-            percent = int((item.price - item.average_price) / item.average_price * 100)
-            average_price = QtGui.QStandardItem(
-                f"{int(item.average_price)}({'+' if percent>0 else ''}{percent}%)"
-            )
-            if self.enable_help:
-                self.model_market.appendRow([name, price, average_price])
-
-            else:
-                self.model_market.appendRow([name, price])
-
-        if self.enable_help:
-            self.model_market.setHorizontalHeaderLabels(
-                [
-                    self.tr("Goods"),
-                    self.tr("Black Market prices"),
-                    self.tr("average price"),
-                ]
-            )
-        else:
-            self.model_market.setHorizontalHeaderLabels(
-                [self.tr("Goods"), self.tr("Black Market prices")]
-            )
-
-        header = self.ui.black_market.horizontalHeader()
-        header.setSectionResizeMode(
-            0, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
-        )
-        header.setSectionResizeMode(
-            1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
-        )
-        if self.enable_help:
-            header.setSectionResizeMode(
-                2, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
-            )
-        self.ui.black_market.setSelectionMode(
-            QtWidgets.QAbstractItemView.SelectionMode.SingleSelection
-        )
-        self.ui.black_market.setSelectionBehavior(
-            QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows
-        )
-
-        self.model_myitem.clear()
-        for item in self.my_items:
-            name = QtGui.QStandardItem(get_item_name(item))
-            icon = QtGui.QIcon(":/res/item.ico")
-            name.setIcon(icon)
-            price = QtGui.QStandardItem(str(item.price))
-            quantity = QtGui.QStandardItem(str(item.quantity))
-            self.model_myitem.appendRow([name, price, quantity])
-
-        self.model_myitem.setHorizontalHeaderLabels(
-            [self.tr("Goods"), self.tr("Bought price"), self.tr("Quantity")]
-        )
-
-        header = self.ui.my_room.horizontalHeader()
-        header.setSectionResizeMode(
-            0, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
-        )
-        header.setSectionResizeMode(
-            1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
-        )
-        header.setSectionResizeMode(
-            2, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
-        )
-        self.ui.my_room.setSelectionMode(
-            QtWidgets.QAbstractItemView.SelectionMode.SingleSelection
-        )
-        self.ui.my_room.setSelectionBehavior(
-            QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows
-        )
+        self.t_1.slot_items(self.market_items)
+        self.t_2.slot_items(self.my_items)
 
         self.quantity = sum([x.quantity for x in self.my_items])
         self.ui.label_7.setText(
@@ -804,6 +731,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.quantity, self.max_quantity
             )
         )
+
 
     def show_intro(self):
         self.dlg = StoryDlg()

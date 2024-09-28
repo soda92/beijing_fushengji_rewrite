@@ -12,6 +12,7 @@ from .hospital import Hospital
 from .pay_debt import PayDebt
 from .buy import Buy
 from .sell import Sell
+from .news import News
 
 __all__ = [
     "AboutGame",
@@ -28,4 +29,5 @@ __all__ = [
     "PayDebt",
     "Buy",
     "Sell",
+    "News",
 ]
