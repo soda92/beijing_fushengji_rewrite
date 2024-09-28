@@ -271,6 +271,305 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.quantity = sum([x.quantity for x in self.my_items])
 
+        self.time_left = 40
+
+    def handle_cash_and_debt(self):
+        self.status.debt *= 1.1
+        self.status.saving *= 1.01
+
+    def handle_normal_events(self):
+        if self.time_left <= 2:
+            self.market_items = makeDrugPrices(0)
+        else:
+            self.market_items = makeDrugPrices(3)
+        self.handle_cash_and_debt()
+        self.do_random_stuff()
+        self.do_random_event()
+        self.on_steal()
+
+        self.time_left -= 1
+        self.setWindowTitle(
+            self.tr("Beijing Life ({}/{} day)").format(40 - self.time_left, 40)
+        )
+
+        if self.time_left == 1:
+            self.show_diary(
+                self.tr(
+                    "I'm going back to my hometown tomorrow and selling all the goods quickly."
+                )
+            )
+        if self.time_left == 0:
+            self.show_diary(
+                self.tr(
+                    "I have been in Beijing for 40 days, it’s time to go back and get married."
+                )
+            )
+            if len(self.my_items) != 0:
+                self.show_diary(
+                    self.tr("The system sold the remaining goods for me: {}").format(
+                        ",".join(list(map(get_item_name, self.my_items)))
+                    )
+                )
+                for i in self.my_items:
+                    self.status.cash += self.get_price(i) * i.quantity
+                self.my_items = []
+            self.on_exit()
+
+        self.refresh_display()
+
+    def do_random_event(self):
+        pass
+
+    def do_random_stuff(self):
+        from dataclasses import dataclass
+
+        @dataclass
+        class GameMessage:
+            freq: int
+            msg: str
+            drug: ItemName
+            plus: int
+            minus: int
+            add: int
+
+        gameMessages = [
+            [
+                170,
+                MainWindow.tr(
+                    'Experts propose to improve college students\' "hands-on quality", imported toys are popular!'
+                ),
+                ItemName.toys,
+                2,
+                0,
+                0,
+            ],
+            [
+                139,
+                MainWindow.tr(
+                    "Some people proudly say: When you are sick, you don't need to take injections or medicine, just drink fake liquor (very toxic)!"
+                ),
+                ItemName.liquor,
+                3,
+                0,
+                0,
+            ],
+            [
+                100,
+                MainWindow.tr(
+                    'Hospital\'s secret report: "Shanghai Baby" is more effective than Viagra"!'
+                ),
+                ItemName.r18_book,
+                5,
+                0,
+                0,
+            ],
+            [
+                41,
+                MainWindow.tr(
+                    'The illiterate said: "2000 Nobel Prize in Literature? Bah! Not as good as pirated VCD Hong Kong and Taiwan movies." ”'
+                ),
+                ItemName.vcd_game,
+                4,
+                0,
+                0,
+            ],
+            [
+                37,
+                MainWindow.tr(
+                    'Editorial of "Beijing Economic Newspaper": "Smuggling cars vigorously promotes car consumption!"'
+                ),
+                ItemName.car,
+                3,
+                0,
+                0,
+            ],
+            [
+                23,
+                MainWindow.tr(
+                    'Editorial of "Beijing Truth": "Promote beauty and put it into practice", counterfeit cosmetics are very popular!'
+                ),
+                ItemName.makeup,
+                4,
+                0,
+                0,
+            ],
+            [
+                37,
+                MainWindow.tr(
+                    '8858.com e-bookstore dare not sell "Shanghai Baby", a copy can be sold at a sky-high price on the black market!'
+                ),
+                ItemName.r18_book,
+                8,
+                0,
+                0,
+            ],
+            [
+                15,
+                MainWindow.tr(
+                    'Xie Bufeng said at the party: "I am cool! I use counterfeit cosmetics!", counterfeit cosmetics are in short supply!'
+                ),
+                ItemName.makeup,
+                7,
+                0,
+                0,
+            ],
+            [
+                40,
+                MainWindow.tr(
+                    "Some people in Beijing drink fake Shanxi wine crazily, and can sell it at a sky-high price!"
+                ),
+                ItemName.liquor,
+                7,
+                0,
+                0,
+            ],
+            [
+                29,
+                MainWindow.tr(
+                    "College students in Beijing start looking for jobs, parallel-imported mobile phones are very popular!!"
+                ),
+                ItemName.phone,
+                7,
+                0,
+                0,
+            ],
+            [
+                35,
+                MainWindow.tr(
+                    "Rich people in Beijing are crazy about buying smuggled cars! Prices are soaring!"
+                ),
+                ItemName.car,
+                8,
+                0,
+                0,
+            ],
+            [
+                17,
+                MainWindow.tr("The market is flooded with smuggled cigarettes from Fujian!"),
+                ItemName.cigar,
+                0,
+                8,
+                0,
+            ],
+            [
+                24,
+                MainWindow.tr(
+                    "Children in Beijing are busy studying online, no one wants to buy imported toys."
+                ),
+                ItemName.toys,
+                0,
+                5,
+                0,
+            ],
+            [
+                18,
+                MainWindow.tr(
+                    'The piracy industry is booming, and Zhongguancun, the "Silicon Valley of China", is full of village girls selling pirated VCDs!'
+                ),
+                ItemName.vcd_game,
+                0,
+                8,
+                0,
+            ],
+            [
+                160,
+                MainWindow.tr(
+                    "My old classmate in Xiamen sponsored me two smuggled cars! I'm rich!"
+                ),
+                ItemName.car,
+                0,
+                0,
+                2,
+            ],
+            [
+                45,
+                MainWindow.tr(
+                    "After the Industrial and Commercial Bureau raided the place, I found the imported cigarettes lost by my fellow villager in a dark corner."
+                ),
+                ItemName.cigar,
+                0,
+                0,
+                6,
+            ],
+            [
+                35,
+                MainWindow.tr(
+                    "My fellow villager gave me some fake Shanxi liquor (highly toxic) before he went home!"
+                ),
+                ItemName.liquor,
+                0,
+                0,
+                4,
+            ],
+            [
+                140,
+                MainWindow.tr(
+                    "Media reports: Another Japanese product exported to China has gone wrong! After the incident, the Japanese refused to admit it and refused to compensate. The village chief learned of this news and asked someone to sell you his parallel-imported mobile phone (without any manufacturer logo) for 2,500 yuan."
+                ),
+                ItemName.phone,
+                0,
+                0,
+                1,
+            ],
+        ]
+        messages: list[GameMessage] = []
+        for i in gameMessages:
+            m = GameMessage(*i)
+            # m.freq, m.msg, m.drug, m.plus, m.minus, m.add = i
+            messages.append(m)
+
+        for k, message in enumerate(messages):
+            r = random.randint(0, 950)
+
+            if r % message.freq == 0:
+                if message.drug not in [x.name for x in self.market_items]:
+                    continue
+                index = [x.name for x in self.market_items].index(message.drug)
+
+                self.show_diary(message.msg)
+                if k == len(messages) - 1:
+                    self.status.debt += 2500
+
+                # price multipled
+                if message.plus > 0:
+                    self.market_items[index].price *= message.plus
+                # price divided
+                if message.minus > 0:
+                    self.market_items[index].price /= message.minus
+
+                if message.add > 0:
+                    max_add_count = self.max_quantity - self.quantity
+                    add_count = message.add
+                    if add_count > max_add_count:
+                        add_count = max_add_count
+                    if add_count == 0:
+                        self.show_diary(
+                            self.tr(
+                                "What a pity! The house I rented is too small and can only hold {} items."
+                            ).format(self.max_quantity)
+                        )
+                    else:
+                        item = Item()
+                        item.name = message.drug
+                        item.price = 0
+                        item.quantity = add_count
+                        if k == len(messages) - 1:
+                            item.price = 2500
+                        
+                        if item.name not in [x.name for x in self.my_items]:
+                            self.my_items.append(item)
+                        else:
+                            index = [x.name for x in self.my_items].index(item.name)
+                            self.my_items[index].quantity += add_count
+
+        self.refresh_display()
+
+    def on_steal(self):
+        pass
+
+    def on_exit(self):
+        pass
+
     def play_sound(self, name: str):
         # the "self" is important because sound will run in the background
         self.effect = QtMultimedia.QSoundEffect()
