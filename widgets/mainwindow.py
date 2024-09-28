@@ -331,7 +331,126 @@ class MainWindow(QtWidgets.QMainWindow):
         self.refresh_display()
 
     def do_random_event(self):
-        pass
+        self.random_events = [
+            [117, self.tr("Two hooligans beat me up on the street!"), 3, "kill.wav"],
+            [
+                157,
+                self.tr("I was beaten up by a stick in the underpass!"),
+                20,
+                "death.wav",
+            ],
+            [
+                21,
+                self.tr(
+                    "The Industrial and Commercial Bureau chased me through three alleys."
+                ),
+                1,
+                "dog.wav",
+            ],
+            [
+                100,
+                self.tr("Beijing's congested traffic makes me anxious!"),
+                1,
+                "harley.wav",
+            ],
+            [35, self.tr("A minibus driver slapped me!"), 1, "hit.wav"],
+            [313, self.tr("A group of migrant workers beat me up!"), 10, "flee.wav"],
+            [
+                120,
+                self.tr("A young man in a nearby alley hit me with a brick!"),
+                5,
+                "death.wav",
+            ],
+            [
+                29,
+                self.tr(
+                    "A fake security guard in a nearby office building shocked me with an electric baton!"
+                ),
+                3,
+                "el.wav",
+            ],
+            [
+                43,
+                self.tr("The stinky black river in Beijing is making me sick!"),
+                1,
+                "vomit.wav",
+            ],
+            [
+                45,
+                self.tr(
+                    "Auntie Wang, who is guarding bicycles, laughed at me for not having a Beijing hukou!"
+                ),
+                1,
+                "level.wav",
+            ],
+            [
+                48,
+                self.tr("The temperature in Beijing is 40 degrees! I feel hot..."),
+                1,
+                "lan.wav",
+            ],
+            [
+                33,
+                self.tr(
+                    "The Olympic bid has added a new landscape, and Beijing has another sandstorm!"
+                ),
+                1,
+                "breath.wav",
+            ],
+        ]
+        r = random.randint(0, 1000)
+        for i in self.random_events:
+            if r % i[0] == 0:
+                self.show_diary("{} My health decreases {} point.".format(i[1], i[2]))
+                self.play_sound(i[3])
+                self.status.health -= i[2]
+
+        msg = self.tr(
+            "Because I didn't take care of myself, I was found unconscious next to {} near {}."
+        )
+        msg2 = self.tr(
+            "Kind citizens carried me to the hospital, and the doctor told me to be treated for {} days."
+        )
+        msg3 = self.tr(
+            "The village chief asked someone to advance {} yuan for my hospitalization fee."
+        )
+
+        msg4 = self.tr("My health... health crisis... go to the doctor...")
+        msg5 = self.tr(
+            'I fell on the street, and the diary beside me said: "Beijing, I will come again!"'
+        )
+
+        self.places = [
+            self.tr("In the hair salon"),
+            self.tr("at the breakfast stall"),
+            self.tr("at the newsstand"),
+            self.tr("at the roast lamb stall"),
+            self.tr("in the bus"),
+            self.tr("on the rickshaw"),
+            self.tr("in the women's restroom"),
+            self.tr("in the men's restroom"),
+            self.tr("in the telephone booth"),
+            self.tr("in the arms of the escort girl"),
+            self.tr("in the taxi"),
+            self.tr("in the minibus"),
+            self.tr("in the beauty salon"),
+            self.tr("in the small kiosk"),
+            self.tr("in front of the small shopping mall"),
+            self.tr("at the feet of the migrant workers"),
+            self.tr("in the stalls of unlicensed peddlers"),
+            self.tr("on the grass"),
+            self.tr("on the top of the telephone pole"),
+            self.tr("in the small restaurant"),
+            self.tr("on the side of the road"),
+            self.tr("on the sidewalk"),
+            self.tr("in the central park"),
+            self.tr("under the billboard"),
+            self.tr("in the bus station"),
+            self.tr("in the long-distance bus station"),
+            self.tr("next to the pirated game seller"),
+            self.tr("next to the corpse of a Internet company"),
+            self.tr("next to the fraudulent intellectual property owner"),
+        ]
 
     def do_random_stuff(self):
         from dataclasses import dataclass
@@ -581,7 +700,59 @@ class MainWindow(QtWidgets.QMainWindow):
         self.refresh_display()
 
     def on_steal(self):
-        pass
+        self.steal_events = [
+            [
+                60,
+                self.tr(
+                    "I feel sorry for the old lady pretending to be a beggar at the subway entrance."
+                ),
+                10,
+            ],
+            [
+                125,
+                self.tr(
+                    'A man stopped me on the street and said, "Brother, give me some money!".'
+                ),
+                10,
+            ],
+            [100, self.tr('A big man touched me and said, "Stop squeezing!".'), 40],
+            [
+                65,
+                self.tr(
+                    'Three old ladies with red armbands grabbed me and said, "You are from another place? Fine!"'
+                ),
+                20,
+            ],
+            [
+                35,
+                self.tr(
+                    'Two strong men grabbed me and said, "Pay the long-distance call surcharge and Internet fee."'
+                ),
+                15,
+            ],
+            [
+                27,
+                self.tr(
+                    'The deputy director said, "Applying for a business license? Don\'t come to my house to give me money at night."'
+                ),
+                10,
+            ],
+            [
+                40,
+                self.tr(
+                    "Beijing's air pollution is serious. I'm going to the oxygen bar to breathe oxygen..."
+                ),
+                5,
+            ],
+        ]
+        self.hacker_msg = self.tr(
+            "Hackers hacked into the bank network and frantically modified the database. My deposit increased by {}"
+        )
+
+        self.msg2 = self.tr("I am in trouble.")
+
+        self.msg3 = self.tr("My money decreased by 5.")
+        self.msg_4 = self.tr("My deposit decreased by 5. Oh no!")
 
     def on_exit(self):
         pass
@@ -731,7 +902,6 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.quantity, self.max_quantity
             )
         )
-
 
     def show_intro(self):
         self.dlg = StoryDlg()
