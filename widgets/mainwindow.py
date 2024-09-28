@@ -157,7 +157,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def show_diary(self, text: str):
         self.d_diary = Diary()
         self.d_diary.ui.label.setText(text)
-        self.d_diary.show()
+        self.d_diary.exec()
 
     def enter_hospital(self):
         if self.status.health == 100:
