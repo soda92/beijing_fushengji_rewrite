@@ -254,6 +254,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.allow_hacker = allow_hacker
 
     def init_data(self):
+        self.enable_help = False
         self.turn_off_sound = False
         self.allow_hacker = False
         self.quantity = 0
@@ -730,11 +731,24 @@ class MainWindow(QtWidgets.QMainWindow):
             average_price = QtGui.QStandardItem(
                 f"{int(item.average_price)}({'+' if percent>0 else ''}{percent}%)"
             )
-            self.model_market.appendRow([name, price, average_price])
+            if self.enable_help:
+                self.model_market.appendRow([name, price, average_price])
 
-        self.model_market.setHorizontalHeaderLabels(
-            [self.tr("Goods"), self.tr("Black Market prices"), self.tr("average price")]
-        )
+            else:
+                self.model_market.appendRow([name, price])
+
+        if self.enable_help:
+            self.model_market.setHorizontalHeaderLabels(
+                [
+                    self.tr("Goods"),
+                    self.tr("Black Market prices"),
+                    self.tr("average price"),
+                ]
+            )
+        else:
+            self.model_market.setHorizontalHeaderLabels(
+                [self.tr("Goods"), self.tr("Black Market prices")]
+            )
 
         header = self.ui.black_market.horizontalHeader()
         header.setSectionResizeMode(
@@ -743,9 +757,10 @@ class MainWindow(QtWidgets.QMainWindow):
         header.setSectionResizeMode(
             1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
         )
-        header.setSectionResizeMode(
-            2, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
-        )
+        if self.enable_help:
+            header.setSectionResizeMode(
+                2, QtWidgets.QHeaderView.ResizeMode.ResizeToContents
+            )
         self.ui.black_market.setSelectionMode(
             QtWidgets.QAbstractItemView.SelectionMode.SingleSelection
         )
