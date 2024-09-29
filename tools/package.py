@@ -25,7 +25,7 @@ from tools.translate import generate as generate_ts, compile as compile_ts
 
 import platform
 
-PYINSTALLER = "venv/Scripts/pyinstaller.exe" if platform.system() != "Linux" else "venv/bin/pyinstaller"
+PYINSTALLER = ".venv/Scripts/pyinstaller.exe" if platform.system() != "Linux" else "venv/bin/pyinstaller"
 
 def run_pyinstaller():
     with cd(str(CURRENT.parent)):
