@@ -225,6 +225,7 @@ class MainWidget(QtWidgets.QWidget):
         self.d_settings.sig_settings.connect(self.settings)
 
     def go_airport(self):
+        self.play_sound("airport.wav")
         self.d_airport = Airport()
         self.d_airport.show()
 
@@ -280,6 +281,12 @@ class MainWidget(QtWidgets.QWidget):
         self.do_random_stuff()
         self.do_random_event()
         self.on_steal()
+
+        if self.status.debt > 100000:
+            self.show_diary(self.tr("I owed too much money, so the village chief called a group of villagers to beat me up!"))
+            self.play_sound("kill.wav")
+            self.status.health -= 30
+            self.refresh_display()
 
         self.decrease_time()
 
@@ -376,12 +383,13 @@ class MainWidget(QtWidgets.QWidget):
                 "breath.wav",
             ],
         ]
-        r = random.randint(0, 1000)
         for i in self.random_events:
+            r = random.randint(0, 1000 - 1)
             if r % i[0] == 0:
-                self.show_diary("{} My health decreases {} point.".format(i[1], i[2]))
+                self.show_diary(i[1] + self.tr(" My health decreases {} point.").format(i[2]))
                 self.play_sound(i[3])
                 self.status.health -= i[2]
+                self.refresh_display()
 
         msg = self.tr(
             "Because I didn't take care of myself, I was found unconscious next to {} near {}."
@@ -433,9 +441,9 @@ class MainWidget(QtWidgets.QWidget):
             delay_day = 1 + random.randint(0, 1)
             place = ""
             for i in self.places:
-                if i.isDisabled():
+                if not i.isEnabled():
                     place = i.text()
-            place2 = random.randint(0, len(self.down_places) - 1)
+            place2 = self.down_places[random.randint(0, len(self.down_places) - 1)]
             messages = []
             messages.append(msg.format(place, place2))
             messages.append(msg2.format(delay_day))
@@ -449,12 +457,12 @@ class MainWidget(QtWidgets.QWidget):
             self.status.health += 10
             self.time_left -= delay_day
 
-        elif 20 > self.status.health > 0:
+        if 20 > self.status.health > 0:
             self.show_diary(msg4)
-        elif self.status.health < 0:
+        if self.status.health < 0:
             self.play_sound("death.wav")
             self.show_diary(msg5)
-            self.close()
+            self.on_exit()
 
         self.refresh_display()
 

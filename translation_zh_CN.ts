@@ -454,7 +454,7 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation>《》</translation>
     </message>
     <message>
-        <location filename="form/diary.ui" line="91"/>
+        <location filename="form/diary.ui" line="94"/>
         <source>Close Diary</source>
         <translation>关上日记本</translation>
     </message>
@@ -534,7 +534,7 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation type="vanished">媒体报道：又有日本出口到中国的产品出事了! 出事后日本人死不认帐,拒绝赔偿。村长得知此消息，托人把他用的水货手机（无任何厂商标识）硬卖给您，收您2500元。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="661"/>
+        <location filename="widgets/main_widget.py" line="698"/>
         <source>What a pity! The house I rented is too small and can only hold {} items.</source>
         <translation>可惜!俺租的房子太小，只能放{}个物品。</translation>
     </message>
@@ -900,437 +900,460 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>我要进地铁</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="282"/>
         <source>Beijing Life ({}/{} day)</source>
-        <translation>北京浮生（{}/{}天）</translation>
+        <translation type="vanished">北京浮生（{}/{}天）</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="290"/>
+        <location filename="widgets/main_widget.py" line="286"/>
+        <source>I owed too much money, so the village chief called a group of villagers to beat me up!</source>
+        <translation>俺欠钱太多，村长叫一群老乡揍了俺一顿！</translation>
+    </message>
+    <message>
+        <location filename="widgets/main_widget.py" line="298"/>
         <source>I&apos;m going back to my hometown tomorrow and selling all the goods quickly.</source>
         <translation>俺明天回家乡，快把全部货物卖掉。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="296"/>
+        <location filename="widgets/main_widget.py" line="304"/>
         <source>I have been in Beijing for 40 days, it’s time to go back and get married.</source>
         <translation>俺已经在北京40天了，该回去结婚去了。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="299"/>
+        <location filename="widgets/main_widget.py" line="307"/>
         <source>The system sold the remaining goods for me: {}</source>
         <translation>系统帮我卖了剩余货物：{}</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="312"/>
+        <location filename="widgets/main_widget.py" line="320"/>
         <source>Two hooligans beat me up on the street!</source>
         <translation>大街上两个流氓打了俺!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="315"/>
+        <location filename="widgets/main_widget.py" line="323"/>
         <source>I was beaten up by a stick in the underpass!</source>
         <translation>俺在过街地道被人打了蒙棍!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="323"/>
+        <location filename="widgets/main_widget.py" line="331"/>
         <source>The Industrial and Commercial Bureau chased me through three alleys.</source>
         <translation>工商局的追俺超过三个胡同。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="329"/>
+        <location filename="widgets/main_widget.py" line="337"/>
         <source>Beijing&apos;s congested traffic makes me anxious!</source>
         <translation>北京拥挤的交通让俺心焦!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="333"/>
+        <location filename="widgets/main_widget.py" line="341"/>
         <source>A minibus driver slapped me!</source>
         <translation>开小巴的打俺一耳光!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="334"/>
+        <location filename="widgets/main_widget.py" line="342"/>
         <source>A group of migrant workers beat me up!</source>
         <translation>一群民工打了俺!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="337"/>
+        <location filename="widgets/main_widget.py" line="345"/>
         <source>A young man in a nearby alley hit me with a brick!</source>
         <translation>附近胡同的一个小青年砸俺一砖头!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="345"/>
+        <location filename="widgets/main_widget.py" line="353"/>
         <source>A fake security guard in a nearby office building shocked me with an electric baton!</source>
         <translation>附近写字楼一个假保安用电棍电击俺!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="351"/>
+        <location filename="widgets/main_widget.py" line="359"/>
         <source>The stinky black river in Beijing is making me sick!</source>
         <translation>北京臭黑的小河熏着我了!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="359"/>
+        <location filename="widgets/main_widget.py" line="367"/>
         <source>Auntie Wang, who is guarding bicycles, laughed at me for not having a Beijing hukou!</source>
         <translation>守自行车的王大婶嘲笑俺没北京户口!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="365"/>
+        <location filename="widgets/main_widget.py" line="373"/>
         <source>The temperature in Beijing is 40 degrees! I feel hot...</source>
         <translation>北京高温40度!俺热...</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="373"/>
+        <location filename="widgets/main_widget.py" line="381"/>
         <source>The Olympic bid has added a new landscape, and Beijing has another sandstorm!</source>
         <translation>申奥添了新风景，北京又来沙尘暴!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="388"/>
+        <location filename="widgets/main_widget.py" line="389"/>
+        <source> My health decreases {} point.</source>
+        <oldsource>{} My health decreases {} point.</oldsource>
+        <translation>俺的健康减少了{}点。</translation>
+    </message>
+    <message>
+        <location filename="widgets/main_widget.py" line="397"/>
         <source>Because I didn&apos;t take care of myself, I was found unconscious next to {} near {}.</source>
         <translation>由于不注意身体,我被人发现昏迷在{}附近的{}。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="391"/>
+        <location filename="widgets/main_widget.py" line="400"/>
         <source>Kind citizens carried me to the hospital, and the doctor told me to be treated for {} days.</source>
         <translation>好心的市民把我抬到医院，医生让我治疗{}天。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="395"/>
+        <location filename="widgets/main_widget.py" line="403"/>
         <source>The village chief asked someone to advance {} yuan for my hospitalization fee.</source>
         <translation>村长让人为我垫付了住院费用{}元。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="396"/>
+        <location filename="widgets/main_widget.py" line="404"/>
         <source>My health... health crisis... go to the doctor...</source>
         <translation>俺的健康..健康危机..快去医..</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="400"/>
+        <location filename="widgets/main_widget.py" line="408"/>
         <source>I fell on the street, and the diary beside me said: &quot;Beijing, I will come again!&quot;</source>
         <translation>俺倒在街头,身边日记本上写着：“北京，我将再来!”</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="401"/>
+        <location filename="widgets/main_widget.py" line="409"/>
         <source>In the hair salon</source>
         <translation>发廊里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="402"/>
+        <location filename="widgets/main_widget.py" line="410"/>
         <source>at the breakfast stall</source>
         <translation>早点摊上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="403"/>
+        <location filename="widgets/main_widget.py" line="411"/>
         <source>at the newsstand</source>
         <translation>报摊上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="404"/>
+        <location filename="widgets/main_widget.py" line="412"/>
         <source>at the roast lamb stall</source>
         <translation>烤羊肉摊上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="405"/>
+        <location filename="widgets/main_widget.py" line="413"/>
         <source>in the bus</source>
         <translation>公共汽车里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="406"/>
+        <location filename="widgets/main_widget.py" line="414"/>
         <source>on the rickshaw</source>
         <translation>人力车上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="407"/>
+        <location filename="widgets/main_widget.py" line="415"/>
         <source>in the women&apos;s restroom</source>
         <translation>女厕所里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="408"/>
+        <location filename="widgets/main_widget.py" line="416"/>
         <source>in the men&apos;s restroom</source>
         <translation>男厕所里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="409"/>
+        <location filename="widgets/main_widget.py" line="417"/>
         <source>in the telephone booth</source>
         <translation>电话亭里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="410"/>
+        <location filename="widgets/main_widget.py" line="418"/>
         <source>in the arms of the escort girl</source>
         <translation>三陪女怀里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="411"/>
+        <location filename="widgets/main_widget.py" line="419"/>
         <source>in the taxi</source>
         <translation>出租车里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="412"/>
+        <location filename="widgets/main_widget.py" line="420"/>
         <source>in the minibus</source>
         <translation>小巴里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="413"/>
+        <location filename="widgets/main_widget.py" line="421"/>
         <source>in the beauty salon</source>
         <translation>美容院里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="414"/>
+        <location filename="widgets/main_widget.py" line="422"/>
         <source>in the small kiosk</source>
         <translation>小商亭里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="415"/>
+        <location filename="widgets/main_widget.py" line="423"/>
         <source>in front of the small shopping mall</source>
         <translation>小商场门口</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="416"/>
+        <location filename="widgets/main_widget.py" line="424"/>
         <source>at the feet of the migrant workers</source>
         <translation>民工脚下</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="417"/>
+        <location filename="widgets/main_widget.py" line="425"/>
         <source>in the stalls of unlicensed peddlers</source>
         <translation>无照游商摊里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="418"/>
+        <location filename="widgets/main_widget.py" line="426"/>
         <source>on the grass</source>
         <translation>草地上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="419"/>
+        <location filename="widgets/main_widget.py" line="427"/>
         <source>on the top of the telephone pole</source>
         <translation>电线杆顶端</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="420"/>
+        <location filename="widgets/main_widget.py" line="428"/>
         <source>in the small restaurant</source>
         <translation>小饭馆里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="421"/>
+        <location filename="widgets/main_widget.py" line="429"/>
         <source>on the side of the road</source>
         <translation>马路边</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="422"/>
+        <location filename="widgets/main_widget.py" line="430"/>
         <source>on the sidewalk</source>
         <translation>人行道上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="423"/>
+        <location filename="widgets/main_widget.py" line="431"/>
         <source>in the central park</source>
         <translation>街心公园里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="424"/>
+        <location filename="widgets/main_widget.py" line="432"/>
         <source>under the billboard</source>
         <translation>广告牌下</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="425"/>
+        <location filename="widgets/main_widget.py" line="433"/>
         <source>in the bus station</source>
         <translation>公共汽车站里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="426"/>
+        <location filename="widgets/main_widget.py" line="434"/>
         <source>in the long-distance bus station</source>
         <translation>长途汽车站里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="427"/>
+        <location filename="widgets/main_widget.py" line="435"/>
         <source>next to the pirated game seller</source>
         <translation>卖盗版游戏的旁边</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="428"/>
+        <location filename="widgets/main_widget.py" line="436"/>
         <source>next to the corpse of a Internet company</source>
         <translation>网络公司尸体旁边</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="429"/>
+        <location filename="widgets/main_widget.py" line="437"/>
         <source>next to the fraudulent intellectual property owner</source>
         <translation>行骗的知本家旁边</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="449"/>
+        <location filename="widgets/main_widget.py" line="486"/>
         <source>Experts propose to improve college students&apos; &quot;hands-on quality&quot;, imported toys are popular!</source>
         <translation>专家提议提高大学生“动手素质”，进口玩具颇受欢迎!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="459"/>
+        <location filename="widgets/main_widget.py" line="496"/>
         <source>Some people proudly say: When you are sick, you don&apos;t need to take injections or medicine, just drink fake liquor (very toxic)!</source>
         <translation>有人自豪地说：生病不用打针吃药，喝假白酒（剧毒）就可以!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="469"/>
+        <location filename="widgets/main_widget.py" line="506"/>
         <source>Hospital&apos;s secret report: &quot;Shanghai Baby&quot; is more effective than Viagra&quot;!</source>
         <translation>医院的秘密报告：“《上海小宝贝》功效甚过伟哥”!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="479"/>
+        <location filename="widgets/main_widget.py" line="516"/>
         <source>The illiterate said: &quot;2000 Nobel Prize in Literature? Bah! Not as good as pirated VCD Hong Kong and Taiwan movies.&quot; ”</source>
         <translation>文盲说：“2000年诺贝尔文学奖？呸！不如盗版VCD港台片。”</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="489"/>
+        <location filename="widgets/main_widget.py" line="526"/>
         <source>Editorial of &quot;Beijing Economic Newspaper&quot;: &quot;Smuggling cars vigorously promotes car consumption!&quot;</source>
         <translation>《北京经济小报》社论：“走私汽车大力推进汽车消费!”</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="499"/>
+        <location filename="widgets/main_widget.py" line="536"/>
         <source>Editorial of &quot;Beijing Truth&quot;: &quot;Promote beauty and put it into practice&quot;, counterfeit cosmetics are very popular!</source>
         <translation>《北京真理报》社论：“提倡爱美，落到实处”，伪劣化妆品大受欢迎!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="509"/>
+        <location filename="widgets/main_widget.py" line="546"/>
         <source>8858.com e-bookstore dare not sell &quot;Shanghai Baby&quot;, a copy can be sold at a sky-high price on the black market!</source>
         <translation>8858.com电子书店也不敢卖《上海小宝贝》，黑市一册可卖天价!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="519"/>
+        <location filename="widgets/main_widget.py" line="556"/>
         <source>Xie Bufeng said at the party: &quot;I am cool! I use counterfeit cosmetics!&quot;, counterfeit cosmetics are in short supply!</source>
         <translation>谢不疯在晚会上说：“我酷!我使用伪劣化妆品!”，伪劣化妆品供不应求!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="529"/>
+        <location filename="widgets/main_widget.py" line="566"/>
         <source>Some people in Beijing drink fake Shanxi wine crazily, and can sell it at a sky-high price!</source>
         <translation>北京有人狂饮山西假酒，可以卖出天价!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="539"/>
+        <location filename="widgets/main_widget.py" line="576"/>
         <source>College students in Beijing start looking for jobs, parallel-imported mobile phones are very popular!!</source>
         <translation>北京的大学生们开始找工作，水货手机大受欢迎！!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="549"/>
+        <location filename="widgets/main_widget.py" line="586"/>
         <source>Rich people in Beijing are crazy about buying smuggled cars! Prices are soaring!</source>
         <translation>北京的富人疯狂地购买走私汽车！价格狂升!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="559"/>
+        <location filename="widgets/main_widget.py" line="596"/>
         <source>The market is flooded with smuggled cigarettes from Fujian!</source>
         <translation>市场上充斥着来自福建的走私香烟!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="569"/>
+        <location filename="widgets/main_widget.py" line="606"/>
         <source>Children in Beijing are busy studying online, no one wants to buy imported toys.</source>
         <translation>北京的孩子们都忙于上网学习，进口玩具没人愿意买。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="579"/>
+        <location filename="widgets/main_widget.py" line="616"/>
         <source>The piracy industry is booming, and Zhongguancun, the &quot;Silicon Valley of China&quot;, is full of village girls selling pirated VCDs!</source>
         <translation>盗版业十分兴旺，“中国硅谷”——中关村全是卖盗版VCD的村姑!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="589"/>
+        <location filename="widgets/main_widget.py" line="626"/>
         <source>My old classmate in Xiamen sponsored me two smuggled cars! I&apos;m rich!</source>
         <translation>厦门的老同学资助俺两部走私汽车！发了！！</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="599"/>
+        <location filename="widgets/main_widget.py" line="636"/>
         <source>After the Industrial and Commercial Bureau raided the place, I found the imported cigarettes lost by my fellow villager in a dark corner.</source>
         <translation>工商局扫荡后，俺在黑暗角落里发现了老乡丢失的进口香烟。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="609"/>
+        <location filename="widgets/main_widget.py" line="646"/>
         <source>My fellow villager gave me some fake Shanxi liquor (highly toxic) before he went home!</source>
         <translation>俺老乡回家前把一些山西假白酒（剧毒）给俺!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="619"/>
+        <location filename="widgets/main_widget.py" line="656"/>
         <source>Media reports: Another Japanese product exported to China has gone wrong! After the incident, the Japanese refused to admit it and refused to compensate. The village chief learned of this news and asked someone to sell you his parallel-imported mobile phone (without any manufacturer logo) for 2,500 yuan.</source>
         <translation>媒体报道：又有日本出口到中国的产品出事了! 出事后日本人死不认帐,拒绝赔偿。村长得知此消息，托人把他用的水货手机（无任何厂商标识）硬卖给您，收您2500元。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="685"/>
+        <location filename="widgets/main_widget.py" line="722"/>
         <source>I feel sorry for the old lady pretending to be a beggar at the subway entrance.</source>
         <translation>俺怜悯地铁口扮演成乞丐的老太太。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="692"/>
+        <location filename="widgets/main_widget.py" line="729"/>
         <source>A man stopped me on the street and said, &quot;Brother, give me some money!&quot;.</source>
         <translation>一个汉子在街头拦住俺：“哥们，给点钱用!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="695"/>
+        <location filename="widgets/main_widget.py" line="732"/>
         <source>A big man touched me and said, &quot;Stop squeezing!&quot;.</source>
         <translation>一个大个子碰了俺一下，说：“别挤了!”。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="700"/>
+        <location filename="widgets/main_widget.py" line="737"/>
         <source>Three old ladies with red armbands grabbed me and said, &quot;You are from another place? Fine!&quot;</source>
         <translation>三个带红袖章的老太太揪住俺：“你是外地人?罚款!”</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="707"/>
+        <location filename="widgets/main_widget.py" line="744"/>
         <source>Two strong men grabbed me and said, &quot;Pay the long-distance call surcharge and Internet fee.&quot;</source>
         <translation>两个猛男揪住俺：“交长话附加费、上网费。”</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="714"/>
+        <location filename="widgets/main_widget.py" line="751"/>
         <source>The deputy director said, &quot;Applying for a business license? Don&apos;t come to my house to give me money at night.&quot;</source>
         <translation>副主任说：“办经商证?晚上不要去我家给我送钱哦。”</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="721"/>
+        <location filename="widgets/main_widget.py" line="758"/>
         <source>Beijing&apos;s air pollution is serious. I&apos;m going to the oxygen bar to breathe oxygen...</source>
         <translation>北京空气污染得厉害,俺去氧吧吸氧...</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="729"/>
+        <location filename="widgets/main_widget.py" line="765"/>
+        <source>Hackers hacked into the bank network and frantically modified the database. My deposit decreased by {}</source>
+        <translation>黑客入侵银行网络，疯狂修改数据库，我的存款减少了{}</translation>
+    </message>
+    <message>
+        <location filename="widgets/main_widget.py" line="769"/>
         <source>Hackers hacked into the bank network and frantically modified the database. My deposit increased by {}</source>
         <translation>黑客入侵银行网络，疯狂修改数据库，我的存款增加了{}</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="731"/>
+        <location filename="widgets/main_widget.py" line="771"/>
         <source>I am in trouble.</source>
         <translation>俺不好办了。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="732"/>
+        <location filename="widgets/main_widget.py" line="772"/>
+        <source>My money decreased by {} percent.</source>
+        <translation>俺的银子减少了{}%</translation>
+    </message>
+    <message>
+        <location filename="widgets/main_widget.py" line="774"/>
+        <source>My deposit decreased by {} percent. Oh no!</source>
+        <translation>俺的存款减少了{}%，哎呀！</translation>
+    </message>
+    <message>
         <source>My money decreased by 5.</source>
-        <translation>俺的银子减少了{}</translation>
+        <translation type="vanished">俺的银子减少了{}</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="734"/>
         <source>My deposit decreased by 5. Oh no!</source>
-        <translation>俺的存款减少了{}，哎呀！</translation>
+        <translation type="vanished">俺的存款减少了{}，哎呀！</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="748"/>
+        <location filename="widgets/main_widget.py" line="825"/>
         <source>I haven&apos;t decided what to buy yet.</source>
         <translation>我还没有选定买什么物品呢。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="757"/>
+        <location filename="widgets/main_widget.py" line="834"/>
         <source>I don&apos;t have enough cash with me, so I&apos;ll go to the bank to withdraw some money.</source>
         <translation>俺带的现金不够，去银行提点钱吧。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="763"/>
+        <location filename="widgets/main_widget.py" line="840"/>
         <source>I don&apos;t have enough cash and I don&apos;t have any deposits in the bank, what should I do?</source>
         <translation>俺的现金不够，银行又没有存款，咋办哩?</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="794"/>
+        <location filename="widgets/main_widget.py" line="871"/>
         <source>Oh? It seems that no one is doing {} business here.</source>
         <translation>哦？仿佛没有人这里做{}生意。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="842"/>
+        <location filename="widgets/main_widget.py" line="919"/>
         <source>You need to bring at least 15 yuan with you when entering an Internet cafe, haha, come back after withdrawing money.</source>
         <translation>进网吧至少身上要带15元，呵呵，取钱再来。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="848"/>
+        <location filename="widgets/main_widget.py" line="925"/>
         <source>The village chief said: Don&apos;t hang out in the Internet cafe all the time, go and do a decent business!</source>
         <translation>村长放出话来：你别总是在网吧里鬼混，快去做正经买卖!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="863"/>
+        <location filename="widgets/main_widget.py" line="940"/>
         <source>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned {} yuan in US Internet advertising fees, hehe!</source>
         <translation>感谢电信改革，可以免费上网! 还挣了美国网络广告费{}元，嘿嘿!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="878"/>
+        <location filename="widgets/main_widget.py" line="955"/>
         <source>your rented house ({}/{})</source>
         <translation>您的出租屋（{}/{}）</translation>
     </message>
@@ -1924,8 +1947,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">我要进地铁</translation>
     </message>
     <message>
+        <location filename="widgets/mainwindow.py" line="56"/>
         <source>Beijing Life ({}/{} day)</source>
-        <translation type="vanished">北京浮生（{}/{}天）</translation>
+        <translation>北京浮生（{}/{}天）</translation>
     </message>
     <message>
         <source>I&apos;m going back to my hometown tomorrow and selling all the goods quickly.</source>
