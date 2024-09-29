@@ -26,11 +26,12 @@ from app.tools import load_data
 
 
 class MainWidget(QtWidgets.QWidget):
+    sig_time_pass = QtCore.Signal(int)
+
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ui = ui.main_widget.Ui_MainWidget()
         self.ui.setupUi(self)
-        self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
         import os
 
         self.hide()
@@ -57,7 +58,6 @@ class MainWidget(QtWidgets.QWidget):
         QtCore.QTimer.singleShot(7000, lambda: self.timer.start())
         self.ui.ticker.enterEvent = lambda _: self.timer.stop()
         self.ui.ticker.leaveEvent = lambda _: self.timer.start()
-
 
         self.places: list[QtWidgets.QPushButton] = [
             getattr(self.ui, f"x{i}") for i in range(10)
@@ -267,6 +267,10 @@ class MainWidget(QtWidgets.QWidget):
         self.status.debt = int(self.status.debt)
         self.status.saving = int(self.status.saving)
 
+    def decrease_time(self, days: int = 1):
+        self.time_left -= 1
+        self.sig_time_pass.emit(self.time_left)
+
     def handle_normal_events(self):
         if self.time_left <= 2:
             self.market_items = makeDrugPrices(0)
@@ -277,10 +281,7 @@ class MainWidget(QtWidgets.QWidget):
         self.do_random_event()
         self.on_steal()
 
-        self.time_left -= 1
-        self.setWindowTitle(
-            self.tr("Beijing Life ({}/{} day)").format(40 - self.time_left, 40)
-        )
+        self.decrease_time()
 
         if self.time_left == 1:
             self.show_diary(
@@ -391,13 +392,12 @@ class MainWidget(QtWidgets.QWidget):
         msg3 = self.tr(
             "The village chief asked someone to advance {} yuan for my hospitalization fee."
         )
-
         msg4 = self.tr("My health... health crisis... go to the doctor...")
         msg5 = self.tr(
             'I fell on the street, and the diary beside me said: "Beijing, I will come again!"'
         )
 
-        self.places = [
+        self.down_places = [
             self.tr("In the hair salon"),
             self.tr("at the breakfast stall"),
             self.tr("at the newsstand"),
@@ -428,6 +428,35 @@ class MainWidget(QtWidgets.QWidget):
             self.tr("next to the corpse of a Internet company"),
             self.tr("next to the fraudulent intellectual property owner"),
         ]
+
+        if self.status.health < 85 and self.time_left > 3:
+            delay_day = 1 + random.randint(0, 1)
+            place = ""
+            for i in self.places:
+                if i.isDisabled():
+                    place = i.text()
+            place2 = random.randint(0, len(self.down_places) - 1)
+            messages = []
+            messages.append(msg.format(place, place2))
+            messages.append(msg2.format(delay_day))
+
+            load = 1000 + random.randint(0, 8500)
+            messages.append(msg3.format(load))
+
+            self.show_diary("\n".join(messages))
+
+            self.status.debt += load
+            self.status.health += 10
+            self.time_left -= delay_day
+
+        elif 20 > self.status.health > 0:
+            self.show_diary(msg4)
+        elif self.status.health < 0:
+            self.play_sound("death.wav")
+            self.show_diary(msg5)
+            self.close()
+
+        self.refresh_display()
 
     def do_random_stuff(self):
         from dataclasses import dataclass
@@ -723,13 +752,53 @@ class MainWidget(QtWidgets.QWidget):
             ],
         ]
         self.hacker_msg = self.tr(
+            "Hackers hacked into the bank network and frantically modified the database. My deposit decreased by {}"
+        )
+        self.hacker_msg2 = self.tr(
             "Hackers hacked into the bank network and frantically modified the database. My deposit increased by {}"
         )
 
         self.msg2 = self.tr("I am in trouble.")
 
-        self.msg3 = self.tr("My money decreased by 5.")
-        self.msg_4 = self.tr("My deposit decreased by 5. Oh no!")
+        self.msg3 = self.tr("My money decreased by {} percent.")
+        self.msg_4 = self.tr("My deposit decreased by {} percent. Oh no!")
+
+        for i, event in enumerate(self.steal_events):
+            if random.randint(0, 999) % event[0] == 0:
+                if i != 4 and i != 5:
+                    msg = event[1] + self.msg3.format(event[2])
+                    self.show_diary(msg)
+                    self.status.cash *= 1 - event[2] / 100
+                    self.status.cash = int(self.status.cash)
+                else:
+                    if self.status.saving > 0:
+                        msg = event[1] + self.msg_4.format(event[2])
+                        self.show_diary(msg)
+                        self.status.saving *= 1 - event[2] / 100
+                        self.status.saving = int(self.status.saving)
+
+        if random.randint(0, 999) % 25 == 0 and self.allow_hacker:
+            if self.status.saving < 1000:
+                pass
+            else:
+                if self.status.saving > 100000:
+                    num = int(self.status.saving / (2 + random.randint(0, 19)))
+                    if random.randint(0, 19) % 3 == 0:
+                        self.status.saving -= num
+                        self.show_diary(self.hacker_msg.format(num))
+                    else:
+                        self.status.saving += num
+                        self.show_diary(self.hacker_msg2.format(num))
+                else:
+                    num = int(self.status.saving / (1 + random.randint(0, 14)))
+                    self.status.saving += num
+                    self.show_diary(self.hacker_msg2.format(num))
+
+        if self.status.cash < 0:
+            self.status.cash = 0
+            self.show_diary(self.msg2)
+
+        self.refresh_display()
 
     def on_exit(self):
         pass
