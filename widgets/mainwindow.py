@@ -7,6 +7,8 @@ import widgets.main_widget as main_widget
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, app):
         super().__init__()
+        
+        self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
 
         self.app = app
         self.translator = QtCore.QTranslator()
@@ -18,6 +20,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui = ui_mainwindow.Ui_MainWindow()
         self.ui.setupUi(self)
         self.widget = main_widget.MainWidget()
+        self.widget.sig_time_pass.connect(self.set_title)
         self.setCentralWidget(self.widget)
 
         font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/font.ttf")
@@ -47,6 +50,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.timer.setInterval(1000)
         self.timer.timeout.connect(self.check)
         self.timer.start()
+
+    def set_title(self, time_left: int):
+        self.setWindowTitle(
+            self.tr("Beijing Life ({}/{} day)").format(40 - time_left, 40)
+        )
 
     def check(self):
         from pathlib import Path
