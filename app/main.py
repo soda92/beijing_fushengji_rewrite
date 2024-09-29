@@ -1,11 +1,10 @@
 import os
 import platform
 import sys
-from widgets.mainwindow import MainWindow
+import widgets.mainwindow as mainwindow
 from PySide6 import QtWidgets, QtCore
 import argparse
 from console.mainwindow import main as main_cli
-
 
 def main_gui():
     if platform.system() == "Linux":
@@ -15,7 +14,9 @@ def main_gui():
     translator = QtCore.QTranslator()
     translator.load(":/translations/cn.qm")
     app.installTranslator(translator)
-    _window = MainWindow()
+
+    _window = mainwindow.MainWindow()
+    _window.show()
     sys.exit(app.exec())
 
 
