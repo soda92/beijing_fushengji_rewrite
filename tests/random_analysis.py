@@ -28,7 +28,7 @@ print(sum(occur) / loop_cnt)
 
 conditions = [-1, 0, 0, 0]
 for _ in range(loop_cnt*100):
-    randoms = [random.randint(0, 8) for _ in range(3)]
+    randoms = [random.randint(0, 7) for _ in range(3)]
     conditions[len(set(randoms))] += 1
 
 print(conditions)
