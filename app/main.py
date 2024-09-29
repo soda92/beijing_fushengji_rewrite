@@ -11,11 +11,8 @@ def main_gui():
         # this will enable automaic load of fcitx plugin
         os.environ["QT_PLUGIN_PATH"] = "/usr/lib/qt6/plugins/"
     app = QtWidgets.QApplication(sys.argv)
-    translator = QtCore.QTranslator()
-    translator.load(":/translations/cn.qm")
-    app.installTranslator(translator)
 
-    _window = mainwindow.MainWindow()
+    _window = mainwindow.MainWindow(app)
     _window.show()
     sys.exit(app.exec())
 

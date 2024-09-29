@@ -1,13 +1,17 @@
 from PySide6 import QtWidgets, QtGui, QtCore
 import ui.mainwindow as ui_mainwindow
 import ui.main_widget
-import main_rc
 import widgets.main_widget as main_widget
 
 
 class MainWindow(QtWidgets.QMainWindow):
-    def __init__(self):
+    def __init__(self, app):
         super().__init__()
+
+        self.app = app
+        self.translator = QtCore.QTranslator()
+        self.translator.load(":/translations/cn.qm")
+        self.app.installTranslator(self.translator)
         self.init()
 
     def init(self):
@@ -40,7 +44,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.cybercafe.triggered.connect(self.widget.enter_cafe)
 
         self.timer = QtCore.QTimer()
-        self.timer.setInterval(100)
+        self.timer.setInterval(1000)
         self.timer.timeout.connect(self.check)
         self.timer.start()
 
@@ -49,13 +53,17 @@ class MainWindow(QtWidgets.QMainWindow):
 
         CURRENT = Path(__file__).resolve().parent
         reload_action = CURRENT.parent.joinpath("ui/_reload")
+
+        self.app.removeTranslator(self.translator)
+        self.translator.load("translation_zh_CN.qm")
+        self.app.installTranslator(self.translator)
+
         if reload_action.exists():
             reload_action.unlink()
             import importlib
 
             importlib.reload(main_widget)
             importlib.reload(ui.main_widget)
-            importlib.reload(main_rc)
             self.widget.setParent(None)
             self.widget = main_widget.MainWidget()
             self.setCentralWidget(self.widget)

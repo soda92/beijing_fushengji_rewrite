@@ -26,6 +26,11 @@ if platform.system() == "Windows":
         UCRT = True
 
 CURRENT = Path(__file__).resolve().parent
+import sys
+
+sys.path.insert(0, str(CURRENT.parent))
+
+
 form_dir = CURRENT.parent.joinpath("form")
 ui_dir = CURRENT.parent.joinpath("ui")
 
@@ -99,6 +104,11 @@ def compile2(file: Path):
         compile(file)
     elif file.suffix == ".rc":
         compile_rc(file)
+    elif file.suffix == ".ts":
+        from tools.translate import compile as translate_compile
+
+        translate_compile()
+        # compile_rc(RC_FILE)
 
 
 def get_all_files():
@@ -106,6 +116,7 @@ def get_all_files():
     files.append(RC_FILE)
     widgets_files = list(CURRENT.parent.joinpath("widgets").glob("*.py"))
     files.extend(widgets_files)
+    files.append(CURRENT.parent.joinpath("translation_zh_CN.ts"))
     return files
 
 
@@ -130,4 +141,4 @@ if __name__ == "__main__":
 
             import time
 
-            time.sleep(0.1)
+            time.sleep(1)
