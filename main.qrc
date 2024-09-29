@@ -33,5 +33,17 @@
     <file>sound/vomit.wav</file>
     <file>sound/buy.wav</file>
     <file>sound/money.wav</file>
+    <file>sound/breath.wav</file>
+    <file>sound/death.wav</file>
+    <file>sound/dog.wav</file>
+    <file>sound/el.wav</file>
+    <file>sound/flee.wav</file>
+    <file>sound/harley.wav</file>
+    <file>sound/hit.wav</file>
+    <file>sound/kill.wav</file>
+    <file>sound/lan.wav</file>
+    <file>sound/level.wav</file>
+    
+    <file>sound/airport.wav</file>
   </qresource>
 </RCC>
