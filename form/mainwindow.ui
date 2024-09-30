@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>661</width>
+    <height>384</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Beijing Life</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel, QPushButton, QTextBrowser, QAction, QMenu, QHeaderView, QStandardItem {
+                font: 12pt MiSans;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_7"/>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>661</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>System</string>
+    </property>
+    <addaction name="new_game"/>
+    <addaction name="top_players"/>
+    <addaction name="settings"/>
+    <addaction name="exit_game"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Places</string>
+    </property>
+    <addaction name="bank"/>
+    <addaction name="post_office"/>
+    <addaction name="hospital"/>
+    <addaction name="airport"/>
+    <addaction name="rental_agency"/>
+    <addaction name="cybercafe"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="beijing_intro"/>
+    <addaction name="story"/>
+    <addaction name="game_help"/>
+    <addaction name="about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="new_game">
+   <property name="text">
+    <string>new game</string>
+   </property>
+  </action>
+  <action name="top_players">
+   <property name="text">
+    <string>Ranking</string>
+   </property>
+  </action>
+  <action name="settings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="exit_game">
+   <property name="text">
+    <string>exit</string>
+   </property>
+  </action>
+  <action name="bank">
+   <property name="text">
+    <string>Bank</string>
+   </property>
+  </action>
+  <action name="post_office">
+   <property name="text">
+    <string>Post Office</string>
+   </property>
+  </action>
+  <action name="hospital">
+   <property name="text">
+    <string>Hospital</string>
+   </property>
+  </action>
+  <action name="airport">
+   <property name="text">
+    <string>Airport</string>
+   </property>
+  </action>
+  <action name="rental_agency">
+   <property name="text">
+    <string>Rental Agency</string>
+   </property>
+  </action>
+  <action name="cybercafe">
+   <property name="text">
+    <string>Cyber Cafe</string>
+   </property>
+  </action>
+  <action name="beijing_intro">
+   <property name="text">
+    <string>Beijing Intro</string>
+   </property>
+  </action>
+  <action name="story">
+   <property name="text">
+    <string>Game Story</string>
+   </property>
+  </action>
+  <action name="game_help">
+   <property name="text">
+    <string>Game Guide</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>About this game</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../main.qrc"/>
+ </resources>
+ <connections/>
+</ui>

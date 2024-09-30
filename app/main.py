@@ -1,21 +1,19 @@
 import os
 import platform
 import sys
-from widgets.mainwindow import MainWindow
+import widgets.mainwindow as mainwindow
 from PySide6 import QtWidgets, QtCore
 import argparse
 from console.mainwindow import main as main_cli
-
 
 def main_gui():
     if platform.system() == "Linux":
         # this will enable automaic load of fcitx plugin
         os.environ["QT_PLUGIN_PATH"] = "/usr/lib/qt6/plugins/"
     app = QtWidgets.QApplication(sys.argv)
-    translator = QtCore.QTranslator()
-    translator.load(":/translations/cn.qm")
-    app.installTranslator(translator)
-    _window = MainWindow()
+
+    _window = mainwindow.MainWindow(app)
+    _window.show()
     sys.exit(app.exec())
 
 
