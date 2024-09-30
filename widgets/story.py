@@ -1,6 +1,10 @@
 from PySide6 import QtWidgets, QtCore, QtGui
 from ui.story import Ui_Story
 
+from pathlib import Path
+
+CURRENT = Path(__file__).resolve().parent
+
 
 class StoryDlg(QtWidgets.QWidget):
     start_sig: QtCore.Signal = QtCore.Signal(bool)
@@ -10,6 +14,8 @@ class StoryDlg(QtWidgets.QWidget):
         self.ui = Ui_Story()
         self.ui.setupUi(self)
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
+
+        self.processHelpFile()
 
         self.ui.startGame.clicked.connect(self.start_game)
         self.ui.startGame.setEnabled(False)
@@ -39,32 +45,30 @@ class StoryDlg(QtWidgets.QWidget):
             self._count += 1
         else:
             self.timer.stop()
-            self.processHelpFile()
             QtCore.QTimer.singleShot(
                 330,
                 self.finish_init,
             )
 
     def finish_init(self):
-        self.ui.statusText.setText(self.tr("The game has been initialized, ready to enter Beijing..."))
+        self.ui.statusText.setText(
+            self.tr("The game has been initialized, ready to enter Beijing...")
+        )
         self.ui.startGame.setEnabled(True)
         self.ui.startGame.setFocus()
 
     def processHelpFile(self):
         self.ui.statusText.setText(self.tr("Initialization help information...."))
-        from pathlib import Path
+        self.help_file_encrypted = CURRENT.parent.joinpath("helpinfo")
+        self.help_file: Path = self.help_file_encrypted.parent.joinpath("help.html")
 
-        CURRENT = Path(__file__).resolve().parent
-        help_file_encrypted = CURRENT.parent.joinpath("helpinfo")
-
-        from app.tools import test_dirs
-
-        test_dirs()
-        content = help_file_encrypted.read_bytes()
+        content = self.help_file_encrypted.read_bytes()
         real_content = bytearray([i ^ 0x52 for i in content]).decode("GB2312")
-        help_file_encrypted.parent.joinpath("help.html").write_text(
-            real_content, encoding="utf8"
-        )
+        self.help_file.write_text(real_content, encoding="utf8")
+
+    def remove_help_file(self):
+        if self.help_file.exists():
+            self.help_file.unlink()
 
     def start_game(self):
         self.start_sig.emit(True)

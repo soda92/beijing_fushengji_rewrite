@@ -45,6 +45,15 @@
                 "PYTHONPATH": "${workspaceFolder}"
             },
             "preLaunchTask": "Build UI and Resource"
+        },
+        {
+            "name": "DebugWindow",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/widgets/debug_window.py",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
         }
     ]
 }
