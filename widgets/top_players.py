@@ -23,7 +23,6 @@ class TopPlayers(QtWidgets.QDialog):
         self.ui.ok.clicked.connect(self.close)
 
         self.init_data()
-        self.save_score()
         self.show_scores()
 
     def show_scores(self):
@@ -60,7 +59,7 @@ class TopPlayers(QtWidgets.QDialog):
     def get_my_order(self, score):
         for i in range(len(self.data)):
             if score > self.data[i][1]:
-                return i
+                return i+1
         return 100
 
     def insert_score(self, name, score, health, fame):
@@ -72,6 +71,8 @@ class TopPlayers(QtWidgets.QDialog):
             else:
                 break
         self.data.insert(i, [name, score, health, fame])
+        self.save_score()
+        self.show_scores()
 
     def init_data(self):
         self.model.setHorizontalHeaderLabels(
@@ -107,6 +108,7 @@ class TopPlayers(QtWidgets.QDialog):
                 ["li", 34, 100, self.tr("so-so")],
                 ["li", 3, 100, self.tr("outstanding youth")],
             ]
+            self.save_score()
         else:
             self.raw_data = score.read_text(encoding="utf8").split("\n")
             self.data = []

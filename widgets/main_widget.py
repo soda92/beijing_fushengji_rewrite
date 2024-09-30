@@ -1,4 +1,4 @@
-from PySide6 import QtWidgets, QtGui, QtCore, QtMultimedia
+from PySide6 import QtWidgets, QtCore, QtMultimedia
 import random
 from app.models import makeDrugPrices, get_item_name, Item, ItemName
 import ui.main_widget
@@ -18,6 +18,8 @@ from widgets import (
     Buy,
     Sell,
     News,
+    TopPlayers,
+    CelebrateWindow,
 )
 
 
@@ -27,6 +29,7 @@ from app.tools import load_data
 
 class MainWidget(QtWidgets.QWidget):
     sig_time_pass = QtCore.Signal(int)
+    sig_close = QtCore.Signal()
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -35,6 +38,9 @@ class MainWidget(QtWidgets.QWidget):
         import os
 
         self.hide()
+
+        self.d_story = StoryDlg()
+        self.d_story.start_sig.connect(self.check_start)
 
         hide_intro = os.environ.get("HIDE_INTRO", False)
         if not hide_intro:
@@ -283,7 +289,11 @@ class MainWidget(QtWidgets.QWidget):
         self.on_steal()
 
         if self.status.debt > 100000:
-            self.show_diary(self.tr("I owed too much money, so the village chief called a group of villagers to beat me up!"))
+            self.show_diary(
+                self.tr(
+                    "I owed too much money, so the village chief called a group of villagers to beat me up!"
+                )
+            )
             self.play_sound("kill.wav")
             self.status.health -= 30
             self.refresh_display()
@@ -386,7 +396,9 @@ class MainWidget(QtWidgets.QWidget):
         for i in self.random_events:
             r = random.randint(0, 1000 - 1)
             if r % i[0] == 0:
-                self.show_diary(i[1] + self.tr(" My health decreases {} point.").format(i[2]))
+                self.show_diary(
+                    i[1] + self.tr(" My health decreases {} point.").format(i[2])
+                )
                 self.play_sound(i[3])
                 self.status.health -= i[2]
                 self.refresh_display()
@@ -808,8 +820,73 @@ class MainWidget(QtWidgets.QWidget):
 
         self.refresh_display()
 
+    def show_top_players(self):
+        self.top_players = TopPlayers()
+        self.top_players.exec()
+
     def on_exit(self):
-        pass
+        self.top_players = TopPlayers()
+        score = self.status.cash + self.status.saving - self.status.debt
+        if score > 0:
+            i = self.top_players.get_my_order(score)
+            if i != 100:
+                self.d_celebrate = CelebrateWindow(score, i)
+                self.d_celebrate.exec()
+                self.top_players.insert_score(
+                    self.d_celebrate.get_name(),
+                    score,
+                    self.status.health,
+                    self.status.fame,
+                )
+            else:
+                self.show_news(
+                    self.tr(
+                        "The {} money you earned is too little, so you failed to enter the top 10 rich people. Try harder next time!"
+                    ).format(score)
+                )
+
+            self.top_players.exec()
+
+            if score > 10000000:
+                self.show_news(
+                    self.tr(
+                        "The money you earned, {} RMB, is very high. It is recommended that you send it to the author for expert ranking."
+                    )
+                )
+        else:
+            self.show_news(
+                self.tr(
+                    'The Beijing Game News reported: Player "Anonymous" failed to make money in Beijing and was sent home.'
+                )
+            )
+
+        msg_box = QtWidgets.QMessageBox()
+        msg_box.setWindowTitle("Confirmation")
+        msg_box.setText(self.tr("Hey, wanna play again?"))
+        msg_box.setStandardButtons(
+            QtWidgets.QMessageBox.StandardButton.Yes
+            | QtWidgets.QMessageBox.StandardButton.No
+        )
+        msg_box.setDefaultButton(QtWidgets.QMessageBox.StandardButton.No)
+
+        result = msg_box.exec()
+
+        if result == QtWidgets.QMessageBox.StandardButton.Yes:
+            self.on_new_game()
+        else:
+            self.remove_help_file()
+            self.sig_close.emit()
+            self.close()
+
+    def remove_help_file(self):
+        self.d_story.remove_help_file()
+
+    def on_new_game(self):
+        self.init_data()
+        self.refresh_display()
+        self.indexes = []
+        self.sell_indexes = []
+        self.show()
 
     def play_sound(self, name: str):
         if not self.turn_off_sound:
@@ -958,9 +1035,7 @@ class MainWidget(QtWidgets.QWidget):
         )
 
     def show_intro(self):
-        self.dlg = StoryDlg()
-        self.dlg.start_sig.connect(self.check_start)
-        self.dlg.show()
+        self.d_story.show()
 
     def check_start(self):
         self.show()
