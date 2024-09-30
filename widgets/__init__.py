@@ -13,6 +13,8 @@ from .pay_debt import PayDebt
 from .buy import Buy
 from .sell import Sell
 from .news import News
+from .top_players import TopPlayers
+from .celebrate import CelebrateWindow
 
 __all__ = [
     "AboutGame",
@@ -30,4 +32,6 @@ __all__ = [
     "Buy",
     "Sell",
     "News",
+    "TopPlayers",
+    "CelebrateWindow",
 ]
