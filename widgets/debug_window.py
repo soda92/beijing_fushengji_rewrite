@@ -43,7 +43,15 @@ class DebugWidget(QtWidgets.QWidget):
         try:
             r = eval(data)
         except Exception as e:
-            print(e)
+            r = str(e)
+            try:
+                exec(data)
+            except Exception as e2:
+                print(e, e2)
+            else:
+                self.data.append(data)
+                self.data.append(r)
+                self.texts.setText("\n".join(map(str, self.data)))
         else:
             self.data.append(data)
             self.data.append(r)
@@ -51,8 +59,9 @@ class DebugWidget(QtWidgets.QWidget):
 
 
 class DebugWindowReloader(QtWidgets.QWidget):
-    def __init__(self):
+    def __init__(self, main=None):
         super().__init__()
+        self.main = main
         self.mtime = os.path.getmtime(__file__)
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.check)
@@ -60,7 +69,7 @@ class DebugWindowReloader(QtWidgets.QWidget):
 
         self._layout = QtWidgets.QVBoxLayout()
         self.setLayout(self._layout)
-        self.widget = DebugWidget()
+        self.widget = DebugWidget(self.main)
         self._layout.addWidget(self.widget)
 
     def check(self):
@@ -75,8 +84,8 @@ class DebugWindowReloader(QtWidgets.QWidget):
                 pass
             else:
                 try:
-                    self.widget_2 = s.DebugWidget()
-                except:
+                    self.widget_2 = s.DebugWidget(self.main)
+                except Exception as _v:
                     pass
                 else:
                     self._layout.removeWidget(self.widget)

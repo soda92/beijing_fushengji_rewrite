@@ -7,7 +7,7 @@ import widgets.main_widget as main_widget
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, app):
         super().__init__()
-        
+
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
 
         self.app = app
@@ -16,11 +16,20 @@ class MainWindow(QtWidgets.QMainWindow):
         self.app.installTranslator(self.translator)
         self.init()
 
+        from app.tools import debugger_is_active
+
+        if debugger_is_active():
+            from widgets.debug_window import DebugWindowReloader
+
+            self.debug_window = DebugWindowReloader(self.widget)
+            self.debug_window.show()
+
     def init(self):
         self.ui = ui_mainwindow.Ui_MainWindow()
         self.ui.setupUi(self)
         self.widget = main_widget.MainWidget()
         self.widget.sig_time_pass.connect(self.set_title)
+        self.widget.sig_close.connect(self.close)
         self.setCentralWidget(self.widget)
 
         font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/font.ttf")
@@ -45,11 +54,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.settings.triggered.connect(self.widget.show_settings)
         self.ui.exit_game.triggered.connect(self.widget.close)
         self.ui.cybercafe.triggered.connect(self.widget.enter_cafe)
+        self.ui.top_players.triggered.connect(self.widget.show_top_players)
 
         self.timer = QtCore.QTimer()
         self.timer.setInterval(1000)
         self.timer.timeout.connect(self.check)
-        self.timer.start()
+        # self.timer.start()
 
     def set_title(self, time_left: int):
         self.setWindowTitle(
