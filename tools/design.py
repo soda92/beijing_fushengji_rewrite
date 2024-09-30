@@ -24,8 +24,8 @@ def cd(dir: str):
 PREFIX = ""
 if pathlib.Path("venv/bin/python").exists():
     PREFIX += "venv/bin/"
-elif pathlib.Path("venv/Scripts/python.exe").exists():
-    PREFIX += "venv/Scripts/"
+elif pathlib.Path(".venv/Scripts/python.exe").exists():
+    PREFIX += ".venv/Scripts/"
 
 
 def run(command):

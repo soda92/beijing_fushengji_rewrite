@@ -51,14 +51,14 @@ def get_dest_path(file: Path) -> Path:
 def compile(file: Path):
     dest_path = get_dest_path(file)
 
-    command = "venv/Scripts/pyside6-uic.exe"
+    command = ".venv/Scripts/pyside6-uic.exe"
     if LINUX:
         command = "venv/bin/pyside6-uic"
-    subprocess.run(f"{command} {str(file)} -o {str(dest_path)}".split(), check=True)
+    subprocess.run(f"{command} {file} -o {str(dest_path)}".split(), check=True)
 
 
-def compile_rc(file: Path):
-    command = "venv/Scripts/pyside6-rcc.exe"
+def compile_rc(file: Path=RC_FILE):
+    command = ".venv/Scripts/pyside6-rcc.exe"
     if LINUX:
         command = "venv/bin/pyside6-rcc"
 

@@ -76,7 +76,7 @@ def makeDrugPrices(leaveout: int) -> list[Item]:
 
     if leaveout != 0:
         hide_num = random.choices(
-            population=[1, 2, 3], weights=[12364, 296397, 691239], k=1
+            population=[1, 2, 3], weights=[15372, 328392, 655876], k=1
         )[0]
         hide_items = random.sample(range(8), hide_num)
         for i in hide_items:
