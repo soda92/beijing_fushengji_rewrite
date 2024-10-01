@@ -15,6 +15,9 @@ class BlackMarketTable(QtCore.QObject):
         self.table.setModel(self.model_market)
 
         self.enable_help = False
+        import os
+        if os.environ.get("ENABLE_HELP"):
+            self.enable_help = True
 
     def slot_items(self, items):
         self.market_items = items
@@ -71,7 +74,6 @@ class MyItemsTable(QtCore.QObject):
     def __init__(self, table: QtWidgets.QTableWidget):
         super().__init__()
         self.table = table
-        self.enable_help = False
 
         self.model_myitem = MyTableModel()
         self.table.setModel(self.model_myitem)

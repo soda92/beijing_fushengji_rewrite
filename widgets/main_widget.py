@@ -285,7 +285,10 @@ class MainWidget(QtWidgets.QWidget):
     def init_data(self):
         self.bad_fame1_shown = False
         self.bad_fame2_shown = False
+        import os
         self.turn_off_sound = False
+        if os.environ.get("NOSOUND"):
+            self.turn_off_sound = True
         self.allow_hacker = False
         self.quantity = 0
         self.max_quantity = 100

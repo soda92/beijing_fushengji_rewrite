@@ -22,6 +22,8 @@
             "env": {
                 "PYTHONPATH": "${workspaceFolder}",
                 "HIDE_INTRO": "true",
+                "NOSOUND": "true",
+                "ENABLE_HELP": "true",
             },
             "preLaunchTask": "Build UI and Resource"
         },
@@ -40,7 +42,9 @@
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/app/main.py",
-            "args": ["--console"],
+            "args": [
+                "--console"
+            ],
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"
             },
