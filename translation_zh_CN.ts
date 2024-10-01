@@ -488,6 +488,19 @@ To expand your business, it is recommended that you rent a bigger house.</source
     </message>
 </context>
 <context>
+    <name>EasterEgg</name>
+    <message>
+        <location filename="widgets/easteregg.py" line="19"/>
+        <source>Author: Guo Xianghao, male, born in April 1970, graduated from Beijing University of Posts and Telecommunications in 1998 with a Ph.D. in artificial intelligence and natural language processing. Currently engaged in natural language processing research and software development. Loves games so much that he develops his own. Lived in Beijing for more than 10 years.</source>
+        <translation>作者：郭祥昊，男，1970年4月生，1998年毕业于北京邮电大学，获博士学位，专业：人工智能与自然语言处理。目前从事自然语言处理研究，开发软件。热爱游戏到了自己开发的地步。在北京浮生超过10年。</translation>
+    </message>
+    <message>
+        <location filename="widgets/easteregg.py" line="25"/>
+        <source>I love nature, art, and literature. I mainly use C/C++ for programming, but I am also very familiar with 80x86 assembly language. I once wrote a computer virus for my girlfriend (now the mother of my child). I am also proficient in LISP and Prolog languages, and have in-depth research on information retrieval technology and concept retrieval technology.</source>
+        <translation>我爱自然，艺术、文学。编程序主要使用C/C++, 但是对80x86汇编语言也非常熟悉，曾经给女朋友（现在是我孩子的妈）编过一个计算机病毒。我还精通LISP和Prolog语言，对信息检索技术和概念检索技术有很深入的研究。</translation>
+    </message>
+</context>
+<context>
     <name>Form</name>
     <message>
         <location filename="form/top_players.ui" line="14"/>
@@ -510,8 +523,14 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation>恭喜恭喜! “北京金钱年鉴”通知您：</translation>
     </message>
     <message>
+        <location filename="form/easteregg.ui" line="14"/>
+        <source>--</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="form/easteregg.ui" line="26"/>
         <source>TextLabel</source>
-        <translation type="vanished">《》</translation>
+        <translation>《》</translation>
     </message>
     <message>
         <location filename="form/celebrate.ui" line="35"/>
@@ -555,6 +574,7 @@ Beijing&apos;s environmental pollution is serious. The governance in recent year
     <message>
         <location filename="form/beijing_intro.ui" line="98"/>
         <location filename="form/celebrate.ui" line="103"/>
+        <location filename="form/easteregg.ui" line="61"/>
         <location filename="form/top_players.ui" line="64"/>
         <source>OK</source>
         <translation>OK</translation>
@@ -2994,7 +3014,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
     <message>
         <location filename="widgets/story.py" line="48"/>
-        <source>Continue game</source>
+        <source>Continue game &gt;&gt;</source>
+        <oldsource>Continue game</oldsource>
         <translation>继续游戏 &gt;&gt;</translation>
     </message>
     <message>
