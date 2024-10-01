@@ -3,6 +3,78 @@ import os
 import importlib
 
 
+class CompleterWidget(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.widgets = []
+        self.selected_index = 0
+        self._layout = QtWidgets.QVBoxLayout()
+        self.setLayout(self._layout)
+
+        self.words = []
+
+        self.ref = None
+
+    def slot_complete(self, obj, attr):
+        self.prefix = obj
+        try:
+            obj = eval(obj, globals(), {"self": self.ref})
+        except Exception as e:
+            self.show_selection([])
+        else:
+            attrs = dir(obj)
+            result = []
+            for i in attrs:
+                if i.startswith(attr):
+                    result.append(i)
+            if len(result) == 1 and attr == result[0]:  # TODO: fix double return
+                self.show_selection([])
+            self.show_selection(result[:5])
+
+    def show_selection(self, words):
+        for w in self.widgets:
+            w.setParent(None)
+            self.layout().removeWidget(w)
+        self.words = words
+        if len(words) == 0:
+            return
+        self.selected_index = 0
+        self.widgets = [QtWidgets.QLabel(x) for x in words]
+        self.widgets[self.selected_index].setStyleSheet("color: green;")
+
+        for w in self.widgets:
+            self.layout().addWidget(w)
+
+    def complete(self):
+        if len(self.words) == 0:
+            return ""
+        word = self.prefix + "." + self.words[self.selected_index]
+        self.show_selection([])
+        return word
+
+    def has_completion(self):
+        return len(self.words) != 0
+
+    def slot_up(self):
+        if len(self.widgets) == 0:
+            return
+        self.widgets[self.selected_index].setStyleSheet("")
+        self.selected_index -= 1
+        if self.selected_index < 0:
+            self.selected_index = 0
+        self.widgets[self.selected_index].setStyleSheet("color: green;")
+
+    def slot_down(self):
+        if len(self.widgets) == 0:
+            return
+        self.widgets[self.selected_index].setStyleSheet("")
+        self.selected_index += 1
+        if self.selected_index >= len(self.widgets):
+            self.selected_index = len(self.widgets) - 1
+        self.widgets[self.selected_index].setStyleSheet("color: green;")
+
+
 class MyInput(QtWidgets.QLineEdit):
     """
     Custom input class for handling input history.
@@ -10,22 +82,47 @@ class MyInput(QtWidgets.QLineEdit):
 
     sig_up = QtCore.Signal()
     sig_down = QtCore.Signal()
+    sig_return = QtCore.Signal()
 
-    def __init__(self):
+    def __init__(self, completer):
         super().__init__()
+
+        self.completer = completer
+
         self.textChanged.connect(self.text_changed)
 
     def keyPressEvent(self, event: QtGui.QKeyEvent):
         if event.key() == QtCore.Qt.Key.Key_Up:
-            self.sig_up.emit()
+            if self.completer.has_completion():
+                self.completer.slot_up()
+            else:
+                self.sig_up.emit()
         elif event.key() == QtCore.Qt.Key.Key_Down:
-            self.sig_down.emit()
+            if self.completer.has_completion():
+                self.completer.slot_down()
+            else:
+                self.sig_down.emit()
+        elif event.key() == QtCore.Qt.Key.Key_Return:
+            w = self.completer.complete()
+            if w != "":
+                self.setText(w)
+            else:
+                self.sig_return.emit()
+        elif event.key() == QtCore.Qt.Key.Key_Escape:
+            self.completer.complete()
         super().keyPressEvent(event)
 
     def text_changed(self):
         "some help"
         if len(self.text()) == 0:
             return
+        text = self.text()
+        if "." not in text:
+            return
+        pointer_pos = text.rfind(".")
+        obj = text[:pointer_pos]
+        attr = text[pointer_pos + 1 :]
+        self.completer.slot_complete(obj, attr)
 
 
 class DebugWidget(QtWidgets.QWidget):
@@ -50,13 +147,17 @@ class DebugWidget(QtWidgets.QWidget):
         self.commands = list(commands)
         self.results = list(results)
 
-        self.input = MyInput()
-        self.input.returnPressed.connect(self.r_eval)
+        self.completer = CompleterWidget()
+        self.completer.ref = self.main
+        self.input = MyInput(self.completer)
+        self.input.setFont(QtGui.QFont("Consolas", 12))
+        self.input.sig_return.connect(self.r_eval)
 
         self.input.sig_up.connect(self.enumerate_previous_command)
         self.input.sig_down.connect(self.enumerate_next_command)
 
         self._layout.addWidget(self.commands_area)
+        self._layout.addWidget(self.completer)
         self._layout.addWidget(self.input)
         self.input.setFocus()
 
@@ -64,7 +165,10 @@ class DebugWidget(QtWidgets.QWidget):
         for i in range(len(self.commands)):
             command = QtWidgets.QLabel(self.commands[i])
             command.setWordWrap(True)
+            command.setFont(QtGui.QFont("Consolas", 12))
+
             result = QtWidgets.QLabel(self.results[i])
+            result.setFont(QtGui.QFont("Consolas", 12))
             result.setWordWrap(True)
             self.commands_area_contents.layout().addWidget(command)
             self.commands_area_contents.layout().addWidget(result)
@@ -90,13 +194,13 @@ class DebugWidget(QtWidgets.QWidget):
 
     def r_eval(self):
         data = self.input.text()
-        self.input.clear()
+        self.input.setText("self")
         try:
-            r = eval(data)
+            r = eval(data, globals(), {"self": self.completer.ref})
         except Exception as e:
             r = str(e)
             try:
-                exec(data)
+                exec(data, globals(), {"self": self.completer.ref})
             except Exception as e2:
                 print(e, e2)
             else:
@@ -114,7 +218,10 @@ class DebugWidget(QtWidgets.QWidget):
     def refresh_display(self):
         command = QtWidgets.QLabel(self.commands[-1])
         command.setWordWrap(True)
+        command.setFont(QtGui.QFont("Consolas", 12))
+
         result = QtWidgets.QLabel(self.results[-1])
+        result.setFont(QtGui.QFont("Consolas", 12))
         result.setWordWrap(True)
         self.commands_area_contents.layout().addWidget(command)
         self.commands_area_contents.layout().addWidget(result)
