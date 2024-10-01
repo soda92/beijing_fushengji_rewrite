@@ -20,7 +20,7 @@ class CompleterWidget(QtWidgets.QWidget):
         self.prefix = obj
         try:
             obj = eval(obj, globals(), {"self": self.ref})
-        except Exception as e:
+        except Exception as _e:
             self.show_selection([])
         else:
             attrs = dir(obj)
