@@ -15,6 +15,7 @@ from .sell import Sell
 from .news import News
 from .top_players import TopPlayers
 from .celebrate import CelebrateWindow
+from .rent import Rent
 
 __all__ = [
     "AboutGame",
@@ -34,4 +35,5 @@ __all__ = [
     "News",
     "TopPlayers",
     "CelebrateWindow",
+    "Rent",
 ]
