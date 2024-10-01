@@ -63,6 +63,7 @@ class TopPlayers(QtWidgets.QDialog):
         return 100
 
     def insert_score(self, name, score, health, fame):
+        fame = self.get_fame_str(fame)
         i = 0
         for x in self.data:
             if x[1] > score:

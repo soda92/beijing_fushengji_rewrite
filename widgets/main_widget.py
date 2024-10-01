@@ -304,6 +304,7 @@ class MainWidget(QtWidgets.QWidget):
         self.quantity = sum([x.quantity for x in self.my_items])
 
         self.time_left = 40
+        self.sig_time_pass.emit(self.time_left)
 
     def handle_cash_and_debt(self):
         self.status.debt *= 1.1
@@ -603,6 +604,7 @@ class MainWidget(QtWidgets.QWidget):
         result = msg_box.exec()
 
         if result == QtWidgets.QMessageBox.StandardButton.Yes:
+            self.time_left = 40  # avoid bug for new_game dialog
             self.on_new_game()
         else:
             self.remove_help_file()
@@ -613,6 +615,25 @@ class MainWidget(QtWidgets.QWidget):
         self.d_story.remove_help_file()
 
     def on_new_game(self):
+        if 40 - self.time_left >= 3:
+            msg_box = QtWidgets.QMessageBox()
+            msg_box.setWindowTitle("Confirmation")
+            msg_box.setText(
+                self.tr(
+                    "Do you want abandon currently-playing game and start a new one?"
+                )
+            )
+            msg_box.setStandardButtons(
+                QtWidgets.QMessageBox.StandardButton.Yes
+                | QtWidgets.QMessageBox.StandardButton.No
+            )
+            msg_box.setDefaultButton(QtWidgets.QMessageBox.StandardButton.No)
+
+            result = msg_box.exec()
+
+            if result == QtWidgets.QMessageBox.StandardButton.No:
+                return
+
         self.init_data()
         self.refresh_display()
         self.indexes = []
