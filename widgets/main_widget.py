@@ -1,6 +1,6 @@
 from PySide6 import QtWidgets, QtCore, QtMultimedia
 import random
-from app.models import makeDrugPrices, get_item_name, Item
+from app.models import makeDrugPrices, get_item_name, Item, ItemName
 import ui.main_widget
 from widgets.tables import BlackMarketTable, MyItemsTable
 from app.events import RandomEvents, GameMessages, StealEvents
@@ -283,6 +283,8 @@ class MainWidget(QtWidgets.QWidget):
         self.allow_hacker = allow_hacker
 
     def init_data(self):
+        self.bad_fame1_shown = False
+        self.bad_fame2_shown = False
         self.turn_off_sound = False
         self.allow_hacker = False
         self.quantity = 0
@@ -692,6 +694,7 @@ class MainWidget(QtWidgets.QWidget):
             pass
         else:
             item = self.my_items[self.sell_indexes[0]]
+
             price = self.get_price(item)
             if price == -1:
                 self.show_diary(
@@ -722,6 +725,26 @@ class MainWidget(QtWidgets.QWidget):
         self.my_items[index].quantity -= quantity
         if self.my_items[index].quantity == 0:
             del self.my_items[index]
+
+        item = self.d_sell.item
+        if item.name == ItemName.r18_book:
+            self.status.fame -= 7
+            if not self.bad_fame1_shown:
+                self.bad_fame1_shown = True
+                self.show_diary(
+                    self.tr(
+                        'Buying and selling "Shanghai Baby" (banned book) pollutes society and my reputation has become bad!'
+                    )
+                )
+        elif item.name == ItemName.liquor:
+            self.status.fame -= 10
+            if not self.bad_fame2_shown:
+                self.bad_fame2_shown = True
+                self.show_diary(
+                    self.tr(
+                        "Buying and selling fake liquor (very poisonous!) harms society and my reputation has declined."
+                    )
+                )
         self.refresh_display()
 
     def scroll(self):
@@ -772,6 +795,10 @@ class MainWidget(QtWidgets.QWidget):
     def refresh_display(self):
         self.ui.cash.display(self.status.cash)
         self.ui.saving.display(self.status.saving)
+        if self.status.fame < 60:
+            if self.status.fame < 0:
+                self.status.fame = 0
+            self.ui.fame.setStyleSheet("color: rgb(240, 0, 0);")
         self.ui.fame.display(self.status.fame)
         self.ui.debt.display(self.status.debt)
         self.ui.health.display(self.status.health)
