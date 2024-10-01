@@ -51,7 +51,13 @@ class TopPlayers(QtWidgets.QDialog):
         )
         for i in range(10):
             cell = QtGui.QStandardItem(str(places_text[i]))
-            cells = [cell, *[QtGui.QStandardItem(str(self.data[i][x])) for x in range(len(self.data[0]))]]
+            cells = [
+                cell,
+                *[
+                    QtGui.QStandardItem(str(self.data[i][x]))
+                    for x in range(len(self.data[0]))
+                ],
+            ]
             for cell in cells:
                 cell.setFont(QtGui.QFont("MiSans", 12))
             self.model.appendRow(cells)
@@ -59,7 +65,7 @@ class TopPlayers(QtWidgets.QDialog):
     def get_my_order(self, score):
         for i in range(len(self.data)):
             if score > self.data[i][1]:
-                return i+1
+                return i + 1
         return 100
 
     def insert_score(self, name, score, health, fame):
@@ -144,7 +150,7 @@ class TopPlayers(QtWidgets.QDialog):
             return self.tr("controversial figure")
         elif fame < 40 and fame >= 20:
             return self.tr("bad")
-        elif fame < 20 >= 10:
+        elif 10 <= fame < 20:
             return self.tr("very bad")
         elif fame < 10:
             return self.tr("disdained by the world")
