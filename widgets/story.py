@@ -9,7 +9,7 @@ CURRENT = Path(__file__).resolve().parent
 class StoryDlg(QtWidgets.QDialog):
     start_sig: QtCore.Signal = QtCore.Signal(bool)
 
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, c_continue=False):
         super().__init__(parent)
         self.ui = Ui_Story()
         self.ui.setupUi(self)
@@ -32,12 +32,22 @@ class StoryDlg(QtWidgets.QDialog):
             self.tr("Loading Beijing real-time news...."),
         ]
         self._count = 1
-        self.ui.statusText.setText(self.messages[0])
 
-        self.timer = QtCore.QTimer()
-        self.timer.timeout.connect(self.update_message)
-        self.timer.setInterval(330)
-        self.timer.start()
+        if not c_continue:
+            self.ui.statusText.setText(self.messages[0])
+        else:
+            self.ui.statusText.hide()
+
+        if not c_continue:
+            self.timer = QtCore.QTimer()
+            self.timer.timeout.connect(self.update_message)
+            self.timer.setInterval(330)
+            self.timer.start()
+        else:
+            self.ui.startGame.setEnabled(True)
+            self.ui.startGame.setText(self.tr("Continue game >>"))
+            self.ui.startGame.setFocus()
+            self.ui.startGame.clicked.connect(self.start_game)
 
     def update_message(self):
         if self._count < 5:

@@ -2,6 +2,7 @@ from PySide6 import QtWidgets, QtGui, QtCore
 import ui.mainwindow as ui_mainwindow
 import ui.main_widget
 import widgets.main_widget as main_widget
+from widgets.beijing_intro import BeijingIntro
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -60,11 +61,29 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.top_players.triggered.connect(self.widget.show_top_players)
         self.ui.new_game.triggered.connect(self.widget.on_new_game)
         self.ui.rental_agency.triggered.connect(self.widget.rent_house)
+        self.ui.beijing_intro.triggered.connect(self.beijing_intro)
+        self.ui.game_help.triggered.connect(self.game_doc)
+        self.ui.story.triggered.connect(self.show_story)
 
         self.timer = QtCore.QTimer()
         self.timer.setInterval(1000)
         self.timer.timeout.connect(self.check)
         # self.timer.start()
+
+    def show_story(self):
+        from widgets.story import StoryDlg
+
+        self.d_story = StoryDlg(c_continue=True)
+        self.d_story.show()
+
+    def game_doc(self):
+        import webbrowser
+
+        webbrowser.open(self.widget.d_story.help_file)
+
+    def beijing_intro(self):
+        self.intro = BeijingIntro()
+        self.intro.show()
 
     def set_title(self, time_left: int):
         self.setWindowTitle(
