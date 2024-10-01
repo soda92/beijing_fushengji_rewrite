@@ -28,9 +28,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui = ui_mainwindow.Ui_MainWindow()
         self.ui.setupUi(self)
         self.widget = main_widget.MainWidget()
+        self.widget.hide()
         self.widget.sig_time_pass.connect(self.set_title)
         self.widget.sig_close.connect(self.close)
         self.setCentralWidget(self.widget)
+        self.widget.show()
 
         font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/font.ttf")
         family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
@@ -53,8 +55,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.airport.triggered.connect(self.widget.go_airport)
         self.ui.settings.triggered.connect(self.widget.show_settings)
         self.ui.exit_game.triggered.connect(self.widget.close)
+        self.ui.exit_game.triggered.connect(self.close)
         self.ui.cybercafe.triggered.connect(self.widget.enter_cafe)
         self.ui.top_players.triggered.connect(self.widget.show_top_players)
+        self.ui.new_game.triggered.connect(self.widget.on_new_game)
+        self.ui.rental_agency.triggered.connect(self.widget.rent_house)
 
         self.timer = QtCore.QTimer()
         self.timer.setInterval(1000)

@@ -1,8 +1,9 @@
 from PySide6 import QtWidgets, QtCore, QtMultimedia
 import random
-from app.models import makeDrugPrices, get_item_name, Item, ItemName
+from app.models import makeDrugPrices, get_item_name, Item
 import ui.main_widget
 from widgets.tables import BlackMarketTable, MyItemsTable
+from app.events import RandomEvents, GameMessages, StealEvents
 
 from widgets import (
     AboutGame,
@@ -20,6 +21,7 @@ from widgets import (
     News,
     TopPlayers,
     CelebrateWindow,
+    Rent,
 )
 
 
@@ -46,13 +48,14 @@ class MainWidget(QtWidgets.QWidget):
         if not hide_intro:
             self.show_intro()
         else:
-            self.show()
+            pass
         self.move(
             QtWidgets.QApplication.screens()[0].geometry().center()
             - self.rect().center()
         )
         self.n_cafe = 0
         self.ui.p_netcafe.clicked.connect(self.enter_cafe)
+        self.ui.p_rent.clicked.connect(self.rent_house)
 
         self.ui.buy.clicked.connect(self.buy)
         self.ui.sell.clicked.connect(self.sell)
@@ -225,6 +228,42 @@ class MainWidget(QtWidgets.QWidget):
 
         return action
 
+    def rent_house(self):
+        if self.max_quantity == 140:
+            self.show_diary(
+                self.tr(
+                    "The agent said, your house is bigger than the director's! And you're still renting?"
+                )
+            )
+            return
+
+        if self.status.cash < 30000:
+            self.show_diary(
+                self.tr(
+                    "The agent said, you don't have 30,000 cash and you want to rent? Go away!"
+                )
+            )
+        else:
+            self.d_rent = Rent(self.status.cash, self.max_quantity)
+            ret = self.d_rent.exec()
+            if ret == QtWidgets.QDialog.Accepted:
+                self.status.cash = int(self.status.cash) / 2
+                self.status.cash -= 2000
+                self.max_quantity += 10
+                self.refresh_display()
+
+                self.show_diary(
+                    self.tr(
+                        "My house can hold {} items! But it seems that the agency cheated me of some money..."
+                    ).format(self.max_quantity)
+                )
+            else:
+                self.show_diary(
+                    self.tr(
+                        "Ha! Be careful! Rumor has it that some rental agencies in Beijing are very good at cheating people..."
+                    )
+                )
+
     def show_settings(self):
         self.d_settings = Settings(None, self.allow_hacker, self.turn_off_sound)
         self.d_settings.show()
@@ -244,7 +283,6 @@ class MainWidget(QtWidgets.QWidget):
         self.allow_hacker = allow_hacker
 
     def init_data(self):
-        self.enable_help = False
         self.turn_off_sound = False
         self.allow_hacker = False
         self.quantity = 0
@@ -728,7 +766,7 @@ class MainWidget(QtWidgets.QWidget):
         )
 
     def show_intro(self):
-        self.d_story.show()
+        self.d_story.exec()
 
     def check_start(self):
         self.show()

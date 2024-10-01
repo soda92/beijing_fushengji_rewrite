@@ -6,7 +6,7 @@ from pathlib import Path
 CURRENT = Path(__file__).resolve().parent
 
 
-class StoryDlg(QtWidgets.QWidget):
+class StoryDlg(QtWidgets.QDialog):
     start_sig: QtCore.Signal = QtCore.Signal(bool)
 
     def __init__(self, parent=None):
