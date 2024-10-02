@@ -1,31 +1,12 @@
 from PySide6 import QtWidgets, QtCore, QtMultimedia
 import random
-from app.models import makeDrugPrices, get_item_name, Item, ItemName
-import ui.main_widget
-from widgets.tables import BlackMarketTable, MyItemsTable
-from app.events import RandomEvents, GameMessages, StealEvents
-
-from widgets import (
-    AboutGame,
-    Bank,
-    Airport,
-    CyberCafe,
-    Diary,
-    Settings,
-    StoryDlg,
-    TextEditor,
-    Hospital,
-    PayDebt,
-    Buy,
-    Sell,
-    News,
-    TopPlayers,
-    CelebrateWindow,
-    Rent,
-)
-
+import os
+import importlib
 
 from app.models import Status
+from widgets.tables import BlackMarketTable, MyItemsTable
+from app.models import makeDrugPrices, get_item_name, Item, ItemName
+from app.events import RandomEvents, GameMessages, StealEvents
 from app.tools import load_data
 
 
@@ -35,13 +16,19 @@ class MainWidget(QtWidgets.QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+
+        import ui.main_widget
+
+        importlib.reload(ui.main_widget)
         self.ui = ui.main_widget.Ui_MainWidget()
         self.ui.setupUi(self)
-        import os
 
         self.hide()
 
-        self.d_story = StoryDlg()
+        import widgets.story
+
+        importlib.reload(widgets.story)
+        self.d_story = widgets.story.StoryDlg()
         self.d_story.start_sig.connect(self.check_start)
 
         hide_intro = os.environ.get("HIDE_INTRO", False)
@@ -99,8 +86,12 @@ class MainWidget(QtWidgets.QWidget):
             self.sell_indexes = [index.row() for index in selected.indexes()]
 
     def pay_debt(self):
+        import widgets.pay_debt
+
         if self.status.debt > 0:
-            self.d_paydebt = PayDebt(self.status.cash, self.status.debt)
+            self.d_paydebt = widgets.pay_debt.PayDebt(
+                self.status.cash, self.status.debt
+            )
             self.d_paydebt.sig_pay.connect(self.after_pay_debt)
             self.d_paydebt.show()
         else:
@@ -142,16 +133,22 @@ class MainWidget(QtWidgets.QWidget):
         self.refresh_display()
 
     def show_diary(self, text: str):
-        self.d_diary = Diary()
+        import widgets.simple_dialogs
+
+        self.d_diary = widgets.simple_dialogs.Diary()
         self.d_diary.ui.label.setText(text)
         self.d_diary.exec()
 
     def show_news(self, text: str):
-        self.d_diary = News()
+        import widgets.simple_dialogs
+
+        self.d_diary = widgets.simple_dialogs.News()
         self.d_diary.ui.label.setText(text)
         self.d_diary.exec()
 
     def enter_hospital(self):
+        import widgets.hospital
+
         if self.status.health == 100:
             self.show_diary(
                 self.tr(
@@ -159,7 +156,9 @@ class MainWidget(QtWidgets.QWidget):
                 )
             )
         else:
-            self.d_hospital = Hospital(None, self.status.cash, self.status.health)
+            self.d_hospital = widgets.hospital.Hospital(
+                None, self.status.cash, self.status.health
+            )
             self.d_hospital.sig_health.connect(self.leave_hospital)
             self.d_hospital.show()
 
@@ -169,7 +168,9 @@ class MainWidget(QtWidgets.QWidget):
         self.refresh_display()
 
     def enter_bank(self):
-        self.d_bank = Bank(None, self.status.cash, self.status.saving)
+        import widgets.bank
+
+        self.d_bank = widgets.bank.Bank(None, self.status.cash, self.status.saving)
         self.d_bank.sig_account.connect(self.leave_bank)
         self.d_bank.show()
 
@@ -179,7 +180,9 @@ class MainWidget(QtWidgets.QWidget):
         self.refresh_display()
 
     def switch_mode(self):
-        self.text_editor = TextEditor()
+        import widgets.simple_dialogs
+
+        self.text_editor = widgets.simple_dialogs.TextEditor()
         self.text_editor.show()
 
     def switch_place(self):
@@ -244,7 +247,11 @@ class MainWidget(QtWidgets.QWidget):
                 )
             )
         else:
-            self.d_rent = Rent(self.status.cash, self.max_quantity)
+            import widgets.simple_dialogs
+
+            self.d_rent = widgets.simple_dialogs.Rent(
+                self.status.cash, self.max_quantity
+            )
             ret = self.d_rent.exec()
             if ret == QtWidgets.QDialog.Accepted:
                 self.status.cash = int(self.status.cash) / 2
@@ -265,13 +272,19 @@ class MainWidget(QtWidgets.QWidget):
                 )
 
     def show_settings(self):
-        self.d_settings = Settings(None, self.allow_hacker, self.turn_off_sound)
+        import widgets.simple_dialogs
+
+        self.d_settings = widgets.simple_dialogs.Settings(
+            None, self.allow_hacker, self.turn_off_sound
+        )
         self.d_settings.show()
         self.d_settings.sig_settings.connect(self.settings)
 
     def go_airport(self):
         self.play_sound("airport.wav")
-        self.d_airport = Airport()
+        import widgets.simple_dialogs
+
+        self.d_airport = widgets.simple_dialogs.Airport()
         self.d_airport.show()
 
     def show_about(self):
@@ -289,6 +302,7 @@ class MainWidget(QtWidgets.QWidget):
         self.bad_fame1_shown = False
         self.bad_fame2_shown = False
         import os
+
         self.turn_off_sound = False
         if os.environ.get("NOSOUND"):
             self.turn_off_sound = True
@@ -561,16 +575,22 @@ class MainWidget(QtWidgets.QWidget):
         self.refresh_display()
 
     def show_top_players(self):
-        self.top_players = TopPlayers()
+        import widgets.top_players
+
+        self.top_players = widgets.top_players.TopPlayers()
         self.top_players.exec()
 
     def on_exit(self):
-        self.top_players = TopPlayers()
+        import widgets.top_players
+
+        self.top_players = widgets.top_players.TopPlayers()
         score = self.status.cash + self.status.saving - self.status.debt
         if score > 0:
             i = self.top_players.get_my_order(score)
             if i != 100:
-                self.d_celebrate = CelebrateWindow(score, i)
+                import widgets.simple_dialogs
+
+                self.d_celebrate = widgets.simple_dialogs.CelebrateWindow(score, i)
                 self.d_celebrate.exec()
                 self.top_players.insert_score(
                     self.d_celebrate.get_name(),
@@ -676,7 +696,9 @@ class MainWidget(QtWidgets.QWidget):
                         )
                     )
             else:
-                self.d_buy = Buy(
+                import widgets.buy
+
+                self.d_buy = widgets.buy.Buy(
                     self.status.cash,
                     self.market_items[self.indexes[0]],
                     self.quantity,
@@ -709,7 +731,9 @@ class MainWidget(QtWidgets.QWidget):
                     ).format(get_item_name(item))
                 )
             else:
-                self.d_sell = Sell(item)
+                import widgets.simple_dialogs
+
+                self.d_sell = widgets.simple_dialogs.Sell(item)
                 self.d_sell.ui.pushButton.clicked.connect(self.finish_sell)
                 self.d_sell.show()
 
@@ -783,7 +807,9 @@ class MainWidget(QtWidgets.QWidget):
             )
         else:
             self.n_cafe += 1
-            self.cafe = CyberCafe()
+            import widgets.simple_dialogs
+
+            self.cafe = widgets.simple_dialogs.CyberCafe()
             self.cafe.ui.leave_cybercafe.clicked.connect(self.finish_cyber_cafe)
             self.cafe.show()
 

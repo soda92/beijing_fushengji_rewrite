@@ -1,5 +1,8 @@
-from PySide6 import QtWidgets
+from PySide6 import QtWidgets, QtCore
 import importlib
+import random
+
+from app.models import Item, get_item_name
 
 
 class Airport(QtWidgets.QWidget):
@@ -37,27 +40,24 @@ class CyberCafe(QtWidgets.QWidget):
         self.ui.leave_cybercafe.clicked.connect(lambda _: self.close())
 
 
-from PySide6 import QtWidgets
-from ui.diary import Ui_Diary
-
-
 class Diary(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.ui = Ui_Diary()
+
+        import ui.simple_dialogs
+
+        importlib.reload(ui.simple_dialogs)
+        self.ui = ui.simUi_Diary()
         self.ui.setupUi(self)
-
-
-from PySide6 import QtWidgets
-
-from ui.easteregg import Ui_Form
 
 
 class EasterEgg(QtWidgets.QWidget):
     def __init__(self, detail=False):
         super().__init__()
 
-        self.ui = Ui_Form()
+        import ui.easteregg
+
+        self.ui = ui.easteregg.Ui_Form()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.close)
 
@@ -75,26 +75,21 @@ class EasterEgg(QtWidgets.QWidget):
             )
 
 
-from PySide6 import QtWidgets
-from ui.news import Ui_News
-
-
 class News(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.ui = Ui_News()
+        import ui.news
+
+        self.ui = ui.news.Ui_News()
         self.ui.setupUi(self)
-
-
-from PySide6 import QtWidgets
-
-from ui.rent import Ui_Rent
 
 
 class Rent(QtWidgets.QDialog):
     def __init__(self, money: int, max_quantity: int):
         super().__init__()
-        self.ui = Ui_Rent()
+        import ui.rent
+
+        self.ui = ui.rent.Ui_Rent()
         self.ui.setupUi(self)
 
         t = self.ui.label_2.text()
@@ -105,17 +100,14 @@ class Rent(QtWidgets.QDialog):
         self.ui.cancel.clicked.connect(self.reject)
 
 
-from ui.sell import Ui_Sell
-from PySide6 import QtWidgets
-from app.models import Item, get_item_name
-
-
 class Sell(QtWidgets.QWidget):
     def __init__(self, item: Item):
         super().__init__()
         self.item = item
 
-        self.ui = Ui_Sell()
+        import ui.sell
+
+        self.ui = ui.sell.Ui_Sell()
         self.ui.setupUi(self)
         self.item = item
 
@@ -131,19 +123,13 @@ class Sell(QtWidgets.QWidget):
         self.ui.pushButton.clicked.connect(self.close)
 
 
-from PySide6 import QtWidgets
-from ui.send_money import Ui_SendMoney
-
-
 class SendMoney(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
+        from ui.send_money import Ui_SendMoney
+
         self.ui = Ui_SendMoney()
         self.ui.setupUi(self)
-
-
-from PySide6 import QtWidgets, QtCore
-from ui.settings import Ui_Settings
 
 
 class Settings(QtWidgets.QWidget):
@@ -153,6 +139,8 @@ class Settings(QtWidgets.QWidget):
         self, parent=None, allow_hacker: bool = False, turn_off_sound: bool = False
     ):
         super().__init__(parent)
+        from ui.settings import Ui_Settings
+
         self.ui = Ui_Settings()
         self.ui.setupUi(self)
 
@@ -168,13 +156,11 @@ class Settings(QtWidgets.QWidget):
         self.close()
 
 
-from PySide6 import QtWidgets
-from ui.text_editor import Ui_TextEditor
-
-
 class TextEditor(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
+        from ui.text_editor import Ui_TextEditor
+
         self.ui = Ui_TextEditor()
         self.ui.setupUi(self)
         self.move(
@@ -195,27 +181,22 @@ class TextEditor(QtWidgets.QWidget):
         )
 
 
-from PySide6 import QtWidgets, QtCore
-from ui.statements import Ui_Statements
-
-
 class Statement(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
+        from ui.statements import Ui_Statements
+
         self.ui = Ui_Statements()
         self.ui.setupUi(self)
-
-
-from PySide6 import QtWidgets
-from ui.celebrate import Ui_Form
-import random
 
 
 class CelebrateWindow(QtWidgets.QDialog):
     def __init__(self, score, order):
         super().__init__()
 
-        self.ui = Ui_Form()
+        import ui.celebrate
+
+        self.ui = ui.celebrate.Ui_Form()
         self.ui.setupUi(self)
 
         self.messages = [
