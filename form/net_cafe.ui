@@ -88,8 +88,17 @@
       </item>
       <item>
        <widget class="QPushButton" name="leave_cybercafe">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>38</height>
+         </size>
+        </property>
         <property name="text">
          <string>Leave Cybercafe</string>
+        </property>
+        <property name="default">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
