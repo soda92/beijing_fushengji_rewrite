@@ -275,7 +275,10 @@ class MainWidget(QtWidgets.QWidget):
         self.d_airport.show()
 
     def show_about(self):
-        self.about_game = AboutGame()
+        import widgets.about
+
+        importlib.reload(widgets.about)
+        self.about_game = widgets.about.AboutGame()
         self.about_game.show()
 
     def settings(self, allow_hacker: bool, turn_off_sound: bool):
