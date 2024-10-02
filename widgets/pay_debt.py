@@ -1,13 +1,16 @@
 from PySide6 import QtWidgets, QtCore
-from ui.pay_debt import Ui_PayDebt
+import importlib
 
 
-class PayDebt(QtWidgets.QWidget):
+class PayDebt(QtWidgets.QDialog):
     sig_pay = QtCore.Signal(int, int)
 
     def __init__(self, cash: int = 0, debt: int = 0):
         super().__init__()
-        self.ui = Ui_PayDebt()
+        import ui.pay_debt
+
+        importlib.reload(ui.pay_debt)
+        self.ui = ui.pay_debt.Ui_PayDebt()
         self.ui.setupUi(self)
 
         self.cash = cash

@@ -27,7 +27,7 @@ class BeijingIntro(QtWidgets.QWidget):
         self.ui.pushButton.clicked.connect(self.close)
 
 
-class CyberCafe(QtWidgets.QWidget):
+class CyberCafe(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         import ui.net_cafe
@@ -44,10 +44,10 @@ class Diary(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        import ui.simple_dialogs
+        import ui.diary
 
-        importlib.reload(ui.simple_dialogs)
-        self.ui = ui.simUi_Diary()
+        importlib.reload(ui.diary)
+        self.ui = ui.diary.Ui_Diary()
         self.ui.setupUi(self)
 
 
