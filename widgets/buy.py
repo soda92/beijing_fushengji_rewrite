@@ -1,6 +1,6 @@
-from ui.buy import Ui_Buy
 from PySide6 import QtWidgets
 from app.models import Item, get_item_name
+import importlib
 
 
 class Buy(QtWidgets.QWidget):
@@ -9,7 +9,11 @@ class Buy(QtWidgets.QWidget):
         self.cash = cash
         self.item = item
 
-        self.ui = Ui_Buy()
+        import ui.buy
+
+        importlib.reload(ui.buy)
+
+        self.ui = ui.buy.Ui_Buy()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.close)
 

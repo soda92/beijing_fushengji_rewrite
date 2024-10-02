@@ -88,6 +88,8 @@ class MainWidget(QtWidgets.QWidget):
     def pay_debt(self):
         import widgets.pay_debt
 
+        importlib.reload(widgets.pay_debt)
+
         if self.status.debt > 0:
             self.d_paydebt = widgets.pay_debt.PayDebt(
                 self.status.cash, self.status.debt
@@ -169,6 +171,8 @@ class MainWidget(QtWidgets.QWidget):
 
     def enter_bank(self):
         import widgets.bank
+
+        importlib.reload(widgets.bank)
 
         self.d_bank = widgets.bank.Bank(None, self.status.cash, self.status.saving)
         self.d_bank.sig_account.connect(self.leave_bank)
@@ -809,6 +813,7 @@ class MainWidget(QtWidgets.QWidget):
             self.n_cafe += 1
             import widgets.simple_dialogs
 
+            importlib.reload(widgets.simple_dialogs)
             self.cafe = widgets.simple_dialogs.CyberCafe()
             self.cafe.ui.leave_cybercafe.clicked.connect(self.finish_cyber_cafe)
             self.cafe.show()
