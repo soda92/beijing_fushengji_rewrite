@@ -1,6 +1,5 @@
 from PySide6 import QtWidgets, QtCore, QtGui
-from ui.story import Ui_Story
-
+import importlib
 from pathlib import Path
 
 CURRENT = Path(__file__).resolve().parent
@@ -11,9 +10,23 @@ class StoryDlg(QtWidgets.QDialog):
 
     def __init__(self, parent=None, c_continue=False):
         super().__init__(parent)
-        self.ui = Ui_Story()
+
+        import ui.story
+
+        importlib.reload(ui.story)
+        self.ui = ui.story.Ui_Story()
         self.ui.setupUi(self)
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
+
+        font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/font.ttf")
+        family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
+        self.setStyleSheet(
+            """
+            QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {{
+                font: 12pt {family};
+            }}
+            """.format(family=family)
+        )
 
         self.processHelpFile()
 
