@@ -47,11 +47,12 @@ class MainWidget(QtWidgets.QWidget):
         self.ui.buy.clicked.connect(self.buy)
         self.ui.sell.clicked.connect(self.sell)
 
+
         self.timer = QtCore.QTimer()
         self.timer.setInterval(20)
         self.timer.timeout.connect(self.scroll)
         self.t_pos = 0
-        QtCore.QTimer.singleShot(7000, lambda: self.timer.start())
+        QtCore.QTimer.singleShot(7000, self.timer.start)
         self.ui.ticker.enterEvent = lambda _: self.timer.stop()
         self.ui.ticker.leaveEvent = lambda _: self.timer.start()
 
@@ -73,13 +74,13 @@ class MainWidget(QtWidgets.QWidget):
         self.indexes = []
         self.sell_indexes = []
 
-    def black_market_items(self, selected, deselected):
+    def black_market_items(self, selected, _deselected):
         if len(selected.indexes()) == 0:
             self.indexes = []
         else:
             self.indexes = [index.row() for index in selected.indexes()]
 
-    def my_home_items(self, selected, deselected):
+    def my_home_items(self, selected, _deselected):
         if len(selected.indexes()) == 0:
             self.sell_indexes = []
         else:
@@ -305,7 +306,6 @@ class MainWidget(QtWidgets.QWidget):
     def init_data(self):
         self.bad_fame1_shown = False
         self.bad_fame2_shown = False
-        import os
 
         self.turn_off_sound = False
         if os.environ.get("NOSOUND"):
@@ -313,7 +313,7 @@ class MainWidget(QtWidgets.QWidget):
         self.allow_hacker = False
         self.quantity = 0
         self.max_quantity = 100
-        status, market_items, my_items = load_data()
+        status, _market_items, my_items = load_data()
         self.status: Status = status
 
         self.market_items: list[Item] = makeDrugPrices(3)
@@ -327,7 +327,7 @@ class MainWidget(QtWidgets.QWidget):
         )
         self.ui.my_room.selectionModel().selectionChanged.connect(self.my_home_items)
 
-        self.quantity = sum([x.quantity for x in self.my_items])
+        self.quantity = sum(x.quantity for x in self.my_items)
 
         self.time_left = 40
         self.sig_time_pass.emit(self.time_left)
@@ -339,7 +339,7 @@ class MainWidget(QtWidgets.QWidget):
         self.status.debt = int(self.status.debt)
         self.status.saving = int(self.status.saving)
 
-    def decrease_time(self, days: int = 1):
+    def decrease_time(self, _days: int = 1):
         self.time_left -= 1
         self.sig_time_pass.emit(self.time_left)
 
@@ -502,9 +502,7 @@ class MainWidget(QtWidgets.QWidget):
 
                 if message.add > 0:
                     max_add_count = self.max_quantity - self.quantity
-                    add_count = message.add
-                    if add_count > max_add_count:
-                        add_count = max_add_count
+                    add_count = min(message.add, max_add_count)
                     if add_count == 0:
                         self.show_diary(
                             self.tr(
@@ -543,7 +541,7 @@ class MainWidget(QtWidgets.QWidget):
 
         for i, event in enumerate(self.steal_events):
             if random.randint(0, 999) % event[0] == 0:
-                if i != 4 and i != 5:
+                if i not in (4, 5):
                     msg = event[1] + self.msg3.format(event[2])
                     self.show_diary(msg)
                     self.status.cash *= 1 - event[2] / 100
@@ -747,8 +745,7 @@ class MainWidget(QtWidgets.QWidget):
             index = names.index(item.name)
             market_item = self.market_items[index]
             return market_item.price
-        else:
-            return -1
+        return -1
 
     def finish_sell(self):
         self.play_sound("money.wav")
@@ -794,7 +791,7 @@ class MainWidget(QtWidgets.QWidget):
 
     def restart_scroll(self):
         self.t_pos = 0
-        QtCore.QTimer.singleShot(7000, lambda: self.timer.start())
+        QtCore.QTimer.singleShot(7000, self.timer.start)
 
     def enter_cafe(self):
         if self.status.cash < 15:
@@ -833,8 +830,7 @@ class MainWidget(QtWidgets.QWidget):
         self.ui.cash.display(self.status.cash)
         self.ui.saving.display(self.status.saving)
         if self.status.fame < 60:
-            if self.status.fame < 0:
-                self.status.fame = 0
+            self.status.fame = max(self.status.fame, 0)
             self.ui.fame.setStyleSheet("color: rgb(240, 0, 0);")
         self.ui.fame.display(self.status.fame)
         self.ui.debt.display(self.status.debt)
@@ -843,7 +839,7 @@ class MainWidget(QtWidgets.QWidget):
         self.t_1.slot_items(self.market_items)
         self.t_2.slot_items(self.my_items)
 
-        self.quantity = sum([x.quantity for x in self.my_items])
+        self.quantity = sum(x.quantity for x in self.my_items)
         self.ui.label_7.setText(
             self.tr("your rented house ({}/{})").format(
                 self.quantity, self.max_quantity
