@@ -122,7 +122,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;如果您想给辛苦的作者寄5分钱来支持本游戏的进一步发展，请按此：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/about.ui" line="112"/>
+        <location filename="form/about.ui" line="107"/>
         <source>Send 5 cents</source>
         <translation>寄5分钱</translation>
     </message>
@@ -153,7 +153,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;这是本游戏的特别声明，您一定要看并遵守：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/about.ui" line="53"/>
+        <location filename="form/about.ui" line="48"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -176,7 +176,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Copyright(C) Guoly 工作室&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/about.ui" line="78"/>
+        <location filename="form/about.ui" line="73"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -203,7 +203,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;如果您想给辛苦的作者寄5分钱来支持本游戏的进一步发展，请按此：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/about.ui" line="140"/>
+        <location filename="form/about.ui" line="135"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -222,13 +222,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;这是本游戏的特别声明，您一定要看并遵守：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/about.ui" line="170"/>
+        <location filename="form/about.ui" line="165"/>
         <source>special 
  statement</source>
         <translation>特别声明</translation>
     </message>
     <message>
-        <location filename="form/about.ui" line="206"/>
+        <location filename="form/about.ui" line="201"/>
         <source>Ok</source>
         <translation>确定</translation>
     </message>
@@ -241,12 +241,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>首都机场</translation>
     </message>
     <message>
-        <location filename="form/airport.ui" line="25"/>
+        <location filename="form/airport.ui" line="20"/>
         <source>Do you want to fly to the United States and build a global trade network?</source>
         <translation>您想飞到美国，在全球建立贸易网？</translation>
     </message>
     <message>
-        <location filename="form/airport.ui" line="38"/>
+        <location filename="form/airport.ui" line="33"/>
         <source>In the upcoming version 2.0, you can engage in international trade between major cities in the world (New York, Tokyo, London, Paris, Shanghai, Mumbai, Singapore, and Pyongyang in North Korea).
  Selling food to North Korea? Sell ​​cosmetics from Paris? Selling Indian specialties in New York? Or import Southeast Asian fruits to Singapore?
  The most exciting thing is probably in Tokyo! Reselling Japanese specialties - &quot;Despicable Medicine&quot; and &quot;Despicable Meatballs&quot;!</source>
@@ -255,7 +255,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 最刺激的恐怕是在东京!  倒卖日本特产----“死不认帐药”和“卑鄙丸子”！</translation>
     </message>
     <message>
-        <location filename="form/airport.ui" line="75"/>
+        <location filename="form/airport.ui" line="70"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -268,22 +268,22 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>银行！</translation>
     </message>
     <message>
-        <location filename="form/bank.ui" line="25"/>
+        <location filename="form/bank.ui" line="20"/>
         <source>Hello customer! Your cash is 2000, your deposit is 0, what do you want to do...</source>
         <translation>客户您好！您的现金是2000，您的存款是0，请问您要...</translation>
     </message>
     <message>
-        <location filename="form/bank.ui" line="50"/>
+        <location filename="form/bank.ui" line="45"/>
         <source>Deposit</source>
         <translation>存钱</translation>
     </message>
     <message>
-        <location filename="form/bank.ui" line="69"/>
+        <location filename="form/bank.ui" line="64"/>
         <source>Withdraw</source>
         <translation>取钱</translation>
     </message>
     <message>
-        <location filename="form/bank.ui" line="88"/>
+        <location filename="form/bank.ui" line="83"/>
         <source>Leave</source>
         <translation>离开</translation>
     </message>
@@ -292,17 +292,17 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">客户您好！您的现金是%1，您的存款是%2，请问您要...</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="27"/>
+        <location filename="widgets/bank.py" line="28"/>
         <source>Hello customer! Your cash is {}, your deposit is {}, what do you want to do...</source>
         <translation>客户您好！您的现金是{}，您的存款是{}，请问您要...</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="35"/>
+        <location filename="widgets/bank.py" line="36"/>
         <source>How much money do you deposit?</source>
         <translation>您存多少钱？</translation>
     </message>
     <message>
-        <location filename="widgets/bank.py" line="52"/>
+        <location filename="widgets/bank.py" line="53"/>
         <source>How much money do you withdraw?</source>
         <translation>您提走多少钱？</translation>
     </message>
@@ -335,22 +335,22 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>买多少？</translation>
     </message>
     <message>
-        <location filename="form/buy.ui" line="25"/>
+        <location filename="form/buy.ui" line="20"/>
         <source>&lt;placeholder&gt;</source>
         <translation>&lt;placeholder&gt;</translation>
     </message>
     <message>
-        <location filename="form/buy.ui" line="48"/>
+        <location filename="form/buy.ui" line="43"/>
         <source>How much do you want to buy?</source>
         <translation>您想买多少？</translation>
     </message>
     <message>
-        <location filename="form/buy.ui" line="103"/>
+        <location filename="form/buy.ui" line="98"/>
         <source>Confirm</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="form/buy.ui" line="129"/>
+        <location filename="form/buy.ui" line="124"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -370,27 +370,27 @@ To expand your business, it is recommended that you rent a bigger house.</source
 <context>
     <name>CelebrateWindow</name>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="203"/>
+        <location filename="widgets/simple_dialogs.py" line="183"/>
         <source>Outstanding money-maker in Beijing</source>
         <translation>北京市优秀赚钱员</translation>
     </message>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="204"/>
+        <location filename="widgets/simple_dialogs.py" line="184"/>
         <source>Top 10 outstanding young people in Beijing</source>
         <translation>北京十大杰出小青年</translation>
     </message>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="205"/>
+        <location filename="widgets/simple_dialogs.py" line="185"/>
         <source>The coolest reseller in Beijing</source>
         <translation>京城最酷倒卖手</translation>
     </message>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="206"/>
+        <location filename="widgets/simple_dialogs.py" line="186"/>
         <source>The money-making master in Beijing</source>
         <translation>京都捞钱大师</translation>
     </message>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="207"/>
+        <location filename="widgets/simple_dialogs.py" line="187"/>
         <source>Beijing&apos;s No. 1 golden finger</source>
         <translation>北京第一金手指</translation>
     </message>
@@ -403,32 +403,32 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation>街头网吧</translation>
     </message>
     <message>
-        <location filename="form/net_cafe.ui" line="28"/>
+        <location filename="form/net_cafe.ui" line="24"/>
         <source>Please choose what to do in cybercafe:</source>
         <translation>请选择在网吧做什么：</translation>
     </message>
     <message>
-        <location filename="form/net_cafe.ui" line="38"/>
+        <location filename="form/net_cafe.ui" line="34"/>
         <source>About this game:</source>
         <translation>本游戏相关</translation>
     </message>
     <message>
-        <location filename="form/net_cafe.ui" line="44"/>
+        <location filename="form/net_cafe.ui" line="40"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Write email to author: &lt;a href=&quot;mailto:guoxh@hotmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;mailto:guoxh@hotmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;mailto:guoxh@hotmail.com&quot;&gt;&lt;/a&gt;&lt;span&gt;Join discuss group, get latest version and news:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://groups.yahoo.com/group/BeijingHell&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://groups.yahoo.com/group/BeijingHell&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Access main page of this game:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.guoly.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.guoly.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://guolycomtypeb.51.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://guolycomtypeb.51.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;给游戏作者写信： &lt;a href=&quot;mailto:guoxh@hotmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;mailto:guoxh@hotmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;mailto:guoxh@hotmail.com&quot;&gt;&lt;/a&gt;&lt;span style=&quot; color:#000000;&quot;&gt;参加讨论组，得到最新版本和最新信息：&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://groups.yahoo.com/group/BeijingHell&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://groups.yahoo.com/group/BeijingHell&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;访问|北京浮生记|主页&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.guoly.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.guoly.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://guolycomtypeb.51.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://guolycomtypeb.51.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/net_cafe.ui" line="57"/>
+        <location filename="form/net_cafe.ui" line="53"/>
         <source>About game:</source>
         <translation>游戏相关：</translation>
     </message>
     <message>
-        <location filename="form/net_cafe.ui" line="63"/>
+        <location filename="form/net_cafe.ui" line="59"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Free game: &lt;a href=&quot;http://www.freegames.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.freegames.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Game development: &lt;a href=&quot;http://www.gamedev.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.gamedev.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;免费游戏：&lt;a href=&quot;http://www.freegames.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.freegames.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;游戏开发：&lt;a href=&quot;http://www.gamedev.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.gamedev.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/net_cafe.ui" line="92"/>
+        <location filename="form/net_cafe.ui" line="94"/>
         <source>Leave Cybercafe</source>
         <translation>离开网吧</translation>
     </message>
@@ -477,12 +477,12 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation>我在北京的岁月</translation>
     </message>
     <message>
-        <location filename="form/diary.ui" line="59"/>
+        <location filename="form/diary.ui" line="56"/>
         <source>TextLabel</source>
         <translation>《》</translation>
     </message>
     <message>
-        <location filename="form/diary.ui" line="94"/>
+        <location filename="form/diary.ui" line="91"/>
         <source>Close Diary</source>
         <translation>关上日记本</translation>
     </message>
@@ -490,12 +490,12 @@ To expand your business, it is recommended that you rent a bigger house.</source
 <context>
     <name>EasterEgg</name>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="69"/>
+        <location filename="widgets/simple_dialogs.py" line="57"/>
         <source>Author: Guo Xianghao, male, born in April 1970, graduated from Beijing University of Posts and Telecommunications in 1998 with a Ph.D. in artificial intelligence and natural language processing. Currently engaged in natural language processing research and software development. Loves games so much that he develops his own. Lived in Beijing for more than 10 years.</source>
         <translation>作者：郭祥昊，男，1970年4月生，1998年毕业于北京邮电大学，获博士学位，专业：人工智能与自然语言处理。目前从事自然语言处理研究，开发软件。热爱游戏到了自己开发的地步。在北京浮生超过10年。</translation>
     </message>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="75"/>
+        <location filename="widgets/simple_dialogs.py" line="63"/>
         <source>I love nature, art, and literature. I mainly use C/C++ for programming, but I am also very familiar with 80x86 assembly language. I once wrote a computer virus for my girlfriend (now the mother of my child). I am also proficient in LISP and Prolog languages, and have in-depth research on information retrieval technology and concept retrieval technology.</source>
         <translation>我爱自然，艺术、文学。编程序主要使用C/C++, 但是对80x86汇编语言也非常熟悉，曾经给女朋友（现在是我孩子的妈）编过一个计算机病毒。我还精通LISP和Prolog语言，对信息检索技术和概念检索技术有很深入的研究。</translation>
     </message>
@@ -508,7 +508,7 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation>高手榜</translation>
     </message>
     <message>
-        <location filename="form/top_players.ui" line="25"/>
+        <location filename="form/top_players.ui" line="21"/>
         <source>Top 10 Beijing Fu Sheng Masters</source>
         <translation>北京浮生高手前10名</translation>
     </message>
@@ -518,7 +518,7 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation>组件</translation>
     </message>
     <message>
-        <location filename="form/celebrate.ui" line="25"/>
+        <location filename="form/celebrate.ui" line="20"/>
         <source>Congratulations! &quot;Beijing Money Yearbook&quot; informs you:</source>
         <translation>恭喜恭喜! “北京金钱年鉴”通知您：</translation>
     </message>
@@ -528,27 +528,27 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation></translation>
     </message>
     <message>
-        <location filename="form/easteregg.ui" line="31"/>
+        <location filename="form/easteregg.ui" line="28"/>
         <source>TextLabel</source>
         <translation>《》</translation>
     </message>
     <message>
-        <location filename="form/celebrate.ui" line="35"/>
+        <location filename="form/celebrate.ui" line="30"/>
         <source>Your wealth of {} RMB has already entered the top {} list of rich people in Beijing.</source>
         <translation>您的财富{}人民币已经进入北京富人前{}名。</translation>
     </message>
     <message>
-        <location filename="form/celebrate.ui" line="45"/>
+        <location filename="form/celebrate.ui" line="40"/>
         <source>You have also been awarded the title of &quot;{}&quot;.</source>
         <translation>您还被授予“{}”称号。</translation>
     </message>
     <message>
-        <location filename="form/celebrate.ui" line="58"/>
+        <location filename="form/celebrate.ui" line="53"/>
         <source>Plelease enter your name:</source>
         <translation>请输入您的大名：</translation>
     </message>
     <message>
-        <location filename="form/celebrate.ui" line="71"/>
+        <location filename="form/celebrate.ui" line="66"/>
         <source>History will always remember your glorious deeds of starting from scratch and becoming rich through hard work.</source>
         <translation>历史将永远记住您白手起家、劳动致富的光辉事迹。</translation>
     </message>
@@ -558,12 +558,12 @@ To expand your business, it is recommended that you rent a bigger house.</source
         <translation>北京介绍</translation>
     </message>
     <message>
-        <location filename="form/beijing_intro.ui" line="41"/>
+        <location filename="form/beijing_intro.ui" line="36"/>
         <source>Beijing short intro</source>
         <translation>北京简介</translation>
     </message>
     <message>
-        <location filename="form/beijing_intro.ui" line="64"/>
+        <location filename="form/beijing_intro.ui" line="59"/>
         <source>Beijing is a world-famous historical and cultural city with a history of more than 3,000 years of city construction and more than 800 years of capital construction.
 It is located at the northern end of the North China Plain, with the city center located at 39 degrees 56 minutes north latitude and 116 degrees 20 minutes east longitude.
 Beijing&apos;s environmental pollution is serious. The governance in recent years has been very effective, and sometimes you can even see the stars in the night sky in the middle of the night.</source>
@@ -572,10 +572,10 @@ Beijing&apos;s environmental pollution is serious. The governance in recent year
     北京环境污染严重。最近几年的治理非常有成效，有时半夜甚至能够看见夜空中的星星。</translation>
     </message>
     <message>
-        <location filename="form/beijing_intro.ui" line="98"/>
-        <location filename="form/celebrate.ui" line="103"/>
-        <location filename="form/easteregg.ui" line="66"/>
-        <location filename="form/top_players.ui" line="64"/>
+        <location filename="form/beijing_intro.ui" line="93"/>
+        <location filename="form/celebrate.ui" line="98"/>
+        <location filename="form/easteregg.ui" line="63"/>
+        <location filename="form/top_players.ui" line="60"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -667,27 +667,27 @@ Beijing&apos;s environmental pollution is serious. The governance in recent year
         <translation>在医院里</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="38"/>
+        <location filename="form/hospital.ui" line="35"/>
         <source>TextLabel</source>
         <translation>《》</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="45"/>
+        <location filename="form/hospital.ui" line="42"/>
         <source>Resolutely resist corruption! I will only charge you 3,500 yuan red envelope for each health point.&quot;</source>
         <translation>坚决抵制腐败！每个健康点数俺只收您3500元红包。”</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="58"/>
+        <location filename="form/hospital.ui" line="55"/>
         <source>Treatment Points</source>
         <translation>治疗点数</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="93"/>
+        <location filename="form/hospital.ui" line="90"/>
         <source>Confirm</source>
         <translation>确认</translation>
     </message>
     <message>
-        <location filename="form/hospital.ui" line="119"/>
+        <location filename="form/hospital.ui" line="116"/>
         <source>You are too dark! I will sue you!</source>
         <translation>你太黑了!俺告你去!</translation>
     </message>
@@ -757,172 +757,172 @@ Beijing&apos;s environmental pollution is serious. The governance in recent year
         <translation>组件</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="58"/>
+        <location filename="form/main_widget.ui" line="56"/>
         <source>Black Market</source>
         <translation>黑市</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="95"/>
+        <location filename="form/main_widget.ui" line="93"/>
         <source>Buy</source>
         <translation>买进</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="117"/>
+        <location filename="form/main_widget.ui" line="115"/>
         <source>==&gt;</source>
         <translation>==&gt;</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="124"/>
+        <location filename="form/main_widget.ui" line="122"/>
         <source>Sell</source>
         <translation>卖出</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="146"/>
+        <location filename="form/main_widget.ui" line="144"/>
         <source>&lt;==</source>
         <translation>&lt;==</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="159"/>
+        <location filename="form/main_widget.ui" line="157"/>
         <source>Your rented house</source>
         <translation>您的出租屋</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="207"/>
+        <location filename="form/main_widget.ui" line="206"/>
         <source>Your Status</source>
         <translation>您的状态</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="264"/>
+        <location filename="form/main_widget.ui" line="263"/>
         <source>Cash</source>
         <translation>现金</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="308"/>
+        <location filename="form/main_widget.ui" line="307"/>
         <source>Savings</source>
         <translation>存款</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="352"/>
+        <location filename="form/main_widget.ui" line="351"/>
         <source>Debt</source>
         <translation>欠债</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="402"/>
+        <location filename="form/main_widget.ui" line="401"/>
         <source>Health</source>
         <translation>健康</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="422"/>
+        <location filename="form/main_widget.ui" line="421"/>
         <source>Fame</source>
         <translation>名声</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="495"/>
-        <location filename="widgets/main_widget.py" line="217"/>
+        <location filename="form/main_widget.ui" line="494"/>
+        <location filename="widgets/main_widget.py" line="205"/>
         <source>I want to visit 
 the capital</source>
         <translation>我要逛京城</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="533"/>
-        <location filename="widgets/main_widget.py" line="192"/>
+        <location filename="form/main_widget.ui" line="532"/>
+        <location filename="widgets/main_widget.py" line="180"/>
         <source>Pingguoyuan</source>
         <translation>苹果园</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="546"/>
-        <location filename="widgets/main_widget.py" line="193"/>
+        <location filename="form/main_widget.ui" line="545"/>
+        <location filename="widgets/main_widget.py" line="181"/>
         <source>Gongzhufen</source>
         <translation>公主坟</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="567"/>
+        <location filename="form/main_widget.ui" line="566"/>
         <source>Switch mode</source>
         <translation>老板来了</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="598"/>
-        <location filename="widgets/main_widget.py" line="199"/>
+        <location filename="form/main_widget.ui" line="597"/>
+        <location filename="widgets/main_widget.py" line="187"/>
         <source>Changchun Street</source>
         <translation>长椿街</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="611"/>
-        <location filename="widgets/main_widget.py" line="196"/>
+        <location filename="form/main_widget.ui" line="610"/>
+        <location filename="widgets/main_widget.py" line="184"/>
         <source>Dongzhimen</source>
         <translation>东直门</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="624"/>
-        <location filename="widgets/main_widget.py" line="197"/>
+        <location filename="form/main_widget.ui" line="623"/>
+        <location filename="widgets/main_widget.py" line="185"/>
         <source>Fuxingmen</source>
         <translation>复兴门</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="637"/>
-        <location filename="widgets/main_widget.py" line="195"/>
+        <location filename="form/main_widget.ui" line="636"/>
+        <location filename="widgets/main_widget.py" line="183"/>
         <source>Jishuitan</source>
         <translation>积水潭</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="650"/>
-        <location filename="widgets/main_widget.py" line="198"/>
+        <location filename="form/main_widget.ui" line="649"/>
+        <location filename="widgets/main_widget.py" line="186"/>
         <source>Jianguomen</source>
         <translation>建国门</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="663"/>
-        <location filename="widgets/main_widget.py" line="194"/>
+        <location filename="form/main_widget.ui" line="662"/>
+        <location filename="widgets/main_widget.py" line="182"/>
         <source>Xizhimen</source>
         <translation>西直门</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="676"/>
-        <location filename="widgets/main_widget.py" line="191"/>
+        <location filename="form/main_widget.ui" line="675"/>
+        <location filename="widgets/main_widget.py" line="179"/>
         <source>Beijing Railway 
 Station</source>
         <translation>北京站</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="690"/>
-        <location filename="widgets/main_widget.py" line="200"/>
+        <location filename="form/main_widget.ui" line="689"/>
+        <location filename="widgets/main_widget.py" line="188"/>
         <source>Chongwenmen</source>
         <translation>崇文门</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="743"/>
+        <location filename="form/main_widget.ui" line="733"/>
         <source>Bank</source>
         <translation>银行</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="765"/>
+        <location filename="form/main_widget.ui" line="755"/>
         <source>Hospital</source>
         <translation>医院</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="790"/>
+        <location filename="form/main_widget.ui" line="780"/>
         <source>Post Office</source>
         <translation>邮局</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="812"/>
+        <location filename="form/main_widget.ui" line="802"/>
         <source>Rental agency</source>
         <translation>租房中介</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="834"/>
+        <location filename="form/main_widget.ui" line="824"/>
         <source>Cyber Cafe</source>
         <translation>网吧</translation>
     </message>
     <message>
-        <location filename="form/main_widget.ui" line="869"/>
+        <location filename="form/main_widget.ui" line="859"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MiSans&apos;; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Beijing News: Citizens reported that someone was selling counterfeit wine at the subway entrance | 12:09 | Guoly Computing company was established | 12:20 | Beijing issued management regulations for the online antiques market | 21:8.10 | Guoly Computing company launched &amp;quot;Beijing Fushengji&amp;quot; survival strategy Games | 13:10 | Guoly Computing seeks venture capital (guoxh@hotmail.com) | 2:25.00 | Chengdu smuggled plane successfully bids for Beijingers | 2:45.50 | Capital agency: big predictions for Beijing property market next year | 3:55.00 | The auto industry is once again aggressively recruiting Beijing Automobile to pay a thousand-yuan adjustment | 13:6.25 | North Korea supports Beijing&apos;s bid to host the Olympics | 2:35 | Famous painter An Qianlei: A promise between Beijing and me | 8:28.30 | Discounted air tickets for 50 yuan You can fly from Beijing East to Changping | 16:2.30 | Beijing combines the ban on setting off fireworks and firecrackers with the love for animals | 13:35.00 | Beijing Computer Sports Lottery announced that the 1.2 billion grand prize was claimed by a man | 7:06.00 | Xicheng&apos;s &amp;quot;anti-pornography&amp;quot; The regular army takes action &amp;quot;quickly, accurately and ruthlessly&amp;quot; | 4:62.00 | Beijing police crack down on those who buy and sell fake cosmetics | 10:60.00 | Witnesses in Beijing: Vendors are rampant at subway entrances, and people say the relevant departments should take control | 2:19.50 | Imported toys and electronics Business website (ePlayMe.com) launched in Beijing | 20:1.80 | 200,000 teachers and students in the capital signed in support of the Olympic bid | 23:1.00 | &amp;quot;Beijing Pravda&amp;quot; recruitment reporters will undergo re-examination on Saturday | 5:04.15 | Thousand-year-old wine appears in Beijing The fragrance of counterfeit wine is the best | 9:16.00 | High-tech development in rural areas: VCD sellers gather in the capital | 4:00.00 | Seven major trends in parallel-imported mobile phones in Beijing attract scientists&apos; attention | 7:12:5 | Beijing&apos;s environmentally friendly toilets enter the United States | 23 :50 (US Western Time) | Three ears were cut off after a fellow villager turned against him | 5:40 | Police raided in the early morning and seized 5,000 copies of &amp;quot;It Looks Really Fake&amp;quot; | 4:08 | Beijing&apos;s new fashion: Give away lottery tickets during the holidays | 19: 45 | College students working in Beijing proudly say: Our housing will be available for purchase in 100 years | 10:46 | Beijing has made great achievements in environmental protection, Shougang is more than 10 times more beautiful than the park | 7:13.00 | Citizen Uncle Zhang reflects that some people Selling &amp;quot;Shanghai Baby&amp;quot; at the subway entrance | 6:00 | The CEO of a company in Zhongguancun accidentally drank Shanxi fake liquor and passed out, and the date of entering NSDQ was postponed | 20:0.50 | &amp;quot;Universal Qigong Daily&amp;quot;: Registration for the crash course on sinking qi in Dantian has begun | 15 :50 | Public security in Beijing has reached a new level and it has been rated as the safest city in the world | 19:00.00 | Officials joked about why the phenomenon of arbitrary fees in Beijing disappeared | 20:00 | The Industry and Commerce Bureau investigated a pirated VCD den | 4:0:00 | American experts: Beijing’s air contains a variety of minerals and is rich in nutrients | 8:15:00 (US Eastern Time) | An expensive car turned out to be a smuggled car in Xiamen | 8:59:00 | College graduate job fair information: University of Posts and Telecommunications The supply of students exceeds the demand, and many IT companies are snatching people | 4:16:00 | Primary school students from all over the world gather in Beijing to see white pollution and sandstorms | 6:20:00 (Paris time) | Letter of thanks from Swan Lake: Beijingers saved wild swans | 6:18:00 | At the Hong Kong conference, Beijing was rated as the cleanest city | 6:48:00 | A good district chief who insists on &amp;quot;putting relatives second and talents first&amp;quot; | 2:32:85 | Experts say: FoxLoveChicken.com website will not go bankrupt and will be profitable in 2 years | 3:30 | Leaders say: Beijing’s roads are in good condition | 4:07 | Citizens complain about too many fake medical advertisements in Beijing newspapers | 5:53 | Chen Gou Miss Cat&apos;s &amp;quot;I Love Beijing&apos;s Hutongs&amp;quot; won the first place in the essay competition | 4:40 | Community residents warned thieves: Stop stealing bicycles | 10:85 | A police station in Beijing was accused of moving someone else&apos;s household registration without permission | 4:00 | Beijing A university adheres to the lifelong system of &amp;quot;doctoral supervisors&amp;quot; and is praised by American professors | 19:09 | The 150th issue of the Beijing Sports Lottery draws a special prize of 20,000 first prize | 5:63 | Archaeological excavation of &amp;quot;Yak Hutong&amp;quot; in Beijing , the live TV broadcast turned into a farce | 10:09 | Restaurants and other service industries will extend their business hours during Teachers’ Day in Beijing | 23:00 | Three hundred buildings in Beijing have achieved broadband access | 3:40 | Beijing public security improves the order of passenger transportation during the festival | 8:23 | There are millions of college students &amp;quot;working&amp;quot; in Zhongguancun | 2:00 | Our city&apos;s polluting enterprises have decreased by 12% compared with the previous year | 11:34 | The securities market has achieved a new breakthrough and annual financing has exceeded the trillion mark for the first time | 20:40 | Today End of news, replay in one minute | 14:24&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -934,87 +934,105 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;R北京新闻: 市民反映有人在地铁口卖假酒 | 12:09 | Guoly Computing公司成立 | 12:20 | 北京市出台网上古玩市场管理规定 | 21:8.10  | Guoly Computing公司推出“北京浮生记”生存策略游戏 | 13:10 | Guoly Computing 寻求风险投资 (guoxh@hotmail.com) | 2:25.00  | 成都走私飞机北京人竞拍成功 | 2:45.50  | 京城大代理行：明年北京楼市大预言  | 3:55.00 | 车业再发狠招 北京汽车调千元 | 13:6.25  |  朝鲜支持北京申办奥运 | 2:35 | 著名画家安前类：北京与我的一个约定 | 8:28.30  | 机票打折变招术 50元就可以从北京东飞往昌平 | 16:2.30  | 北京把禁止燃放烟花爆竹同热爱动物结合起来 | 13:35.00 | 北京电脑体育彩票揭晓 12亿巨奖被一男子领取 | 7:06.00  | 西城“扫黄”正规军   出手“快准狠” | 4:62.00  | 北京警方严打买卖伪劣化妆品的人 | 10:60.00 | 京城目击：地铁口小贩猖獗，群众说有关部门应该管一管了 | 2:19.50  | 进口玩具电子商务网站(ePlayMe.com)在北京开通 | 20:1.80  | 首都20万师生联合签名支持申奥 | 23:1.00  | 《北京真理报》招聘记者周六进行复试 | 5:04.15  | 千年古酒亮相北京 假酒飘香堪称极品 | 9:16.00  | 农村发展高科技：卖VCD大军会京师 | 4:00.00  | 京城水货手机七大趋势令科学家关注 | 7:12:5 | 北京环保厕所进军美国  | 23:50 (美国西部时间) | 同乡反目三只耳朵被砍 | 5:40 | 警方凌晨出击 查获《看上去真的很假》五千册  | 4:08 | 北京新时尚：过节送彩票  | 19:45 | 留京工作大学生自豪地说：我们的住房100年后就可买到手 | 10:46 | 北京环境保护取得伟大成就，首钢比公园还美10多倍 | 7:13.00 | 市民张大爷反映有人在地铁口卖《上海小宝贝》 | 6:00  | 中关村某公司CEO误喝山西假白酒昏迷，进军Nsdq日期后推 | 20:0.50 | 《宇宙气功日报》：气沉丹田速成班开始报名 | 15:50 | 北京治安又上新台阶，被评为世界最安全城市 | 19:00.00  | 官员笑谈北京乱收费现象为什么不见了 | 20:00  | 工商局查处一处盗版VCD窝点 | 4:0:00  | 美国专家：北京的空气含有多种矿物质，营养丰富 | 8:15:00 (美国东部时间) | 一名贵汽车原来是厦门走私汽车 | 8:59:00  | 大学生毕业招聘会信息：邮电大学学生供不应求，多家IT企业抢人 | 4:16:00  | 世界小学生会聚北京，见识白色污染和沙尘暴 | 6:20:00 (巴黎时间) | 来自天鹅湖的感谢信：北京人救了野天鹅 | 6:18:00  | 香港会议上，北京被评为最廉洁的城市 | 6:48:00  | 坚持“亲戚第二、人才第一”的好区长 | 2:32:85 | 专家称：狐狸爱鸡.com网站不会倒闭，2年后就可赢利 | 3:30 | 领导说：北京的道路状况良好 | 4:07 | 市民抱怨北京报纸假医疗广告太多 | 5:53 | 陈狗猫小姐的《我爱北京的胡同》荣获征文第一名 | 4:40 | 小区居民正告小偷：不要再偷自行车了 | 10:85 | 擅迁他人户口 北京一派出所被告倒 | 4:00  | 北京一大学坚持“博士生导师”终身制，受到美国教授赞扬 | 19:09 | 北京体育彩票第150期 摇出一注特等奖 一等奖达2万 | 5:63 | 北京“牦牛胡同”考古挖掘，电视直播成闹剧 | 10:09 | 北京教师节期间餐厅等服务行业将延长营业时间 | 23：00 | 北京三百楼宇实现宽带接入 | 3:40 | 北京公安整治节日客运秩序 | 8:23 | 中关村有百万大学生在“打工”  | 2:00 | 我市污染企业比上一年减少12% | 11:34 | 证券市场实现新跨越 年度筹资首次破万亿大关  | 20:40 | 本日新闻结束，一分钟后重播 | 14:24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="104"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MiSans&apos;; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Beijing News: Citizens reported that someone was selling counterfeit wine at the subway entrance | 12:09 | Guoly Computing company was established | 12:20 | Beijing issued management regulations for the online antiques market | 21:8.10 | Guoly Computing company launched &amp;quot;Beijing Fushengji&amp;quot; survival strategy Games | 13:10 | Guoly Computing seeks venture capital (guoxh@hotmail.com) | 2:25.00 | Chengdu smuggled plane successfully bids for Beijingers | 2:45.50 | Capital agency: big predictions for Beijing property market next year | 3:55.00 | The auto industry is once again aggressively recruiting Beijing Automobile to pay a thousand-yuan adjustment | 13:6.25 | North Korea supports Beijing&apos;s bid to host the Olympics | 2:35 | Famous painter An Qianlei: A promise between Beijing and me | 8:28.30 | Discounted air tickets for 50 yuan You can fly from Beijing East to Changping | 16:2.30 | Beijing combines the ban on setting off fireworks and firecrackers with the love for animals | 13:35.00 | Beijing Computer Sports Lottery announced that the 1.2 billion grand prize was claimed by a man | 7:06.00 | Xicheng&apos;s &amp;quot;anti-pornography&amp;quot; The regular army takes action &amp;quot;quickly, accurately and ruthlessly&amp;quot; | 4:62.00 | Beijing police crack down on those who buy and sell fake cosmetics | 10:60.00 | Witnesses in Beijing: Vendors are rampant at subway entrances, and people say the relevant departments should take control | 2:19.50 | Imported toys and electronics Business website (ePlayMe.com) launched in Beijing | 20:1.80 | 200,000 teachers and students in the capital signed in support of the Olympic bid | 23:1.00 | &amp;quot;Beijing Pravda&amp;quot; recruitment reporters will undergo re-examination on Saturday | 5:04.15 | Thousand-year-old wine appears in Beijing The fragrance of counterfeit wine is the best | 9:16.00 | High-tech development in rural areas: VCD sellers gather in the capital | 4:00.00 | Seven major trends in parallel-imported mobile phones in Beijing attract scientists&apos; attention | 7:12:5 | Beijing&apos;s environmentally friendly toilets enter the United States | 23 :50 (US Western Time) | Three ears were cut off after a fellow villager turned against him | 5:40 | Police raided in the early morning and seized 5,000 copies of &amp;quot;It Looks Really Fake&amp;quot; | 4:08 | Beijing&apos;s new fashion: Give away lottery tickets during the holidays | 19: 45 | College students working in Beijing proudly say: Our housing will be available for purchase in 100 years | 10:46 | Beijing has made great achievements in environmental protection, Shougang is more than 10 times more beautiful than the park | 7:13.00 | Citizen Uncle Zhang reflects that some people Selling &amp;quot;Shanghai Baby&amp;quot; at the subway entrance | 6:00 | The CEO of a company in Zhongguancun accidentally drank Shanxi fake liquor and passed out, and the date of entering NSDQ was postponed | 20:0.50 | &amp;quot;Universal Qigong Daily&amp;quot;: Registration for the crash course on sinking qi in Dantian has begun | 15 :50 | Public security in Beijing has reached a new level and it has been rated as the safest city in the world | 19:00.00 | Officials joked about why the phenomenon of arbitrary fees in Beijing disappeared | 20:00 | The Industry and Commerce Bureau investigated a pirated VCD den | 4:0:00 | American experts: Beijing’s air contains a variety of minerals and is rich in nutrients | 8:15:00 (US Eastern Time) | An expensive car turned out to be a smuggled car in Xiamen | 8:59:00 | College graduate job fair information: University of Posts and Telecommunications The supply of students exceeds the demand, and many IT companies are snatching people | 4:16:00 | Primary school students from all over the world gather in Beijing to see white pollution and sandstorms | 6:20:00 (Paris time) | Letter of thanks from Swan Lake: Beijingers saved wild swans | 6:18:00 | At the Hong Kong conference, Beijing was rated as the cleanest city | 6:48:00 | A good district chief who insists on &amp;quot;putting relatives second and talents first&amp;quot; | 2:32:85 | Experts say: FoxLoveChicken.com website will not go bankrupt and will be profitable in 2 years | 3:30 | Leaders say: Beijing’s roads are in good condition | 4:07 | Citizens complain about too many fake medical advertisements in Beijing newspapers | 5:53 | Chen Gou Miss Cat&apos;s &amp;quot;I Love Beijing&apos;s Hutongs&amp;quot; won the first place in the essay competition | 4:40 | Community residents warned thieves: Stop stealing bicycles | 10:85 | A police station in Beijing was accused of moving someone else&apos;s household registration without permission | 4:00 | Beijing A university adheres to the lifelong system of &amp;quot;doctoral supervisors&amp;quot; and is praised by American professors | 19:09 | The 150th issue of the Beijing Sports Lottery draws a special prize of 20,000 first prize | 5:63 | Archaeological excavation of &amp;quot;Yak Hutong&amp;quot; in Beijing , the live TV broadcast turned into a farce | 10:09 | Restaurants and other service industries will extend their business hours during Teachers’ Day in Beijing | 23:00 | Three hundred buildings in Beijing have achieved broadband access | 3:40 | Beijing public security improves the order of passenger transportation during the festival | 8:23 | There are millions of college students &amp;quot;working&amp;quot; in Zhongguancun | 2:00 | Our city&apos;s polluting enterprises have decreased by 12% compared with the previous year | 11:34 | The securities market has achieved a new breakthrough and annual financing has exceeded the trillion mark for the first time | 20:40 | Today End of news, replay in one minute | 14:24&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MiSans&apos;; font-size:12pt;  font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;R北京新闻: 市民反映有人在地铁口卖假酒 | 12:09 | Guoly Computing公司成立 | 12:20 | 北京市出台网上古玩市场管理规定 | 21:8.10  | Guoly Computing公司推出“北京浮生记”生存策略游戏 | 13:10 | Guoly Computing 寻求风险投资 (guoxh@hotmail.com) | 2:25.00  | 成都走私飞机北京人竞拍成功 | 2:45.50  | 京城大代理行：明年北京楼市大预言  | 3:55.00 | 车业再发狠招 北京汽车调千元 | 13:6.25  |  朝鲜支持北京申办奥运 | 2:35 | 著名画家安前类：北京与我的一个约定 | 8:28.30  | 机票打折变招术 50元就可以从北京东飞往昌平 | 16:2.30  | 北京把禁止燃放烟花爆竹同热爱动物结合起来 | 13:35.00 | 北京电脑体育彩票揭晓 12亿巨奖被一男子领取 | 7:06.00  | 西城“扫黄”正规军   出手“快准狠” | 4:62.00  | 北京警方严打买卖伪劣化妆品的人 | 10:60.00 | 京城目击：地铁口小贩猖獗，群众说有关部门应该管一管了 | 2:19.50  | 进口玩具电子商务网站(ePlayMe.com)在北京开通 | 20:1.80  | 首都20万师生联合签名支持申奥 | 23:1.00  | 《北京真理报》招聘记者周六进行复试 | 5:04.15  | 千年古酒亮相北京 假酒飘香堪称极品 | 9:16.00  | 农村发展高科技：卖VCD大军会京师 | 4:00.00  | 京城水货手机七大趋势令科学家关注 | 7:12:5 | 北京环保厕所进军美国  | 23:50 (美国西部时间) | 同乡反目三只耳朵被砍 | 5:40 | 警方凌晨出击 查获《看上去真的很假》五千册  | 4:08 | 北京新时尚：过节送彩票  | 19:45 | 留京工作大学生自豪地说：我们的住房100年后就可买到手 | 10:46 | 北京环境保护取得伟大成就，首钢比公园还美10多倍 | 7:13.00 | 市民张大爷反映有人在地铁口卖《上海小宝贝》 | 6:00  | 中关村某公司CEO误喝山西假白酒昏迷，进军Nsdq日期后推 | 20:0.50 | 《宇宙气功日报》：气沉丹田速成班开始报名 | 15:50 | 北京治安又上新台阶，被评为世界最安全城市 | 19:00.00  | 官员笑谈北京乱收费现象为什么不见了 | 20:00  | 工商局查处一处盗版VCD窝点 | 4:0:00  | 美国专家：北京的空气含有多种矿物质，营养丰富 | 8:15:00 (美国东部时间) | 一名贵汽车原来是厦门走私汽车 | 8:59:00  | 大学生毕业招聘会信息：邮电大学学生供不应求，多家IT企业抢人 | 4:16:00  | 世界小学生会聚北京，见识白色污染和沙尘暴 | 6:20:00 (巴黎时间) | 来自天鹅湖的感谢信：北京人救了野天鹅 | 6:18:00  | 香港会议上，北京被评为最廉洁的城市 | 6:48:00  | 坚持“亲戚第二、人才第一”的好区长 | 2:32:85 | 专家称：狐狸爱鸡.com网站不会倒闭，2年后就可赢利 | 3:30 | 领导说：北京的道路状况良好 | 4:07 | 市民抱怨北京报纸假医疗广告太多 | 5:53 | 陈狗猫小姐的《我爱北京的胡同》荣获征文第一名 | 4:40 | 小区居民正告小偷：不要再偷自行车了 | 10:85 | 擅迁他人户口 北京一派出所被告倒 | 4:00  | 北京一大学坚持“博士生导师”终身制，受到美国教授赞扬 | 19:09 | 北京体育彩票第150期 摇出一注特等奖 一等奖达2万 | 5:63 | 北京“牦牛胡同”考古挖掘，电视直播成闹剧 | 10:09 | 北京教师节期间餐厅等服务行业将延长营业时间 | 23：00 | 北京三百楼宇实现宽带接入 | 3:40 | 北京公安整治节日客运秩序 | 8:23 | 中关村有百万大学生在“打工”  | 2:00 | 我市污染企业比上一年减少12% | 11:34 | 证券市场实现新跨越 年度筹资首次破万亿大关  | 20:40 | 本日新闻结束，一分钟后重播 | 14:24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="widgets/main_widget.py" line="98"/>
         <source>The village chief laughed and said: &quot;You have no money, you are crazy!&quot;</source>
         <translation>村长嘿嘿笑道：“你没钱,有神经病!”</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="110"/>
+        <location filename="widgets/main_widget.py" line="104"/>
         <source>The village chief nodded to me: &quot;Brother, do you want to support your hometown with 1,000 yuan?&quot;</source>
         <translation>村长朝俺点头：&quot;兄弟,您想支援家乡1000元吗？&quot;</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="116"/>
+        <location filename="widgets/main_widget.py" line="110"/>
         <source>The village chief bowed to me on the phone: &quot;Rich man! I want to marry my daughter to you.&quot;...</source>
         <translation>村长在电话中朝俺鞠躬: &quot;富豪!我想把我女儿嫁给您.&quot;...</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="122"/>
+        <location filename="widgets/main_widget.py" line="116"/>
         <source>The village chief knelt down to me on the phone and said: &quot;You are my real father!&quot;</source>
         <translation>村长在电话中朝俺下跪，说：&quot;您简直是我亲爹！&quot;</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="128"/>
+        <location filename="widgets/main_widget.py" line="122"/>
         <source>The village chief said: &quot;You are a role model for rural young people!&quot;</source>
         <translation>村长说：&quot;您是农村年轻人的典范！&quot;</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="157"/>
+        <location filename="widgets/main_widget.py" line="147"/>
         <source>The young nurse looked at me with a smile and said, &quot;Brother! Please register at the neurology department.&quot;</source>
         <translation>小护士笑咪咪地望着俺：&quot;大哥！神经科这边挂号.&quot;</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="203"/>
+        <location filename="widgets/main_widget.py" line="191"/>
         <source>Fangzhuang</source>
         <translation>方庄</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="204"/>
+        <location filename="widgets/main_widget.py" line="192"/>
         <source>Bajiao West Road</source>
         <translation>八角西路</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="205"/>
+        <location filename="widgets/main_widget.py" line="193"/>
         <source>Cuiwei Road</source>
         <translation>翠微路</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="206"/>
+        <location filename="widgets/main_widget.py" line="194"/>
         <source>Haidian Street</source>
         <translation>海淀大街</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="207"/>
+        <location filename="widgets/main_widget.py" line="195"/>
         <source>Asian Games Village</source>
         <translation>亚运村</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="208"/>
+        <location filename="widgets/main_widget.py" line="196"/>
         <source>Sanyuan West Bridge</source>
         <translation>三元西桥</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="209"/>
+        <location filename="widgets/main_widget.py" line="197"/>
         <source>Fuyou Street</source>
         <translation>府右街</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="210"/>
+        <location filename="widgets/main_widget.py" line="198"/>
         <source>Yong&apos;anli</source>
         <translation>永安里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="211"/>
+        <location filename="widgets/main_widget.py" line="199"/>
         <source>Yuquanying</source>
         <translation>玉泉营</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="212"/>
+        <location filename="widgets/main_widget.py" line="200"/>
         <source>Yongdingmen</source>
         <translation>永定门</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="221"/>
+        <location filename="widgets/main_widget.py" line="209"/>
         <source>I want to go
  to the subway</source>
         <translation>我要进地铁</translation>
@@ -1024,42 +1042,42 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">北京浮生（{}/{}天）</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="240"/>
+        <location filename="widgets/main_widget.py" line="228"/>
         <source>The agent said, your house is bigger than the director&apos;s! And you&apos;re still renting?</source>
         <translation>中介说，您的房子比局长的还大!还租房?</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="248"/>
+        <location filename="widgets/main_widget.py" line="236"/>
         <source>The agent said, you don&apos;t have 30,000 cash and you want to rent? Go away!</source>
         <translation>中介说，您没有三万现金就想租房? 一边凉快去!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="265"/>
+        <location filename="widgets/main_widget.py" line="251"/>
         <source>My house can hold {} items! But it seems that the agency cheated me of some money...</source>
         <translation>我的房子可以放{}个物品了!可是，好象中介公司骗了我一些钱...</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="272"/>
+        <location filename="widgets/main_widget.py" line="258"/>
         <source>Ha! Be careful! Rumor has it that some rental agencies in Beijing are very good at cheating people...</source>
         <translation>呵! 小心为妙! 传闻北京有的租房中介公司很能骗人....</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="357"/>
+        <location filename="widgets/main_widget.py" line="335"/>
         <source>I owed too much money, so the village chief called a group of villagers to beat me up!</source>
         <translation>俺欠钱太多，村长叫一群老乡揍了俺一顿！</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="369"/>
+        <location filename="widgets/main_widget.py" line="347"/>
         <source>I&apos;m going back to my hometown tomorrow and selling all the goods quickly.</source>
         <translation>俺明天回家乡，快把全部货物卖掉。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="375"/>
+        <location filename="widgets/main_widget.py" line="353"/>
         <source>I have been in Beijing for 40 days, it’s time to go back and get married.</source>
         <translation>俺已经在北京40天了，该回去结婚去了。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="378"/>
+        <location filename="widgets/main_widget.py" line="356"/>
         <source>The system sold the remaining goods for me: {}</source>
         <translation>系统帮我卖了剩余货物：{}</translation>
     </message>
@@ -1112,188 +1130,188 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">申奥添了新风景，北京又来沙尘暴!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="395"/>
+        <location filename="widgets/main_widget.py" line="373"/>
         <source> My health decreases {} point.</source>
         <oldsource>{} My health decreases {} point.</oldsource>
         <translation>俺的健康减少了{}点。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="404"/>
+        <location filename="widgets/main_widget.py" line="382"/>
         <source>Because I didn&apos;t take care of myself, I was found unconscious next to {} near {}.</source>
         <translation>由于不注意身体,我被人发现昏迷在{}附近的{}。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="407"/>
+        <location filename="widgets/main_widget.py" line="385"/>
         <source>Kind citizens carried me to the hospital, and the doctor told me to be treated for {} days.</source>
         <translation>好心的市民把我抬到医院，医生让我治疗{}天。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="410"/>
+        <location filename="widgets/main_widget.py" line="388"/>
         <source>The village chief asked someone to advance {} yuan for my hospitalization fee.</source>
         <translation>村长让人为我垫付了住院费用{}元。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="411"/>
+        <location filename="widgets/main_widget.py" line="389"/>
         <source>My health... health crisis... go to the doctor...</source>
         <translation>俺的健康..健康危机..快去医..</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="415"/>
+        <location filename="widgets/main_widget.py" line="393"/>
         <source>I fell on the street, and the diary beside me said: &quot;Beijing, I will come again!&quot;</source>
         <translation>俺倒在街头,身边日记本上写着：“北京，我将再来!”</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="416"/>
+        <location filename="widgets/main_widget.py" line="394"/>
         <source>In the hair salon</source>
         <translation>发廊里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="417"/>
+        <location filename="widgets/main_widget.py" line="395"/>
         <source>at the breakfast stall</source>
         <translation>早点摊上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="418"/>
+        <location filename="widgets/main_widget.py" line="396"/>
         <source>at the newsstand</source>
         <translation>报摊上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="419"/>
+        <location filename="widgets/main_widget.py" line="397"/>
         <source>at the roast lamb stall</source>
         <translation>烤羊肉摊上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="420"/>
+        <location filename="widgets/main_widget.py" line="398"/>
         <source>in the bus</source>
         <translation>公共汽车里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="421"/>
+        <location filename="widgets/main_widget.py" line="399"/>
         <source>on the rickshaw</source>
         <translation>人力车上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="422"/>
+        <location filename="widgets/main_widget.py" line="400"/>
         <source>in the women&apos;s restroom</source>
         <translation>女厕所里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="423"/>
+        <location filename="widgets/main_widget.py" line="401"/>
         <source>in the men&apos;s restroom</source>
         <translation>男厕所里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="424"/>
+        <location filename="widgets/main_widget.py" line="402"/>
         <source>in the telephone booth</source>
         <translation>电话亭里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="425"/>
+        <location filename="widgets/main_widget.py" line="403"/>
         <source>in the arms of the escort girl</source>
         <translation>三陪女怀里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="426"/>
+        <location filename="widgets/main_widget.py" line="404"/>
         <source>in the taxi</source>
         <translation>出租车里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="427"/>
+        <location filename="widgets/main_widget.py" line="405"/>
         <source>in the minibus</source>
         <translation>小巴里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="428"/>
+        <location filename="widgets/main_widget.py" line="406"/>
         <source>in the beauty salon</source>
         <translation>美容院里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="429"/>
+        <location filename="widgets/main_widget.py" line="407"/>
         <source>in the small kiosk</source>
         <translation>小商亭里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="430"/>
+        <location filename="widgets/main_widget.py" line="408"/>
         <source>in front of the small shopping mall</source>
         <translation>小商场门口</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="431"/>
+        <location filename="widgets/main_widget.py" line="409"/>
         <source>at the feet of the migrant workers</source>
         <translation>民工脚下</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="432"/>
+        <location filename="widgets/main_widget.py" line="410"/>
         <source>in the stalls of unlicensed peddlers</source>
         <translation>无照游商摊里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="433"/>
+        <location filename="widgets/main_widget.py" line="411"/>
         <source>on the grass</source>
         <translation>草地上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="434"/>
+        <location filename="widgets/main_widget.py" line="412"/>
         <source>on the top of the telephone pole</source>
         <translation>电线杆顶端</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="435"/>
+        <location filename="widgets/main_widget.py" line="413"/>
         <source>in the small restaurant</source>
         <translation>小饭馆里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="436"/>
+        <location filename="widgets/main_widget.py" line="414"/>
         <source>on the side of the road</source>
         <translation>马路边</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="437"/>
+        <location filename="widgets/main_widget.py" line="415"/>
         <source>on the sidewalk</source>
         <translation>人行道上</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="438"/>
+        <location filename="widgets/main_widget.py" line="416"/>
         <source>in the central park</source>
         <translation>街心公园里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="439"/>
+        <location filename="widgets/main_widget.py" line="417"/>
         <source>under the billboard</source>
         <translation>广告牌下</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="440"/>
+        <location filename="widgets/main_widget.py" line="418"/>
         <source>in the bus station</source>
         <translation>公共汽车站里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="441"/>
+        <location filename="widgets/main_widget.py" line="419"/>
         <source>in the long-distance bus station</source>
         <translation>长途汽车站里</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="442"/>
+        <location filename="widgets/main_widget.py" line="420"/>
         <source>next to the pirated game seller</source>
         <translation>卖盗版游戏的旁边</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="443"/>
+        <location filename="widgets/main_widget.py" line="421"/>
         <source>next to the corpse of a Internet company</source>
         <translation>网络公司尸体旁边</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="444"/>
+        <location filename="widgets/main_widget.py" line="422"/>
         <source>next to the fraudulent intellectual property owner</source>
         <translation>行骗的知本家旁边</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="508"/>
+        <location filename="widgets/main_widget.py" line="484"/>
         <source>What a pity! The house I rented is too small and can only hold {} items.</source>
         <translation>可惜!俺租的房子太小，只能放{}个物品。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="653"/>
+        <location filename="widgets/main_widget.py" line="625"/>
         <source>Do you want abandon currently-playing game and start a new one?</source>
         <translation>您正在玩一个游戏，要放弃它并开始新的吗?</translation>
     </message>
@@ -1416,47 +1434,47 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">北京空气污染得厉害,俺去氧吧吸氧...</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="531"/>
+        <location filename="widgets/main_widget.py" line="507"/>
         <source>Hackers hacked into the bank network and frantically modified the database. My deposit decreased by {}</source>
         <translation>黑客入侵银行网络，疯狂修改数据库，我的存款减少了{}</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="535"/>
+        <location filename="widgets/main_widget.py" line="511"/>
         <source>Hackers hacked into the bank network and frantically modified the database. My deposit increased by {}</source>
         <translation>黑客入侵银行网络，疯狂修改数据库，我的存款增加了{}</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="537"/>
+        <location filename="widgets/main_widget.py" line="513"/>
         <source>I am in trouble.</source>
         <translation>俺不好办了。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="538"/>
+        <location filename="widgets/main_widget.py" line="514"/>
         <source>My money decreased by {} percent.</source>
         <translation>俺的银子减少了{}%</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="540"/>
+        <location filename="widgets/main_widget.py" line="516"/>
         <source>My deposit decreased by {} percent. Oh no!</source>
         <translation>俺的存款减少了{}%，哎呀！</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="605"/>
+        <location filename="widgets/main_widget.py" line="577"/>
         <source>The {} money you earned is too little, so you failed to enter the top 10 rich people. Try harder next time!</source>
         <translation>您挣的钱{}元人民币太少，没能进入富人前10名，下次努力哦!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="615"/>
+        <location filename="widgets/main_widget.py" line="587"/>
         <source>The money you earned, {} RMB, is very high. It is recommended that you send it to the author for expert ranking.</source>
         <translation>您挣的钱{}元人民币很高，建议您发给作者进行高手排行。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="621"/>
+        <location filename="widgets/main_widget.py" line="593"/>
         <source>The Beijing Game News reported: Player &quot;Anonymous&quot; failed to make money in Beijing and was sent home.</source>
         <translation>《北京游戏报》报道: 玩家“无名氏”在北京没挣着钱，被遣送回家。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="625"/>
+        <location filename="widgets/main_widget.py" line="597"/>
         <source>Hey, wanna play again?</source>
         <translation>嗨, 再玩一把吗?</translation>
     </message>
@@ -1469,52 +1487,52 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">俺的存款减少了{}，哎呀！</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="682"/>
+        <location filename="widgets/main_widget.py" line="654"/>
         <source>I haven&apos;t decided what to buy yet.</source>
         <translation>我还没有选定买什么物品呢。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="691"/>
+        <location filename="widgets/main_widget.py" line="663"/>
         <source>I don&apos;t have enough cash with me, so I&apos;ll go to the bank to withdraw some money.</source>
         <translation>俺带的现金不够，去银行提点钱吧。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="697"/>
+        <location filename="widgets/main_widget.py" line="669"/>
         <source>I don&apos;t have enough cash and I don&apos;t have any deposits in the bank, what should I do?</source>
         <translation>俺的现金不够，银行又没有存款，咋办哩?</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="731"/>
+        <location filename="widgets/main_widget.py" line="701"/>
         <source>Oh? It seems that no one is doing {} business here.</source>
         <translation>哦？仿佛没有人这里做{}生意。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="768"/>
+        <location filename="widgets/main_widget.py" line="735"/>
         <source>Buying and selling &quot;Shanghai Baby&quot; (banned book) pollutes society and my reputation has become bad!</source>
         <translation>买卖 《上海小宝贝》（禁书）, 污染社会,俺的名声变坏了啊!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="777"/>
+        <location filename="widgets/main_widget.py" line="744"/>
         <source>Buying and selling fake liquor (very poisonous!) harms society and my reputation has declined.</source>
         <translation>买卖 假白酒（剧毒！）,危害社会，俺的名声下降了。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="801"/>
+        <location filename="widgets/main_widget.py" line="768"/>
         <source>You need to bring at least 15 yuan with you when entering an Internet cafe, haha, come back after withdrawing money.</source>
         <translation>进网吧至少身上要带15元，呵呵，取钱再来。</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="807"/>
+        <location filename="widgets/main_widget.py" line="774"/>
         <source>The village chief said: Don&apos;t hang out in the Internet cafe all the time, go and do a decent business!</source>
         <translation>村长放出话来：你别总是在网吧里鬼混，快去做正经买卖!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="824"/>
+        <location filename="widgets/main_widget.py" line="789"/>
         <source>Thanks to the telecommunications reform, you can surf the Internet for free! And I also earned {} yuan in US Internet advertising fees, hehe!</source>
         <translation>感谢电信改革，可以免费上网! 还挣了美国网络广告费{}元，嘿嘿!</translation>
     </message>
     <message>
-        <location filename="widgets/main_widget.py" line="843"/>
+        <location filename="widgets/main_widget.py" line="807"/>
         <source>your rented house ({}/{})</source>
         <translation>您的出租屋（{}/{}）</translation>
     </message>
@@ -1733,17 +1751,17 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">崇文门</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="89"/>
+        <location filename="form/mainwindow.ui" line="85"/>
         <source>Bank</source>
         <translation>银行</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="99"/>
+        <location filename="form/mainwindow.ui" line="95"/>
         <source>Hospital</source>
         <translation>医院</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="94"/>
+        <location filename="form/mainwindow.ui" line="90"/>
         <source>Post Office</source>
         <translation>邮局</translation>
     </message>
@@ -1752,7 +1770,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">租房中介</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="114"/>
+        <location filename="form/mainwindow.ui" line="110"/>
         <source>Cyber Cafe</source>
         <translation>网吧</translation>
     </message>
@@ -1775,7 +1793,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;R北京新闻: 市民反映有人在地铁口卖假酒 | 12:09 | Guoly Computing公司成立 | 12:20 | 北京市出台网上古玩市场管理规定 | 21:8.10  | Guoly Computing公司推出“北京浮生记”生存策略游戏 | 13:10 | Guoly Computing 寻求风险投资 (guoxh@hotmail.com) | 2:25.00  | 成都走私飞机北京人竞拍成功 | 2:45.50  | 京城大代理行：明年北京楼市大预言  | 3:55.00 | 车业再发狠招 北京汽车调千元 | 13:6.25  |  朝鲜支持北京申办奥运 | 2:35 | 著名画家安前类：北京与我的一个约定 | 8:28.30  | 机票打折变招术 50元就可以从北京东飞往昌平 | 16:2.30  | 北京把禁止燃放烟花爆竹同热爱动物结合起来 | 13:35.00 | 北京电脑体育彩票揭晓 12亿巨奖被一男子领取 | 7:06.00  | 西城“扫黄”正规军   出手“快准狠” | 4:62.00  | 北京警方严打买卖伪劣化妆品的人 | 10:60.00 | 京城目击：地铁口小贩猖獗，群众说有关部门应该管一管了 | 2:19.50  | 进口玩具电子商务网站(ePlayMe.com)在北京开通 | 20:1.80  | 首都20万师生联合签名支持申奥 | 23:1.00  | 《北京真理报》招聘记者周六进行复试 | 5:04.15  | 千年古酒亮相北京 假酒飘香堪称极品 | 9:16.00  | 农村发展高科技：卖VCD大军会京师 | 4:00.00  | 京城水货手机七大趋势令科学家关注 | 7:12:5 | 北京环保厕所进军美国  | 23:50 (美国西部时间) | 同乡反目三只耳朵被砍 | 5:40 | 警方凌晨出击 查获《看上去真的很假》五千册  | 4:08 | 北京新时尚：过节送彩票  | 19:45 | 留京工作大学生自豪地说：我们的住房100年后就可买到手 | 10:46 | 北京环境保护取得伟大成就，首钢比公园还美10多倍 | 7:13.00 | 市民张大爷反映有人在地铁口卖《上海小宝贝》 | 6:00  | 中关村某公司CEO误喝山西假白酒昏迷，进军Nsdq日期后推 | 20:0.50 | 《宇宙气功日报》：气沉丹田速成班开始报名 | 15:50 | 北京治安又上新台阶，被评为世界最安全城市 | 19:00.00  | 官员笑谈北京乱收费现象为什么不见了 | 20:00  | 工商局查处一处盗版VCD窝点 | 4:0:00  | 美国专家：北京的空气含有多种矿物质，营养丰富 | 8:15:00 (美国东部时间) | 一名贵汽车原来是厦门走私汽车 | 8:59:00  | 大学生毕业招聘会信息：邮电大学学生供不应求，多家IT企业抢人 | 4:16:00  | 世界小学生会聚北京，见识白色污染和沙尘暴 | 6:20:00 (巴黎时间) | 来自天鹅湖的感谢信：北京人救了野天鹅 | 6:18:00  | 香港会议上，北京被评为最廉洁的城市 | 6:48:00  | 坚持“亲戚第二、人才第一”的好区长 | 2:32:85 | 专家称：狐狸爱鸡.com网站不会倒闭，2年后就可赢利 | 3:30 | 领导说：北京的道路状况良好 | 4:07 | 市民抱怨北京报纸假医疗广告太多 | 5:53 | 陈狗猫小姐的《我爱北京的胡同》荣获征文第一名 | 4:40 | 小区居民正告小偷：不要再偷自行车了 | 10:85 | 擅迁他人户口 北京一派出所被告倒 | 4:00  | 北京一大学坚持“博士生导师”终身制，受到美国教授赞扬 | 19:09 | 北京体育彩票第150期 摇出一注特等奖 一等奖达2万 | 5:63 | 北京“牦牛胡同”考古挖掘，电视直播成闹剧 | 10:09 | 北京教师节期间餐厅等服务行业将延长营业时间 | 23：00 | 北京三百楼宇实现宽带接入 | 3:40 | 北京公安整治节日客运秩序 | 8:23 | 中关村有百万大学生在“打工”  | 2:00 | 我市污染企业比上一年减少12% | 11:34 | 证券市场实现新跨越 年度筹资首次破万亿大关  | 20:40 | 本日新闻结束，一分钟后重播 | 14:24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="35"/>
+        <location filename="form/mainwindow.ui" line="31"/>
         <source>System</source>
         <translation>系统</translation>
     </message>
@@ -1905,62 +1923,62 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;R北京新闻: 市民反映有人在地铁口卖假酒 | 12:09 | Guoly Computing公司成立 | 12:20 | 北京市出台网上古玩市场管理规定 | 21:8.10  | Guoly Computing公司推出“北京浮生记”生存策略游戏 | 13:10 | Guoly Computing 寻求风险投资 (guoxh@hotmail.com) | 2:25.00  | 成都走私飞机北京人竞拍成功 | 2:45.50  | 京城大代理行：明年北京楼市大预言  | 3:55.00 | 车业再发狠招 北京汽车调千元 | 13:6.25  |  朝鲜支持北京申办奥运 | 2:35 | 著名画家安前类：北京与我的一个约定 | 8:28.30  | 机票打折变招术 50元就可以从北京东飞往昌平 | 16:2.30  | 北京把禁止燃放烟花爆竹同热爱动物结合起来 | 13:35.00 | 北京电脑体育彩票揭晓 12亿巨奖被一男子领取 | 7:06.00  | 西城“扫黄”正规军   出手“快准狠” | 4:62.00  | 北京警方严打买卖伪劣化妆品的人 | 10:60.00 | 京城目击：地铁口小贩猖獗，群众说有关部门应该管一管了 | 2:19.50  | 进口玩具电子商务网站(ePlayMe.com)在北京开通 | 20:1.80  | 首都20万师生联合签名支持申奥 | 23:1.00  | 《北京真理报》招聘记者周六进行复试 | 5:04.15  | 千年古酒亮相北京 假酒飘香堪称极品 | 9:16.00  | 农村发展高科技：卖VCD大军会京师 | 4:00.00  | 京城水货手机七大趋势令科学家关注 | 7:12:5 | 北京环保厕所进军美国  | 23:50 (美国西部时间) | 同乡反目三只耳朵被砍 | 5:40 | 警方凌晨出击 查获《看上去真的很假》五千册  | 4:08 | 北京新时尚：过节送彩票  | 19:45 | 留京工作大学生自豪地说：我们的住房100年后就可买到手 | 10:46 | 北京环境保护取得伟大成就，首钢比公园还美10多倍 | 7:13.00 | 市民张大爷反映有人在地铁口卖《上海小宝贝》 | 6:00  | 中关村某公司CEO误喝山西假白酒昏迷，进军Nsdq日期后推 | 20:0.50 | 《宇宙气功日报》：气沉丹田速成班开始报名 | 15:50 | 北京治安又上新台阶，被评为世界最安全城市 | 19:00.00  | 官员笑谈北京乱收费现象为什么不见了 | 20:00  | 工商局查处一处盗版VCD窝点 | 4:0:00  | 美国专家：北京的空气含有多种矿物质，营养丰富 | 8:15:00 (美国东部时间) | 一名贵汽车原来是厦门走私汽车 | 8:59:00  | 大学生毕业招聘会信息：邮电大学学生供不应求，多家IT企业抢人 | 4:16:00  | 世界小学生会聚北京，见识白色污染和沙尘暴 | 6:20:00 (巴黎时间) | 来自天鹅湖的感谢信：北京人救了野天鹅 | 6:18:00  | 香港会议上，北京被评为最廉洁的城市 | 6:48:00  | 坚持“亲戚第二、人才第一”的好区长 | 2:32:85 | 专家称：狐狸爱鸡.com网站不会倒闭，2年后就可赢利 | 3:30 | 领导说：北京的道路状况良好 | 4:07 | 市民抱怨北京报纸假医疗广告太多 | 5:53 | 陈狗猫小姐的《我爱北京的胡同》荣获征文第一名 | 4:40 | 小区居民正告小偷：不要再偷自行车了 | 10:85 | 擅迁他人户口 北京一派出所被告倒 | 4:00  | 北京一大学坚持“博士生导师”终身制，受到美国教授赞扬 | 19:09 | 北京体育彩票第150期 摇出一注特等奖 一等奖达2万 | 5:63 | 北京“牦牛胡同”考古挖掘，电视直播成闹剧 | 10:09 | 北京教师节期间餐厅等服务行业将延长营业时间 | 23：00 | 北京三百楼宇实现宽带接入 | 3:40 | 北京公安整治节日客运秩序 | 8:23 | 中关村有百万大学生在“打工”  | 2:00 | 我市污染企业比上一年减少12% | 11:34 | 证券市场实现新跨越 年度筹资首次破万亿大关  | 20:40 | 本日新闻结束，一分钟后重播 | 14:24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="44"/>
+        <location filename="form/mainwindow.ui" line="40"/>
         <source>Places</source>
         <translation>重要场所</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="55"/>
+        <location filename="form/mainwindow.ui" line="51"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="69"/>
+        <location filename="form/mainwindow.ui" line="65"/>
         <source>new game</source>
         <translation>新游戏</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="74"/>
+        <location filename="form/mainwindow.ui" line="70"/>
         <source>Ranking</source>
         <translation>高手排行</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="79"/>
+        <location filename="form/mainwindow.ui" line="75"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="84"/>
+        <location filename="form/mainwindow.ui" line="80"/>
         <source>exit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="104"/>
+        <location filename="form/mainwindow.ui" line="100"/>
         <source>Airport</source>
         <translation>机场</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="109"/>
+        <location filename="form/mainwindow.ui" line="105"/>
         <source>Rental Agency</source>
         <translation>租房中介</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="119"/>
+        <location filename="form/mainwindow.ui" line="115"/>
         <source>Beijing Intro</source>
         <translation>北京简介</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="124"/>
+        <location filename="form/mainwindow.ui" line="120"/>
         <source>Game Story</source>
         <translation>游戏故事</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="129"/>
+        <location filename="form/mainwindow.ui" line="125"/>
         <source>Game Guide</source>
         <translation>游戏文档</translation>
     </message>
     <message>
-        <location filename="form/mainwindow.ui" line="134"/>
+        <location filename="form/mainwindow.ui" line="130"/>
         <source>About this game</source>
         <translation>关于本游戏</translation>
     </message>
@@ -2108,7 +2126,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">我要进地铁</translation>
     </message>
     <message>
-        <location filename="widgets/mainwindow.py" line="91"/>
+        <location filename="widgets/mainwindow.py" line="87"/>
         <source>Beijing Life ({}/{} day)</source>
         <translation>北京浮生（{}/{}天）</translation>
     </message>
@@ -2486,17 +2504,17 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>现金交易</translation>
     </message>
     <message>
-        <location filename="form/money_exchange.ui" line="28"/>
+        <location filename="form/money_exchange.ui" line="24"/>
         <source>&lt;placeholder&gt;</source>
         <translation>&lt;placeholder&gt;</translation>
     </message>
     <message>
-        <location filename="form/money_exchange.ui" line="57"/>
+        <location filename="form/money_exchange.ui" line="53"/>
         <source>Conform Transaction</source>
         <translation>确认交易</translation>
     </message>
     <message>
-        <location filename="form/money_exchange.ui" line="83"/>
+        <location filename="form/money_exchange.ui" line="79"/>
         <source>Cancel Transaction</source>
         <translation>取消交易</translation>
     </message>
@@ -2527,12 +2545,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>北京新闻</translation>
     </message>
     <message>
-        <location filename="form/news.ui" line="59"/>
+        <location filename="form/news.ui" line="55"/>
         <source>TextLabel</source>
         <translation>《》</translation>
     </message>
     <message>
-        <location filename="form/news.ui" line="91"/>
+        <location filename="form/news.ui" line="87"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
@@ -2545,27 +2563,27 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>给村长还钱</translation>
     </message>
     <message>
-        <location filename="form/pay_debt.ui" line="25"/>
+        <location filename="form/pay_debt.ui" line="21"/>
         <source>The village chief said on the phone: &quot;Tie Niu, you owe me %d yuan, pay me back!&quot;</source>
         <translation>村长在电话中说：&quot;铁牛，你欠俺%d元，快还!&quot;</translation>
     </message>
     <message>
-        <location filename="form/pay_debt.ui" line="38"/>
+        <location filename="form/pay_debt.ui" line="34"/>
         <source>How much do you owe?</source>
         <translation>您还多少？</translation>
     </message>
     <message>
-        <location filename="form/pay_debt.ui" line="86"/>
+        <location filename="form/pay_debt.ui" line="82"/>
         <source>Conform</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="form/pay_debt.ui" line="112"/>
+        <location filename="form/pay_debt.ui" line="108"/>
         <source>Wait a few days.</source>
         <translation>缓几天吧</translation>
     </message>
     <message>
-        <location filename="widgets/pay_debt.py" line="28"/>
+        <location filename="widgets/pay_debt.py" line="29"/>
         <source>The village chief said on the phone: &quot;Tie Niu, you owe me {} yuan, pay me back!&quot;</source>
         <translation>村长在电话中说：&quot;铁牛，你欠俺{}元，快还!&quot;</translation>
     </message>
@@ -2673,27 +2691,27 @@ You can spend {} yuan to rent a house that can hold {} items.</source>
         <translation>卖多少？</translation>
     </message>
     <message>
-        <location filename="form/sell.ui" line="25"/>
+        <location filename="form/sell.ui" line="21"/>
         <source>&lt;placeholder&gt;</source>
         <translation>&lt;placeholder&gt;</translation>
     </message>
     <message>
-        <location filename="form/sell.ui" line="48"/>
+        <location filename="form/sell.ui" line="44"/>
         <source>How much do you want to sell?</source>
         <translation>您想卖出多少？</translation>
     </message>
     <message>
-        <location filename="form/sell.ui" line="103"/>
+        <location filename="form/sell.ui" line="99"/>
         <source>Confirm</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="form/sell.ui" line="129"/>
+        <location filename="form/sell.ui" line="125"/>
         <source>Cancel</source>
         <translation>放弃</translation>
     </message>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="119"/>
+        <location filename="widgets/simple_dialogs.py" line="101"/>
         <source>You have {} {}, how many do you want to sell?</source>
         <translation>您有{}个{}，想卖出多少？</translation>
     </message>
@@ -2706,7 +2724,7 @@ You can spend {} yuan to rent a house that can hold {} items.</source>
         <translation>寄钱</translation>
     </message>
     <message>
-        <location filename="form/send_money.ui" line="28"/>
+        <location filename="form/send_money.ui" line="24"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -2743,7 +2761,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;非常感谢您的支持! 钱就免了吧。 请把这个小游戏推荐给您的朋友、同事、同学和你所爱的任何人，让大家都轻松轻松！&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/send_money.ui" line="58"/>
+        <location filename="form/send_money.ui" line="54"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -2760,27 +2778,27 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="obsolete">《》</translation>
     </message>
     <message>
-        <location filename="form/settings.ui" line="34"/>
+        <location filename="form/settings.ui" line="30"/>
         <source>Allow hackers to attack banking networks</source>
         <translation>允许黑客攻击银行网络</translation>
     </message>
     <message>
-        <location filename="form/settings.ui" line="41"/>
+        <location filename="form/settings.ui" line="37"/>
         <source>Your deposit may decrease or increase wildly, so be careful.</source>
         <translation>您的存款可能疯狂减少或者增加，小心为妙。</translation>
     </message>
     <message>
-        <location filename="form/settings.ui" line="51"/>
+        <location filename="form/settings.ui" line="47"/>
         <source>turn off sound</source>
         <translation>关闭声音</translation>
     </message>
     <message>
-        <location filename="form/settings.ui" line="83"/>
+        <location filename="form/settings.ui" line="79"/>
         <source>Confirm</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="form/settings.ui" line="103"/>
+        <location filename="form/settings.ui" line="99"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -2793,7 +2811,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>---</translation>
     </message>
     <message>
-        <location filename="form/statements.ui" line="33"/>
+        <location filename="form/statements.ui" line="25"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -2852,7 +2870,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5. 在作为免费软件发行时，我们无为本游戏提供任何形式技术支持的责任，并认定本软件是没有担保的(no warranty)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/statements.ui" line="68"/>
+        <location filename="form/statements.ui" line="60"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -2923,32 +2941,32 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation>北京浮生记</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="54"/>
+        <location filename="form/story.ui" line="50"/>
         <source>The story of &quot;Beijing Life&quot;</source>
         <translation>“北京浮生记”的故事</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="67"/>
+        <location filename="form/story.ui" line="63"/>
         <source>You play the role of a young man who comes to Beijing from other places to make a living. At the beginning, you only have 2,000 yuan, and you still owe a debt of 5,500 yuan to the village chief (a gangster leader). The daily interest on these debts is as high as 10%. If you do not pay it off in time, the village chief will call fellow villagers in Beijing to beat you up, and you may die on the streets of Beijing. You decide to get rich by reselling various items on the black market at subway entrances across Beijing. Not only do you want to pay off your debts, but you also want to be ranked among the richest people in Beijing.</source>
         <translation>您扮演一位从外地到北京谋生的青年。一开始，您只有2000元钱，并且还欠村长（一个流氓头子）5500元 债务。这些债务每天的利息高达10%.如果不及时还清，村长会叫在北京的老乡们来扁您，您可能牺牲在北京街头。 您决定在北京各地铁口黑市倒卖各种物品来发财致富，不仅还掉债务，而且要荣登北京富人排行榜。</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="77"/>
+        <location filename="form/story.ui" line="73"/>
         <source>You can only stay in Beijing for 40 days, and each visit to a black market counts as one day. In the beginning, you can only place 100 items in the house you rent. You will encounter various events in Beijing. You need to fight wits and courage with gangsters, thieves, murderers, corrupt officials, swindlers, etc. You also need to try to survive in Beijing&apos;s harsh natural environment.</source>
         <translation>您只能在北京呆40天，每次奔走一个黑市算一天。一开始，您租的房子只能放100个东西。 您会在北京遭遇到各种事件，您需要与流氓、小偷、凶手、贪官、骗子等斗智斗勇，还需要在北京恶劣的自然环境下设法生存下来。</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="87"/>
+        <location filename="form/story.ui" line="83"/>
         <source>You will experience the excitement of selling pirated VCDs and smuggled cars in Beijing, as well as the funny events that are unique to our time.</source>
         <translation>您将体验在北京卖盗版VCD和走私汽车的刺激以及我们这个时代才有的搞笑事件。</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="97"/>
+        <location filename="form/story.ui" line="93"/>
         <source>&lt;status&gt;</source>
         <translation>状态</translation>
     </message>
     <message>
-        <location filename="form/story.ui" line="107"/>
+        <location filename="form/story.ui" line="103"/>
         <source>Start Game &gt;&gt;</source>
         <translation>开始游戏 &gt;&gt;</translation>
     </message>
@@ -2988,43 +3006,43 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <translation type="vanished">初始化帮助信息....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="28"/>
+        <location filename="widgets/story.py" line="39"/>
         <source>Initialize hacker information....</source>
         <translation>初始化黑客信息....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="29"/>
+        <location filename="widgets/story.py" line="40"/>
         <source>Initialize the second loop information.....</source>
         <translation>初始化二环路信息.....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="30"/>
+        <location filename="widgets/story.py" line="41"/>
         <source>Initialize black market items...</source>
         <translation>初始化黑市物品......</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="31"/>
+        <location filename="widgets/story.py" line="42"/>
         <source>Initialize random events...</source>
         <translation>初始化随机事件......</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="32"/>
+        <location filename="widgets/story.py" line="43"/>
         <source>Loading Beijing real-time news....</source>
         <translation>加载北京实时新闻....</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="48"/>
+        <location filename="widgets/story.py" line="59"/>
         <source>Continue game &gt;&gt;</source>
         <oldsource>Continue game</oldsource>
         <translation>继续游戏 &gt;&gt;</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="66"/>
+        <location filename="widgets/story.py" line="77"/>
         <source>The game has been initialized, ready to enter Beijing...</source>
         <translation>游戏初始化完毕,准备进入北京...</translation>
     </message>
     <message>
-        <location filename="widgets/story.py" line="71"/>
+        <location filename="widgets/story.py" line="82"/>
         <source>Initialization help information....</source>
         <translation>初始化帮助信息....</translation>
     </message>
@@ -3073,7 +3091,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/text_editor.ui" line="25"/>
+        <location filename="form/text_editor.ui" line="21"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -3110,27 +3128,27 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="form/text_editor.ui" line="60"/>
+        <location filename="form/text_editor.ui" line="56"/>
         <source>Save</source>
         <translation>存盘</translation>
     </message>
     <message>
-        <location filename="form/text_editor.ui" line="67"/>
+        <location filename="form/text_editor.ui" line="63"/>
         <source>Check Grammar</source>
         <translation>拼写检查</translation>
     </message>
     <message>
-        <location filename="form/text_editor.ui" line="74"/>
+        <location filename="form/text_editor.ui" line="70"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="176"/>
+        <location filename="widgets/simple_dialogs.py" line="158"/>
         <source>Grammar</source>
         <translation>拼写</translation>
     </message>
     <message>
-        <location filename="widgets/simple_dialogs.py" line="179"/>
+        <location filename="widgets/simple_dialogs.py" line="161"/>
         <source>Spell check suggestion: &quot;Fragrant air&quot; changed to &quot;Fresh air&quot;; &quot;Boss&quot; changed to &quot;Boss lady&quot;.</source>
         <translation>拼写检查建议：“空气清香”改为“空气清新”；“老板”改为“老板娘”。</translation>
     </message>
