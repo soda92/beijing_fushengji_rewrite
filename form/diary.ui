@@ -14,9 +14,6 @@
    <string>My days in Beijing</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit {
-                font: 12pt MiSans;
-            }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

@@ -13,11 +13,7 @@
   <property name="windowTitle">
    <string>Send Money</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit {
-                font: 12pt MiSans;
-            }</string>
-  </property>
+  
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QWidget" name="widget" native="true">

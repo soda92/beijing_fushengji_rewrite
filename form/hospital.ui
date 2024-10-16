@@ -14,9 +14,6 @@
    <string>In Hospital</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit , QSpinBox {
-                font: 12pt MiSans;
-            }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

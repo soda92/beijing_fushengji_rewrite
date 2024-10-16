@@ -13,11 +13,7 @@
   <property name="windowTitle">
    <string>Beijing News</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit {
-                font: 12pt MiSans;
-            }</string>
-  </property>
+  
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QWidget" name="widget_2" native="true">

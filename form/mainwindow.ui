@@ -13,11 +13,7 @@
   <property name="windowTitle">
    <string>Beijing Life</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">QLabel, QPushButton, QTextBrowser, QAction, QMenu, QHeaderView, QStandardItem {
-                font: 12pt MiSans;
-}</string>
-  </property>
+  
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_7"/>
   </widget>
