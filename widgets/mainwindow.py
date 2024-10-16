@@ -2,6 +2,7 @@ from PySide6 import QtWidgets, QtGui, QtCore
 import ui.mainwindow as ui_mainwindow
 import ui.main_widget
 import widgets.main_widget as main_widget
+from app.tools import load
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -81,9 +82,7 @@ class MainWindow(QtWidgets.QMainWindow):
         webbrowser.open(str(self.widget.d_story.help_file))
 
     def beijing_intro(self):
-        import widgets.simple_dialogs
-
-        self.intro = widgets.simple_dialogs.BeijingIntro()
+        self.intro = load("widgets.simple_dialogs").BeijingIntro()
         self.intro.show()
 
     def set_title(self, time_left: int):

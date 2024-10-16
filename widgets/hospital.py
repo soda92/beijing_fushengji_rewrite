@@ -1,5 +1,5 @@
 from PySide6 import QtWidgets, QtCore
-import importlib
+from app.tools import load
 
 
 class Hospital(QtWidgets.QWidget):
@@ -7,10 +7,7 @@ class Hospital(QtWidgets.QWidget):
 
     def __init__(self, parent=None, cash: int = 0, health: int = 100):
         super().__init__(parent)
-        import ui.hospital
-
-        importlib.reload(ui.hospital)
-        self.ui = ui.hospital.Ui_Hospital()
+        self.ui = load("ui.hospital").Ui_Hospital()
         self.ui.setupUi(self)
 
         self.cash = cash
@@ -32,10 +29,7 @@ class Hospital(QtWidgets.QWidget):
     def do_cure(self):
         self.needed_money = 3500 * self.ui.spinBox.value()
         if self.cash < self.needed_money:
-            import widgets.simple_dialogs
-
-            importlib.reload(widgets.simple_dialogs)
-            self.dialog = widgets.simple_dialogs.Diary()
+            self.dialog = load("widgets.simple_dialogs").Diary()
             self.dialog.ui.label.setText(
                 self.tr(
                     'The doctor said, "There\'s not enough money! I refuse to treat you."'

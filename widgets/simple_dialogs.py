@@ -1,5 +1,5 @@
 from PySide6 import QtWidgets, QtCore
-import importlib
+from app.tools import load
 import random
 
 from app.models import Item, get_item_name
@@ -8,20 +8,14 @@ from app.models import Item, get_item_name
 class Airport(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
-        import ui.airport
-
-        importlib.reload(ui.airport)
-        self.ui = ui.airport.Ui_Airport()
+        self.ui = load("ui.airport").Ui_Airport()
         self.ui.setupUi(self)
 
 
 class BeijingIntro(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        import ui.beijing_intro
-
-        importlib.reload(ui.beijing_intro)
-        self.ui = ui.beijing_intro.Ui_Form()
+        self.ui = load("ui.beijing_intro").Ui_Form()
         self.ui.setupUi(self)
 
         self.ui.pushButton.clicked.connect(self.close)
@@ -30,10 +24,7 @@ class BeijingIntro(QtWidgets.QWidget):
 class CyberCafe(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        import ui.net_cafe
-
-        importlib.reload(ui.net_cafe)
-        self.ui = ui.net_cafe.Ui_CyberCafe()
+        self.ui = load("ui.net_cafe").Ui_CyberCafe()
         self.ui.setupUi(self)
         self.show()
 
@@ -44,10 +35,7 @@ class Diary(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        import ui.diary
-
-        importlib.reload(ui.diary)
-        self.ui = ui.diary.Ui_Diary()
+        self.ui = load("ui.diary").Ui_Diary()
         self.ui.setupUi(self)
 
 
@@ -55,9 +43,7 @@ class EasterEgg(QtWidgets.QWidget):
     def __init__(self, detail=False):
         super().__init__()
 
-        import ui.easteregg
-
-        self.ui = ui.easteregg.Ui_Form()
+        self.ui = load("ui.easteregg").Ui_Form()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.close)
 
@@ -78,18 +64,14 @@ class EasterEgg(QtWidgets.QWidget):
 class News(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        import ui.news
-
-        self.ui = ui.news.Ui_News()
+        self.ui = load("ui.news").Ui_News()
         self.ui.setupUi(self)
 
 
 class Rent(QtWidgets.QDialog):
     def __init__(self, money: int, max_quantity: int):
         super().__init__()
-        import ui.rent
-
-        self.ui = ui.rent.Ui_Rent()
+        self.ui = load("ui.rent").Ui_Rent()
         self.ui.setupUi(self)
 
         t = self.ui.label_2.text()
@@ -105,9 +87,7 @@ class Sell(QtWidgets.QWidget):
         super().__init__()
         self.item = item
 
-        import ui.sell
-
-        self.ui = ui.sell.Ui_Sell()
+        self.ui = load("ui.sell").Ui_Sell()
         self.ui.setupUi(self)
         self.item = item
 
@@ -194,9 +174,7 @@ class CelebrateWindow(QtWidgets.QDialog):
     def __init__(self, score, order):
         super().__init__()
 
-        import ui.celebrate
-
-        self.ui = ui.celebrate.Ui_Form()
+        self.ui = load("ui.celebrate").Ui_Form()
         self.ui.setupUi(self)
 
         self.messages = [

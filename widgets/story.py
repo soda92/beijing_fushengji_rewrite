@@ -1,5 +1,5 @@
 from PySide6 import QtWidgets, QtCore, QtGui
-import importlib
+from app.tools import load
 from pathlib import Path
 
 CURRENT = Path(__file__).resolve().parent
@@ -11,10 +11,7 @@ class StoryDlg(QtWidgets.QDialog):
     def __init__(self, parent=None, c_continue=False):
         super().__init__(parent)
 
-        import ui.story
-
-        importlib.reload(ui.story)
-        self.ui = ui.story.Ui_Story()
+        self.ui = load("ui.story").Ui_Story()
         self.ui.setupUi(self)
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
 

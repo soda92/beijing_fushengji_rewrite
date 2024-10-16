@@ -1,14 +1,11 @@
 from PySide6 import QtWidgets, QtCore
-import importlib
+from app.tools import load
 
 
 class MoneyExchange(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
-        import ui.money_exchange
-
-        importlib.reload(ui.money_exchange)
-        self.ui = ui.money_exchange.Ui_MoneyExchange()
+        self.ui = load("ui.money_exchange").Ui_MoneyExchange()
         self.ui.setupUi(self)
 
 
@@ -17,10 +14,7 @@ class Bank(QtWidgets.QDialog):
 
     def __init__(self, parent=None, cash: int = 0, saving: int = 0):
         super().__init__(parent)
-        import ui.bank
-
-        importlib.reload(ui.bank)
-        self.ui = ui.bank.Ui_Bank()
+        self.ui = load("ui.bank").Ui_Bank()
         self.ui.setupUi(self)
 
         self.cash = cash
@@ -36,10 +30,7 @@ class Bank(QtWidgets.QDialog):
         self.ui.withdraw.clicked.connect(self.withdraw)
 
     def deposit(self):
-        import widgets.bank
-
-        importlib.reload(widgets.bank)
-        self.dialog = widgets.bank.MoneyExchange()
+        self.dialog = load("widgets.bank").MoneyExchange()
         self.dialog.ui.label.setText(self.tr("How much money do you deposit?"))
         self.dialog.ui.spinBox.setMinimum(0)
         self.dialog.ui.spinBox.setMaximum(self.cash)
@@ -56,10 +47,7 @@ class Bank(QtWidgets.QDialog):
         self.close()
 
     def withdraw(self):
-        import widgets.bank
-
-        importlib.reload(widgets.bank)
-        self.dialog = widgets.bank.MoneyExchange()
+        self.dialog = load("widgets.bank").MoneyExchange()
         self.dialog.ui.label.setText(self.tr("How much money do you withdraw?"))
         self.dialog.ui.spinBox.setMinimum(0)
         self.dialog.ui.spinBox.setMaximum(self.saving)

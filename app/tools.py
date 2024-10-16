@@ -43,3 +43,12 @@ def load_data() -> (Status, list[Item], list[Item]):
     my_items = []
 
     return status, market_items, my_items
+
+
+def load(module: str):
+    import importlib
+
+    m = importlib.import_module(module)
+    importlib.reload(m)
+
+    return m

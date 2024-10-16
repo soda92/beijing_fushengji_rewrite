@@ -1,5 +1,5 @@
 from PySide6 import QtWidgets, QtCore
-import importlib
+from app.tools import load
 
 
 class PayDebt(QtWidgets.QDialog):
@@ -7,10 +7,7 @@ class PayDebt(QtWidgets.QDialog):
 
     def __init__(self, cash: int = 0, debt: int = 0):
         super().__init__()
-        import ui.pay_debt
-
-        importlib.reload(ui.pay_debt)
-        self.ui = ui.pay_debt.Ui_PayDebt()
+        self.ui = load("ui.pay_debt").Ui_PayDebt()
         self.ui.setupUi(self)
 
         self.cash = cash
