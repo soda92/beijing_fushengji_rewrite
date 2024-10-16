@@ -13,8 +13,7 @@
   <property name="windowTitle">
    <string>My days in Beijing</string>
   </property>
-  <property name="styleSheet">
-  </property>
+
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QWidget" name="widget_3" native="true">

@@ -13,8 +13,7 @@
   <property name="windowTitle">
    <string>In Hospital</string>
   </property>
-  <property name="styleSheet">
-  </property>
+
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QWidget" name="widget" native="true">

@@ -196,9 +196,6 @@
           <height>191</height>
          </size>
         </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
         <property name="title">
          <string>Your Status</string>
         </property>
@@ -705,9 +702,6 @@ Station</string>
    </item>
    <item>
     <widget class="QWidget" name="places" native="true">
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="p_bank">
