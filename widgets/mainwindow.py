@@ -8,6 +8,8 @@ from app.tools import load
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, app):
         super().__init__()
+        from widgets.styled_widget import qss
+        self.setStyleSheet(qss)
 
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
 
@@ -28,6 +30,8 @@ class MainWindow(QtWidgets.QMainWindow):
     def init(self):
         self.ui = ui_mainwindow.Ui_MainWindow()
         self.ui.setupUi(self)
+        from widgets.styled_widget import qss
+        self.setStyleSheet(qss)
         self.widget = main_widget.MainWidget()
         self.widget.hide()
         self.widget.sig_time_pass.connect(self.set_title)
@@ -37,13 +41,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
         font_id = QtGui.QFontDatabase.addApplicationFont(":/FONTS/font.ttf")
         family = QtGui.QFontDatabase.applicationFontFamilies(font_id)[0]
-        self.setStyleSheet(
-            """
-            QLabel, QPushButton, QTextBrowser, QGroupBox, QTextEdit, QRadioButton {{
-                font: 12pt {family};
-            }}
-            """.format(family=family)
-        )
         self.ui.menubar.setFont(QtGui.QFont(family, 14))
         self.ui.menu.setFont(QtGui.QFont(family, 14))
         self.ui.menu_2.setFont(QtGui.QFont(family, 14))
