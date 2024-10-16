@@ -2,9 +2,9 @@ from PySide6 import QtWidgets, QtGui
 from ui.top_players import Ui_Form
 from pathlib import Path
 from widgets.my_table_model import MyTableModel
+from widgets.styled_widget import StyledDialog
 
-
-class TopPlayers(QtWidgets.QDialog):
+class TopPlayers(StyledDialog):
     def __init__(self):
         super().__init__()
         self.ui = Ui_Form()

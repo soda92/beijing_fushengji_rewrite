@@ -1,9 +1,9 @@
-from PySide6 import QtWidgets
 from app.models import Item, get_item_name
 from app.tools import load
+from widgets.styled_widget import StyledWidget
 
 
-class Buy(QtWidgets.QWidget):
+class Buy(StyledWidget):
     def __init__(self, cash: int, item: Item, current_store: int, max_store: int):
         super().__init__()
         self.cash = cash

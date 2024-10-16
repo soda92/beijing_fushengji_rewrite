@@ -1,15 +1,16 @@
-from PySide6 import QtWidgets, QtCore, QtGui
+from PySide6 import QtCore, QtGui
 from app.tools import load
 from pathlib import Path
+from widgets.styled_widget import StyledDialog
 
 CURRENT = Path(__file__).resolve().parent
 
 
-class StoryDlg(QtWidgets.QDialog):
+class StoryDlg(StyledDialog):
     start_sig: QtCore.Signal = QtCore.Signal(bool)
 
-    def __init__(self, parent=None, c_continue=False):
-        super().__init__(parent)
+    def __init__(self, _parent=None, c_continue=False):
+        super().__init__()
 
         self.ui = load("ui.story").Ui_Story()
         self.ui.setupUi(self)

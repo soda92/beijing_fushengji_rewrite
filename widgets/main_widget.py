@@ -8,14 +8,16 @@ from widgets.tables import BlackMarketTable, MyItemsTable
 from app.models import makeDrugPrices, get_item_name, Item, ItemName
 from app.events import RandomEvents, GameMessages, StealEvents
 from app.tools import load_data
+from widgets.styled_widget import StyledWidget
+from widgets.styled_widget import StyledDialog
 
 
-class MainWidget(QtWidgets.QWidget):
+class MainWidget(StyledWidget):
     sig_time_pass = QtCore.Signal(int)
     sig_close = QtCore.Signal()
 
-    def __init__(self, parent=None):
-        super().__init__(parent)
+    def __init__(self):
+        super().__init__()
 
         self.ui = load("ui.main_widget").Ui_MainWidget()
         self.ui.setupUi(self)
@@ -237,7 +239,7 @@ class MainWidget(QtWidgets.QWidget):
                 self.status.cash, self.max_quantity
             )
             ret = self.d_rent.exec()
-            if ret == QtWidgets.QDialog.Accepted:
+            if ret == StyledDialog.Accepted:
                 self.status.cash = int(self.status.cash) / 2
                 self.status.cash -= 2000
                 self.max_quantity += 10

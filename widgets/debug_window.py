@@ -1,9 +1,10 @@
 from PySide6 import QtWidgets, QtGui, QtCore
 import os
 import importlib
+from widgets.styled_widget import StyledWidget
 
 
-class CompleterWidget(QtWidgets.QWidget):
+class CompleterWidget(StyledWidget):
     def __init__(self):
         super().__init__()
 
@@ -125,7 +126,7 @@ class MyInput(QtWidgets.QLineEdit):
         self.completer.slot_complete(obj, attr)
 
 
-class DebugWidget(QtWidgets.QWidget):
+class DebugWidget(StyledWidget):
     "The main debug widget layout."
 
     sig_data = QtCore.Signal(list, list)
@@ -139,7 +140,7 @@ class DebugWidget(QtWidgets.QWidget):
 
         self.commands_area = QtWidgets.QScrollArea()
         self.commands_area.setWidgetResizable(True)
-        self.commands_area_contents = QtWidgets.QWidget()
+        self.commands_area_contents = StyledWidget()
         self.commands_area.setWidget(self.commands_area_contents)
         self.commands_area_layout = QtWidgets.QVBoxLayout()
         self.commands_area_contents.setLayout(self.commands_area_layout)
@@ -233,7 +234,7 @@ class DebugWidget(QtWidgets.QWidget):
         scroll_bar.setValue(scroll_bar.maximum())
 
 
-class DebugWindowReloader(QtWidgets.QWidget):
+class DebugWindowReloader(StyledWidget):
     "check modified file, reload debug widget."
 
     def __init__(self, main=None):

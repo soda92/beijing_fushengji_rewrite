@@ -1,8 +1,9 @@
-from PySide6 import QtWidgets, QtCore
+from PySide6 import QtCore
 from app.tools import load
+from widgets.styled_widget import StyledDialog
 
 
-class PayDebt(QtWidgets.QDialog):
+class PayDebt(StyledDialog):
     sig_pay = QtCore.Signal(int, int)
 
     def __init__(self, cash: int = 0, debt: int = 0):

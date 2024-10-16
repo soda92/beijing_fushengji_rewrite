@@ -1,10 +1,12 @@
-from PySide6 import QtWidgets, QtCore
+from PySide6 import QtCore
 from app.tools import load
 
+from widgets.styled_widget import StyledDialog
 
-class AboutGame(QtWidgets.QDialog):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+
+class AboutGame(StyledDialog):
+    def __init__(self):
+        super().__init__()
         self.ui = load("ui.about").Ui_AboutGame()
         self.ui.setupUi(self)
         self.show()

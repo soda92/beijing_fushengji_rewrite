@@ -1,8 +1,9 @@
-from PySide6 import QtWidgets, QtCore
+from PySide6 import QtCore
 from app.tools import load
+from widgets.styled_widget import StyledWidget
 
 
-class Hospital(QtWidgets.QWidget):
+class Hospital(StyledWidget):
     sig_health = QtCore.Signal(int, int)
 
     def __init__(self, parent=None, cash: int = 0, health: int = 100):

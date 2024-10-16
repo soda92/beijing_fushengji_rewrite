@@ -3,16 +3,18 @@ from app.tools import load
 import random
 
 from app.models import Item, get_item_name
+from widgets.styled_widget import StyledWidget
+from widgets.styled_widget import StyledDialog
 
 
-class Airport(QtWidgets.QWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class Airport(StyledWidget):
+    def __init__(self):
+        super().__init__()
         self.ui = load("ui.airport").Ui_Airport()
         self.ui.setupUi(self)
 
 
-class BeijingIntro(QtWidgets.QWidget):
+class BeijingIntro(StyledWidget):
     def __init__(self):
         super().__init__()
         self.ui = load("ui.beijing_intro").Ui_Form()
@@ -21,9 +23,9 @@ class BeijingIntro(QtWidgets.QWidget):
         self.ui.pushButton.clicked.connect(self.close)
 
 
-class CyberCafe(QtWidgets.QDialog):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class CyberCafe(StyledDialog):
+    def __init__(self):
+        super().__init__()
         self.ui = load("ui.net_cafe").Ui_CyberCafe()
         self.ui.setupUi(self)
         self.show()
@@ -31,15 +33,15 @@ class CyberCafe(QtWidgets.QDialog):
         self.ui.leave_cybercafe.clicked.connect(lambda _: self.close())
 
 
-class Diary(QtWidgets.QDialog):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class Diary(StyledDialog):
+    def __init__(self):
+        super().__init__()
 
         self.ui = load("ui.diary").Ui_Diary()
         self.ui.setupUi(self)
 
 
-class EasterEgg(QtWidgets.QWidget):
+class EasterEgg(StyledWidget):
     def __init__(self, detail=False):
         super().__init__()
 
@@ -61,14 +63,14 @@ class EasterEgg(QtWidgets.QWidget):
             )
 
 
-class News(QtWidgets.QDialog):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class News(StyledDialog):
+    def __init__(self):
+        super().__init__()
         self.ui = load("ui.news").Ui_News()
         self.ui.setupUi(self)
 
 
-class Rent(QtWidgets.QDialog):
+class Rent(StyledDialog):
     def __init__(self, money: int, max_quantity: int):
         super().__init__()
         self.ui = load("ui.rent").Ui_Rent()
@@ -82,7 +84,7 @@ class Rent(QtWidgets.QDialog):
         self.ui.cancel.clicked.connect(self.reject)
 
 
-class Sell(QtWidgets.QWidget):
+class Sell(StyledWidget):
     def __init__(self, item: Item):
         super().__init__()
         self.item = item
@@ -103,22 +105,22 @@ class Sell(QtWidgets.QWidget):
         self.ui.pushButton.clicked.connect(self.close)
 
 
-class SendMoney(QtWidgets.QWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class SendMoney(StyledWidget):
+    def __init__(self):
+        super().__init__()
         from ui.send_money import Ui_SendMoney
 
         self.ui = Ui_SendMoney()
         self.ui.setupUi(self)
 
 
-class Settings(QtWidgets.QWidget):
+class Settings(StyledWidget):
     sig_settings = QtCore.Signal(bool, bool)
 
     def __init__(
         self, parent=None, allow_hacker: bool = False, turn_off_sound: bool = False
     ):
-        super().__init__(parent)
+        super().__init__()
         from ui.settings import Ui_Settings
 
         self.ui = Ui_Settings()
@@ -136,9 +138,9 @@ class Settings(QtWidgets.QWidget):
         self.close()
 
 
-class TextEditor(QtWidgets.QWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class TextEditor(StyledWidget):
+    def __init__(self):
+        super().__init__()
         from ui.text_editor import Ui_TextEditor
 
         self.ui = Ui_TextEditor()
@@ -161,16 +163,16 @@ class TextEditor(QtWidgets.QWidget):
         )
 
 
-class Statement(QtWidgets.QWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class Statement(StyledWidget):
+    def __init__(self):
+        super().__init__()
         from ui.statements import Ui_Statements
 
         self.ui = Ui_Statements()
         self.ui.setupUi(self)
 
 
-class CelebrateWindow(QtWidgets.QDialog):
+class CelebrateWindow(StyledDialog):
     def __init__(self, score, order):
         super().__init__()
 

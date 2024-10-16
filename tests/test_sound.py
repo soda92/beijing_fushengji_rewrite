@@ -3,8 +3,8 @@ import sys
 import main_rc  # noqa: F401
 
 class X(QtCore.QObject):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+    def __init__(self):
+        super().__init__()
         self.effect = QtMultimedia.QSoundEffect()
         self.effect.setSource(QtCore.QUrl.fromLocalFile(":/SND/sound/vomit.wav"))
         self.effect.play()

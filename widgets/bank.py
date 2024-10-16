@@ -1,19 +1,21 @@
-from PySide6 import QtWidgets, QtCore
+from PySide6 import QtCore
 from app.tools import load
+from widgets.styled_widget import StyledDialog
+from widgets.styled_widget import StyledWidget
 
 
-class MoneyExchange(QtWidgets.QWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class MoneyExchange(StyledWidget):
+    def __init__(self):
+        super().__init__()
         self.ui = load("ui.money_exchange").Ui_MoneyExchange()
         self.ui.setupUi(self)
 
 
-class Bank(QtWidgets.QDialog):
+class Bank(StyledDialog):
     sig_account = QtCore.Signal(int, int)
 
-    def __init__(self, parent=None, cash: int = 0, saving: int = 0):
-        super().__init__(parent)
+    def __init__(self, _parent=None, cash: int = 0, saving: int = 0):
+        super().__init__()
         self.ui = load("ui.bank").Ui_Bank()
         self.ui.setupUi(self)
 
