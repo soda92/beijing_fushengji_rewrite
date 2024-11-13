@@ -15,25 +15,23 @@ name = "beijing-fushengji"
 version = "0.1.1"
 source = { editable = "." }
 dependencies = [
-    { name = "pyinstaller" },
     { name = "pyside6" },
 ]
 
 [package.dev-dependencies]
 dev = [
     { name = "build" },
+    { name = "pyinstaller" },
     { name = "twine" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "pyinstaller", specifier = ">=6.10.0" },
-    { name = "pyside6", specifier = ">=6.6.3.1" },
-]
+requires-dist = [{ name = "pyside6", specifier = ">=6.6.3.1" }]
 
 [package.metadata.requires-dev]
 dev = [
     { name = "build", specifier = ">=1.2.2.post1" },
+    { name = "pyinstaller", specifier = ">=6.10.0" },
     { name = "twine", specifier = ">=5.1.1" },
 ]
 

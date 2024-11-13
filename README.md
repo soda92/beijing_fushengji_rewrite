@@ -12,5 +12,6 @@ Features:
 
 
 ![main](https://github.com/soda92/beijing_fushengji_rewrite/blob/main/bf-show-main.png)
-![event](bf-show-event.png)
-![rank](bf-show-rank.png)
+![event](https://github.com/soda92/beijing_fushengji_rewrite/blob/main/bf-show-event.png)
+![rank](https://github.com/soda92/beijing_fushengji_rewrite/blob/main/bf-show-rank.png)
+

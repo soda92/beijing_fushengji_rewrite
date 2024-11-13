@@ -1,12 +1,15 @@
 [project]
 name = "beijing_fushengji"
-version = "0.1.1"
+version = "0.1.2"
 description = "beijing fushengji (a simple simulation game) rewritten in Python"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["pyinstaller>=6.10.0", "pyside6>=6.6.3.1"]
+dependencies = ["pyside6>=6.6.3.1"]
 
 classifiers = ["Topic :: Games/Entertainment :: Turn Based Strategy"]
+
+[project.urls]
+Repository = "https://github.com/soda92/beijing_fushengji_rewrite.git"
 
 [build-system]
 requires = ["setuptools"]
@@ -35,4 +38,4 @@ unfixable = ["B"]
 "tests/*.py" = ["E402", "F401"]
 
 [dependency-groups]
-dev = ["build>=1.2.2.post1", "twine>=5.1.1"]
+dev = ["build>=1.2.2.post1", "pyinstaller>=6.10.0", "twine>=5.1.1"]
