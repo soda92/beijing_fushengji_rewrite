@@ -1,6 +1,7 @@
 from PySide6 import QtCore, QtMultimedia
 import sys
-import main_rc  # noqa: F401
+import beijing_fushengji.main_rc as main_rc  # noqa: F401
+
 
 class X(QtCore.QObject):
     def __init__(self):

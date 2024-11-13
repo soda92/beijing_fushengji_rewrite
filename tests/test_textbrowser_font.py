@@ -5,7 +5,7 @@ import sys
 
 CURRENT = Path(__file__).resolve().parent
 sys.path.insert(0, str(CURRENT.parent))
-import main_rc as _a
+import beijing_fushengji.main_rc as main_rc
 
 
 class MainWindow(QtWidgets.QMainWindow):

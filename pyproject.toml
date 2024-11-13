@@ -1,13 +1,21 @@
 [project]
-name = "beijing_fushengji_rewrite"
-version = "0.1.0"
+name = "beijing_fushengji"
+version = "0.1.1"
 description = "beijing fushengji (a simple simulation game) rewritten in Python"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "pyinstaller>=6.10.0",
-    "pyside6>=6.6.3.1",
-]
+dependencies = ["pyinstaller>=6.10.0", "pyside6>=6.6.3.1"]
+
+classifiers = ["Topic :: Games/Entertainment :: Turn Based Strategy"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["beijing_fushengji", "beijing_fushengji.*"]
+exclude = ["tests"]
+
 
 [tool.ruff.lint]
 # 1. Enable flake8-bugbear (`B`) rules, in addition to the defaults.
@@ -25,3 +33,6 @@ unfixable = ["B"]
 "**/{tests,docs,tools}/*" = ["E402"]
 "ui/*.py" = ["F401"]
 "tests/*.py" = ["E402", "F401"]
+
+[dependency-groups]
+dev = ["build>=1.2.2.post1", "twine>=5.1.1"]

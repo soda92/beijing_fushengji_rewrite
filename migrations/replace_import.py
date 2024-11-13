@@ -31,7 +31,7 @@ def get_replacement(lines):
     i = 0
     while i < len(lines):
         v = lines[i]
-        v = v.replace('\n', '')
+        v = v.replace("\n", "")
         if is_import(v):
             f = get_import(v)
             if is_call(f, lines[i + 1]):
@@ -55,14 +55,14 @@ def read_file():
     sources = widgets_dir.glob("*.py")
 
     for file in sources:
-        lines = file.read_text(encoding='utf-8')
-        replaced = '\n'.join(get_replacement(lines))
-        file.write_text(replaced, encoding='utf-8')
+        lines = file.read_text(encoding="utf-8")
+        replaced = "\n".join(get_replacement(lines))
+        file.write_text(replaced, encoding="utf-8")
 
 
 def test1():
     test_str = """
-        import ui.bank
+        import beijing_fushengji.ui.bank
 
         importlib.reload(ui.bank)
         self.ui = ui.bank.Ui_Bank()
@@ -78,7 +78,7 @@ def test1():
     print("\n".join(get_replacement(test_str)) == target)
 
     test_str2 = """
-        import ui.bank
+        import beijing_fushengji.ui.bank
 
         self.ui = ui.bank.Ui_Bank()
         """
