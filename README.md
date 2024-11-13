@@ -4,13 +4,13 @@
 
 A Qt rewrite of game [beijing fushengji][url].
 
+[url]: https://github.com/chrisguo/beijing_fushengji
+
 Features:
  - all dialogs are reproduced.
- - built-in english translation.
  - support sounds.
- - support save/load.
 
 
-![main](bf-show-main.png)
+![main](https://github.com/soda92/beijing_fushengji_rewrite/blob/main/bf-show-main.png)
 ![event](bf-show-event.png)
 ![rank](bf-show-rank.png)
