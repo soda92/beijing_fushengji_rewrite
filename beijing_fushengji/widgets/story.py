@@ -80,11 +80,16 @@ class StoryDlg(StyledDialog):
 
     def processHelpFile(self):
         self.ui.statusText.setText(self.tr("Initialization help information...."))
+        self.settings = QtCore.QSettings()
+        lang_en = self.settings.value("lang", "cn") == "en"
         from beijing_fushengji.help_html import help
+        from beijing_fushengji.help_en_html import help as help_en
 
-        self.help_file_encrypted = CURRENT.parent.joinpath("helpinfo")
-        self.help_file: Path = self.help_file_encrypted.parent.joinpath("help.html")
-        self.help_file.write_text(help, encoding="utf8")
+        self.help_file: Path = Path(__file__).resolve().parent.joinpath("help.html")
+        if lang_en:
+            self.help_file.write_text(help_en, encoding="utf8")
+        else:
+            self.help_file.write_text(help, encoding="utf8")
 
     def remove_help_file(self):
         if self.help_file.exists():
