@@ -1,13 +1,15 @@
 from PySide6 import QtWidgets, QtCore, QtMultimedia
 import random
 import os
+import pickle
+import base64
+
 from beijing_fushengji.app.tools import load
 
 from beijing_fushengji.app.models import Status
 from beijing_fushengji.widgets.tables import BlackMarketTable, MyItemsTable
 from beijing_fushengji.app.models import makeDrugPrices, get_item_name, Item, ItemName
 from beijing_fushengji.app.events import RandomEvents, GameMessages, StealEvents
-from beijing_fushengji.app.tools import load_data
 from beijing_fushengji.widgets.styled_widget import StyledWidget
 from beijing_fushengji.widgets.styled_widget import StyledDialog
 
@@ -18,6 +20,8 @@ class MainWidget(StyledWidget):
 
     def __init__(self):
         super().__init__()
+
+        self.settings = QtCore.QSettings()
 
         self.ui = load("ui.main_widget").Ui_MainWidget()
         self.ui.setupUi(self)
@@ -262,7 +266,7 @@ class MainWidget(StyledWidget):
             None, self.allow_hacker, self.turn_off_sound
         )
         self.d_settings.show()
-        self.d_settings.sig_settings.connect(self.settings)
+        self.d_settings.sig_settings.connect(self.d_settings)
 
     def go_airport(self):
         self.play_sound("airport.wav")
@@ -273,25 +277,38 @@ class MainWidget(StyledWidget):
         self.about_game = load("widgets.about").AboutGame()
         self.about_game.show()
 
-    def settings(self, allow_hacker: bool, turn_off_sound: bool):
+    def d_settings(self, allow_hacker: bool, turn_off_sound: bool):
         self.turn_off_sound = turn_off_sound
+        if turn_off_sound:
+            self.settings.setValue("no_sound", "true")
+        else:
+            self.settings.setValue("no_sound", "false")
         self.allow_hacker = allow_hacker
+        if allow_hacker:
+            self.settings.setValue("allow_hacker", "true")
+        else:
+            self.settings.setValue("allow_hacker", "false")
 
-    def init_data(self):
+    def init_data(self, reset=False):
         self.bad_fame1_shown = False
         self.bad_fame2_shown = False
+        self.turn_off_sound = self.settings.value("no_sound", "false") == "false"
 
-        self.turn_off_sound = False
         if os.environ.get("NOSOUND"):
             self.turn_off_sound = True
-        self.allow_hacker = False
-        self.quantity = 0
-        self.max_quantity = 100
-        status, _market_items, my_items = load_data()
-        self.status: Status = status
+        self.allow_hacker = self.settings.value("allow_hacker", "false") == "false"
 
-        self.market_items: list[Item] = makeDrugPrices(3)
-        self.my_items: list[Item] = my_items
+        if reset:
+            self.quantity = 0
+            self.max_quantity = 100
+            self.status, _market_items, self.my_items = Status(), [], []
+            self.market_items: list[Item] = makeDrugPrices(3)
+            self.time_left = 40
+        else:
+            self.quantity = self.settings.value("quantity", 0)
+            self.max_quantity = self.settings.value("max_quantity", 100)
+            self.status, self.market_items, self.my_items = self.load_data()
+            self.time_left = self.settings.value("time_left", 40)
 
         self.t_1 = BlackMarketTable(self.ui.black_market)
         self.t_2 = MyItemsTable(self.ui.my_room)
@@ -303,8 +320,28 @@ class MainWidget(StyledWidget):
 
         self.quantity = sum(x.quantity for x in self.my_items)
 
-        self.time_left = 40
         self.sig_time_pass.emit(self.time_left)
+
+    def load_data(self) -> (Status, list[Item], list[Item]):
+        status = Status()
+        market_items = makeDrugPrices(3)
+        my_items = []
+
+        default = [status, market_items, my_items]
+        val = pickle.dumps(default)
+        default_obj = base64.b64encode(val).decode()
+
+        obj = self.settings.value("status", default_obj)
+        return pickle.loads(base64.b64decode(obj))
+
+    def save(self):
+        data = [self.status, self.market_items, self.my_items]
+        val = pickle.dumps(data)
+        obj = base64.b64encode(val).decode()
+        self.settings.setValue("status", obj)
+        self.settings.setValue("quantity", self.quantity)
+        self.settings.setValue("max_quantity", self.max_quantity)
+        self.settings.setValue("time_left", self.time_left)
 
     def handle_cash_and_debt(self):
         self.status.debt *= 1.1
@@ -634,7 +671,7 @@ class MainWidget(StyledWidget):
             if result == QtWidgets.QMessageBox.StandardButton.No:
                 return
 
-        self.init_data()
+        self.init_data(reset=True)
         self.refresh_display()
         self.indexes = []
         self.sell_indexes = []

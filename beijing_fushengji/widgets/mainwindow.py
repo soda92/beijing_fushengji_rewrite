@@ -1,11 +1,14 @@
 from PySide6 import QtWidgets, QtGui, QtCore
 import beijing_fushengji.ui.mainwindow as ui_mainwindow
-import beijing_fushengji.ui.main_widget
 import beijing_fushengji.widgets.main_widget as main_widget
 from beijing_fushengji.app.tools import load
 
 
 class MainWindow(QtWidgets.QMainWindow):
+    def closeEvent(self, event):
+        self.widget.save()
+        super().closeEvent(event)
+
     def __init__(self, app):
         super().__init__()
         QtWidgets.QApplication.setOrganizationName("SodaCris")
@@ -55,6 +58,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.widget = main_widget.MainWidget()
         self.widget.hide()
         self.widget.sig_time_pass.connect(self.set_title)
+        self.set_title(self.widget.time_left)
         self.widget.sig_close.connect(self.close)
         self.setCentralWidget(self.widget)
         self.widget.show()
@@ -124,7 +128,6 @@ class MainWindow(QtWidgets.QMainWindow):
             import importlib
 
             importlib.reload(main_widget)
-            importlib.reload(ui.main_widget)
             self.widget.setParent(None)
             self.widget = main_widget.MainWidget()
             self.setCentralWidget(self.widget)

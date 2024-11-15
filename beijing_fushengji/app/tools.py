@@ -37,14 +37,6 @@ def test_dirs():
         print_dirs()
 
 
-def load_data() -> (Status, list[Item], list[Item]):
-    status = Status()
-    market_items = []
-    my_items = []
-
-    return status, market_items, my_items
-
-
 def load(module: str):
     module = "beijing_fushengji." + module
     import importlib

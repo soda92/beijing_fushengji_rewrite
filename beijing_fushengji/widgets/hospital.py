@@ -7,7 +7,7 @@ class Hospital(StyledWidget):
     sig_health = QtCore.Signal(int, int)
 
     def __init__(self, parent=None, cash: int = 0, health: int = 100):
-        super().__init__(parent)
+        super().__init__()
         self.ui = load("ui.hospital").Ui_Hospital()
         self.ui.setupUi(self)
 

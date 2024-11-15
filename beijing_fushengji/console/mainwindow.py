@@ -107,14 +107,10 @@ class MainWindow(QtCore.QObject):
 
 
 def main():
-    from beijing_fushengji.app.tools import load_data
-
-    status, market_items, my_items = load_data()
-
     app = QtCore.QCoreApplication(sys.argv)
     translator = QtCore.QTranslator()
     translator.load(":/translations/cn.qm")
     app.installTranslator(translator)
     window = MainWindow()
-    window.start(status, market_items, my_items)
+    window.start(Status(), [], [])
     sys.exit(app.exec())

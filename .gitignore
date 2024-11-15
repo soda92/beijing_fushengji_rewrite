@@ -2,7 +2,8 @@
 
 /ui
 /main_rc.py
-/help.html
+*.html
+score.txt
 /*.qm
 /score.txt
 /html
