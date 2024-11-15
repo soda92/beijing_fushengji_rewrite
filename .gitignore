@@ -1,16 +1,18 @@
-# custom
-
-/ui
-main_rc.py
-*.html
-
+# help
 !help.html
 !help_en.html
+*_html.py
 
-score.txt
+# resources
 /*.qm
-/score.txt
+main_rc.py
+score.txt
+
+# doc
 /html
+*.html
+
+# ui
 beijing_fushengji/ui/*.py
 
 
