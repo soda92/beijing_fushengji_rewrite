@@ -8,6 +8,9 @@ from beijing_fushengji.app.tools import load
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, app):
         super().__init__()
+        QtWidgets.QApplication.setOrganizationName("SodaCris")
+        QtWidgets.QApplication.setOrganizationDomain("sodacris.com")
+        QtWidgets.QApplication.setApplicationName("Beijing Fushengji")
         from beijing_fushengji.widgets.styled_widget import qss
 
         self.setStyleSheet(qss)
@@ -15,9 +18,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setWindowIcon(QtGui.QIcon(":/ICON/icon.ico"))
 
         self.app = app
-        self.translator = QtCore.QTranslator()
-        self.translator.load(":/translations/cn.qm")
-        self.app.installTranslator(self.translator)
+        self.settings = QtCore.QSettings()
+        lang = self.settings.value("lang", "cn")
+        if lang == "cn":
+            self.translator = QtCore.QTranslator()
+            self.translator.load(":/translations/cn.qm")
+            self.app.installTranslator(self.translator)
         self.init()
 
         from beijing_fushengji.app.tools import debugger_is_active
@@ -29,11 +35,16 @@ class MainWindow(QtWidgets.QMainWindow):
             self.debug_window.show()
 
     def lang_chs(self):
-        self.app.installTranslator(self.translator)
+        self.settings.setValue("lang", "cn")
+        QtWidgets.QMessageBox.information(
+            None, "Info", "重启游戏即可生效", QtWidgets.QMessageBox.Ok
+        )
 
     def lang_en(self):
-        breakpoint()
-        self.app.removeTranslator(self.translator)
+        self.settings.setValue("lang", "en")
+        QtWidgets.QMessageBox.information(
+            None, "Info", "restart game to take effect", QtWidgets.QMessageBox.Ok
+        )
 
     def init(self):
         self.ui = ui_mainwindow.Ui_MainWindow()
