@@ -16,9 +16,12 @@ Features:
 ![main](https://github.com/soda92/beijing_fushengji_rewrite/raw/main/main.png)
 ![main_en](https://github.com/soda92/beijing_fushengji_rewrite/raw/main/main-en.png)
 
-## Install package
+## Install package From PYPI
 
 `pip install beijing-fushengji`
+
+Run:
+
 `py -m beijing_fushengji`
 
 ## Run locally
@@ -40,4 +43,4 @@ Run `tools/translate.py`
 
 On debian, you need to install some dependencies first. see `debian_deps.sh`.
 
-On linux with fcitx, need to copy some libs for `Linguist` to support Chinese. see `enable-pyside-fcitx.sh`.
+On linux with fcitx, need to copy some libs for `Linguist` translator to support Chinese. see `enable-pyside-fcitx.sh`.
