@@ -31,19 +31,19 @@ def run(command):
     subprocess.run(f"{PREFIX}{command}".split(), check=True)
 
 
-def get_files(folder: str, ext: str):
+def get_files(folder: str, pattern: str):
     with cd(str(CURRENT.parent)):
-        files1 = pathlib.Path(folder).glob(f"*.{ext}")
+        files1 = pathlib.Path(folder).glob(pattern)
         files1 = [f"{folder}/{x.name}" for x in files1]
         return files1
 
 
 def generate():
     all_files = []
-    all_files.extend(get_files("form", "ui"))
-    all_files.extend(get_files("widgets", "py"))
-    all_files.extend(get_files("console", "py"))
-    all_files.extend(get_files("app", "py"))
+    all_files.extend(get_files("form", "*.ui"))
+    all_files.extend(get_files("beijing_fushengji/widgets", "*.py"))
+    all_files.extend(get_files("beijing_fushengji/console", "*.py"))
+    all_files.extend(get_files("beijing_fushengji/app", "*.py"))
 
     with cd(str(CURRENT.parent)):
         run(f"pyside6-lupdate {' '.join(all_files)} -ts translation_zh_CN.ts")
@@ -75,4 +75,5 @@ if __name__ == "__main__":
 
     sys.path.insert(0, str(CURRENT))
     from compile_all import compile_rc
+
     compile_rc()

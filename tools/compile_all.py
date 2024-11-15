@@ -58,6 +58,12 @@ def compile(file: Path):
         command = "venv/bin/pyside6-uic"
     subprocess.run(f"{command} {file} -o {str(dest_path)}".split(), check=True)
 
+    content = dest_path.read_text(encoding="utf8")
+    dest_path.write_text(
+        content.replace("import main_rc", "import beijing_fushengji.main_rc"),
+        encoding="utf8",
+    )
+
 
 def compile_rc(file: Path = RC_FILE):
     command = ".venv/Scripts/pyside6-rcc.exe"
@@ -72,7 +78,6 @@ def compile_rc(file: Path = RC_FILE):
 
 
 def compile_forms():
-    breakpoint()
     ui_dir.mkdir(parents=True, exist_ok=True)
     for i in get_ui_files():
         compile(i)

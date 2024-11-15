@@ -48,6 +48,5 @@ def design():
 
 
 if __name__ == "__main__":
-    breakpoint()
     design()
     compile_forms()
