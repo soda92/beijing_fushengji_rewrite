@@ -91,7 +91,7 @@ class StoryDlg(StyledDialog):
         else:
             text = help
         text = text.replace(
-            "CUSTOM_STYLE",
+            "<CUSTOM_STYLE />",
             """
 <style>
 @media (prefers-color-scheme: dark) {
