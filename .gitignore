@@ -1,8 +1,12 @@
 # custom
 
 /ui
-/main_rc.py
+main_rc.py
 *.html
+
+!help.html
+!help_en.html
+
 score.txt
 /*.qm
 /score.txt

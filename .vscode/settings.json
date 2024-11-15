@@ -14,5 +14,7 @@
         "*zh_CN.ts": "xml",
         "*.qrc": "xml"
     },
-    "gitlens.blame.avatars": false
+    "git.decorations.enabled": false,
+    "gitlens.blame.avatars": false,
+    "python.REPL.enableREPLSmartSend": false
 }
