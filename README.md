@@ -2,16 +2,16 @@
 
 北京浮生记重制版
 
-A Qt rewrite of game [beijing fushengji][url].
+Rewrite [beijing fushengji][url] using Qt.
 
 [url]: https://github.com/chrisguo/beijing_fushengji
 
 Features:
  - all dialogs are reproduced.
  - support sounds.
+ - Support Autosave.
+ - Support both English and Simplified Chinese.
 
 
-![main](https://github.com/soda92/beijing_fushengji_rewrite/blob/main/bf-show-main.png)
-![event](https://github.com/soda92/beijing_fushengji_rewrite/blob/main/bf-show-event.png)
-![rank](https://github.com/soda92/beijing_fushengji_rewrite/blob/main/bf-show-rank.png)
-
+![main](https://github.com/soda92/beijing_fushengji_rewrite/raw/main/main.png)
+![main_en](https://github.com/soda92/beijing_fushengji_rewrite/raw/main/main-en.png)
