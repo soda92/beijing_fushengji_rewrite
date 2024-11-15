@@ -83,11 +83,6 @@ def compile_forms():
         compile(i)
 
 
-def main():
-    compile_forms()
-    compile_rc(RC_FILE)
-
-
 def get_mtimes(files):
     import os
 
@@ -126,6 +121,24 @@ def get_all_files():
     files.extend(widgets_files)
     files.append(ROOT.joinpath("translation_zh_CN.ts"))
     return files
+
+
+def build_help():
+    files = ["help.html", "help_en.html"]
+
+    for file in files:
+        r = ROOT.joinpath(file).read_text(encoding="utf8")
+        dest_file = PROJ.joinpath(file.replace(".", "_") + ".py")
+        r = 'help = r"""\n' + r + 'r"""'
+        dest_file.write_text(r, encoding="utf8")
+
+
+def main():
+    compile_forms()
+    from translate import compile
+    compile()
+    compile_rc(RC_FILE)
+    build_help()
 
 
 if __name__ == "__main__":
