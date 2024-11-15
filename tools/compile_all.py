@@ -26,15 +26,17 @@ if platform.system() == "Windows":
         UCRT = True
 
 CURRENT = Path(__file__).resolve().parent
+PROJ = CURRENT.parent.joinpath("beijing_fushengji")
+ROOT = CURRENT.parent
 import sys
 
-sys.path.insert(0, str(CURRENT.parent))
+sys.path.insert(0, str(ROOT))
 
 
-form_dir = CURRENT.parent.joinpath("form")
-ui_dir = CURRENT.parent.joinpath("ui")
+form_dir = ROOT.joinpath("form")
+ui_dir = PROJ.joinpath("ui")
 
-RC_FILE = CURRENT.parent.joinpath("main.qrc")
+RC_FILE = ROOT.joinpath("main.qrc")
 
 
 def get_ui_files() -> list[Path]:
@@ -57,12 +59,12 @@ def compile(file: Path):
     subprocess.run(f"{command} {file} -o {str(dest_path)}".split(), check=True)
 
 
-def compile_rc(file: Path=RC_FILE):
+def compile_rc(file: Path = RC_FILE):
     command = ".venv/Scripts/pyside6-rcc.exe"
     if LINUX:
         command = "venv/bin/pyside6-rcc"
 
-    out_file = CURRENT.parent.joinpath(f"{file.stem}_rc.py")
+    out_file = PROJ.joinpath(f"{file.stem}_rc.py")
     subprocess.run(
         f"{command} {str(file)} -o {str(out_file)}".split(),
         check=True,
@@ -70,6 +72,7 @@ def compile_rc(file: Path=RC_FILE):
 
 
 def compile_forms():
+    breakpoint()
     ui_dir.mkdir(parents=True, exist_ok=True)
     for i in get_ui_files():
         compile(i)
@@ -114,9 +117,9 @@ def compile2(file: Path):
 def get_all_files():
     files = get_ui_files()
     files.append(RC_FILE)
-    widgets_files = list(CURRENT.parent.joinpath("widgets").glob("*.py"))
+    widgets_files = list(PROJ.joinpath("widgets").glob("*.py"))
     files.extend(widgets_files)
-    files.append(CURRENT.parent.joinpath("translation_zh_CN.ts"))
+    files.append(ROOT.joinpath("translation_zh_CN.ts"))
     return files
 
 

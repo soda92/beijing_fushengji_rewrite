@@ -41,12 +41,13 @@ def get_files(folder: str, ext: str):
 
 def design():
     all_files = []
-    all_files.extend(get_files("form", "ui"))
+    all_files.extend(get_files(folder="form", ext="ui"))
 
     with cd(str(CURRENT.parent)):
         run(f"pyside6-designer {' '.join(all_files)}")
 
 
 if __name__ == "__main__":
+    breakpoint()
     design()
     compile_forms()
