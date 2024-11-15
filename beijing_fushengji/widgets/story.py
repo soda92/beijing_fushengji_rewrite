@@ -87,9 +87,23 @@ class StoryDlg(StyledDialog):
 
         self.help_file: Path = Path(__file__).resolve().parent.joinpath("help.html")
         if lang_en:
-            self.help_file.write_text(help_en, encoding="utf8")
+            text = help_en
         else:
-            self.help_file.write_text(help, encoding="utf8")
+            text = help
+        text = text.replace(
+            "CUSTOM_STYLE",
+            """
+<style>
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #753;
+    color: #dcb;
+  }
+}
+</style>
+        """,
+        )
+        self.help_file.write_text(text, encoding="utf8")
 
     def remove_help_file(self):
         if self.help_file.exists():

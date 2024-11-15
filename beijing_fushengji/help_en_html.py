@@ -4,7 +4,7 @@ help = r"""
 <html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Introduction to Beijing Floating Life</title>
-
+CUSTOM_STYLE
 <!-- <link type="text/css" rel="stylesheet" charset="UTF-8" href="./Introduction to Beijing Floating Life_files/m=el_main_css"></head> -->
 
 <body background="help_file_bg.png">
@@ -536,3 +536,4 @@ help = r"""
 
 
 </ul></body></html>r"""
+

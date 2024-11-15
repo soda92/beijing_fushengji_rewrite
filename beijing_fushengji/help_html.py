@@ -9,6 +9,7 @@ help = r"""
 
 </TITLE>
 
+CUSTOM_STYLE
 </HEAD>
 
 <body background="backblue.gif">
@@ -580,3 +581,4 @@ help = r"""
 </BODY>
 
 </HTML>r"""
+
