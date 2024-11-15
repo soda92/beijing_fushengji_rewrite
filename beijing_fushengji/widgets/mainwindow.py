@@ -28,6 +28,13 @@ class MainWindow(QtWidgets.QMainWindow):
             self.debug_window = DebugWindowReloader(self.widget)
             self.debug_window.show()
 
+    def lang_chs(self):
+        self.app.installTranslator(self.translator)
+
+    def lang_en(self):
+        breakpoint()
+        self.app.removeTranslator(self.translator)
+
     def init(self):
         self.ui = ui_mainwindow.Ui_MainWindow()
         self.ui.setupUi(self)
@@ -63,6 +70,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.beijing_intro.triggered.connect(self.beijing_intro)
         self.ui.game_help.triggered.connect(self.game_doc)
         self.ui.story.triggered.connect(self.show_story)
+        self.ui.langChs.triggered.connect(self.lang_chs)
+        self.ui.langEn.triggered.connect(self.lang_en)
 
         self.timer = QtCore.QTimer()
         self.timer.setInterval(1000)

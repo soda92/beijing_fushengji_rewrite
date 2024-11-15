@@ -6,6 +6,7 @@
 /*.qm
 /score.txt
 /html
+beijing_fushengji/ui/*.py
 
 
 # Byte-compiled / optimized / DLL files
