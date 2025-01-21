@@ -1,5 +1,10 @@
 # beijing fushengji rewrite
 
+
+<a href="https://pypi.org/project/beijing_fushengji/">
+    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/beijing_fushengji">
+</a>
+
 北京浮生记重制版
 
 Rewrite [beijing fushengji][url] using Qt.
@@ -18,11 +23,13 @@ Features:
 
 ## Install package From PYPI
 
-`pip install beijing-fushengji`
+```
+pip install -U beijing_fushengji
+```
 
 Run:
 
-`py -m beijing_fushengji`
+`beijing-fushengji`
 
 ## Run locally
 
