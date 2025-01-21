@@ -45,7 +45,11 @@ unfixable = ["B"]
 "tests/*.py" = ["E402", "F401"]
 
 [dependency-groups]
-dev = ["build>=1.2.2.post1", "pyinstaller>=6.10.0", "twine>=5.1.1"]
+dev = [
+    "build>=1.2.2.post1",
+    "pyinstaller>=6.10.0",
+    "twine>=6.0.0",
+]
 
 [project.gui-scripts]
 beijing-fushengji = "beijing_fushengji.app.main:main"
