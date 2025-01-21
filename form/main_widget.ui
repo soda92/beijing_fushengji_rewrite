@@ -687,7 +687,7 @@ Station</string>
          <item row="1" column="1">
           <widget class="QLabel" name="label_16">
            <property name="styleSheet">
-            <string notr="true">image: url(:/bg/res/subway.bmp);</string>
+            <string notr="true">image: url(:/bg/res/beijing-subway.gif);</string>
            </property>
            <property name="text">
             <string/>

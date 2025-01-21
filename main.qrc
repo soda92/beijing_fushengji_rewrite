@@ -11,6 +11,7 @@
   </qresource>
   <qresource prefix="bg">
     <file>res/subway.bmp</file>
+    <file>res/beijing-subway.gif</file>
     <file>res/hospital.ico</file>
     <file>res/hospital_hover.ico</file>
     <file>res/netcafe.ico</file>
