@@ -16,10 +16,16 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.sdist]
+ignore-vcs = true
 packages = ["beijing_fushengji", "beijing_fushengji.*"]
+include = ["*_html.py", "*_rc.py", "ui/*.py"]
+exclude = ["__pycache__", "*.html", "score.txt"]
 
 [tool.hatch.build.targets.wheel]
+ignore-vcs = true
 packages = ["beijing_fushengji", "beijing_fushengji.*"]
+include = ["*_html.py", "*_rc.py", "ui/*.py"]
+exclude = ["__pycache__", "*.html", "score.txt"]
 
 [tool.ruff.lint]
 # 1. Enable flake8-bugbear (`B`) rules, in addition to the defaults.
