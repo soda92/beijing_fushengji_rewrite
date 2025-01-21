@@ -27,7 +27,8 @@ Run:
 ## Run locally
 
 1. Clone repo
-1. install dependencies in `m-r.txt`
+1. install [uv](https://docs.astral.sh/uv/)
+1. run `uv sync`, then activate the virtual environment
 1. run `tools/compile_all.py`
 1. Start app with `entry.py`
 

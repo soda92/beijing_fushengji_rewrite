@@ -8,7 +8,7 @@
             "name": "Main",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/app/main.py",
+            "program": "${workspaceFolder}/beijing_fushengji/app/main.py",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}",
             },
@@ -18,7 +18,7 @@
             "name": "Main - Skip Intro",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/app/main.py",
+            "program": "${workspaceFolder}/beijing_fushengji/app/main.py",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}",
                 "HIDE_INTRO": "true",
@@ -31,7 +31,7 @@
             "name": "Main - Skip Intro - no compile",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/app/main.py",
+            "program": "${workspaceFolder}/beijing_fushengji/app/main.py",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}",
                 "HIDE_INTRO": "true",
@@ -41,7 +41,7 @@
             "name": "Main - Console",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/app/main.py",
+            "program": "${workspaceFolder}/beijing_fushengji/app/main.py",
             "args": [
                 "--console"
             ],
