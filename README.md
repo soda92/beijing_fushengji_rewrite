@@ -1,5 +1,10 @@
 # beijing fushengji rewrite
 
+
+<a href="https://pypi.org/project/beijing_fushengji/">
+    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/beijing_fushengji">
+</a>
+
 北京浮生记重制版
 
 Rewrite [beijing fushengji][url] using Qt.
@@ -18,16 +23,19 @@ Features:
 
 ## Install package From PYPI
 
-`pip install beijing-fushengji`
+```
+pip install -U beijing_fushengji
+```
 
 Run:
 
-`py -m beijing_fushengji`
+`beijing-fushengji`
 
 ## Run locally
 
 1. Clone repo
-1. install dependencies in `m-r.txt`
+1. install [uv](https://docs.astral.sh/uv/)
+1. run `uv sync`, then activate the virtual environment
 1. run `tools/compile_all.py`
 1. Start app with `entry.py`
 
